@@ -2,11 +2,40 @@ import requests
 from bs4 import BeautifulSoup
 import json
 import os
+import time
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
 
 # --- Configuration ---
 SOURCES_FILE_PATH = 'config/sources.json'
 OUTPUT_FILE_PATH = 'data/raw_album_list.json'
 OUTPUT_DIR = 'data'
+
+# --- NEW: Selenium Helper Function ---
+def get_page_with_selenium(url):
+    """
+    Uses a headless Chrome browser (Selenium) to fetch a
+    JavaScript-rendered page.
+    """
+    print(f"  > Fetching with Selenium (headless browser)...")
+    options = Options()
+    options.add_argument("--headless") # Run invisibly
+    options.add_argument("--no-sandbox") # Required for GitHub Actions
+    options.add_argument("--disable-dev-shm-usage") # Required for GitHub Actions
+    options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36")
+    
+    driver = webdriver.Chrome(options=options)
+    
+    try:
+        driver.get(url)
+        # Wait 5 seconds for all the JavaScript to load
+        time.sleep(5) 
+        html_content = driver.page_source
+        return html_content
+    finally:
+        driver.quit()
+
+# --- Your Parser Functions (Unchanged) ---
 
 def parse_pitchfork(html_content, source_name):
     """
@@ -16,9 +45,6 @@ def parse_pitchfork(html_content, source_name):
     albums_found = []
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # NEW: Find all review "cards" by a different class
-    # Pitchfork now seems to use 'ReviewCardContainer-...'
-    # We will look for the 'a' tag that links to the review
     review_links = soup.find_all('a', href=lambda href: href and href.startswith('/reviews/albums/'))
     
     if not review_links:
@@ -27,20 +53,16 @@ def parse_pitchfork(html_content, source_name):
 
     for link in review_links:
         try:
-            # The card content is inside the link
-            # Find the artist name
             artist_tag = link.find('ul', class_=lambda c: c and c.startswith('ArtistList-'))
             if not artist_tag:
                 artist_tag = link.find('div', class_=lambda c: c and c.startswith('ReviewCardArtist-'))
             
-            # Find the album title
             album_tag = link.find('h2', class_=lambda c: c and c.startswith('ReviewCardAlbumName-'))
             
             if artist_tag and album_tag:
-                artist_name = artist_tag.get_text(strip=True)
+                artist_name = artist_tag.get_text(stripTrue=True)
                 album_title = album_tag.get_text(strip=True)
                 
-                # Avoid duplicates
                 if {"artist": artist_name, "album": album_title, "source": source_name} not in albums_found:
                     albums_found.append({
                         "artist": artist_name,
@@ -62,7 +84,6 @@ def parse_rolling_stone(html_content, source_name):
     albums_found = []
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # NEW: Find all the 'article' cards
     review_cards = soup.find_all('article', class_=lambda c: c and c.startswith('story-'))
     
     if not review_cards:
@@ -71,17 +92,13 @@ def parse_rolling_stone(html_content, source_name):
 
     for card in review_cards:
         try:
-            # The artist name is often in a 'p' tag with class 'c-kicker' or similar
             artist_tag = card.find('p', class_=lambda c: c and 'kicker' in c)
-            
-            # The album title is in an 'h3' tag
             album_tag = card.find('h3', class_=lambda c: c and 'title' in c)
             
             if artist_tag and album_tag:
                 artist_name = artist_tag.get_text(strip=True)
                 album_title = album_tag.get_text(strip=True)
                 
-                # Clean up album titles that might include artist
                 if album_title.lower().startswith(artist_name.lower()):
                     album_title = album_title[len(artist_name):].lstrip(":' ")
                 
@@ -96,11 +113,10 @@ def parse_rolling_stone(html_content, source_name):
     print(f"  > Found {len(albums_found)} albums on Rolling Stone.")
     return albums_found
 
-# --- Main Function ---
+# --- Main Function (UPDATED) ---
 def harvest_new_albums():
     print("HarvesterAgent: Starting run...")
     
-    # 1. Load the list of sources
     try:
         with open(SOURCES_FILE_PATH, 'r') as f:
             sources_config = json.load(f)
@@ -110,7 +126,6 @@ def harvest_new_albums():
     
     raw_albums = []
     
-    # 2. Loop through each source and fetch content
     for source in sources_config['sources']:
         source_name = source['name']
         source_url = source['url']
@@ -118,36 +133,28 @@ def harvest_new_albums():
         print(f"\nScanning source: {source_name} ({source_url})")
         
         try:
-            # We use a user-agent to look like a real browser
-            headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36'}
-            response = requests.get(source_url, headers=headers, timeout=10)
+            # --- THIS IS THE BIG CHANGE ---
+            # We now use Selenium to get the page
+            page_html = get_page_with_selenium(source_url)
+            # --- END CHANGE ---
             
-            # Raise an error if the request failed
-            response.raise_for_status() 
-            
-            # 3. Parse the HTML (THE HARD PART)
-            # This block is now correctly indented inside the 'try'
-            
-            albums = [] # Initialize our list for this source
+            albums = [] 
             
             if "pitchfork.com" in source_url:
-                albums = parse_pitchfork(response.text, source_name)
+                albums = parse_pitchfork(page_html, source_name)
                 
             elif "rollingstone.com" in source_url:
-                albums = parse_rolling_stone(response.text, source_name)
+                albums = parse_rolling_stone(page_html, source_name)
             
             else:
                 print(f"Note: No specific parser for this source: {source_name}")
             
-            
             if albums:
                 raw_albums.extend(albums)
 
-        except requests.exceptions.RequestException as e:
+        except Exception as e:
             print(f"Error fetching {source_url}: {e}")
 
-    # 4. Save the results to the output file
-    # Ensure the 'data' directory exists
     os.makedirs(OUTPUT_DIR, exist_ok=True) 
     
     with open(OUTPUT_FILE_PATH, 'w') as f:
