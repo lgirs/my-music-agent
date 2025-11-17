@@ -9,9 +9,11 @@ on:
 
 jobs:
   run-music-agent:
+    # This block fixes the "Error 403"
     permissions:
       contents: write
-    runs-on: ubuntu-latest    runs-on: ubuntu-latest
+      
+    runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v4
@@ -25,9 +27,6 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
-      - name: Install Chrome for Selenium
-        uses: browser-actions/setup-chrome@v1
 
       - name: Run the main workflow
         run: python main_workflow.py
@@ -46,6 +45,7 @@ jobs:
       - name: Commit and Push Data
         run: |
           if [ -d "data" ]; then
+            # This '-f' (force) fixes the .gitignore error
             git add -f data/
             if ! git diff-index --quiet HEAD; then
               git commit -m "Automated data run - $(date)"
