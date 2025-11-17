@@ -60,6 +60,7 @@ def get_ai_analysis(page_text, source_name, system_prompt):
 def analyze_albums():
     print("AnalysisAgent: Starting run (AI-Parser Mode)...")
     
+    # 1. Load the system prompt
     try:
         with open(PROMPT_FILE_PATH, 'r') as f:
             system_prompt = f.read()
@@ -68,6 +69,7 @@ def analyze_albums():
         print(f"Error: Prompt file not found at {PROMPT_FILE_PATH}")
         return
 
+    # 2. Load the raw pages list
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
             raw_pages = json.load(f)
@@ -78,7 +80,15 @@ def analyze_albums():
         
     if not raw_pages:
         print("No raw pages found. Exiting analysis.")
+        return # <-- Added a 'return' here to stop if no pages
         
+    # 3. Analyze each page
+    
+    # --- THIS IS THE NEW FIX ---
+    print("  > Waiting 60s for free tier to cool down before first call...")
+    time.sleep(60)
+    # --- END NEW FIX ---
+    
     all_approved_albums = []
     for page in raw_pages:
         if not page.get('page_text'):
@@ -96,9 +106,12 @@ def analyze_albums():
             all_approved_albums.extend(approved_albums_from_page)
         else:
             print(f"  > [AI] Found no relevant albums on {page['source_name']}.")
-            print("  > Waiting 60s to respect free tier rate limit...")
+
+        # This delay protects all calls *after* the first one
+        print("  > Waiting 60s to respect free tier rate limit...")
         time.sleep(60)
 
+    # 4. Save the combined list of all approved albums
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE_PATH, 'w') as f:
         json.dump(all_approved_albums, f, indent=2)
@@ -106,5 +119,6 @@ def analyze_albums():
     print(f"\nAnalysisAgent: Run complete. Approved {len(all_approved_albums)} total albums.")
     print(f"Results saved to {OUTPUT_FILE_PATH}")
 
+# --- Run the script ---
 if __name__ == "__main__":
     analyze_albums()
