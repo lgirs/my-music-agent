@@ -8,7 +8,7 @@ from fuzzywuzzy import fuzz
 
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
-HARVESTER_LOG_PATH = 'data/harvester_log.json' # <-- NEW: Read the harvester log
+HARVESTER_LOG_PATH = 'data/harvester_log.json'
 LOG_FILE_PATH = 'data/run_log.txt'
 REPORT_FILE_PATH = 'data/index.html'
 OUTPUT_DIR = 'data'
@@ -94,22 +94,23 @@ class RealTidalClient:
 def process_album_action(tidal_client, album_data):
     """
     Processes a single album and returns a detailed log tuple:
-    (status, artist, original_title, found_title, ai_score)
+    (status, artist, original_title, found_title, ai_score, reasoning)
     """
     artist = album_data.get('artist', 'Unknown')
     album_to_find = album_data.get('album', 'Unknown')
     decision = album_data.get('decision')
     ai_score = album_data.get('relevance_score', 0)
-    
+    reasoning = album_data.get('reasoning', 'N/A') # <-- NEW: Get reasoning
+
     if not artist or not album_to_find:
-        return ("SKIPPED_INVALID", artist, f"Invalid data: {album_data}", "", ai_score)
+        return ("SKIPPED_INVALID", artist, f"Invalid data: {album_data}", "", ai_score, reasoning)
 
     match_info = tidal_client.find_album_id(artist, album_to_find)
     
     if match_info["status"] == "NOT_FOUND":
-        return ("NOT_FOUND", artist, album_to_find, "", ai_score)
+        return ("NOT_FOUND", artist, album_to_find, "", ai_score, reasoning)
     if match_info["status"] == "ERROR":
-        return ("ERROR", artist, album_to_find, match_info['title'], ai_score)
+        return ("ERROR", artist, album_to_find, match_info['title'], ai_score, reasoning)
 
     album_id = match_info["id"]
     found_title = match_info["title"]
@@ -118,21 +119,20 @@ def process_album_action(tidal_client, album_data):
     try:
         if decision == "LIKE_IMMEDIATELY":
             tidal_client.like_album(album_id, artist, found_title)
-            return ("LIKED_" + match_status, artist, album_to_find, found_title, ai_score)
+            return ("LIKED_" + match_status, artist, album_to_find, found_title, ai_score, reasoning)
         elif decision == "ADD_TO_PLAYLIST":
             tidal_client.add_album_to_playlist(album_id, artist, found_title, playlist_name=PLAYLIST_NAME)
-            return ("ADDED_" + match_status, artist, album_to_find, found_title, ai_score)
+            return ("ADDED_" + match_status, artist, album_to_find, found_title, ai_score, reasoning)
     except Exception as e:
         print(f"  > Error during Tidal action: {e}")
-        return ("ERROR", artist, album_to_find, str(e), ai_score)
+        return ("ERROR", artist, album_to_find, str(e), ai_score, reasoning)
     
-    return ("UNKNOWN", artist, album_to_find, "", ai_score)
+    return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 # --- generate_html_report (HEAVILY UPGRADED) ---
 def generate_html_report(actions_list):
     print(f"  > Generating HTML report...")
 
-    # --- NEW: Read harvester log ---
     try:
         with open(HARVESTER_LOG_PATH, 'r') as f:
             harvester_log = json.load(f)
@@ -140,19 +140,20 @@ def generate_html_report(actions_list):
         harvester_log = []
 
     # --- Helper function to format list items (UPGRADED) ---
-    def format_li(status, artist, original, found, score):
+    def format_li(status, artist, original, found, score, reasoning):
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
+        reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
         
         # This is for "Not Found" or "Error"
         if not found:
-            return f"<li><b>{artist} - {original}</b> {score_html}</li>"
+            return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>"
         
         # This is for "Fuzzy Matches"
         if "FUZZY" in status:
-            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span></li>"
+            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
         
         # This is for "Exact Matches"
-        return f"<li><b>{artist} - {found}</b> {score_html}</li>"
+        return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
     # Separate actions by type
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
@@ -162,7 +163,6 @@ def generate_html_report(actions_list):
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
 
-    # --- NEW: Build Harvester Log HTML ---
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
 
@@ -183,8 +183,9 @@ def generate_html_report(actions_list):
             h2 {{ font-size: 24px; margin-top: 40px; }}
             ul {{ list-style-type: none; padding-left: 0; }}
             li {{ background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; }}
-            .score {{ float: right; color: #586069; font-size: 0.9em; }}
+            .score {{ float: right; color: #586069; font-size: 0.9em; font-weight: bold; }}
             .fuzzy {{ color: #b08800; font-size: 0.9em; }}
+            .reasoning {{ color: #586069; font-size: 0.9em; }}
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
         </style>
@@ -202,28 +203,28 @@ def generate_html_report(actions_list):
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
         <p>These albums passed the AI filter but could not be found on Tidal.</p>
         <ul>
-            {not_found or "<li>None</li>"}
+            {''_join(not_found) or "<li>None</li>"}
         </ul>
 
         <h2 class="error">❌ Tidal API Errors ({len(errors)})</h2>
         <p>These albums were found, but a system error occurred during the Tidal action.</p>
         <ul>
-            {errors or "<li>None</li>"}
+            {''_join(errors) or "<li>None</li>"}
         </ul>
 
         <h2>⭐ Albums Liked ({len(liked_exact) + len(liked_fuzzy)})</h2>
         <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores.</p>
         <ul>
-            { ''.join(liked_exact) }
-            { ''.join(liked_fuzzy) }
+            {''_join(liked_exact)}
+            {''_join(liked_fuzzy)}
             {'<li>None</li>' if not (liked_exact or liked_fuzzy) else ''}
         </ul>
 
         <h2>🎶 Added to 'Weekly Discovery' ({len(added_exact) + len(added_fuzzy)})</h2>
         <p>These albums were also recommended by the AI and added to your playlist.</p>
         <ul>
-            { ''.join(added_exact) }
-            { ''.join(added_fuzzy) }
+            {''_join(added_exact)}
+            {''_join(added_fuzzy)}
             {'<li>None</li>' if not (added_exact or added_fuzzy) else ''}
         </ul>
 
@@ -242,7 +243,6 @@ def generate_html_report(actions_list):
         print(f"  > Successfully wrote HTML report to {REPORT_FILE_PATH}")
     except Exception as e:
         print(f"  > Error writing HTML report: {e}")
-
 
 # --- Main Function (UPDATED) ---
 def take_tidal_actions():
@@ -286,8 +286,9 @@ def take_tidal_actions():
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
-        for status, artist, original, found, score in actions_list_for_report:
-            f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}'\n")
+        # --- NEW: Log includes all new fields ---
+        for status, artist, original, found, score, reasoning in actions_list_for_report:
+            f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
     
     generate_html_report(actions_list_for_report)
     
