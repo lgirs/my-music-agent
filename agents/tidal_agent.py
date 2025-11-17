@@ -66,8 +66,10 @@ class RealTidalClient:
         print(f"  > ACTION: Adding to playlist '{playlist_name}' (ID: {album_id}) - '{album}' by '{artist}'")
         try:
             # --- THIS IS THE FIX ---
-            # It's 'self.session.album' (singular), not 'self.session.albums'
-            tracks = self.session.album.tracks(album_id)
+            # 1. Get the album object by CALLING session.album()
+            album_object = self.session.album(album_id)
+            # 2. Get the tracks from the OBJECT
+            tracks = album_object.tracks()
             # --- END FIX ---
             
             track_ids = [track.id for track in tracks]
