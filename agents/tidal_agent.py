@@ -42,11 +42,7 @@ class RealTidalClient:
         """Searches Tidal for an album and returns its ID."""
         print(f"  > Searching Tidal for: '{album}' by '{artist}'...")
         try:
-            # --- THIS IS THE FIX ---
-            # It's 'tidalapi.Album', not 'tidalapi.model.Album'
             search_results = self.session.search(f"{artist} {album}", models=[tidalapi.Album])
-            # --- END FIX ---
-            
             if search_results and search_results['albums']:
                 first_album = search_results['albums'][0]
                 print(f"  > Found album ID: {first_album.id}")
@@ -69,7 +65,11 @@ class RealTidalClient:
         """Adds all tracks from an album to a specified playlist."""
         print(f"  > ACTION: Adding to playlist '{playlist_name}' (ID: {album_id}) - '{album}' by '{artist}'")
         try:
-            tracks = self.session.albums.tracks(album_id)
+            # --- THIS IS THE FIX ---
+            # It's 'self.session.album' (singular), not 'self.session.albums'
+            tracks = self.session.album.tracks(album_id)
+            # --- END FIX ---
+            
             track_ids = [track.id for track in tracks]
             
             playlist_id = None
