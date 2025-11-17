@@ -77,21 +77,21 @@ def harvest_new_albums():
             # Raise an error if the request failed
             response.raise_for_status() 
             
-            # 3. Parse the HTML (THE HARD PART)
+           # 3. Parse the HTML (THE HARD PART)
             # We pass the HTML content to a specific parsing function
-            if "pitchfork" in source_url:
-                # In the future, we'd call a specific parser
-                # e.g., albums = parse_pitchfork(response.text)
-                print("Note: Pitchfork parser not yet implemented.")
-            elif "YourFavoriteBlog" in source_name:
-                print("Note: 'YourFavoriteBlog' parser not yet implemented.")
-            else:
-                print("Note: No specific parser for this source.")
+            
+            albums = [] # Initialize our list for this source
+            
+            if "pitchfork.com" in source_url:
+                albums = parse_pitchfork(response.text, source_name)
                 
-            # For now, we'll just add a placeholder
-            # In a real run, 'albums' would be a list of dicts
-            # e.g., albums = [{"artist": "Test", "album": "Test Album", "source": source_name}]
-            albums = [] 
+            elif "rollingstone.com" in source_url:
+                # We'll build this one next
+                print(f"Note: 'Rolling Stone' parser not yet implemented.")
+            
+            else:
+                print(f"Note: No specific parser for this source: {source_name}")
+            
             
             if albums:
                 raw_albums.extend(albums)
