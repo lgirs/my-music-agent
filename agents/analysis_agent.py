@@ -96,6 +96,8 @@ def analyze_albums():
             all_approved_albums.extend(approved_albums_from_page)
         else:
             print(f"  > [AI] Found no relevant albums on {page['source_name']}.")
+            print("  > Waiting 60s to respect free tier rate limit...")
+        time.sleep(60)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE_PATH, 'w') as f:
