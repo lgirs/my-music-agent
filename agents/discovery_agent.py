@@ -43,7 +43,7 @@ def run_discovery():
     print("  > [AI] Calling Gemini to find new sources...")
     try:
         model = genai.GenerativeModel(
-            'gemini-1.5-flash',
+            'gemini-2.5-flash',
             system_instruction=system_prompt
         )
         response = model.generate_content(user_content)
