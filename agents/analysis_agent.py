@@ -36,7 +36,7 @@ def get_ai_analysis(page_text, source_name, system_prompt):
 
     try:
         model = genai.GenerativeModel(
-            'gemini-pro',
+            'gemini-2.5-flash',
             system_instruction=system_prompt,
             # Set a higher safety threshold if needed, or keep default
             # safety_settings={'HARASSMENT': 'BLOCK_NONE'} 
