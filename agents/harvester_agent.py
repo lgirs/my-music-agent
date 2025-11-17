@@ -10,87 +10,87 @@ OUTPUT_DIR = 'data'
 
 def parse_pitchfork(html_content, source_name):
     """
-    Parses the Pitchfork /reviews/albums/ page HTML
-    and extracts artist and album names.
+    (Updated) Parses the Pitchfork /reviews/albums/ page HTML.
     """
     print(f"  > Running Pitchfork-specific parser...")
     albums_found = []
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # Find all the review "cards" on the page
-    # Pitchfork wraps each review in a 'div' with a class 'review'
-    review_cards = soup.find_all('div', class_='review')
+    # NEW: Find all review "cards" by a different class
+    # Pitchfork now seems to use 'ReviewCardContainer-...'
+    # We will look for the 'a' tag that links to the review
+    review_links = soup.find_all('a', href=lambda href: href and href.startswith('/reviews/albums/'))
     
-    if not review_cards:
-        print("  > No review cards found. (HTML structure might have changed?)")
+    if not review_links:
+        print("  > No review links found. (HTML structure might have changed?)")
         return []
 
-    for card in review_cards:
+    for link in review_links:
         try:
-            # The artist name is in a 'ul' with class 'artist-list'
-            artist_name = card.find('ul', class_='artist-list').get_text(strip=True)
+            # The card content is inside the link
+            # Find the artist name
+            artist_tag = link.find('ul', class_=lambda c: c and c.startswith('ArtistList-'))
+            if not artist_tag:
+                artist_tag = link.find('div', class_=lambda c: c and c.startswith('ReviewCardArtist-'))
             
-            # The album title is in an 'h2' tag
-            album_title = card.find('h2').get_text(strip=True)
+            # Find the album title
+            album_tag = link.find('h2', class_=lambda c: c and c.startswith('ReviewCardAlbumName-'))
             
-            if artist_name and album_title:
-                albums_found.append({
-                    "artist": artist_name,
-                    "album": album_title,
-                    "source": source_name
-                })
+            if artist_tag and album_tag:
+                artist_name = artist_tag.get_text(strip=True)
+                album_title = album_tag.get_text(strip=True)
+                
+                # Avoid duplicates
+                if {"artist": artist_name, "album": album_title, "source": source_name} not in albums_found:
+                    albums_found.append({
+                        "artist": artist_name,
+                        "album": album_title,
+                        "source": source_name
+                    })
         except AttributeError:
-            # If a card is missing an artist or album (e.g., it's a 'Various Artists'
-            # compilation without a clear tag), we just skip it.
             continue
             
     print(f"  > Found {len(albums_found)} albums on Pitchfork.")
     return albums_found
 
+
 def parse_rolling_stone(html_content, source_name):
     """
-    Parses the Rolling Stone /music-album-reviews/ page HTML
-    and extracts artist and album names.
+    (Updated) Parses the Rolling Stone /music-album-reviews/ page HTML.
     """
     print(f"  > Running Rolling Stone-specific parser...")
     albums_found = []
     soup = BeautifulSoup(html_content, 'html.parser')
     
-    # Rolling Stone often wraps reviews in 'article' tags or 'div's
-    # with specific 'l-row' or 'c-card' classes.
-    # We'll try to find the 'cards' by looking for the artist name's class.
+    # NEW: Find all the 'article' cards
+    review_cards = soup.find_all('article', class_=lambda c: c and c.startswith('story-'))
     
-    # Find all the 'p' tags with class 'c-kicker' (which often holds the artist)
-    artist_tags = soup.find_all('p', class_='c-kicker')
-    
-    if not artist_tags:
-        print("  > No artist tags ('c-kicker') found. (HTML structure might have changed or be dynamic?)")
+    if not review_cards:
+        print("  > No 'article' tags found. (HTML structure might have changed?)")
         return []
 
-    for artist_tag in artist_tags:
+    for card in review_cards:
         try:
-            # The artist name is the text of this tag
-            artist_name = artist_tag.get_text(strip=True)
+            # The artist name is often in a 'p' tag with class 'c-kicker' or similar
+            artist_tag = card.find('p', class_=lambda c: c and 'kicker' in c)
             
-            # The album title is *usually* in an 'h3' tag with class 'c-title'
-            # that is a sibling or near parent/sibling of the artist tag.
-            # We'll find the common parent 'article'
-            parent_card = artist_tag.find_parent('article')
-            if not parent_card:
-                # If no 'article', try to find the row
-                parent_card = artist_tag.find_parent('div', class_='l-row')
-
-            album_title_tag = parent_card.find('h3', class_='c-title')
+            # The album title is in an 'h3' tag
+            album_tag = card.find('h3', class_=lambda c: c and 'title' in c)
             
-            if artist_name and album_title_tag:
-                album_title = album_title_tag.get_text(strip=True)
+            if artist_tag and album_tag:
+                artist_name = artist_tag.get_text(strip=True)
+                album_title = album_tag.get_text(strip=True)
+                
+                # Clean up album titles that might include artist
+                if album_title.lower().startswith(artist_name.lower()):
+                    album_title = album_title[len(artist_name):].lstrip(":' ")
+                
                 albums_found.append({
                     "artist": artist_name,
                     "album": album_title,
                     "source": source_name
                 })
         except AttributeError:
-            # Skip this card if the structure is not what we expect
             continue
             
     print(f"  > Found {len(albums_found)} albums on Rolling Stone.")
