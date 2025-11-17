@@ -1,23 +1,37 @@
 [
   {
+    "artist": "Chat Pile / Hayden Pedigo",
+    "album": "In the Earth Again",
+    "relevance_score": 95,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Chat Pile is explicitly listed as a recent favorite artist in your criteria, making any new release or collaboration from them a high-priority recommendation despite the lack of a detailed review."
+  },
+  {
     "artist": "Danny Brown",
     "album": "Stardust",
-    "relevance_score": 88,
+    "relevance_score": 80,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description of Danny Brown as a 'hip-hop wildcard' who 'mixes jarring beats' strongly aligns with your occasional interest in hip hop/rap, especially when it features artistic merit and innovative sounds. 'Jarring' suggests a non-standard approach, which could offer inspiration for new musical ideas."
+    "reasoning": "The description highlights the artist's 'wildcard' nature and 'jarring beats,' suggesting an experimental approach to hip hop that could offer new musical ideas and artistic merit, which aligns with your occasional interest in the genre and desire for challenging music."
   },
   {
     "artist": "Rosal\u00eda",
     "album": "Lux",
-    "relevance_score": 92,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Described as 'Pop\u2019s most provocative chaos agent' delivering a 'transcendent album that sounds like nothing else in music right now,' this strongly indicates high artistic value and innovation. Even within the context of pop music, this level of uniqueness and provocation aligns perfectly with your criteria for artistic merit and seeking inspiration for new musical ideas."
+    "relevance_score": 88,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Despite being labeled pop, the description emphasizes a 'provocative chaos agent' delivering a 'transcendent' album that 'sounds like nothing else.' This strong indication of artistic innovation and uniqueness aligns perfectly with your desire for inspiring music with high artistic merit, similar to artists like Kae Tempest."
   },
   {
-    "artist": "Florence + the Machine",
+    "artist": "Florence Welch",
     "album": "Everybody Scream",
-    "relevance_score": 89,
+    "relevance_score": 92,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "The description highlights themes of 'primal scream,' 'fighting trauma,' and transforming a 'painful experience into an artistic triumph.' This points to profound emotional depth and raw artistic expression, aligning perfectly with your appreciation for artists like Tom Waits, Nick Cave, and the emotional intensity found in genres like sludge and hardcore."
+  },
+  {
+    "artist": "Lily Allen",
+    "album": "West End Girl",
+    "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description highlights a 'primal scream' and turning 'a painful experience into an artistic triumph,' indicating strong emotional depth and artistic merit. Florence + the Machine's style often incorporates elements of alternative and stadium rock, which you enjoy, and the focus on artistic purpose aligns perfectly with your criteria that music is important as such and should provide inspiration."
+    "reasoning": "The album is described as a 'powerful album' that involves a 'brutal emotional inventory' and transforming a 'painful marriage.' This suggests significant artistic merit and raw emotional honesty, aligning with your criteria for music that is deeply personal and impactful, similar to artists like Against Me! or Tom Waits."
   }
 ]
