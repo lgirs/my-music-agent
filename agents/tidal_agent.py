@@ -47,7 +47,7 @@ class RealTidalClient:
         print(f"  > Searching Tidal for: '{album}' by '{artist}'...")
         try:
             # Search for the album
-            search_results = self.session.search(f"{artist} {album}", models=[tidalapi.model.Album])
+            search_results = self.session.search(f"{artist} {album}", models=[tidalapi.Album])
             if search_results and search_results['albums']:
                 # Assume the first result is the best match
                 first_album = search_results['albums'][0]
