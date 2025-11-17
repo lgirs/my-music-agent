@@ -8,6 +8,46 @@ SOURCES_FILE_PATH = 'config/sources.json'
 OUTPUT_FILE_PATH = 'data/raw_album_list.json'
 OUTPUT_DIR = 'data'
 
+def parse_pitchfork(html_content, source_name):
+    """
+    Parses the Pitchfork /reviews/albums/ page HTML
+    and extracts artist and album names.
+    """
+    print(f"  > Running Pitchfork-specific parser...")
+    albums_found = []
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Find all the review "cards" on the page
+    # Pitchfork wraps each review in a 'div' with a class 'review'
+    review_cards = soup.find_all('div', class_='review')
+    
+    if not review_cards:
+        print("  > No review cards found. (HTML structure might have changed?)")
+        return []
+
+    for card in review_cards:
+        try:
+            # The artist name is in a 'ul' with class 'artist-list'
+            artist_name = card.find('ul', class_='artist-list').get_text(strip=True)
+            
+            # The album title is in an 'h2' tag
+            album_title = card.find('h2').get_text(strip=True)
+            
+            if artist_name and album_title:
+                albums_found.append({
+                    "artist": artist_name,
+                    "album": album_title,
+                    "source": source_name
+                })
+        except AttributeError:
+            # If a card is missing an artist or album (e.g., it's a 'Various Artists'
+            # compilation without a clear tag), we just skip it.
+            continue
+            
+    print(f"  > Found {len(albums_found)} albums on Pitchfork.")
+    return albums_found
+
+
 # --- Main Function ---
 def harvest_new_albums():
     print("HarvesterAgent: Starting run...")
