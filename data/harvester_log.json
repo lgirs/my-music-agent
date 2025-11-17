@@ -1,0 +1,127 @@
+[
+  {
+    "status": "success",
+    "source": "Twangville",
+    "message": "Fetched 5423 chars"
+  },
+  {
+    "status": "success",
+    "source": "Pitchfork",
+    "message": "Fetched 4855 chars"
+  },
+  {
+    "status": "error",
+    "source": "Sputnikmusic",
+    "message": "404 Client Error: Not Found for url: https://www.sputnikmusic.com/reviews/"
+  },
+  {
+    "status": "success",
+    "source": "Louder Sound",
+    "message": "Fetched 4586 chars"
+  },
+  {
+    "status": "error",
+    "source": "Drowned in Sound",
+    "message": "404 Client Error: Not Found for url: https://drownedinsound.com/reviews/album"
+  },
+  {
+    "status": "success",
+    "source": "AllMusic",
+    "message": "Fetched 7460 chars"
+  },
+  {
+    "status": "error",
+    "source": "Metal Temple",
+    "message": "404 Client Error: Not Found for url: https://metal-temple.com/site/catalogues/reviews.htm"
+  },
+  {
+    "status": "success",
+    "source": "Consequence of Sound",
+    "message": "Fetched 5191 chars"
+  },
+  {
+    "status": "success",
+    "source": "AltCorner",
+    "message": "Fetched 5582 chars"
+  },
+  {
+    "status": "success",
+    "source": "Blabbermouth",
+    "message": "Fetched 979 chars"
+  },
+  {
+    "status": "success",
+    "source": "Loudwire",
+    "message": "Fetched 7030 chars"
+  },
+  {
+    "status": "success",
+    "source": "Metacritic (Music)",
+    "message": "Fetched 18715 chars"
+  },
+  {
+    "status": "success",
+    "source": "Angry Metal Guy",
+    "message": "Fetched 7698 chars"
+  },
+  {
+    "status": "success",
+    "source": "Heavy Blog is Heavy (HBIH)",
+    "message": "Fetched 1827 chars"
+  },
+  {
+    "status": "success",
+    "source": "KEXP Blog/Reviews",
+    "message": "Fetched 7886 chars"
+  },
+  {
+    "status": "success",
+    "source": "Maximum Rocknroll (MRR)",
+    "message": "Fetched 43254 chars"
+  },
+  {
+    "status": "success",
+    "source": "Profane Existence",
+    "message": "Fetched 283 chars"
+  },
+  {
+    "status": "error",
+    "source": "Aquarium Drunkard",
+    "message": "404 Client Error: Not Found for url: https://aquariumdrunkard.com/category/reviews/"
+  },
+  {
+    "status": "error",
+    "source": "The Toilet Ov Hell",
+    "message": "Invalid URL 'https-reviews/': No scheme supplied. Perhaps you meant https://https-reviews/?"
+  },
+  {
+    "status": "success",
+    "source": "Distorted Sound Magazine",
+    "message": "Fetched 3250 chars"
+  },
+  {
+    "status": "error",
+    "source": "Illustrate Magazine",
+    "message": "404 Client Error: Not Found for url: https://illustratemagazine.com/all-music-reviews/"
+  },
+  {
+    "status": "success",
+    "source": "We are the Last Beatniks",
+    "message": "Fetched 10873 chars"
+  },
+  {
+    "status": "error",
+    "source": "Nothing But A Nightmare",
+    "message": "404 Client Error: Not Found for url: https://www.nothingbutanightmare.com/category/reviews/"
+  },
+  {
+    "status": "error",
+    "source": "Gorilla vs. Bear",
+    "message": "404 Client Error: Not Found for url: https://www.gorillavsbear.net/category/albums/"
+  },
+  {
+    "status": "error",
+    "source": "Portals",
+    "message": "HTTPSConnectionPool(host='www.portalsmusic.com', port=443): Read timed out. (read timeout=15)"
+  }
+]
