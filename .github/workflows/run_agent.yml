@@ -9,10 +9,8 @@ on:
 
 jobs:
   run-music-agent:
-    # --- ADD THIS BLOCK ---
     permissions:
-      contents: write # Give the job permission to write to the repo
-    # --- END BLOCK ---
+      contents: write
     runs-on: ubuntu-latest    runs-on: ubuntu-latest
     steps:
       - name: Check out code
