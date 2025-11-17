@@ -11,61 +11,55 @@ PROMPT_FILE_PATH = 'config/analyzer_prompt.txt'
 OUTPUT_DIR = 'data'
 
 # --- Load API Key and Configure AI ---
-# This loads the GOOGLE_API_KEY from your config/.env file
 load_dotenv(dotenv_path='config/.env')
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not API_KEY:
-    print("Error: GOOGLE_API_KEY not found. Make sure it's set in a .env file in the config/ directory.")
+    print("Error: GOOGLE_API_KEY not found. Make sure it's set in your GitHub Secrets.")
 else:
     genai.configure(api_key=API_KEY)
 
 # --- REAL Google AI API Call ---
-def get_ai_analysis(album_info, system_prompt):
+def get_ai_analysis(page_text, source_name, system_prompt):
     """
-    This function makes a REAL API call to Google AI
-    to analyze the album.
+    This function sends the ENTIRE page text to the AI for
+    finding AND analyzing albums.
     """
-    print(f"  > [AI] Analyzing: {album_info.get('artist', 'Unknown')} - {album_info.get('album', 'Unknown')}")
+    print(f"  > [AI] Analyzing page: {source_name} ({len(page_text)} chars)")
     
-    try:
-        # Initialize the model with your system prompt
-        model = genai.GenerativeModel(
-            'gemini-pro', # You can update this to newer models
-            system_instruction=system_prompt
-        )
-        
-        # Format the album info as the "user" message
-        user_content = (
-            "Please analyze this album based on the review I found:\n"
-            f"ARTIST: {album_info.get('artist')}\n"
-            f"ALBUM: {album_info.get('album')}\n"
-            f"SOURCE: {album_info.get('source')}\n\n"
-            "Provide your JSON analysis."
-        )
+    # Truncate text if it's too long for the model's context window
+    # A safe limit for gemini-pro is ~30k, but let's be safer for the prompt
+    max_chars = 25000 
+    if len(page_text) > max_chars:
+        print(f"  > [AI] Page text is too long. Truncating to {max_chars} chars.")
+        page_text = page_text[:max_chars]
 
-        # Generate the content
-        response = model.generate_content(user_content)
+    try:
+        model = genai.GenerativeModel(
+            'gemini-pro',
+            system_instruction=system_prompt,
+            # Set a higher safety threshold if needed, or keep default
+            # safety_settings={'HARASSMENT': 'BLOCK_NONE'} 
+        )
         
-        # Clean the response and parse the JSON
-        # The AI often wraps JSON in ```json ... ```
+        response = model.generate_content(page_text)
+        
         json_text = response.text.strip().replace("```json", "").replace("```", "")
         
-        analysis_json = json.loads(json_text)
-        return analysis_json
+        analysis_list = json.loads(json_text)
+        return analysis_list
 
     except json.JSONDecodeError:
-        print(f"  > [AI Error] Failed to decode JSON from AI response: {response.text}")
-        return None # Return None to skip this album
+        print(f"  > [AI Error] Failed to decode JSON list from AI response: {response.text}")
+        return []
     except Exception as e:
         print(f"  > [AI Error] An error occurred: {e}")
-        return None # Return None to skip this album
+        return []
 
 # --- Main Function ---
 def analyze_albums():
-    print("AnalysisAgent: Starting run...")
+    print("AnalysisAgent: Starting run (AI-Parser Mode)...")
     
-    # 1. Load the system prompt
     try:
         with open(PROMPT_FILE_PATH, 'r') as f:
             system_prompt = f.read()
@@ -74,42 +68,41 @@ def analyze_albums():
         print(f"Error: Prompt file not found at {PROMPT_FILE_PATH}")
         return
 
-    # 2. Load the raw albums list
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
-            raw_albums = json.load(f)
-        print(f"Found {len(raw_albums)} albums to analyze.")
-    except FileNotFoundError:
-        print(f"Note: Raw albums file not found at {INPUT_FILE_PATH}. No albums to process.")
-        raw_albums = []
-    except json.JSONDecodeError:
-        print(f"Error: Could not decode {INPUT_FILE_PATH}. Assuming empty.")
-        raw_albums = []
+            raw_pages = json.load(f)
+        print(f"Found {len(raw_pages)} pages to analyze.")
+    except (FileNotFoundError, json.JSONDecodeError):
+        print("Note: Raw pages file not found or empty. No pages to process.")
+        raw_pages = []
         
-    if not raw_albums:
-        print("No raw albums found. Exiting analysis.")
-        # We no longer create a dummy album
+    if not raw_pages:
+        print("No raw pages found. Exiting analysis.")
         
-    # 3. Analyze each album
-    filtered_albums = []
-    for album_info in raw_albums:
-        # Call our REAL AI function
-        analysis_result = get_ai_analysis(album_info, system_prompt)
-        
-        # Check if the result is valid AND passes our criteria
-        if analysis_result and analysis_result.get('decision') in ["ADD_TO_PLAYLIST", "LIKE_IMMEDIATELY"]:
-            filtered_albums.append(analysis_result)
-        else:
-            print(f"  > [AI] Decision: IGNORE or FAILED. Skipping album.")
+    all_approved_albums = []
+    for page in raw_pages:
+        if not page.get('page_text'):
+            print(f"  > Skipping {page['source_name']}, no text found.")
+            continue
 
-    # 4. Save the results
+        approved_albums_from_page = get_ai_analysis(
+            page['page_text'], 
+            page['source_name'], 
+            system_prompt
+        )
+        
+        if approved_albums_from_page:
+            print(f"  > [AI] Found {len(approved_albums_from_page)} approved albums on {page['source_name']}.")
+            all_approved_albums.extend(approved_albums_from_page)
+        else:
+            print(f"  > [AI] Found no relevant albums on {page['source_name']}.")
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(OUTPUT_FILE_PATH, 'w') as f:
-        json.dump(filtered_albums, f, indent=2)
+        json.dump(all_approved_albums, f, indent=2)
         
-    print(f"\nAnalysisAgent: Run complete. Approved {len(filtered_albums)} albums.")
+    print(f"\nAnalysisAgent: Run complete. Approved {len(all_approved_albums)} total albums.")
     print(f"Results saved to {OUTPUT_FILE_PATH}")
 
-# --- Run the script ---
 if __name__ == "__main__":
     analyze_albums()
