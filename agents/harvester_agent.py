@@ -19,10 +19,17 @@ def harvest_new_albums():
         print(f"Error: Sources file not found at {SOURCES_FILE_PATH}")
         return
     
+    # This is now a list of "pages to be read"
     pages_to_analyze = []
     
+    # Loop through each source and fetch content
     for source in sources_config['sources']:
-        source_name = source['name']
+        
+        # --- THIS IS THE FIX ---
+        # We are using the 'website' key from your new sources file
+        source_name = source['website'] 
+        # --- END FIX ---
+        
         source_url = source['url']
         
         print(f"\nFetching text from: {source_name} ({source_url})")
@@ -32,14 +39,16 @@ def harvest_new_albums():
             response = requests.get(source_url, headers=headers, timeout=15)
             response.raise_for_status() 
             
+            # Use BeautifulSoup to get CLEAN text, not to parse
             soup = BeautifulSoup(response.text, 'html.parser')
             page_text = soup.get_text(separator=' ', strip=True)
             
             if page_text:
+                # We still save it as 'source_name' for the next agent
                 pages_to_analyze.append({
                     "source_name": source_name,
                     "source_url": source_url,
-                    "page_text": page_text
+                    "page_text": page_text # Just the clean text
                 })
                 print(f"  > Successfully fetched {len(page_text)} characters.")
             else:
@@ -48,6 +57,7 @@ def harvest_new_albums():
         except requests.exceptions.RequestException as e:
             print(f"  > Error fetching {source_url}: {e}")
 
+    # Save the results to the output file
     os.makedirs(OUTPUT_DIR, exist_ok=True) 
     
     with open(OUTPUT_FILE_PATH, 'w') as f:
@@ -56,5 +66,6 @@ def harvest_new_albums():
     print(f"\nHarvesterAgent: Run complete. Found {len(pages_to_analyze)} pages to analyze.")
     print(f"Results saved to {OUTPUT_FILE_PATH}")
 
+# --- Run the script ---
 if __name__ == "__main__":
     harvest_new_albums()
