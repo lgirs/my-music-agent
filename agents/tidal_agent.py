@@ -3,16 +3,13 @@ import os
 import time
 from dotenv import load_dotenv
 from tidalapi import Session, Quality
+import tidalapi # <-- THIS IS THE FIX.
 
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
 LOG_FILE_PATH = 'data/run_log.txt'
 OUTPUT_DIR = 'data'
-PLAYLIST_NAME = "Weekly Discovery" # The name of the playlist to add tracks to
-
-# --- Load API Keys ---
-# This loads ALL keys from your config/.env file
-load_dotenv(dotenv_path='config/.env')
+PLAYLIST_NAME = "Weekly Discovery"
 
 # --- Real Tidal API Client ---
 class RealTidalClient:
@@ -27,8 +24,7 @@ class RealTidalClient:
         expiry_time = os.getenv("TIDAL_EXPIRY_TIME")
 
         if not all([token_type, access_token, refresh_token, expiry_time]):
-            print("Error: Tidal auth tokens not found in config/.env")
-            print("Please run a local auth script to get your tokens.")
+            print("Error: Tidal auth tokens not found in config/.env or GitHub Secrets.")
             raise ValueError("Missing Tidal authentication")
 
         print("TidalActionAgent: Authenticating with Tidal...")
@@ -147,7 +143,7 @@ def take_tidal_actions():
 
     # Log our actions
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(LOG_FILE_PATH, 'a') as f:
+    with open(LOG_FILE_PATH, 'a') as f: # 'a' means append to the log
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
         for action in actions_taken:
             f.write(f"{action}\n")
