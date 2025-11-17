@@ -145,8 +145,14 @@ def generate_html_report(actions_list):
 
     # Helper function to format list items
     def format_li(status, artist, original, found, score, reasoning):
+        # Ensure data is HTML-safe
+        artist = artist.replace('<', '&lt;').replace('>', '&gt;')
+        original = original.replace('<', '&lt;').replace('>', '&gt;')
+        found = found.replace('<', '&lt;').replace('>', '&gt;')
+        reasoning = reasoning.replace('<', '&lt;').replace('>', '&gt;')
+
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
-        reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
+        reason_html = f"<br><span class='reasoning'>&nbsp;&Larr; <i>AI Reason: {reasoning}</i></span>"
         
         # This is for "Not Found" or "Error"
         if not found:
@@ -154,7 +160,7 @@ def generate_html_report(actions_list):
         
         # This is for "Fuzzy Matches"
         if "FUZZY" in status:
-            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
+            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&Larr; Matched as: <i>{found}</i></span>{reason_html}</li>"
         
         # This is for "Exact Matches"
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
@@ -171,9 +177,11 @@ def generate_html_report(actions_list):
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
 
-    harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&nbsp;&nbsp;↳ {h['message']}</span></li>" for h in harvester_errors])
-    harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&nbsp;↳ {h['message']}</li>" for h in harvester_success])
+    harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&Larr; {h['message']}</span></li>" for h in harvester_errors])
+    harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&Larr; {h['message']}</li>" for h in harvester_success])
 
+    # --- THIS IS THE FIX ---
+    # The '' must be "" inside an f-string
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
