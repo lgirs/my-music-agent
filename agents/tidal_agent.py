@@ -4,16 +4,17 @@ import time
 from dotenv import load_dotenv
 from tidalapi import Session, Quality
 import tidalapi
-from fuzzywuzzy import fuzz # <-- NEW: For string matching
+from fuzzywuzzy import fuzz
 
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
+HARVESTER_LOG_PATH = 'data/harvester_log.json' # <-- NEW: Read the harvester log
 LOG_FILE_PATH = 'data/run_log.txt'
-REPORT_FILE_PATH = 'data/index.html' # The report file
+REPORT_FILE_PATH = 'data/index.html'
 OUTPUT_DIR = 'data'
 PLAYLIST_NAME = "Weekly Discovery"
 MAX_LIKED_ALBUMS_PER_RUN = 5 
-FUZZY_MATCH_THRESHOLD = 85 # How "similar" a title must be (0-100)
+FUZZY_MATCH_THRESHOLD = 85
 
 # --- RealTidalClient Class (No Changes) ---
 class RealTidalClient:
@@ -23,11 +24,9 @@ class RealTidalClient:
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
         refresh_token = os.getenv("TIDAL_REFRESH_TOKEN")
         expiry_time = os.getenv("TIDAL_EXPIRY_TIME")
-
         if not all([token_type, access_token, refresh_token, expiry_time]):
             print("Error: Tidal auth tokens not found...")
             raise ValueError("Missing Tidal authentication")
-
         print("TidalActionAgent: Authenticating with Tidal...")
         try:
             self.session.load_oauth_session(
@@ -42,71 +41,51 @@ class RealTidalClient:
             print(f"Failed to authenticate with Tidal: {e}")
             raise
 
-    # --- find_album_id (UPGRADED) ---
     def find_album_id(self, artist, album_to_find):
-        """
-        Searches Tidal and intelligently finds the best match.
-        Returns a dictionary with match details.
-        """
         print(f"  > Searching Tidal for: '{album_to_find}' by '{artist}'...")
         try:
             search_results = self.session.search(f"{artist} {album_to_find}", models=[tidalapi.Album])
-            
             if not search_results or not search_results['albums']:
                 return {"id": None, "status": "NOT_FOUND", "title": album_to_find, "score": 0}
-
             best_match = None
             highest_score = 0
-
-            for tidal_album in search_results['albums'][:5]: # Check top 5 results
-                # Use a robust fuzzy match
+            for tidal_album in search_results['albums'][:5]:
                 score = fuzz.token_sort_ratio(album_to_find, tidal_album.name)
-                
-                # Boost score if artist matches exactly
                 if tidal_album.artist.name.lower() == artist.lower():
                     score += 10
-                
                 if score > highest_score:
                     highest_score = score
                     best_match = tidal_album
-
             if highest_score > FUZZY_MATCH_THRESHOLD:
                 return {
                     "id": best_match.id,
                     "status": "FUZZY_MATCH" if highest_score < 98 else "EXACT_MATCH",
-                    "title": best_match.name, # The title Tidal *actually* found
+                    "title": best_match.name,
                     "score": highest_score
                 }
-            
             return {"id": None, "status": "NOT_FOUND", "title": album_to_find, "score": 0}
-
         except Exception as e:
             print(f"  > Error searching for album: {e}")
             return {"id": None, "status": "ERROR", "title": str(e), "score": 0}
 
-    # --- like_album (No Changes) ---
     def like_album(self, album_id, artist, album):
         print(f"  > ACTION: 'Liking' album (ID: {album_id}) - '{album}' by '{artist}'")
         self.session.user.favorites.add_album(album_id)
 
-    # --- add_album_to_playlist (UPGRADED) ---
     def add_album_to_playlist(self, album_id, artist, album, playlist_name):
         print(f"  > ACTION: Adding to playlist '{playlist_name}' (ID: {album_id}) - '{album}' by '{artist}'")
         album_object = self.session.album(album_id)
         tracks = album_object.tracks()
         track_ids = [track.id for track in tracks]
-        
         playlist_id = None
         for pl in self.session.user.playlists():
             if pl.name == playlist_name:
                 playlist_id = pl.id
                 break
-        
         if not playlist_id:
             print(f"  > Playlist '{playlist_name}' not found. Creating it...")
             new_pl = self.session.user.create_playlist(playlist_name, "Created by my AI agent.")
             playlist_id = new_pl.id
-
         playlist = self.session.playlist(playlist_id)
         playlist.add(track_ids)
         print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
@@ -114,58 +93,66 @@ class RealTidalClient:
 # --- process_album_action (UPGRADED) ---
 def process_album_action(tidal_client, album_data):
     """
-    Processes a single album and returns a detailed log tuple.
-    (status, original_title, found_title, ai_score)
+    Processes a single album and returns a detailed log tuple:
+    (status, artist, original_title, found_title, ai_score)
     """
-    artist = album_data.get('artist')
-    album_to_find = album_data.get('album')
+    artist = album_data.get('artist', 'Unknown')
+    album_to_find = album_data.get('album', 'Unknown')
     decision = album_data.get('decision')
     ai_score = album_data.get('relevance_score', 0)
     
     if not artist or not album_to_find:
-        return ("SKIPPED_INVALID", f"Invalid data: {album_data}", "", ai_score)
+        return ("SKIPPED_INVALID", artist, f"Invalid data: {album_data}", "", ai_score)
 
     match_info = tidal_client.find_album_id(artist, album_to_find)
     
     if match_info["status"] == "NOT_FOUND":
-        return ("NOT_FOUND", album_to_find, "", ai_score)
+        return ("NOT_FOUND", artist, album_to_find, "", ai_score)
     if match_info["status"] == "ERROR":
-        return ("ERROR", album_to_find, match_info['title'], ai_score)
+        return ("ERROR", artist, album_to_find, match_info['title'], ai_score)
 
-    # We have a match!
     album_id = match_info["id"]
     found_title = match_info["title"]
-    match_status = match_info["status"] # "EXACT_MATCH" or "FUZZY_MATCH"
+    match_status = match_info["status"]
     
     try:
         if decision == "LIKE_IMMEDIATELY":
             tidal_client.like_album(album_id, artist, found_title)
-            return ("LIKED_" + match_status, album_to_find, found_title, ai_score)
-            
+            return ("LIKED_" + match_status, artist, album_to_find, found_title, ai_score)
         elif decision == "ADD_TO_PLAYLIST":
             tidal_client.add_album_to_playlist(album_id, artist, found_title, playlist_name=PLAYLIST_NAME)
-            return ("ADDED_" + match_status, album_to_find, found_title, ai_score)
-            
+            return ("ADDED_" + match_status, artist, album_to_find, found_title, ai_score)
     except Exception as e:
         print(f"  > Error during Tidal action: {e}")
-        return ("ERROR", album_to_find, str(e), ai_score)
+        return ("ERROR", artist, album_to_find, str(e), ai_score)
     
-    return ("UNKNOWN", album_to_find, "", ai_score)
+    return ("UNKNOWN", artist, album_to_find, "", ai_score)
 
-
-# --- generate_html_report (UPGRADED) ---
+# --- generate_html_report (HEAVILY UPGRADED) ---
 def generate_html_report(actions_list):
     print(f"  > Generating HTML report...")
 
-    # Helper function to format list items
-    def format_li(status, original, found, score):
+    # --- NEW: Read harvester log ---
+    try:
+        with open(HARVESTER_LOG_PATH, 'r') as f:
+            harvester_log = json.load(f)
+    except Exception:
+        harvester_log = []
+
+    # --- Helper function to format list items (UPGRADED) ---
+    def format_li(status, artist, original, found, score):
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
-        if status in ["NOT_FOUND", "SKIPPED_INVALID", "ERROR"]:
-            return f"<li><b>{original}</b> {score_html}</li>"
+        
+        # This is for "Not Found" or "Error"
+        if not found:
+            return f"<li><b>{artist} - {original}</b> {score_html}</li>"
+        
+        # This is for "Fuzzy Matches"
         if "FUZZY" in status:
-            return f"<li><b>{original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span></li>"
-        # Exact Match
-        return f"<li><b>{found}</b> {score_html}</li>"
+            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span></li>"
+        
+        # This is for "Exact Matches"
+        return f"<li><b>{artist} - {found}</b> {score_html}</li>"
 
     # Separate actions by type
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
@@ -174,6 +161,13 @@ def generate_html_report(actions_list):
     added_fuzzy = [format_li(*a) for a in actions_list if a[0] == "ADDED_FUZZY_MATCH"]
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
+
+    # --- NEW: Build Harvester Log HTML ---
+    harvester_errors = [l for l in harvester_log if l['status'] == 'error']
+    harvester_success = [l for l in harvester_log if l['status'] == 'success']
+
+    harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&nbsp;&nbsp;↳ {h['message']}</span></li>" for h in harvester_errors])
+    harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&nbsp;↳ {h['message']}</li>" for h in harvester_success])
 
     html = f"""
     <!DOCTYPE html>
@@ -191,40 +185,52 @@ def generate_html_report(actions_list):
             li {{ background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; }}
             .score {{ float: right; color: #586069; font-size: 0.9em; }}
             .fuzzy {{ color: #b08800; font-size: 0.9em; }}
-            .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
+            .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
         </style>
     </head>
     <body>
         <h1>🎵 Music Agent Report</h1>
         <p>Last run: {time.ctime()}</p>
 
+        <h2 class="error">🌐 Source Harvester Errors ({len(harvester_errors)})</h2>
+        <p>These sites failed to load. We need to fix the URLs or remove them from <code>sources.json</code>.</p>
+        <ul>
+            {harvester_error_html or "<li>None</li>"}
+        </ul>
+
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
         <p>These albums passed the AI filter but could not be found on Tidal.</p>
         <ul>
-            {''.join(not_found) or "<li>None</li>"}
+            {not_found or "<li>None</li>"}
         </ul>
 
-        <h2 class="error">❌ Errors ({len(errors)})</h2>
-        <p>These albums were found but a system error occurred during the action.</p>
+        <h2 class="error">❌ Tidal API Errors ({len(errors)})</h2>
+        <p>These albums were found, but a system error occurred during the Tidal action.</p>
         <ul>
-            {''.join(errors) or "<li>None</li>"}
+            {errors or "<li>None</li>"}
         </ul>
 
         <h2>⭐ Albums Liked ({len(liked_exact) + len(liked_fuzzy)})</h2>
         <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores.</p>
         <ul>
-            {''.join(liked_exact)}
-            {''.join(liked_fuzzy)}
+            { ''.join(liked_exact) }
+            { ''.join(liked_fuzzy) }
             {'<li>None</li>' if not (liked_exact or liked_fuzzy) else ''}
         </ul>
 
         <h2>🎶 Added to 'Weekly Discovery' ({len(added_exact) + len(added_fuzzy)})</h2>
         <p>These albums were also recommended by the AI and added to your playlist.</p>
         <ul>
-            {''.join(added_exact)}
-            {''.join(added_fuzzy)}
+            { ''.join(added_exact) }
+            { ''.join(added_fuzzy) }
             {'<li>None</li>' if not (added_exact or added_fuzzy) else ''}
+        </ul>
+
+        <h2>✅ Source Harvester Success ({len(harvester_success)})</h2>
+        <p>These sites were successfully scanned for content.</p>
+        <ul>
+            {harvester_success_html or "<li>None</li>"}
         </ul>
     </body>
     </html>
@@ -238,7 +244,7 @@ def generate_html_report(actions_list):
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Main Function (UPGRADED) ---
+# --- Main Function (UPDATED) ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
@@ -256,7 +262,6 @@ def take_tidal_actions():
         print(f"Note: Filtered albums file not found or empty. No actions to take.")
         filtered_albums = []
     
-    # --- "MAX 5" LOGIC ---
     albums_to_like = [a for a in filtered_albums if a.get('decision') == 'LIKE_IMMEDIATELY']
     albums_to_playlist = [a for a in filtered_albums if a.get('decision') == 'ADD_TO_PLAYLIST']
     albums_to_like.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
@@ -265,9 +270,8 @@ def take_tidal_actions():
     if len(albums_to_like) > MAX_LIKED_ALBUMS_PER_RUN:
         print(f"  > Capping 'Like' list from {len(albums_to_like)} to the top {MAX_LIKED_ALBUMS_PER_RUN} most relevant.")
         albums_to_like = albums_to_like[:MAX_LIKED_ALBUMS_PER_RUN]
-    # --- END ---
 
-    actions_list_for_report = [] # This now holds tuples: (status, original, found, ai_score)
+    actions_list_for_report = [] 
     
     print(f"\n--- Processing {len(albums_to_like)} 'Like' Actions ---")
     for album_data in albums_to_like:
@@ -279,14 +283,12 @@ def take_tidal_actions():
         action_result_tuple = process_album_action(tidal_client, album_data)
         actions_list_for_report.append(action_result_tuple)
 
-    # --- Log to text file ---
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
-        for status, original, found, score in actions_list_for_report:
-            f.write(f"[{status}] (Score: {score}) | Looking for: '{original}' | Found: '{found}'\n")
+        for status, artist, original, found, score in actions_list_for_report:
+            f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}'\n")
     
-    # --- Generate HTML Report ---
     generate_html_report(actions_list_for_report)
     
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
