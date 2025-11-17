@@ -47,6 +47,54 @@ def parse_pitchfork(html_content, source_name):
     print(f"  > Found {len(albums_found)} albums on Pitchfork.")
     return albums_found
 
+def parse_rolling_stone(html_content, source_name):
+    """
+    Parses the Rolling Stone /music-album-reviews/ page HTML
+    and extracts artist and album names.
+    """
+    print(f"  > Running Rolling Stone-specific parser...")
+    albums_found = []
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Rolling Stone often wraps reviews in 'article' tags or 'div's
+    # with specific 'l-row' or 'c-card' classes.
+    # We'll try to find the 'cards' by looking for the artist name's class.
+    
+    # Find all the 'p' tags with class 'c-kicker' (which often holds the artist)
+    artist_tags = soup.find_all('p', class_='c-kicker')
+    
+    if not artist_tags:
+        print("  > No artist tags ('c-kicker') found. (HTML structure might have changed or be dynamic?)")
+        return []
+
+    for artist_tag in artist_tags:
+        try:
+            # The artist name is the text of this tag
+            artist_name = artist_tag.get_text(strip=True)
+            
+            # The album title is *usually* in an 'h3' tag with class 'c-title'
+            # that is a sibling or near parent/sibling of the artist tag.
+            # We'll find the common parent 'article'
+            parent_card = artist_tag.find_parent('article')
+            if not parent_card:
+                # If no 'article', try to find the row
+                parent_card = artist_tag.find_parent('div', class_='l-row')
+
+            album_title_tag = parent_card.find('h3', class_='c-title')
+            
+            if artist_name and album_title_tag:
+                album_title = album_title_tag.get_text(strip=True)
+                albums_found.append({
+                    "artist": artist_name,
+                    "album": album_title,
+                    "source": source_name
+                })
+        except AttributeError:
+            # Skip this card if the structure is not what we expect
+            continue
+            
+    print(f"  > Found {len(albums_found)} albums on Rolling Stone.")
+    return albums_found
 
 # --- Main Function ---
 def harvest_new_albums():
@@ -82,12 +130,11 @@ def harvest_new_albums():
             
             albums = [] # Initialize our list for this source
             
-            if "pitchfork.com" in source_url:
+           if "pitchfork.com" in source_url:
                 albums = parse_pitchfork(response.text, source_name)
                 
             elif "rollingstone.com" in source_url:
-                # We'll build this one next
-                print(f"Note: 'Rolling Stone' parser not yet implemented.")
+                albums = parse_rolling_stone(response.text, source_name)
             
             else:
                 print(f"Note: No specific parser for this source: {source_name}")
