@@ -44,7 +44,7 @@ jobs:
       - name: Commit and Push Data
         run: |
           if [ -d "data" ]; then
-            git add data/
+            git add -f data/
             if ! git diff-index --quiet HEAD; then
               git commit -m "Automated data run - $(date)"
               git push
