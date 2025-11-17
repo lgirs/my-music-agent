@@ -1,1 +1,23 @@
-[]
+[
+  {
+    "artist": "Danny Brown",
+    "album": "Stardust",
+    "relevance_score": 88,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "The description of Danny Brown as a 'hip-hop wildcard' who 'mixes jarring beats' strongly aligns with your occasional interest in hip hop/rap, especially when it features artistic merit and innovative sounds. 'Jarring' suggests a non-standard approach, which could offer inspiration for new musical ideas."
+  },
+  {
+    "artist": "Rosal\u00eda",
+    "album": "Lux",
+    "relevance_score": 92,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Described as 'Pop\u2019s most provocative chaos agent' delivering a 'transcendent album that sounds like nothing else in music right now,' this strongly indicates high artistic value and innovation. Even within the context of pop music, this level of uniqueness and provocation aligns perfectly with your criteria for artistic merit and seeking inspiration for new musical ideas."
+  },
+  {
+    "artist": "Florence + the Machine",
+    "album": "Everybody Scream",
+    "relevance_score": 89,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "The description highlights a 'primal scream' and turning 'a painful experience into an artistic triumph,' indicating strong emotional depth and artistic merit. Florence + the Machine's style often incorporates elements of alternative and stadium rock, which you enjoy, and the focus on artistic purpose aligns perfectly with your criteria that music is important as such and should provide inspiration."
+  }
+]
