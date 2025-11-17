@@ -9,7 +9,6 @@ on:
 
 jobs:
   run-music-agent:
-    # This block fixes the "Error 403"
     permissions:
       contents: write
       
@@ -45,8 +44,11 @@ jobs:
       - name: Commit and Push Data
         run: |
           if [ -d "data" ]; then
-            # This '-f' (force) fixes the .gitignore error
             git add -f data/
+            # --- ADD THIS LINE ---
+            git add -f data/index.html
+            # --- END ADDED LINE ---
+            
             if ! git diff-index --quiet HEAD; then
               git commit -m "Automated data run - $(date)"
               git push
