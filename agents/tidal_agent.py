@@ -16,7 +16,7 @@ PLAYLIST_NAME = "Weekly Discovery"
 MAX_LIKED_ALBUMS_PER_RUN = 5 
 FUZZY_MATCH_THRESHOLD = 85
 
-# --- RealTidalClient Class (No Changes) ---
+# --- RealTidalClient Class ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
@@ -42,6 +42,7 @@ class RealTidalClient:
             raise
 
     def find_album_id(self, artist, album_to_find):
+        """Searches Tidal and intelligently finds the best match."""
         print(f"  > Searching Tidal for: '{album_to_find}' by '{artist}'...")
         try:
             search_results = self.session.search(f"{artist} {album_to_find}", models=[tidalapi.Album])
@@ -69,10 +70,12 @@ class RealTidalClient:
             return {"id": None, "status": "ERROR", "title": str(e), "score": 0}
 
     def like_album(self, album_id, artist, album):
+        """'Likes' an album by adding it to favorites."""
         print(f"  > ACTION: 'Liking' album (ID: {album_id}) - '{album}' by '{artist}'")
         self.session.user.favorites.add_album(album_id)
 
     def add_album_to_playlist(self, album_id, artist, album, playlist_name):
+        """Adds all tracks from an album to a specified playlist."""
         print(f"  > ACTION: Adding to playlist '{playlist_name}' (ID: {album_id}) - '{album}' by '{artist}'")
         album_object = self.session.album(album_id)
         tracks = album_object.tracks()
@@ -90,7 +93,7 @@ class RealTidalClient:
         playlist.add(track_ids)
         print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
 
-# --- process_album_action (No Changes) ---
+# --- process_album_action ---
 def process_album_action(tidal_client, album_data):
     """
     Processes a single album and returns a detailed log tuple:
@@ -140,15 +143,23 @@ def generate_html_report(actions_list):
     except Exception:
         harvester_log = []
 
+    # Helper function to format list items
     def format_li(status, artist, original, found, score, reasoning):
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
         reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
+        
+        # This is for "Not Found" or "Error"
         if not found:
             return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>"
+        
+        # This is for "Fuzzy Matches"
         if "FUZZY" in status:
             return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
+        
+        # This is for "Exact Matches"
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
+    # Separate actions by type
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
     liked_fuzzy = [format_li(*a) for a in actions_list if a[0] == "LIKED_FUZZY_MATCH"]
     added_exact = [format_li(*a) for a in actions_list if a[0] == "ADDED_EXACT_MATCH"]
@@ -156,6 +167,7 @@ def generate_html_report(actions_list):
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
 
+    # Separate harvester logs by type
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
 
@@ -196,28 +208,28 @@ def generate_html_report(actions_list):
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
         <p>These albums passed the AI filter but could not be found on Tidal.</p>
         <ul>
-            {''**.**join(not_found) or "<li>None</li>"}
+            {""**.**join(not_found) or "<li>None</li>"}
         </ul>
 
         <h2 class="error">❌ Tidal API Errors ({len(errors)})</h2>
         <p>These albums were found, but a system error occurred during the Tidal action.</p>
         <ul>
-            {''**.**join(errors) or "<li>None</li>"}
+            {""**.**join(errors) or "<li>None</li>"}
         </ul>
 
         <h2>⭐ Albums Liked ({len(liked_exact) + len(liked_fuzzy)})</h2>
         <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores.</p>
         <ul>
-            {''**.**join(liked_exact)}
-            {''**.**join(liked_fuzzy)}
+            {""**.**join(liked_exact)}
+            {""**.**join(liked_fuzzy)}
             {'<li>None</li>' if not (liked_exact or liked_fuzzy) else ''}
         </ul>
 
         <h2>🎶 Added to 'Weekly Discovery' ({len(added_exact) + len(added_fuzzy)})</h2>
         <p>These albums were also recommended by the AI and added to your playlist.</p>
         <ul>
-            {''**.**join(added_exact)}
-            {''**.**join(added_fuzzy)}
+            {""**.**join(added_exact)}
+            {""**.**join(added_fuzzy)}
             {'<li>None</li>' if not (added_exact or added_fuzzy) else ''}
         </ul>
 
@@ -238,7 +250,7 @@ def generate_html_report(actions_list):
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Main Function (No Changes) ---
+# --- Main Function ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
