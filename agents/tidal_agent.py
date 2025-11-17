@@ -3,7 +3,7 @@ import os
 import time
 from dotenv import load_dotenv
 from tidalapi import Session, Quality
-import tidalapi # <-- THIS IS THE FIX.
+import tidalapi
 
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
@@ -15,9 +15,6 @@ PLAYLIST_NAME = "Weekly Discovery"
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
-        # This is the tricky part - loading the auth
-        # You'll need to run an auth script locally *once*
-        # to get these values.
         token_type = os.getenv("TIDAL_TOKEN_TYPE")
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
         refresh_token = os.getenv("TIDAL_REFRESH_TOKEN")
@@ -29,7 +26,6 @@ class RealTidalClient:
 
         print("TidalActionAgent: Authenticating with Tidal...")
         try:
-            # Load the session from the saved tokens
             self.session.load_oauth_session(
                 token_type=token_type,
                 access_token=access_token,
@@ -46,10 +42,12 @@ class RealTidalClient:
         """Searches Tidal for an album and returns its ID."""
         print(f"  > Searching Tidal for: '{album}' by '{artist}'...")
         try:
-            # Search for the album
+            # --- THIS IS THE FIX ---
+            # It's 'tidalapi.Album', not 'tidalapi.model.Album'
             search_results = self.session.search(f"{artist} {album}", models=[tidalapi.Album])
+            # --- END FIX ---
+            
             if search_results and search_results['albums']:
-                # Assume the first result is the best match
                 first_album = search_results['albums'][0]
                 print(f"  > Found album ID: {first_album.id}")
                 return first_album.id
@@ -71,24 +69,20 @@ class RealTidalClient:
         """Adds all tracks from an album to a specified playlist."""
         print(f"  > ACTION: Adding to playlist '{playlist_name}' (ID: {album_id}) - '{album}' by '{artist}'")
         try:
-            # 1. Get the album's tracks
             tracks = self.session.albums.tracks(album_id)
             track_ids = [track.id for track in tracks]
             
-            # 2. Find the playlist ID by name
             playlist_id = None
             for pl in self.session.user.playlists():
                 if pl.name == playlist_name:
                     playlist_id = pl.id
                     break
             
-            # 3. If playlist doesn't exist, create it
             if not playlist_id:
                 print(f"  > Playlist '{playlist_name}' not found. Creating it...")
                 new_pl = self.session.user.create_playlist(playlist_name, "Created by my AI agent.")
                 playlist_id = new_pl.id
 
-            # 4. Add tracks to the playlist
             playlist = self.session.playlists.get(playlist_id)
             playlist.add(track_ids)
             print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
@@ -105,9 +99,8 @@ def take_tidal_actions():
         tidal_client = RealTidalClient()
     except Exception as e:
         print(f"Could not start Tidal agent. Exiting. Error: {e}")
-        return # Exit if we can't log in
+        return
 
-    # Load the filtered albums list
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
             filtered_albums = json.load(f)
@@ -122,6 +115,10 @@ def take_tidal_actions():
         album = album_data.get('album')
         decision = album_data.get('decision')
         
+        if not artist or not album:
+            print(f"  > Skipping invalid entry: {album_data}")
+            continue
+
         album_id = tidal_client.find_album_id(artist, album)
         if not album_id:
             print(f"  > Could not find '{album}' on Tidal. Skipping.")
@@ -141,9 +138,8 @@ def take_tidal_actions():
             print(f"  > Error during Tidal action: {e}")
             actions_taken.append(f"ERROR: '{album}' by '{artist}' - {e}")
 
-    # Log our actions
     os.makedirs(OUTPUT_DIR, exist_ok=True)
-    with open(LOG_FILE_PATH, 'a') as f: # 'a' means append to the log
+    with open(LOG_FILE_PATH, 'a') as f:
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
         for action in actions_taken:
             f.write(f"{action}\n")
@@ -151,6 +147,5 @@ def take_tidal_actions():
     print(f"\nTidalActionAgent: Run complete. Processed {len(filtered_albums)} albums.")
     print(f"Actions logged to {LOG_FILE_PATH}")
 
-# --- Run the script ---
 if __name__ == "__main__":
     take_tidal_actions()
