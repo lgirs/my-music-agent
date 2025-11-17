@@ -125,12 +125,12 @@ def harvest_new_albums():
             # Raise an error if the request failed
             response.raise_for_status() 
             
-           # 3. Parse the HTML (THE HARD PART)
-            # We pass the HTML content to a specific parsing function
+            # 3. Parse the HTML (THE HARD PART)
+            # This block is now correctly indented inside the 'try'
             
             albums = [] # Initialize our list for this source
             
-           if "pitchfork.com" in source_url:
+            if "pitchfork.com" in source_url:
                 albums = parse_pitchfork(response.text, source_name)
                 
             elif "rollingstone.com" in source_url:
