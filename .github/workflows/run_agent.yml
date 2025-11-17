@@ -9,7 +9,11 @@ on:
 
 jobs:
   run-music-agent:
-    runs-on: ubuntu-latest
+    # --- ADD THIS BLOCK ---
+    permissions:
+      contents: write # Give the job permission to write to the repo
+    # --- END BLOCK ---
+    runs-on: ubuntu-latest    runs-on: ubuntu-latest
     steps:
       - name: Check out code
         uses: actions/checkout@v4
