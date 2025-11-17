@@ -1,0 +1,102 @@
+### AI Agent Research Prompt: Monthly Music Release Source Curation
+
+**TASK NAME:** Monthly Album Release Media Source Audit & Curation
+
+**SCHEDULE:** Execute on the 1st Tuesday of every calendar month.
+
+**OBJECTIVE:** To audit, refine, and update the provided curated list of 30 music journalism sources (15 Established Pillars and 15 Independent Pulse) to ensure maximum relevance for automated album release harvesting, scoring, and streaming application updating. The entire final output **must be a single JSON object** conforming to the specified schema.
+
+-----
+
+### I. Methodology & Criteria
+
+The agent must use the established **Artistic Relevancy Scoring Model (ARSM)** to evaluate each source. This model prioritizes the discovery of albums with high Artistic Merit, covering the user's core tastes (e.g., Psychedelic, Progressive, Post-Punk, various Metal subgenres, Folk, Experimental, Indie Rock).
+
+**ARSM Factors and Weights:**
+
+| Factor | Description | Weight | Action on Source Audit |
+| :--- | :--- | :--- | :--- |
+| **Genre Specificity Index (GSI)** | How focused the site is on niche genres (10 = highly specific metal/punk site; 1 = all-genre aggregation). | **20%** | Audit genre drift. |
+| **Critical Depth & Review Quality (CDQ)** | The length, analysis, and intellectual rigor of the reviews. | **30%** | Evaluate review quality and depth. |
+| **Longevity & Cultural Credibility (LCC)** | The site's history and respect within the music industry/scene. | **15%** | Verify activity and cultural standing. |
+| **Editorial Independence (EI)** | The perceived separation from major label/corporate influence. | **20%** | Check for shifts in ownership or funding. |
+| **Tech Feasibility (TF)** | The ease with which an automated system can scrape album release data (e.g., clear release date listings, structured pages, standard review format). | **15%** | Verify ease of automated data harvesting. |
+
+**Calculation:** The `Relevancy_Score` is calculated as the weighted average of the five factors (each on a 1-10 scale).
+
+-----
+
+### II. Output Format (Mandatory JSON Schema)
+
+The final output MUST be a single JSON array containing 30 objects, one for each source, adhering strictly to the following structure and attributes. The calculated scores must be rounded to one decimal place.
+
+```json
+[
+  {
+    "Source_Name": "Name of the Publication/Blog",
+    "URL": "The primary, working URL for the site's review/news section",
+    "Tier": "Tier I" or "Tier II",
+    "Primary_Genre_Focus": "A brief summary of the main genres covered (e.g., Extreme Metal, Indie Pop, Americana)",
+    "Key_Critical_Strength": "What makes this source valuable (e.g., Ultimate Genre Authority, Early Discovery, Quantitative Consensus)",
+    "GSI": 9,
+    "CDQ": 8,
+    "LCC": 7,
+    "EI": 9,
+    "TF": 7,
+    "Relevancy_Score": 8.4
+  },
+  ... (29 more objects)
+]
+```
+
+-----
+
+### III. Source Audit & Curation Instructions
+
+The agent must audit the current 30 sources (listed below) and perform the following actions:
+
+1.  **URL and Status Check:** Verify that the provided URL is active and still functions as a source of music criticism/release news. Update the URL if a more accurate or newer address is found.
+2.  **ARSM Score Adjustment:** Re-evaluate and adjust the 5 ARSM factor scores (GSI, CDQ, LCC, EI, TF) based on any changes in the source's content, focus, or technical structure over the last month.
+3.  **Calculate Relevancy Score:** Recalculate the `Relevancy_Score` for all 30 sources.
+4.  **Source Replacement (Mandatory):** Two sources have been identified as defunct or incorrect. **The agent MUST replace these two sources with new, highly relevant Tier II sources** that focus on independent, obscure, or niche genres relevant to the user's taste (e.g., underground noise, krautrock, experimental electronic, DIY hardcore).
+
+**Replacement Search Queries for Agent:**
+
+  * `Find a current, highly independent music criticism blog focused on experimental electronic or psychedelic rock.`
+  * `Find a current, respected DIY music blog focused on underground noise, post-punk, or obscure metal subgenres.`
+
+**The 30 Sources to Audit (Use this list as your starting data structure):**
+
+| Source Name | Tier | URL | Primary Genre Focus | Key Critical Strength | GSI | CDQ | LCC | EI | TF | Relevancy Score |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **Established Pillars (Tier I)** | | | | | | | | | | |
+| Decibel Magazine | Tier I | `https://www.decibelmagazine.com/` | Extreme Metal (Death, Black, Grind) | Ultimate Genre Authority, Depth | 10 | 9 | 9 | 8 | 7 | 9.0 |
+| Twangville | Tier I | `https://twangville.com/` | Americana, Roots, Folk | Niche Curation, Listener-focused | 9 | 8 | 7 | 9 | 7 | 8.3 |
+| Revolver Magazine | Tier I | `https://www.revolvermag.com/` | Metal, Hardcore, Industrial | Scene Reporting, Aesthetic Focus | 8 | 7 | 9 | 7 | 8 | 7.9 |
+| Pitchfork | Tier I | `https://pitchfork.com/` | Indie, Experimental, Pop | Cultural Barometer, Long-form Analysis | 6 | 9 | 10 | 7 | 9 | 8.4 |
+| Sputnikmusic | Tier I | `https://www.sputnikmusic.com/` | Progressive, Alternative, User-Driven | High Volume, Community-Based Scores | 7 | 7 | 8 | 8 | 8 | 7.6 |
+| Louder Sound | Tier I | `https://www.loudersound.com/` | Hard Rock, Metal, Prog (Classic Focus) | Deep Genre Expertise, Print Heritage | 8 | 8 | 10 | 7 | 8 | 8.2 |
+| Drowned in Sound | Tier I | `https://drownedinsound.com/` | Indie, Electronic (UK/EU Focus) | Thoughtful Curation, Long-form | 7 | 8 | 9 | 8 | 6 | 7.9 |
+| AllMusic | Tier I | `https://www.allmusic.com/` | Extensive Catalog, Retrospective | Historical Context, Database Quality | 5 | 8 | 10 | 8 | 9 | 8.2 |
+| Metal Temple | Tier I | `https://metal-temple.com/` | European/Power Metal, General Metal | Consistent Output, International Scope | 9 | 7 | 8 | 8 | 7 | 8.0 |
+| Consequence of Sound | Tier I | `https://consequence.net/` | Multi-Genre, News Focus | Timeliness, Broad Industry Coverage | 5 | 7 | 9 | 7 | 9 | 7.6 |
+| Blabbermouth | Tier I | `https://www.blabbermouth.net/` | Metal News, Gossip | Speed of News, Industry Pulse | 9 | 6 | 9 | 7 | 8 | 7.9 |
+| Loudwire | Tier I | `https://loudwire.com/` | Hard Rock, Heavy Metal | High Volume News, Mainstream Metal | 9 | 7 | 8 | 6 | 9 | 7.9 |
+| RateYourMusic (RYM) | Tier I | `https://www.rateyourmusic.com/` | All Genres (User-Driven) | Comprehensive Database, Sub-genre Tags | 1 | 6 | 9 | 9 | 10 | 7.8 |
+| AltCorner | Tier I | `https://altcorner.com/` | Pop Punk, Emo, Alternative | Emerging Scene, Youth Focus | 8 | 7 | 6 | 8 | 8 | 7.7 |
+| Metacritic (Music) | Tier I | `https://www.metacritic.com/music/` | All Genres (Aggregation) | Quantitative Consensus | 1 | 8 | 9 | 9 | 10 | 7.9 |
+| **Independent Pulse (Tier II)** | | | | | | | | | | |
+| Angry Metal Guy | Tier II | `https://www.angrymetalguy.com/` | Extreme Metal, Technical Metal | Humorous, Deeply Opinionated | 9 | 8 | 7 | 9 | 7 | 8.4 |
+| Invisible Oranges | Tier II | `https://www.invisibleoranges.com/` | Black Metal, Doom Metal | Culturally Engaged, High Quality Writing | 9 | 8 | 8 | 8 | 7 | 8.5 |
+| Heavy Blog is Heavy (HBIH) | Tier II | `https://www.heavyblogisheavy.com/` | Progressive Metal, Djent, Post-Metal | Forward-Thinking, Niche Discovery | 9 | 8 | 7 | 8 | 7 | 8.1 |
+| KEXP Blog/Reviews | Tier II | `https://www.kexp.org/read/` | Indie, Eclectic, Pacific Northwest | Curatorial Authority, Radio Backing | 5 | 8 | 8 | 9 | 8 | 7.9 |
+| Maximum Rocknroll (MRR) | Tier II | `https://maximumrocknroll.com/` | Global Punk, Hardcore | DIY Ethos, Historical Significance | 10 | 8 | 9 | 10 | 4 | 8.9 |
+| Profane Existence | Tier II | `https://profaneexistence.com/` | Punk, Crust, DIY Hardcore | Political Edge, Scene Focus | 10 | 7 | 8 | 10 | 5 | 8.7 |
+| Aquarium Drunkard | Tier II | `https://aquariumdrunkard.com/` | Psych, Folk, Jazz, Obscure Reissues | Deep Curation, Historical Liner Notes | 8 | 9 | 8 | 8 | 7 | 8.4 |
+| The Toilet Ov Hell | Tier II | `http://www.toiletovhell.com/` | Underground Metal, Grind | Satirical, Community-Driven | 10 | 7 | 6 | 9 | 7 | 8.2 |
+| Distorted Sound Magazine | Tier II | `https://distortedsoundmag.com/` | Rock, Metal, Alternative (UK Based) | High Volume, UK/European Scene | 8 | 7 | 6 | 7 | 8 | 7.6 |
+| Illustrate Magazine | Tier II | `https://illustratemagazine.com/` | Emerging Indie, Singer-Songwriter | Artist Interviews, New Release Focus | 6 | 7 | 5 | 8 | 7 | 7.2 |
+| Gorilla vs. Bear | Tier II | `http://www.gorillavsbear.net/` | Indie Pop, Electronic, Hype | Early Discovery, Aesthetic Focus | 7 | 7 | 8 | 8 | 7 | 7.7 |
+| Portals | Tier II | `https://www.portalsrock.com/blog-news` | Experimental, Math-Rock, Post-Rock | Niche/Festival-driven, Intellectual | 9 | 8 | 6 | 7 | 7 | 7.8 |
+| **We are the Last Beatniks** | Tier II | `[REPLACE - SEARCH FOR SUITABLE ALTERNATIVE]` | Obscure, Garage, Psych | Deep Curation | 8 | 7 | 5 | 8 | 5 | 7.4 |
+| **Nothing But A Nightmare** | Tier II | `[REPLACE - IDENTIFIED AS BAND - FIND MUSIC CRITICISM BLOG]` | Alternative, Pop Punk | Emerging Scene | 7 | 6 | 4 | 7 | 6 | 6.5 |
