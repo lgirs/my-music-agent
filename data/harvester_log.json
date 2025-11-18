@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4855 chars"
+    "message": "Fetched 4891 chars"
   },
   {
     "status": "error",
@@ -17,7 +17,7 @@
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4586 chars"
+    "message": "Fetched 4434 chars"
   },
   {
     "status": "error",
@@ -37,7 +37,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5191 chars"
+    "message": "Fetched 5214 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 979 chars"
+    "message": "Fetched 993 chars"
   },
   {
     "status": "success",
@@ -62,7 +62,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7698 chars"
+    "message": "Fetched 7784 chars"
   },
   {
     "status": "success",
@@ -97,7 +97,7 @@
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3250 chars"
+    "message": "Fetched 3336 chars"
   },
   {
     "status": "error",
@@ -122,6 +122,6 @@
   {
     "status": "error",
     "source": "Portals",
-    "message": "HTTPSConnectionPool(host='www.portalsmusic.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Found no text on page."
   }
 ]
