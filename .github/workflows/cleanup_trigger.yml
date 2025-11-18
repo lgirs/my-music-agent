@@ -1,26 +1,31 @@
 name: HITL Playlist Cleanup Trigger
 
-# This action is triggered manually (or via the POST request from the HTML dashboard)
 on:
-  # The inputs block must be correctly indented under workflow_dispatch
   workflow_dispatch:
     inputs:
       artist:
-        description: 'Artist Name of the Album to Remove'
+        description: 'Artist Name'
         required: true
         type: string
       album:
-        description: 'Album Title to Remove'
+        description: 'Album Title'
         required: true
         type: string
       album_id:
-        description: 'Tidal Album ID (Numeric)'
+        description: 'Tidal Album ID'
         required: true
         type: string
+      action_type:
+        description: 'Action: REMOVE or PROMOTE'
+        required: true
+        default: 'REMOVE'
+        type: choice
+        options:
+        - REMOVE
+        - PROMOTE
 
 jobs:
-  remove-album:
-    # We need contents:write permission to commit the update to data/processed_albums.json
+  handle-album:
     permissions:
       contents: write 
       
@@ -42,34 +47,40 @@ jobs:
       - name: Run the Cleanup Agent
         run: python agents/cleanup_agent.py
         env:
-          # Pass the Tidal secrets securely
           TIDAL_TOKEN_TYPE: ${{ secrets.TIDAL_TOKEN_TYPE }}
           TIDAL_ACCESS_TOKEN: ${{ secrets.TIDAL_ACCESS_TOKEN }}
           TIDAL_REFRESH_TOKEN: ${{ secrets.TIDAL_REFRESH_TOKEN }}
           TIDAL_EXPIRY_TIME: ${{ secrets.TIDAL_EXPIRY_TIME }}
           
-          # Pass the user-provided inputs to the Python script
+          # Pass inputs to the script
           CLEANUP_ARTIST: ${{ github.event.inputs.artist }}
           CLEANUP_ALBUM: ${{ github.event.inputs.album }}
           CLEANUP_ALBUM_ID: ${{ github.event.inputs.album_id }}
+          CLEANUP_ACTION: ${{ github.event.inputs.action_type }}
 
       - name: Configure Git
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Commit and Push Exclusion Log
+      - name: Commit and Push Log Updates
         run: |
-          # The agent updates data/processed_albums.json which must be committed
           if [ -f "data/processed_albums.json" ]; then
             git add -f data/processed_albums.json
             
+            # Message changes based on action
+            if [ "${{ github.event.inputs.action_type }}" == "PROMOTE" ]; then
+               MSG="Promoted ${{ github.event.inputs.artist }} - ${{ github.event.inputs.album }}"
+            else
+               MSG="Excluded ${{ github.event.inputs.artist }} - ${{ github.event.inputs.album }}"
+            fi
+
             if ! git diff-index --quiet HEAD; then
-              git commit -m "Cleanup Agent: Excluded ${{ github.event.inputs.artist }} - ${{ github.event.inputs.album }}"
+              git commit -m "$MSG"
               git push
             else
-              echo "No changes to the exclusion log."
+              echo "No changes to the log file."
             fi
           else
-            echo "Exclusion log file not found. Ensure the main agent ran at least once."
+            echo "Log file not found."
           fi
