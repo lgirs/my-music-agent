@@ -10,9 +10,9 @@
     "message": "Fetched 4891 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Sputnikmusic",
-    "message": "404 Client Error: Not Found for url: https://www.sputnikmusic.com/albums/"
+    "message": "Fetched 3831 chars"
   },
   {
     "status": "success",
@@ -25,14 +25,14 @@
     "message": "Fetched 7460 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Metal Temple",
-    "message": "404 Client Error: Not Found for url: https://metal-temple.com/site/catalogues/reviews.php"
+    "message": "Fetched 12283 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5238 chars"
+    "message": "Fetched 5237 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 7032 chars"
+    "message": "Fetched 7030 chars"
   },
   {
     "status": "success",
@@ -80,9 +80,9 @@
     "message": "Fetched 283 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "404 Client Error: Not Found for url: https://aquariumdrunkard.com/category/album-reviews/"
+    "message": "Fetched 12622 chars"
   },
   {
     "status": "success",
@@ -95,33 +95,28 @@
     "message": "Fetched 3336 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Illustrate Magazine",
-    "message": "404 Client Error: Not Found for url: https://illustratemagazine.com/music-reviews/"
+    "message": "Fetched 8785 chars"
   },
   {
     "status": "success",
     "source": "We are the Last Beatniks",
-    "message": "Fetched 10898 chars"
+    "message": "Fetched 10873 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Nothing But A Nightmare",
-    "message": "404 Client Error: Not Found for url: https://www.nothingbutanightmare.com/reviews/"
+    "message": "Fetched 981 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "404 Client Error: Not Found for url: https://www.gorillavsbear.net/category/new-music/"
-  },
-  {
-    "status": "error",
-    "source": "Portals",
-    "message": "Found no text on page."
+    "message": "Fetched 5161 chars"
   },
   {
     "status": "error",
     "source": "RateYourMusic (RYM)",
-    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/"
+    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   }
 ]
