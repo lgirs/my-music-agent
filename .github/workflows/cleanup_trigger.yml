@@ -1,20 +1,75 @@
-# --- Entry Point for Manual/Future Workflow C Run (MODIFIED) ---
-if __name__ == "__main__":
-    print("CleanupAgent: Running in workflow mode...")
-    
-    # Read variables passed from the GitHub Action environment
-    artist = os.getenv("CLEANUP_ARTIST")
-    album = os.getenv("CLEANUP_ALBUM")
-    album_id = os.getenv("CLEANUP_ALBUM_ID")
+name: HITL Playlist Cleanup Trigger
 
-    if not all([artist, album, album_id]):
-        print("Error: Missing one or more required cleanup inputs (Artist, Album, Album ID).")
-        sys.exit(1)
+# This action is triggered manually (or via the POST request from the HTML dashboard)
+on:
+  # The inputs block must be correctly indented under workflow_dispatch
+  workflow_dispatch:
+    inputs:
+      artist:
+        description: 'Artist Name of the Album to Remove'
+        required: true
+        type: string
+      album:
+        description: 'Album Title to Remove'
+        required: true
+        type: string
+      album_id:
+        description: 'Tidal Album ID (Numeric)'
+        required: true
+        type: string
 
-    success = remove_album_from_playlist(artist, album, album_id, PLAYLIST_NAME)
-    
-    if success:
-        print(f"\nCleanupAgent: Successfully initiated removal for '{album}' by '{artist}'.")
-    else:
-        print(f"\nCleanupAgent: Failed to complete removal for '{album}' by '{artist}'.")
-        sys.exit(1)
+jobs:
+  remove-album:
+    # We need contents:write permission to commit the update to data/processed_albums.json
+    permissions:
+      contents: write 
+      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run the Cleanup Agent
+        run: python agents/cleanup_agent.py
+        env:
+          # Pass the Tidal secrets securely
+          TIDAL_TOKEN_TYPE: ${{ secrets.TIDAL_TOKEN_TYPE }}
+          TIDAL_ACCESS_TOKEN: ${{ secrets.TIDAL_ACCESS_TOKEN }}
+          TIDAL_REFRESH_TOKEN: ${{ secrets.TIDAL_REFRESH_TOKEN }}
+          TIDAL_EXPIRY_TIME: ${{ secrets.TIDAL_EXPIRY_TIME }}
+          
+          # Pass the user-provided inputs to the Python script
+          CLEANUP_ARTIST: ${{ github.event.inputs.artist }}
+          CLEANUP_ALBUM: ${{ github.event.inputs.album }}
+          CLEANUP_ALBUM_ID: ${{ github.event.inputs.album_id }}
+
+      - name: Configure Git
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+
+      - name: Commit and Push Exclusion Log
+        run: |
+          # The agent updates data/processed_albums.json which must be committed
+          if [ -f "data/processed_albums.json" ]; then
+            git add -f data/processed_albums.json
+            
+            if ! git diff-index --quiet HEAD; then
+              git commit -m "Cleanup Agent: Excluded ${{ github.event.inputs.artist }} - ${{ github.event.inputs.album }}"
+              git push
+            else
+              echo "No changes to the exclusion log."
+            fi
+          else
+            echo "Exclusion log file not found. Ensure the main agent ran at least once."
+          fi
