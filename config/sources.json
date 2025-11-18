@@ -21,8 +21,8 @@
       "website": "Sputnikmusic",
       "relevancy_score": 8.16,
       "genre_focus": "Progressive, Alternative, User-Driven",
-      "description": "Cross-genre review site. (FIXED URL to /albums/)",
-      "url": "https://www.sputnikmusic.com/albums/"
+      "description": "Cross-genre review site. (FIXED URL to /reviews/albums)",
+      "url": "https://www.sputnikmusic.com/reviews/albums"
     },
     {
       "category": "Established Pillars (Tier I)",
@@ -45,8 +45,8 @@
       "website": "Metal Temple",
       "relevancy_score": 7.69,
       "genre_focus": "Extreme Metal, News, History",
-      "description": "Pioneering metal journalism since 2000. (FIXED URL to .php)",
-      "url": "https://www.metal-temple.com/site/catalogues/reviews.php"
+      "description": "Pioneering metal journalism since 2000. (FIXED URL to /reviews/)",
+      "url": "https://metal-temple.com/reviews/"
     },
     {
       "category": "Established Pillars (Tier I)",
@@ -133,8 +133,8 @@
       "website": "Aquarium Drunkard",
       "relevancy_score": 8.78,
       "genre_focus": "Vintage Garage, Psych, Folk",
-      "description": "Excellent high-quality archival and niche curation. (FIXED URL)",
-      "url": "https://aquariumdrunkard.com/category/album-reviews/"
+      "description": "Excellent high-quality archival and niche curation. (FIXED URL to root)",
+      "url": "https://aquariumdrunkard.com/"
     },
     {
       "category": "Independent Pulse (Tier II)",
@@ -157,8 +157,8 @@
       "website": "Illustrate Magazine",
       "relevancy_score": 7.68,
       "genre_focus": "Art Rock, Eclectic, Singer-Songwriter",
-      "description": "Independent journal that often covers Art Rock. (FIXED URL to /music-reviews/)",
-      "url": "https://illustratemagazine.com/music-reviews/"
+      "description": "Independent journal that often covers Art Rock. (FIXED URL to /reviews/)",
+      "url": "https://illustratemagazine.com/reviews/"
     },
     {
       "category": "Independent Pulse (Tier II)",
@@ -173,32 +173,24 @@
       "website": "Nothing But A Nightmare",
       "relevancy_score": 7.1,
       "genre_focus": "Punk, Gothic, Psychobilly, Hardcore",
-      "description": "Focuses on the underground movement. (FIXED URL to /reviews/)",
-      "url": "https://nothingbutanightmare.com/reviews/"
+      "description": "Focuses on the underground movement. (FIXED URL to /releases/)",
+      "url": "https://www.nothingbutanightmare.com/releases/"
     },
     {
       "category": "Independent Pulse (Tier II)",
       "website": "Gorilla vs. Bear",
       "relevancy_score": 7.1,
       "genre_focus": "Indie, Hipster focus, Eclectic",
-      "description": "High cultural cachet in the indie sphere. (FIXED URL to /category/new-music/)",
-      "url": "https://www.gorillavsbear.net/category/new-music/"
-    },
-    {
-      "category": "Independent Pulse (Tier II)",
-      "website": "Portals",
-      "relevancy_score": 6.54,
-      "genre_focus": "Independent, Unsigned Acts",
-      "description": "Focuses heavily on independent and unsigned music. (FIXED URL)",
-      "url": "https://portalsmusic.com/reviews/"
+      "description": "High cultural cachet in the indie sphere. (FIXED URL to root)",
+      "url": "https://www.gorillavsbear.net/"
     },
     {
       "category": "Independent Pulse (Tier II)",
       "website": "RateYourMusic (RYM)",
       "relevancy_score": 7.8,
       "genre_focus": "All Genres (User-Driven, Database)",
-      "description": "Comprehensive database with detailed genre tagging.",
-      "url": "https://rateyourmusic.com/"
+      "description": "Comprehensive database with detailed genre tagging. (FIXED URL to /new-music/)",
+      "url": "https://rateyourmusic.com/new-music/"
     }
   ]
 }
