@@ -4,19 +4,31 @@ My musical taste is defined by these Qualitative Criteria:
 <MY CRITERIA - START>
 Genre wise I like punk rock, alternative rock, grunge, sludge, hardcore, extreme metal, americana and various flavours of genres associated with those.
 I also occasionally like hip hop and rap, pop music, folk, stadium rock and various other sub genres of rock and metal.
-Important to me is that music has artistic value and merit. I actually listen to the music and want to get inspiration for new musical ideas. Music to me is NOT a function e.g. for working out or as background music; it is actually important as such.
-Some of my favourite artists of all time include, but are not limited to: Tom Waits, Pearl Jam, Bad Religion, Pavement, Rage Against the Machine, Biffy Clyro, Deftones, Nick Cave & The Bad Seeds, The Cure, Wilco, Against Me!, Spanish Love Songs, Amenra, Oranssi Pazuzu, Soundgarden, Alice in Chains, Nirvana, Temple of the Dog, Will Varley, Mogwai, Placebo, The National, Elbow, Jason Isbell, Primitive Man, Converge, Idles, Bon Iver, The Hold Steady, Helmet, The Black Crowes, Faith No More, Pixies, Counting Crows, The Band, Towns Van Zant, Jeff Buckley. Sonic Youth, and many many more.
-While it might look like I like a lot of 90s music, I am not stuck only in that era. I enjoy seeing new bands pop up all the time, some of them might eventually becoming my favourites, and recently these have included e.g. We Lost the Sea, Chat Pile, Conjurer, Russian Circles, Anna Tivel, The Felice Brothers, Kae Tempest, Tropical Fuck Storm, Dan Mangan, Full of Hell, Wiegedood, The Wonder Years, Sumac, Deafheaven, and many many more.
-A good source for new music and relevant artists is also in festivals. Some of my favourite festivals include Damnation (almost any band on the bill is relevant), ArcTanGent, Download and 2000Trees, 
+Important to me is that music has artistic value and merit.
+I actually listen to the music and want to get inspiration for new musical ideas.
+Music to me is NOT a function e.g. for working out or as background music;
+it is actually important as such.
+
+***CRITICAL RULE: Prioritize albums that are described using terms indicating innovation, artistic challenge, emotional depth, or unique fusion (e.g., 'caustic,' 'cerebral,' 'unpredictable,' 'searing,' 'poignant,' 'visionary,' 'groundbreaking'). Deprioritize albums described only with generic praise (e.g., 'solid,' 'fun,' 'upbeat').***
+
+Some of my favourite artists of all time include, but are not limited to: Tom Waits, Pearl Jam, Bad Religion, Pavement, Rage Against the Machine, Biffy Clyro, Deftones, Nick Cave & The Bad Seeds, The Cure, Wilco, Against Me!, Spanish Love Songs, Amenra, Oranssi Pazuzu, Soundgarden, Alice in Chains, Nirvana, Temple of the Dog, Will Varley, Mogwai, Placebo, The National, Elbow, Jason Isbell, Primitive Man, Converge, Idles, Bon Iver, The Hold Steady, Helmet, The Black Crowes, Faith No More, Pixies, Counting Crows, The Band, Towns Van Zant, Jeff Buckley.
+Sonic Youth, and many many more.
+While it might look like I like a lot of 90s music, I am not stuck only in that era.
+I enjoy seeing new bands pop up all the time, some of them might eventually becoming my favourites, and recently these have included e.g.
+We Lost the Sea, Chat Pile, Conjurer, Russian Circles, Anna Tivel, The Felice Brothers, Kae Tempest, Tropical Fuck Storm, Dan Mangan, Full of Hell, Wiegedood, The Wonder Years, Sumac, Deafheaven, and many many more.
+A good source for new music and relevant artists is also in festivals.
+Some of my favourite festivals include Damnation (almost any band on the bill is relevant), ArcTanGent, Download and 2000Trees, 
 <MY CRITERIA - END>
 
 <YOUR TASK>
-I will provide you with the raw text from a webpage. Your job is two-fold:
+I will provide you with the raw text from a webpage.
+Your job is two-fold:
 1.  **Find:** Scan the entire text and identify ALL Artist/Album pairs mentioned.
 2.  **Analyze & Filter:** For each pair you find, analyze any accompanying text (reviews, descriptions) against My Criteria.
 3.  **Output:** Return a JSON list containing *only* the albums that meet my criteria for a recommendation.
 
 <RULES>
+* **ALBUM TITLE CLEANING (CRITICAL):** The album title you output must be stripped of extraneous text that does not belong on a streaming platform search (e.g., remove 'LP', 'EP', 'CD', 'cassette', 'split', '7"', '12"', etc.). For example, 'Parasite LP' must become 'Parasite', and 'XXV 12″' must become 'XXV'.
 * If the text is just a list of albums with no description, you must IGNORE them (unless the artist is a high-priority match).
 * If you find multiple albums, return a list.
 * If you find no relevant albums, return an empty list `[]`.
@@ -24,10 +36,9 @@ I will provide you with the raw text from a webpage. Your job is two-fold:
 * If Score > 90, set decision to "LIKE_IMMEDIATELY".
 * If Score > 75, set decision to "ADD_TO_PLAYLIST".
 * If Score <= 75, IGNORE the album (do not include it in the output list).
-
 <OUTPUT FORMAT>
-Your output MUST be a valid JSON list (`[]`). Do not write *any* text before or after the JSON list.
-
+Your output MUST be a valid JSON list (`[]`).
+Do not write *any* text before or after the JSON list.
 Example Output (for a page with two good albums):
 [
   {
@@ -37,3 +48,4 @@ Example Output (for a page with two good albums):
     "decision": "ADD_TO_PLAYLIST",
     "reasoning": "The review described it as 'lo-fi' and 'introspective', matching your criteria."
   }
+]
