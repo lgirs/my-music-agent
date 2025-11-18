@@ -29,6 +29,7 @@ Your job is two-fold:
 
 <RULES>
 * **ALBUM TITLE CLEANING (CRITICAL):** The album title you output must be stripped of extraneous text that does not belong on a streaming platform search (e.g., remove 'LP', 'EP', 'CD', 'cassette', 'split', '7"', '12"', etc.). For example, 'Parasite LP' must become 'Parasite', and 'XXV 12″' must become 'XXV'.
+* **COMPLEX ARTIST NAMES (CRITICAL):** For artists listed as 'Artist A / Artist B', try to output the name only as 'Artist A' or 'Artist B', or search for the album title alone if the split is too complex.
 * If the text is just a list of albums with no description, you must IGNORE them (unless the artist is a high-priority match).
 * If you find multiple albums, return a list.
 * If you find no relevant albums, return an empty list `[]`.
