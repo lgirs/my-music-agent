@@ -244,22 +244,68 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         album_id = album_data['album_id']
         
         # We need a form to submit the data required by the cleanup_agent
-        # This form will target the GitHub Action Dispatch mechanism, which we will set up next.
-        # This is where you need to replace OWNER/REPO with your actual path
+        # *** REMEMBER TO REPLACE OWNER/REPO WITH YOUR ACTUAL PATH ***
         remove_form = f"""
-            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+            <form style="display:inline;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
                 <input type="hidden" name="ref" value="main">
-                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}"}}'>
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "REMOVE"}}'>
                 <button type="submit" class="remove-btn">Remove Album</button>
             </form>
         """
         
+        # --- PROMOTION BUTTON ADDED HERE ---
+        promote_form = f"""
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "PROMOTE"}}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        """
+        
         return f"""
-        <li>
+        <li style="position: relative;">
             <b>{artist_safe} - {album_safe}</b>
-            {remove_form}
+            <div style="float:right;">
+                {promote_form}
+                {remove_form}
+            </div>
         </li>
         """
+    
+    # --- ISOLATED JAVASCRIPT STRING (FIXES SYNTAX ERROR) ---
+    js_script = """
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const inputs = this.querySelector('input[name="inputs"]').value;
+                    let data;
+                    let action = this.querySelector('button').innerText.includes("Remove") ? "remove" : "promote";
+
+                    try {
+                        data = JSON.parse(inputs);
+                    } catch (error) {
+                        console.error("Failed to parse JSON inputs:", error);
+                        alert("Error: Could not process removal data.");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    let message;
+                    if (action === "remove") {
+                        message = `Are you sure you want to permanently REMOVE and EXCLUDE the album "${data.album}" by ${data.artist}?`;
+                    } else {
+                        message = `Are you sure you want to PROMOTE the album "${data.album}" by ${data.artist} to your Liked Albums? (This will also remove it from the playlist).`;
+                    }
+                    
+                    const isConfirmed = confirm(message);
+                    
+                    if (!isConfirmed) {
+                        e.preventDefault();
+                    } else {
+                        alert(`Request submitted for "${data.album}". Check the GitHub Actions page for status.`);
+                    }
+                });
+            });
+    """
 
     # Separate action log by type
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
@@ -301,6 +347,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
             .remove-btn {{ float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }}
+            .promote-btn {{ float: right; background-color:#1890ff; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; margin-right: 10px; }}
         </style>
     </head>
     <body>
@@ -314,7 +361,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         </ul>
         
         <h2>🗑️ Current 'Weekly Discovery' Contents ({len(current_playlist_albums)})</h2>
-        <p>Use the "Remove Album" button to quickly delete an album from the playlist and permanently exclude it from future additions.</p>
+        <p>Use the buttons to manage your playlist. The 'Promote' action removes the album from the playlist and adds it to your Liked Albums.</p>
         <ul>
             {current_playlist_html or "<li>The 'Weekly Discovery' playlist is currently empty or could not be accessed.</li>"}
         </ul>
@@ -360,29 +407,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         </ul>
         
         <script>
-            // This script handles the confirmation step before submitting the form
-            document.querySelectorAll('form').forEach(form => {{
-                form.addEventListener('submit', function(e) {{
-                    const inputs = this.querySelector('input[name="inputs"]').value;
-                    let data;
-                    try {{
-                        data = JSON.parse(inputs);
-                    }} catch (error) {{
-                        console.error("Failed to parse JSON inputs:", error);
-                        alert("Error: Could not process removal data.");
-                        e.preventDefault();
-                        return;
-                    }}
-
-                    const isConfirmed = confirm(`Are you sure you want to permanently remove and exclude the album "${data.album}" by ${data.artist}?`);
-                    
-                    if (!isConfirmed) {{
-                        e.preventDefault();
-                    }} else {{
-                        alert(`Removal request submitted for "${data.album}". Check the GitHub Actions page for status.`);
-                    }}
-                }});
-            }});
+            {js_script}
         </script>
     </body>
     </html>
