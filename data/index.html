@@ -11,28 +11,1883 @@
             h1 { font-size: 32px; }
             h2 { font-size: 24px; margin-top: 40px; }
             ul { list-style-type: none; padding-left: 0; }
-            li { background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; }
+            li { background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; position: relative; }
             .score { float: right; color: #586069; font-size: 0.9em; font-weight: bold; }
             .fuzzy { color: #b08800; font-size: 0.9em; }
             .reasoning { color: #586069; font-size: 0.9em; }
             .error li { background-color: #fff8f8; border-color: #d73a49; }
             .not-found li { background-color: #fffbf0; border-color: #f0ad4e; }
+            .skipped li { background-color: #e6f7ff; border-color: #1890ff; }
+            .remove-btn { float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }
+            .promote-btn { float: right; background-color:#1890ff; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; margin-right: 10px; }
         </style>
     </head>
     <body>
         <h1>🎵 Music Agent Report</h1>
-        <p>Last run: Tue Nov 18 09:55:04 2025</p>
+        <p>Last run: Tue Nov 18 22:16:41 2025 | Albums tracked in history: 73</p>
 
         <h2 class="error">🌐 Source Harvester Errors (1)</h2>
         <p>These sites failed to load. We need to fix the URLs or remove them from <code>sources.json</code>.</p>
         <ul>
             <li><b>RateYourMusic (RYM)</b><br><span class='fuzzy'>&nbsp;&nbsp;↳ 403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/</span></li>
         </ul>
+        
+        <h2>🗑️ Current 'Weekly Discovery' Contents (92)</h2>
+        <p>Use the buttons to manage your playlist. The 'Promote' action removes the album from the playlist and adds it to your Liked Albums.</p>
+        <ul>
+            
+        <li style="position: relative;">
+            <b>Aesop Rock - Float</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Aesop Rock", "album": "Float", "album_id": "228455699", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Aesop Rock", "album": "Float", "album_id": "228455699", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Danny Brown - Stardust</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Danny Brown", "album": "Stardust", "album_id": "458788779", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Danny Brown", "album": "Stardust", "album_id": "458788779", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Saba - C0FFEE!</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Saba", "album": "C0FFEE!", "album_id": "467832065", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Saba", "album": "C0FFEE!", "album_id": "467832065", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Anna von Hausswolff - ICONOCLASTS</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Anna von Hausswolff", "album": "ICONOCLASTS", "album_id": "450695378", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Anna von Hausswolff", "album": "ICONOCLASTS", "album_id": "450695378", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Oasis - (What's The Story) Morning Glory? (Remastered)</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Oasis", "album": "(What's The Story) Morning Glory? (Remastered)", "album_id": "156876004", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Oasis", "album": "(What's The Story) Morning Glory? (Remastered)", "album_id": "156876004", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Tortoise - Touch</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tortoise", "album": "Touch", "album_id": "470366709", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tortoise", "album": "Touch", "album_id": "470366709", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Korn - Korn</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Korn", "album": "Korn", "album_id": "11345543", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Korn", "album": "Korn", "album_id": "11345543", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>5 Seconds Of Summer - EVERYONE'S A STAR!</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "5 Seconds Of Summer", "album": "EVERYONE'S A STAR!", "album_id": "472275555", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "5 Seconds Of Summer", "album": "EVERYONE'S A STAR!", "album_id": "472275555", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>FKA twigs - EUSEXUA Afterglow</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "FKA twigs", "album": "EUSEXUA Afterglow", "album_id": "470872494", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "FKA twigs", "album": "EUSEXUA Afterglow", "album_id": "470872494", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Mavis Staples - Sad And Beautiful World</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mavis Staples", "album": "Sad And Beautiful World", "album_id": "451446208", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mavis Staples", "album": "Sad And Beautiful World", "album_id": "451446208", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Bob Dylan - Through The Open Window: The Bootleg Series Vol. 18 (Highlights)</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Bob Dylan", "album": "Through The Open Window: The Bootleg Series Vol. 18 (Highlights)", "album_id": "469012086", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Bob Dylan", "album": "Through The Open Window: The Bootleg Series Vol. 18 (Highlights)", "album_id": "469012086", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Gurf Morlix - Bristlecone</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Gurf Morlix", "album": "Bristlecone", "album_id": "457921620", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Gurf Morlix", "album": "Bristlecone", "album_id": "457921620", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Rhett Miller - A lifetime of riding by night</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Rhett Miller", "album": "A lifetime of riding by night", "album_id": "448535555", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Rhett Miller", "album": "A lifetime of riding by night", "album_id": "448535555", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>The Grahams - The Bridge</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grahams", "album": "The Bridge", "album_id": "447995123", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grahams", "album": "The Bridge", "album_id": "447995123", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Big L - Harlem's Finest: Return Of The King</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Big L", "album": "Harlem's Finest: Return Of The King", "album_id": "469910298", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Big L", "album": "Harlem's Finest: Return Of The King", "album_id": "469910298", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>common - Resurrection</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "common", "album": "Resurrection", "album_id": "4930655", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "common", "album": "Resurrection", "album_id": "4930655", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Squarepusher - Stereotype</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Squarepusher", "album": "Stereotype", "album_id": "452784289", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Squarepusher", "album": "Stereotype", "album_id": "452784289", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Madi Diaz - Fatal Optimist</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Madi Diaz", "album": "Fatal Optimist", "album_id": "452884035", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Madi Diaz", "album": "Fatal Optimist", "album_id": "452884035", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Cheap Trick - All Washed Up</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cheap Trick", "album": "All Washed Up", "album_id": "453698928", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cheap Trick", "album": "All Washed Up", "album_id": "453698928", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Dijon - Baby</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Dijon", "album": "Baby", "album_id": "453064280", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Dijon", "album": "Baby", "album_id": "453064280", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Tony Molina - On This Day</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tony Molina", "album": "On This Day", "album_id": "460010939", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tony Molina", "album": "On This Day", "album_id": "460010939", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Sister Ray Davies - Holy Island</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sister Ray Davies", "album": "Holy Island", "album_id": "449305157", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sister Ray Davies", "album": "Holy Island", "album_id": "449305157", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Farao - Magical Thinking</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Farao", "album": "Magical Thinking", "album_id": "455178306", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Farao", "album": "Magical Thinking", "album_id": "455178306", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>runo plum - patching</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "runo plum", "album": "patching", "album_id": "445154209", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "runo plum", "album": "patching", "album_id": "445154209", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Blessthefall - GALLOWS</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Blessthefall", "album": "GALLOWS", "album_id": "436686611", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Blessthefall", "album": "GALLOWS", "album_id": "436686611", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Fit For A King - Lonely God</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Fit For A King", "album": "Lonely God", "album_id": "434849635", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Fit For A King", "album": "Lonely God", "album_id": "434849635", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Halestorm - Everest</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Halestorm", "album": "Everest", "album_id": "441777529", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Halestorm", "album": "Everest", "album_id": "441777529", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Linkin Park - From Zero</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Linkin Park", "album": "From Zero", "album_id": "396931349", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Linkin Park", "album": "From Zero", "album_id": "396931349", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Brandi Carlile - Returning To Myself</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Brandi Carlile", "album": "Returning To Myself", "album_id": "467491656", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Brandi Carlile", "album": "Returning To Myself", "album_id": "467491656", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Mezzrow - Embrace The Awakening</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mezzrow", "album": "Embrace The Awakening", "album_id": "448903560", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mezzrow", "album": "Embrace The Awakening", "album_id": "448903560", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Cold Steel - Discipline & Punish</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cold Steel", "album": "Discipline & Punish", "album_id": "471041097", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cold Steel", "album": "Discipline & Punish", "album_id": "471041097", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Tempestuous Fall - The Descent of Mortals Past</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tempestuous Fall", "album": "The Descent of Mortals Past", "album_id": "466254064", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Tempestuous Fall", "album": "The Descent of Mortals Past", "album_id": "466254064", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>The Grasshopper Lies Heavy - HEAVY</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grasshopper Lies Heavy", "album": "HEAVY", "album_id": "473999828", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grasshopper Lies Heavy", "album": "HEAVY", "album_id": "473999828", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>VOWER - A Storm Lined With Silver</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "VOWER", "album": "A Storm Lined With Silver", "album_id": "461685593", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "VOWER", "album": "A Storm Lined With Silver", "album_id": "461685593", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Kostnatění - Přílišnost (Excess)</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Kostnatění", "album": "Přílišnost (Excess)", "album_id": "470570598", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Kostnatění", "album": "Přílišnost (Excess)", "album_id": "470570598", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Voidceremony - Abditum</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Voidceremony", "album": "Abditum", "album_id": "460972805", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Voidceremony", "album": "Abditum", "album_id": "460972805", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>1914 - Viribus Unitis</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "1914", "album": "Viribus Unitis", "album_id": "450933145", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "1914", "album": "Viribus Unitis", "album_id": "450933145", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Undersave - Merged In Abstract Perdition</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Undersave", "album": "Merged In Abstract Perdition", "album_id": "449366684", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Undersave", "album": "Merged In Abstract Perdition", "album_id": "449366684", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Creeper - Sanguivore II: Mistress of Death</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Creeper", "album": "Sanguivore II: Mistress of Death", "album_id": "469367817", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Creeper", "album": "Sanguivore II: Mistress of Death", "album_id": "469367817", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>White Ward - Love Exchange Failure</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "White Ward", "album": "Love Exchange Failure", "album_id": "113921215", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "White Ward", "album": "Love Exchange Failure", "album_id": "113921215", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Eville - BRAT METAL</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Eville", "album": "BRAT METAL", "album_id": "451382441", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Eville", "album": "BRAT METAL", "album_id": "451382441", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Armor For Sleep - There Is No Memory</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Armor For Sleep", "album": "There Is No Memory", "album_id": "455520884", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Armor For Sleep", "album": "There Is No Memory", "album_id": "455520884", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Militarie Gun - God Save The Gun</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Militarie Gun", "album": "God Save The Gun", "album_id": "466009481", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Militarie Gun", "album": "God Save The Gun", "album_id": "466009481", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Set It Off - Set It Off</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Set It Off", "album": "Set It Off", "album_id": "443073407", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Set It Off", "album": "Set It Off", "album_id": "443073407", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Otherwise - Some Kind of Alchemy</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Otherwise", "album": "Some Kind of Alchemy", "album_id": "434275039", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Otherwise", "album": "Some Kind of Alchemy", "album_id": "434275039", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Soulfly - Chama</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Soulfly", "album": "Chama", "album_id": "466048758", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Soulfly", "album": "Chama", "album_id": "466048758", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>James Blunt - All the Lost Souls</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "James Blunt", "album": "All the Lost Souls", "album_id": "3558352", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "James Blunt", "album": "All the Lost Souls", "album_id": "3558352", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Oasis - (What's The Story) Morning Glory? (30th Anniversary Deluxe Edition)</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Oasis", "album": "(What's The Story) Morning Glory? (30th Anniversary Deluxe Edition)", "album_id": "442662583", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Oasis", "album": "(What's The Story) Morning Glory? (30th Anniversary Deluxe Edition)", "album_id": "442662583", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Citadel - Descension</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Citadel", "album": "Descension", "album_id": "422430077", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Citadel", "album": "Descension", "album_id": "422430077", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Lamp of Murmuur - The Dreaming Prince in Ecstasy</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Lamp of Murmuur", "album": "The Dreaming Prince in Ecstasy", "album_id": "461281950", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Lamp of Murmuur", "album": "The Dreaming Prince in Ecstasy", "album_id": "461281950", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Psychonaut - World Maker</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Psychonaut", "album": "World Maker", "album_id": "439605417", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Psychonaut", "album": "World Maker", "album_id": "439605417", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Mastiff - For All the Dead Dreams</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mastiff", "album": "For All the Dead Dreams", "album_id": "455035860", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Mastiff", "album": "For All the Dead Dreams", "album_id": "455035860", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Throat Piss - Existence As A Grinding Gear</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Throat Piss", "album": "Existence As A Grinding Gear", "album_id": "463006793", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Throat Piss", "album": "Existence As A Grinding Gear", "album_id": "463006793", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Your Inland Empire - Your Inland Empire</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Your Inland Empire", "album": "Your Inland Empire", "album_id": "458042772", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Your Inland Empire", "album": "Your Inland Empire", "album_id": "458042772", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>The Maple State - Don't take forever</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Maple State", "album": "Don't take forever", "album_id": "469122378", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Maple State", "album": "Don't take forever", "album_id": "469122378", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Ben Quad - Wisher</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Ben Quad", "album": "Wisher", "album_id": "455779024", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Ben Quad", "album": "Wisher", "album_id": "455779024", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Hüsker Dü - 1985: The Miracle Year</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Hüsker Dü", "album": "1985: The Miracle Year", "album_id": "452159812", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Hüsker Dü", "album": "1985: The Miracle Year", "album_id": "452159812", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Dave McMurray - I LOVE LIFE even when I'm hurting</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Dave McMurray", "album": "I LOVE LIFE even when I'm hurting", "album_id": "472279695", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Dave McMurray", "album": "I LOVE LIFE even when I'm hurting", "album_id": "472279695", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Thee Headcoats - The Sherlock Holmes Rhythm ’n’ Beat Vernacular</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Thee Headcoats", "album": "The Sherlock Holmes Rhythm ’n’ Beat Vernacular", "album_id": "455075025", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Thee Headcoats", "album": "The Sherlock Holmes Rhythm ’n’ Beat Vernacular", "album_id": "455075025", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Kalia Vandever - Another View</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Kalia Vandever", "album": "Another View", "album_id": "457011850", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Kalia Vandever", "album": "Another View", "album_id": "457011850", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Cardi B - AM I THE DRAMA?</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cardi B", "album": "AM I THE DRAMA?", "album_id": "461486925", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Cardi B", "album": "AM I THE DRAMA?", "album_id": "461486925", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Degraved - Spectral Realm of Ruin</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Degraved", "album": "Spectral Realm of Ruin", "album_id": "473376698", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Degraved", "album": "Spectral Realm of Ruin", "album_id": "473376698", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>An Slua - Sure Look It</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "An Slua", "album": "Sure Look It", "album_id": "458441694", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "An Slua", "album": "Sure Look It", "album_id": "458441694", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Bezette Stad - F.A.N.O.N.</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Bezette Stad", "album": "F.A.N.O.N.", "album_id": "469408392", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Bezette Stad", "album": "F.A.N.O.N.", "album_id": "469408392", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>FAN CLUB - Stimulation</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "FAN CLUB", "album": "Stimulation", "album_id": "452135329", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "FAN CLUB", "album": "Stimulation", "album_id": "452135329", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>The Grimly Pleased - I'll Choose It</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grimly Pleased", "album": "I'll Choose It", "album_id": "456984370", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "The Grimly Pleased", "album": "I'll Choose It", "album_id": "456984370", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>MECHT MENSCH - Anthology</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "MECHT MENSCH", "album": "Anthology", "album_id": "456697707", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "MECHT MENSCH", "album": "Anthology", "album_id": "456697707", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Sklitakling - Normal Drift</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sklitakling", "album": "Normal Drift", "album_id": "457013600", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sklitakling", "album": "Normal Drift", "album_id": "457013600", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Top Dollar - Objects of Misfortune</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Top Dollar", "album": "Objects of Misfortune", "album_id": "448143864", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Top Dollar", "album": "Objects of Misfortune", "album_id": "448143864", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Black Eyes - Hostile Design</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Black Eyes", "album": "Hostile Design", "album_id": "454774120", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Black Eyes", "album": "Hostile Design", "album_id": "454774120", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Elias Rønnenfelt - Speak Daggers</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Elias Rønnenfelt", "album": "Speak Daggers", "album_id": "453965051", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Elias Rønnenfelt", "album": "Speak Daggers", "album_id": "453965051", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Melvin Gibbs - Amasia: Anamibia Sessions 2</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Melvin Gibbs", "album": "Amasia: Anamibia Sessions 2", "album_id": "451843004", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Melvin Gibbs", "album": "Amasia: Anamibia Sessions 2", "album_id": "451843004", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Sudan Archives - THE BPM</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sudan Archives", "album": "THE BPM", "album_id": "442014403", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sudan Archives", "album": "THE BPM", "album_id": "442014403", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Moodymann - Black Mahogani</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Moodymann", "album": "Black Mahogani", "album_id": "60573358", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Moodymann", "album": "Black Mahogani", "album_id": "60573358", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Conjurer - Unself</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Conjurer", "album": "Unself", "album_id": "466458650", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Conjurer", "album": "Unself", "album_id": "466458650", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Haerts - Laguna Road</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Haerts", "album": "Laguna Road", "album_id": "440674813", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Haerts", "album": "Laguna Road", "album_id": "440674813", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Jake Xerxes Fussell - Rebuilding</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Jake Xerxes Fussell", "album": "Rebuilding", "album_id": "456335922", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Jake Xerxes Fussell", "album": "Rebuilding", "album_id": "456335922", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Empire Drowns - Endless Nights</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Empire Drowns", "album": "Endless Nights", "album_id": "446449345", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Empire Drowns", "album": "Endless Nights", "album_id": "446449345", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Redshark - Sudden Impact</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Redshark", "album": "Sudden Impact", "album_id": "440550427", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Redshark", "album": "Sudden Impact", "album_id": "440550427", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Destruction Ritual - Providence</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Destruction Ritual", "album": "Providence", "album_id": "459775450", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Destruction Ritual", "album": "Providence", "album_id": "459775450", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Heteropsy - Embalming</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Heteropsy", "album": "Embalming", "album_id": "459213966", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Heteropsy", "album": "Embalming", "album_id": "459213966", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Ripping Remains - Necrodestiny</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Ripping Remains", "album": "Necrodestiny", "album_id": "450776780", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Ripping Remains", "album": "Necrodestiny", "album_id": "450776780", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>ROSALÍA - LUX</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "ROSALÍA", "album": "LUX", "album_id": "472230531", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "ROSALÍA", "album": "LUX", "album_id": "472230531", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Aresi - Aurrera Beti</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Aresi", "album": "Aurrera Beti", "album_id": "437343655", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Aresi", "album": "Aurrera Beti", "album_id": "437343655", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Sister Irene O'Connor - Fire of God's Love</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sister Irene O'Connor", "album": "Fire of God's Love", "album_id": "447274067", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Sister Irene O'Connor", "album": "Fire of God's Love", "album_id": "447274067", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>David Darling - Cycles</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "David Darling", "album": "Cycles", "album_id": "13372721", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "David Darling", "album": "Cycles", "album_id": "13372721", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Modern Nature - The Heat Warps</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Modern Nature", "album": "The Heat Warps", "album_id": "434549030", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Modern Nature", "album": "The Heat Warps", "album_id": "434549030", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>This Will Destroy You - S/T</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "This Will Destroy You", "album": "S/T", "album_id": "8281634", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "This Will Destroy You", "album": "S/T", "album_id": "8281634", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Hilary Woods - Night CRIÚ</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Hilary Woods", "album": "Night CRIÚ", "album_id": "448892486", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Hilary Woods", "album": "Night CRIÚ", "album_id": "448892486", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Jessy Lanza - Slapped By My Life</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Jessy Lanza", "album": "Slapped By My Life", "album_id": "459290241", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Jessy Lanza", "album": "Slapped By My Life", "album_id": "459290241", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Joanne Robertson - Blurrr</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Joanne Robertson", "album": "Blurrr", "album_id": "427745094", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Joanne Robertson", "album": "Blurrr", "album_id": "427745094", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        <li style="position: relative;">
+            <b>Armand Hammer - Mercy</b>
+            <div style="float:right;">
+                
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Armand Hammer", "album": "Mercy", "album_id": "453241376", "action_type": "PROMOTE"}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        
+                
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{"artist": "Armand Hammer", "album": "Mercy", "album_id": "453241376", "action_type": "REMOVE"}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        
+            </div>
+        </li>
+        
+        </ul>
 
-        <h2 class="not-found">❗ Action Required: Not Found (18)</h2>
+        <h2 class="skipped">🚫 Skipped Duplicates (32)</h2>
+        <p>These albums were successfully filtered against the permanent history file (<code>processed_albums.json</code>).</p>
+        <ul>
+            <li><b>Gurf Morlix - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Hüsker Dü - N/A</b> <span class='score'>[AI Score: 90]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Bob Dylan - N/A</b> <span class='score'>[AI Score: 87]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Armand Hammer - N/A</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Chat Pile - N/A</b> <span class='score'>[AI Score: 100]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Oasis - N/A</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Tortoise - N/A</b> <span class='score'>[AI Score: 93]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Militarie Gun - N/A</b> <span class='score'>[AI Score: 96]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Dijon - N/A</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Thee Headcoats - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Sister Ray Davies - N/A</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Farao - N/A</b> <span class='score'>[AI Score: 87]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>James Elkington - N/A</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Kalia Vandever - N/A</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Runo Plum - N/A</b> <span class='score'>[AI Score: 83]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Empire Drowns - N/A</b> <span class='score'>[AI Score: 92]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Your Inland Empire - N/A</b> <span class='score'>[AI Score: 93]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Heteropsy - N/A</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Cardi B - N/A</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Set It Off - N/A</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>SOULFLY - N/A</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Linkin Park - N/A</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Tempestuous Fall - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Citadel - N/A</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Vower - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Sister Irene O’Connor - N/A</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>David Darling - N/A</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Shaun Harris - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Rolo Tomassi - N/A</b> <span class='score'>[AI Score: 92]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Hilary Woods - N/A</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Jessy Lanza - N/A</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li><li><b>Joanne Robertson - N/A</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Skipped: Already processed in a previous run.</i></span></li>
+        </ul>
+
+        <h2 class="not-found">❗ Action Required: Not Found (14)</h2>
         <p>These albums passed the AI filter but could not be found on Tidal.</p>
         <ul>
-            <li><b>Ghould - Bludgeoning Simulations</b> <span class='score'>[AI Score: 98]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'Experimental, Post Metal, Industrial' and an immersive 'barren wasteland' that is like a 'void' one dares to enter, strongly indicating artistic challenge, innovation, and profound emotional depth, aligning perfectly with the user's criteria.</i></span></li><li><b>Teach Them To Weep - Past the Veil of the Observable Universe</b> <span class='score'>[AI Score: 96]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a non-linear, 'out of the box' Black Metal album with an 'eclectic and varied mix of sounds' that 'doesn’t follow any rules,' highlighting innovation, artistic challenge, and an unorthodox approach.</i></span></li><li><b>Makaya McCraven - Off the Record</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Makaya McCraven is a critically acclaimed jazz artist known for innovative, experimental, and genre-blending approaches, fitting your criteria for innovation and new musical ideas, even in a non-core genre.</i></span></li><li><b>Hawkwind - PXR5</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While a remastered re-issue, the description highlights the album as featuring the band at their 'most confrontational' and associated with a 'wayward genius.' These terms indicate artistic challenge and unique vision, aligning with your preference for music with significant artistic value and depth, reminiscent of the experimental and intense nature you appreciate in bands like Oranssi Pazuzu or Mogwai.</i></span></li><li><b>Jeremy Dower - Personal Computer Music, 1997-2022</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While a compilation, the description 'eye-opening' and 'creative, whimsical take on ambient techno and downtempo' suggests significant artistic value and a unique sound, aligning with your interest in finding inspiration and appreciating innovation in music, even in electronic genres you occasionally enjoy.</i></span></li><li><b>Nordicwinter - Solitude</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Combines aggressiveness with 'sheer depression' and evokes a 'contemplative feeling' that prompts introspection, indicating emotional depth and artistic merit beyond background music.</i></span></li><li><b>Chaos Over Cosmos - The Hypercosmic Paradox</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Praised for breathing life into 'heavily technical compositions' by using 'electronics, synth, and ambiance' to augment songs, indicating innovation, unique fusion, and artistic skill beyond typical arrangements.</i></span></li><li><b>Nine Inch Nails - TRON: Ares Soundtrack</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Nine Inch Nails is a highly relevant artist for your tastes (alternative, industrial, electronic elements). The description 'Invokes the Past and the Future' suggests a conceptual and potentially innovative approach, aligning with artistic challenge and unique fusion. The user appreciates industrial and electronic textures.</i></span></li><li><b>The Mountain Goats - Through This Fire</b> <span class='score'>[AI Score: 76]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The artist aligns well with your preference for folk, americana, and artists known for artistic value and depth, such as Wilco, Bon Iver, and The Felice Brothers. Though no specific description is provided for this album, the artist is a high-priority match for your taste profile.</i></span></li><li><b>Bob Dylan - Bootleg Series Vol. 18</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Bob Dylan is a legendary artist who perfectly fits your folk/americana preferences and the criterion for music with 'artistic value and merit' that provides 'inspiration for new musical ideas.' The 'Bootleg Series' format typically offers deep insights into an artist's creative process, making it highly relevant for your interest in artistic inspiration, even without a specific album description.</i></span></li><li><b>Terror Corpse - Ash Eclipses Flesh</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Falls under your preferred 'extreme metal' category with an 'old school deathgrind mayhem' description, suggesting an intense and abrasive sound akin to artists like Converge, Full of Hell, and Primitive Man. The mention of members from other known extreme metal bands adds credibility.</i></span></li><li><b>Enyor - Catalunya En Blanc i Negre</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a 'pioneering attempt' with a 'unique fusion' of Catalan Oi! and indie rock, specifically 'lo-fi Revolution Summer territory' (citing RITES OF SPRING), which fits my interest in innovative and challenging music, despite some reported 'incongruity.'</i></span></li><li><b>Personal Hell - Window Painted Shut</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: 'Lumbering and nasty hardcore' that 'occasionally wade into neo-crust territory,' with 'desperate' vocals and a thick, crunchy sound. This aligns with my preference for heavy and emotionally raw hardcore, indicating strong artistic merit.</i></span></li><li><b>Ruby Rash - Merit Badges</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Combining 'heavy goth and deathrock-inflected synth punk' with 'melancholic vocals' and 'dark, subwoofer-rattling atmospheres,' this album presents a unique fusion and emotional depth. The 'gorgeous shoegaze-y' elements further indicate artistic merit and innovation, aligning with my taste for diverse and impactful sounds.</i></span></li><li><b>Bardø - Self Sabotage</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'very raw-sounding, unpretentious powerviolence,' expertly drawing from influences like INFEST and NEANDERTHAL. This direct and powerful approach to a hardcore subgenre, executed 'to perfection,' indicates strong artistic merit and intensity, aligning with my preference for extreme metal and hardcore.</i></span></li><li><b>Candy Snatchers - Good Riddance / Round Up</b> <span class='score'>[AI Score: 87]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Offering 'pure, unadulterated rock’n’roll,' the review highlights the vocalist's intense delivery, compared to Lux Interior of The Cramps, and describes the band as 'spitting venom.' This indicates a raw, authentic, and impactful sound with strong artistic merit, aligning with my rock and punk sensibilities.</i></span></li><li><b>Nicola Alesini - Marco Polo</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as an 'ambient-word record,' 'vine-like, lush and minimal, layered and discreet,' and 'Fourth world,' indicating experimental and unique fusion, with contributions from notable collaborators like David Sylvian and Roger Eno, which suits your search for artistic merit.</i></span></li><li><b>Sharp Pins - Balloon Balloon Balloon</b> <span class='score'>[AI Score: 76]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Features 'psychedelic 1960s pop' and 'lo-fi fuzz,' with the artist having a connection to 'post-punk' in another project, suggesting an interesting blend and artistic character that could inspire new musical ideas.</i></span></li>
+            <li><b>Teach Them To Weep - Past the Veil of the Observable Universe</b> <span class='score'>[AI Score: 96]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a 'very eclectic and varied mix of sounds' that 'isn’t linear' and 'doesn’t follow any rules,' with 'intriguing and unorthodox' compositions. This strongly suggests innovation, unique fusion, artistic challenge, and a visionary approach that would inspire new ideas.</i></span></li><li><b>Waldgeflüster - Knochengesänge II</b> <span class='score'>[AI Score: 96]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Loosely termed 'Black Metal' due to 'bending of these once rigid genre rules,' focusing instead on 'emotional songs with depth, with meaning, and with distinction' and 'mysteries buried within the album.' This strongly indicates innovation, artistic challenge, emotional depth, and a unique, nuanced approach.</i></span></li><li><b>Elias Rønnenfelt - Who Did the Body</b> <span class='score'>[AI Score: 86]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Given Elias Rønnenfelt's background as the frontman of Iceage, his venture into rap suggests a potentially 'unpredictable' and 'unique fusion' or 'artistic challenge' project, making it highly relevant.</i></span></li><li><b>Nine Inch Nails - Tron: Ares OST</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Nine Inch Nails is a highly influential artist known for innovation, artistic depth, and emotional challenge within alternative rock/industrial. Even for a soundtrack, their work consistently offers artistic value and inspiration, aligning with your criteria.</i></span></li><li><b>Jeremy Dower - Personal Computer Music, 1997-2022</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: An 'eye-opening compilation' with a 'creative, whimsical take on ambient techno and downtempo' suggests significant artistic value and innovation, offering new musical ideas within an electronic sphere that you occasionally explore and aligns with your appreciation for artists like Mogwai.</i></span></li><li><b>Signum - Hammerfilosofi</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'violently alive,' a statement to 'subvert you to their will,' with 'intensity never lets up,' and sounding like 'unearthing Hell itself.' This indicates artistic challenge, emotional depth, and a powerful, immersive experience that aligns with your taste for extreme and impactful music.</i></span></li><li><b>Nordicwinter - Solitude</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Combines 'aggressiveness of Black Metal vocals with the sheer depression,' leading to a 'contemplative feeling' that prompts introspection. This strongly matches your preference for music with emotional depth and artistic merit beyond mere genre adherence.</i></span></li><li><b>Unrecht - A Thousand And One Nightmares</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Features riffing that is 'very canny, very intricate, thoroughly convincing and mostly well done,' with vocals that are 'fit for purpose' and 'complementary of the musical intentions.' This highlights skilled, intricate composition and artistic merit.</i></span></li><li><b>Dune Aurora - Ice Age Desert</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The band 'commits to heavier and bluesier' sounds, indicating a deliberate artistic direction that aligns with your taste for grunge, sludge, Americana, and bluesy rock, suggesting intentional artistic evolution.</i></span></li><li><b>Florence + the Machine - Everybody Scream</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The review highlights 'Brutal Honesty and Cathartic Transformations,' which directly aligns with your criteria for emotional depth and artistic merit. While Florence + the Machine isn't a core genre, the description of profound emotional content is a strong pull, fitting within the 'various other sub-genres of rock' and 'folk' (occasionally) categories you enjoy, and similar to artists like The Cure or The National you appreciate for their depth.</i></span></li><li><b>Bob Dylan - Bootleg Series Vol. 18</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While no specific review text was provided, Bob Dylan is a foundational artist in the folk genre, which aligns with your taste for americana and folk. The 'Bootleg Series' typically offers material with high artistic and historical merit, fitting your criteria for 'artistic value and merit' and seeking 'inspiration for new musical ideas'. Given his immense influence and alignment with the genres and artists you appreciate (e.g., Towns Van Zant, Jason Isbell), he is considered a high-priority match in the spirit of the criteria, even if not explicitly listed in your favorites.</i></span></li><li><b>Nicola Alesini - Marco Polo</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as an 'ambient-word record' that is 'vine-like, lush and minimal, layered and discreet,' and 'Fourth world,' indicating a unique fusion and artistic depth that goes beyond generic ambient music.</i></span></li><li><b>Sharp Pins - Balloon Balloon Balloon</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While described as 'psychedelic 1960s pop,' the mention of 'lo-fi fuzz' and the artist's involvement in 'post-punk' (Lifeguards) suggests an artistic edge and a connection to genres you appreciate.</i></span></li><li><b>Makaya McCraven - Off the Record</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The emphasis on 'organic improvisation,' 'aural alchemy,' 'post-production wizardry,' and 'fervent compositions' highlights innovation and artistic challenge, appealing to your interest in new musical ideas.</i></span></li>
         </ul>
 
         <h2 class="error">❌ Tidal API Errors (0)</h2>
@@ -44,15 +1899,15 @@
         <h2>⭐ Albums Liked (3)</h2>
         <p>These are the Top 5 albums with the highest AI scores.</p>
         <ul>
-            <li><b>Chat Pile - In the Earth Again</b> <span class='score'>[AI Score: 98]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Chat Pile is explicitly mentioned as one of your recently enjoyed bands. Their sludge/noise rock aligns perfectly with your core genres and interest in new, challenging music.</i></span></li><li><b>Hellshock - XXV</b> <span class='score'>[AI Score: 98]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: This album is described as a 'perfect evolution' for the band, 'creating something new and inventive' in the crust genre. The review highlights its 'epic, murkier' sound, 'ominous atmospheric heaviness,' and 'thoughtfully built' songs that tell 'really fucking dark, stories,' indicating profound artistic and emotional depth, aligning perfectly with my criteria for groundbreaking and challenging music.</i></span></li><li><b>Hüsker Dü - 1985: The Miracle Year</b> <span class='score'>[AI Score: 95]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Hüsker Dü is a seminal band in alternative rock and punk, core genres for you. This reissue focusing on a key period offers significant artistic and historical value, providing inspiration for new musical ideas through groundbreaking music.</i></span></li>
+            <li><b>Geese - Getting Killed</b> <span class='score'>[AI Score: 96]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as the 'Most Creative Indie Rock Album of the Year' that 'breaks their previous molds' and forms 'new shapes of guitar music.' These are strong indicators of innovation, artistic challenge, and unique fusion, directly hitting the critical rule for prioritization. Indie rock is a good fit for your general alternative rock taste, and the emphasis on creativity and breaking new ground is highly appealing.</i></span></li><li><b>Keiji Haino - U       TA</b> <span class='score'>[AI Score: 95]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Keiji Haino is a legendary avant-garde artist whose work consistently pushes boundaries, perfectly fitting your criteria for innovation, artistic challenge, and artistic merit, similar to Oranssi Pazuzu and Sumac.</i></span></li><li><b>Conjurer - Unself</b> <span class='score'>[AI Score: 95]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Conjurer is explicitly listed as a recently enjoyed band, indicating high relevance for new musical ideas and artistic value within your preferred genres.</i></span></li>
             
             
         </ul>
 
-        <h2>🎶 Added to 'Weekly Discovery' (54)</h2>
+        <h2>🎶 Added to 'Weekly Discovery' (14)</h2>
         <p>These albums were also recommended by the AI and added to your playlist.</p>
         <ul>
-            <li><b>Gurf Morlix - Bristlecone</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description highlights 'unmistakable work' with 'gothic imagery,' 'sparse guitar,' and 'hard-earned truth,' evoking a vivid, almost cinematic atmosphere. This aligns strongly with your appreciation for artistic value, emotional depth, and unique aesthetics, reminiscent of artists like Nick Cave & The Bad Seeds or Tom Waits. The language suggests a challenging and poignant artistic statement rather than generic praise.</i></span></li><li><b>Aesop Rock - Float</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Aesop Rock is a well-regarded hip hop artist known for his intricate, cerebral lyrics, aligning with your appreciation for artistic value and depth in an occasionally liked genre.</i></span></li><li><b>Danny Brown - Stardust</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Danny Brown is known for his unique, often challenging, and unpredictable style in hip hop, fitting your criteria for artistic challenge and innovation within an occasionally liked genre.</i></span></li><li><b>Saba - C0FFEE!</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Saba is a respected hip hop artist recognized for introspective and narrative-driven work, aligning with your appreciation for emotional depth and artistic value.</i></span></li><li><b>Black Eyes - Hostile Design</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Black Eyes were an influential post-hardcore/dance-punk band, fitting perfectly into your core genre preferences for punk, alternative rock, and hardcore. The 'Best New Album' tag suggests a significant release from a highly relevant band.</i></span></li><li><b>Anna von Hausswolff - ICONOCLASTS</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Anna von Hausswolff creates dark, atmospheric, and experimental music with significant emotional depth, aligning with your interest in artistic challenge and artists like Mogwai.</i></span></li><li><b>Squarepusher - Stereotype</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Squarepusher is a highly regarded experimental electronic artist, consistently pushing boundaries and creating complex, innovative music, which aligns with your criteria for artistic challenge and innovation.</i></span></li><li><b>Elias Rønnenfelt - Speak Daggers</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: As the frontman of Iceage, Elias Rønnenfelt is associated with challenging, often caustic and poignant post-punk/noise rock, which aligns with your core genre interests and qualitative criteria.</i></span></li><li><b>Melvin Gibbs - Amasia: Anamibia Sessions 2</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Melvin Gibbs is a respected bassist known for his experimental, challenging, and boundary-pushing work across various genres, fitting your interest in innovation and artistic challenge.</i></span></li><li><b>Sudan Archives - THE BPM</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Sudan Archives is highly praised for her unique fusion of R&B, electronic, and traditional African influences, embodying innovation and artistic challenge that could provide inspiration for new musical ideas.</i></span></li><li><b>Moodymann - Black Mahogani</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Moodymann's 'Black Mahogani' is a classic in deep house, revered for its soulful, artistic depth and experimental nuances. This aligns with your appreciation for artistic value in an occasionally liked genre.</i></span></li><li><b>Conjurer - Unself</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Conjurer is explicitly listed as a recently enjoyed band in your criteria, making this a high-priority recommendation despite the lack of a detailed review. The artist's established output aligns with your preference for extreme metal and sludge, known for artistic depth and heavy sound.</i></span></li><li><b>Dijon - Baby</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'enthralling' and 'progressive R&B,' indicating artistic ambition and unique sound. The collaboration with Bon Iver, a favorite artist, further enhances its relevance, suggesting potential for emotional depth and innovation.</i></span></li><li><b>Dave McMurray - I LOVE LIFE even when I'm hurting</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While jazz is an occasional preference, the description 'investigate love, loss, and gratitude' indicates significant emotional depth and artistic intention, aligning with your appreciation for music as important and inspiring.</i></span></li><li><b>Thee Headcoats - The Sherlock Holmes Rhythm ’n’ Beat Vernacular</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: 'Cynical lyrics' and 'inspired, elemental garage rock' suggest a strong artistic voice and raw, authentic sound, aligning well with your interest in punk rock and alternative rock.</i></span></li><li><b>Sister Ray Davies - Holy Island</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The shoegaze genre aligns with your taste for bands like Mogwai and The Cure, and being a 'concept album about mystical Lindisfarne island' strongly indicates artistic depth and an innovative approach, fulfilling your criteria for artistic value.</i></span></li><li><b>Farao - Magical Thinking</b> <span class='score'>[AI Score: 87]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as an 'arty electro-acoustic project' with 'atmospheric experiments,' this aligns with your appreciation for artistic value and unique soundscapes, reminiscent of artists like Mogwai and Russian Circles.</i></span></li><li><b>Haerts - Laguna Road</b> <span class='score'>[AI Score: 76]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description 'intimate third album' suggests emotional depth and personal connection, which aligns with your appreciation for music that is important and meaningful.</i></span></li><li><b>James Elkington - Rebuilding</b> <span class='score'>[AI Score: 83]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: 'A spacious and wistful score' indicates emotional depth and artistic merit, fitting your preference for folk and music that provides inspiration, especially given its connection to a 'quiet contemporary western.'</i></span></li><li><b>Kalia Vandever - Another View</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Despite being jazz, the description 'warm, vulnerable, and transformative' strongly indicates emotional depth and artistic merit, making it a high-priority recommendation for inspiration and artistic value.</i></span></li><li><b>Runo Plum - patching</b> <span class='score'>[AI Score: 86]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The themes of 'heartbreak and acceptance' and the 'ruminative' nature of the album indicate significant emotional depth and artistic intent, strongly aligning with your criteria for meaningful and inspiring music.</i></span></li><li><b>Empire Drowns - Endless Nights</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Expertly combines Doom, Death, and Melo-Death with a rare synergy, creating a sound of 'anguish, pain, even terror' with a melodic touch, suggesting significant emotional depth and artistic ambition.</i></span></li><li><b>Redshark - Sudden Impact</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Emphasizes Speed Metal for a more intense, 'in your face' sound that is 'unable to ignore,' indicating a deliberate artistic choice for impact and a non-passive listening experience.</i></span></li><li><b>Destruction Ritual - Providence</b> <span class='score'>[AI Score: 76]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as having 'intense, long blasts of black metal atmosphere,' suggesting an immersive experience and artistic depth beyond generic metal.</i></span></li><li><b>Heteropsy - Embalming</b> <span class='score'>[AI Score: 87]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as feeling like 'a slow and mournful couple years,' powerfully conveying emotional depth and an immersive, non-passive listening experience, aligning with the user's criteria for artistic merit.</i></span></li><li><b>Ripping Remains - Necrodestiny</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description 'turned off...and that was probably the exact reaction they wanted' suggests a deliberate artistic challenge and an impactful, potentially 'caustic' experience, aligning with the user's appreciation for music that is not merely pleasant but thought-provoking.</i></span></li><li><b>Rosalía - LUX</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description 'Bridges Centuries of Musical Temptation' and 'thinks about God' suggests significant artistic ambition and conceptual depth, aligning with your criteria for innovation and artistic challenge, even though it's pop music.</i></span></li><li><b>Cardi B - AM I THE DRAMA?</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While hip-hop is an occasional genre for you, the description mentions 'scorched earth,' 'chaotic,' 'vulnerability,' and 'genre-hopping ambition.' These terms suggest artistic challenge, emotional depth, and a willingness to innovate beyond generic pop, aligning with your criteria for artistic merit.</i></span></li><li><b>Set It Off - Set It Off</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The album is described as having 'absolute brutal moments with stunning poppy hooks', which suggests a dynamic range and potential for interesting fusion, aligning with an appreciation for diverse rock/metal subgenres and artistic depth.</i></span></li><li><b>Fit For a King - Lonely God</b> <span class='score'>[AI Score: 77]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While much of the description focuses on consistency, the mention of 'new flavours' and continuously 'tweaked and polished their sound' suggests an evolving artistic approach and potential for innovative elements within their established metalcore genre, which is highly relevant to your tastes.</i></span></li><li><b>SOULFLY - Chama</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description 'Brings SOULFLY Back To The Primitive' suggests a deliberate artistic direction focused on raw, intense sound, which aligns with your appreciation for artistic challenge and depth, especially given your liking for extreme metal, sludge, and hardcore bands like Primitive Man, Converge, and Full of Hell. This is more than generic praise and indicates a specific artistic intent.</i></span></li><li><b>Linkin Park - From Zero</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The review highlights a 'rebirth' for the band and emphasizes their willingness to take 'sonic risks,' which aligns with your appreciation for artistic challenge and innovation. Descriptions like recordings of 'studio chat' scattering the album, Beach Boys-esque vocal harmonies, and moments where the vocalist's voice is 'left alone without any music behind it' suggest unique artistic choices. The album is also described as having an 'immensely epic and impactful closer,' indicating emotional depth. While Linkin Park isn't a core favorite, these elements move it beyond generic praise and fit your broader rock/metal and artistic merit criteria.</i></span></li><li><b>Brandi Carlile - Returning To Myself</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Brandi Carlile is a strong match for your folk rock/americana taste, drawing parallels to artists like Jason Isbell and Anna Tivel. Her work is known for emotional depth and artistic merit. Although no specific description for this album is available, the artist's general profile makes her a high-priority recommendation.</i></span></li><li><b>Cold Steel - Discipline & Punish</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Hardcore and crossover thrash are key genres for you (e.g., Bad Religion, Against Me!, Idles). Described as a 'piping hot serving,' suggesting high energy and intensity, which aligns with your preference for impactful, non-functional music.</i></span></li><li><b>Tempestuous Fall - The Descent of Mortals Past</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Funeral Doom is an extreme metal sub-genre often characterized by emotional depth and artistic ambition. Described as 'epic' with 'ambitious goals' and incorporating 'classical symphonic elements,' suggesting a potentially unique fusion and a strong focus on artistic merit.</i></span></li><li><b>Citadel - Descension</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The combination of Blackened Death Metal, Death Metal, and Progressive Metal is highly relevant. Described as 'lush and dramatic,' this implies artistic depth and emotional engagement. The strong endorsement ('never left my rotation') suggests significant artistic merit, fitting your criteria for inspiring, important music.</i></span></li><li><b>Vower - A Storm Lined With Silver</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description highlights the album's 'cerebral' side, indicating artistic depth and intelligence, which aligns with your critical rule for prioritization. The appeal to the 'prog crowd' also suggests a progressive rock/metal sound, fitting within your broader genre interests.</i></span></li><li><b>An Slua - Sure Look It</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a 'modern classic' in Oi! punk, with 'fiercely political' and 'lyrically whip-smart' characteristics, aligning with the desire for artistic value and emotionally resonant content.</i></span></li><li><b>Bezette Stad - F.A.N.O.N.</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Belgian hardcore that 'explores our contemporary global scenario with articulate hardcore blended with D-beat,' featuring 'metallic pummeling and digital glitching,' indicates a dynamic sound and thematic depth aligning with my preference for artistic merit and genre fit.</i></span></li><li><b>Fan Club - Stimulation</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: This EP is characterized by 'incendiary hardcore punk with a rock’n’roll undercurrent,' described as 'urgent, alive, and fully realized.' The emphasis on 'relentless motion' and 'sharp, swaggering energy' indicates a high artistic merit and engaging sound, fitting my preference for impactful rock and punk.</i></span></li><li><b>Sklitakling - Normal Drift</b> <span class='score'>[AI Score: 84]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The album is praised for its 'tense, thick atmosphere' created through 'layering,' and 'cascading vocals, which were both screamy and melodic at the same time.' This indicates artistic depth and a dynamic sound, fitting my interest in innovative punk and hardcore.</i></span></li><li><b>Top Dollar - Objects of Misfortune</b> <span class='score'>[AI Score: 86]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: This EP delivers 'New York youth-crew-styled hardcore played at maximum velocity,' featuring an 'unpredictable edge à la Youth Attack Records.' This combination of raw energy and an innovative, less conventional approach to hardcore aligns with my interest in challenging and impactful music.</i></span></li><li><b>Aŕesi - Aurrera Beti</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: A 'potent mix of rock’n’Oi!' with a nod to BLITZ, featuring 'compelling sing-alongs,' which, despite the language barrier, suggests strong artistic merit and an engaging punk rock sound, aligning with my genre preferences.</i></span></li><li><b>Sister Irene O’Connor - Fire of God's Love</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'drenched in reverb and fuzzy drum machine' and 'future music imbued with traditional faith,' hinting at a unique fusion and experimental sound akin to Broadcast, which aligns with your interest in artistic value and new ideas.</i></span></li><li><b>David Darling - Cycles</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as 'widescreen, ambient, transcendent,' indicating artistic depth and potential for inspiration through its atmospheric and experimental qualities.</i></span></li><li><b>Modern Nature - The Heat Warps</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a 'potently shapeshifting outfit,' implying artistic evolution and an experimental approach that aligns with your interest in new musical ideas and challenging artistry.</i></span></li><li><b>Shaun Harris - S/T</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a folk rock 'oddity' with 'startling and heavy introspective themes [that] clash with symphonic, brimming sunshine pop arrangements,' suggesting emotional depth, artistic contrast, and unique presentation.</i></span></li><li><b>YOUR INLAND EMPIRE - Your Inland Empire</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: French industrial quartet with 'crushing electronic beats', emerging from a previous project suggests artistic evolution. Industrial metal can align with your interest in diverse heavy and challenging sounds, similar to Oranssi Pazuzu or Converge.</i></span></li><li><b>THE MAPLE STATE - Don't take forever</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description highlights themes of 'reconciliation,' suggesting emotional depth and mature lyrical content in an emo/alternative rock context. This fits your appreciation for bands like Spanish Love Songs or The National, who delve into poignant narratives.</i></span></li><li><b>1914 - Viribus Unitis</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: A Ukrainian 'blackened death/doom outfit' returning with a war-themed album ('fourth tour of duty on the frontlines of World War One'). This genre blend and thematic consistency suggest a focused artistic vision, aligning with your interest in extreme metal with strong artistic merit like Wiegedood or Sumac.</i></span></li><li><b>ARMOR FOR SLEEP - There Is No Memory</b> <span class='score'>[AI Score: 78]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Identified as a 'post-hardcore meets emo outfit,' which directly hits on genres you enjoy, particularly with bands like Against Me!, Biffy Clyro, or The Wonder Years.</i></span></li><li><b>Hilary Woods - Night CRIÚ</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Released on Sacred Bones, a label often associated with experimental and artistically challenging music. The description of the accompanying video ('incorporating her own hand processed 8mm and 16mm film, archive material and polaroids') strongly suggests a thoughtful and deep artistic approach, aligning with your criteria for artistic value and merit, and providing inspiration for new musical ideas.</i></span></li><li><b>Jessy Lanza - Slapped By My Life</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Described as a 'heartfelt title track' and a 'bittersweet love letter' conceived during a difficult personal time (partner's cancer treatment). This indicates significant emotional depth and personal artistic expression, directly matching your criteria for 'poignant' and emotional depth, and elevating it beyond typical pop/electronic fare.</i></span></li><li><b>Joanne Robertson - Blurrr</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The accompanying single 'Always Were' is described as 'haunting,' indicating a strong sense of atmosphere and emotional depth, which aligns with your appreciation for artists like Mogwai and Nick Cave. The collaboration with Oliver Coates, a renowned cellist, suggests high artistic merit. Released on AD 93, a label known for experimental and avant-garde sounds, further points to artistic challenge and innovation.</i></span></li>
+            <li><b>Aesop Rock - Float</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Aesop Rock is a well-regarded artist known for dense and cerebral hip-hop, aligning with your occasional interest in rap with artistic merit.</i></span></li><li><b>Danny Brown - Stardust</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Danny Brown is recognized for his unique and experimental approach to hip-hop, which aligns with your interest in artists pushing boundaries within the genre.</i></span></li><li><b>Black Eyes - Hostile Design</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Black Eyes' post-hardcore sound aligns with your taste for punk/alternative rock, and its 'Best New Album' designation points to artistic merit and challenge.</i></span></li><li><b>The Antlers - Blight</b> <span class='score'>[AI Score: 82]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The Antlers are recognized for their emotionally rich and introspective indie rock, fitting your criteria for emotional depth and artistic value, similar to artists like The National and Bon Iver.</i></span></li><li><b>They Are Gutting a Body of Water - LOTTO</b> <span class='score'>[AI Score: 90]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Their shoegaze/experimental/post-hardcore sound is highly relevant to your taste for bands like Deftones, Mogwai, and Deafheaven, implying artistic depth and challenge.</i></span></li><li><b>Bruiser Wolf - MADE BY DOPE</b> <span class='score'>[AI Score: 81]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Bruiser Wolf, often working with respected producers like Harry Fraud, delivers hip-hop with artistic distinction, aligning with your occasional interest in the genre.</i></span></li><li><b>Sudan Archives - THE BPM</b> <span class='score'>[AI Score: 89]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Sudan Archives is celebrated for her innovative and genre-fusing approach to music, blending experimental R&B with folk elements, aligning with your interest in unique artistic expressions and designated 'Best New Album' status.</i></span></li><li><b>Princess Nokia - GIRLS</b> <span class='score'>[AI Score: 85]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Princess Nokia is a unique voice in rap, known for her distinctive style and artistic approach, making her a relevant artist for your occasional hip-hop listening, and designated 'Best New Album'.</i></span></li><li><b>Elder - Liminality / Dream State Return</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Elder's known style in progressive/doom metal aligns well with your preferences for sludge, metal, and the bands found at festivals like Damnation and ArcTanGent, indicating high artistic value and potential for new musical ideas, even without a specific description.</i></span></li><li><b>Tony Molina - On This Day</b> <span class='score'>[AI Score: 76]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The description 'Baroque pop miniatures and brief folk-rock gems' suggests a unique and artful approach to folk-rock, aligning with your appreciation for artistic value and folk-oriented artists like Will Varley and Anna Tivel.</i></span></li><li><b>Asira - As Ink in Water</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: The album is described as a meticulous post/prog group's follow-up, indicating artistic intent and a focus on quality, which aligns with your criteria for artistic value and merit. The genres (Black Metal, Progressive Metal, Progressive Rock) are also a good fit.</i></span></li><li><b>Mastiff - For All the Dead Dreams</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: While not explicitly listed as a favorite, Mastiff's genre (sludge/hardcore/extreme metal) strongly aligns with several of your preferred genres and favorite bands (e.g., Primitive Man, Converge, Chat Pile, Full of Hell, Amenra). Their style also fits well with the types of bands found at festivals like Damnation and ArcTanGent, indicating a strong implicit match with your taste even without a specific review.</i></span></li><li><b>YOUR INLAND EMPIRE - Your Inland Empire</b> <span class='score'>[AI Score: 80]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Industrial Metal fits within your broader taste for heavy music. The description 'bursting forth from the ashes' and 'crushing electronic beats' hints at a significant, heavy, and potentially innovative sound, aligning with your interest in artistic value and inspiration.</i></span></li><li><b>BELIEVE IN NOTHING - Rot</b> <span class='score'>[AI Score: 88]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: Noise Rock and Sludge Metal are excellent fits for your preferred genres (sludge, grunge, alternative, extreme metal). The band and album names themselves ('Believe In Nothing', 'Rot') suggest a challenging and possibly deep artistic statement, aligning with your criteria for artistic merit.</i></span></li>
             
             
         </ul>
@@ -60,8 +1915,44 @@
         <h2>✅ Source Harvester Success (23)</h2>
         <p>These sites were successfully scanned for content.</p>
         <ul>
-            <li><b>Twangville</b><br>&nbsp;&nbsp;↳ Fetched 5423 chars</li><li><b>Pitchfork</b><br>&nbsp;&nbsp;↳ Fetched 4891 chars</li><li><b>Sputnikmusic</b><br>&nbsp;&nbsp;↳ Fetched 3831 chars</li><li><b>Louder Sound</b><br>&nbsp;&nbsp;↳ Fetched 4434 chars</li><li><b>AllMusic</b><br>&nbsp;&nbsp;↳ Fetched 7460 chars</li><li><b>Metal Temple</b><br>&nbsp;&nbsp;↳ Fetched 12283 chars</li><li><b>Consequence of Sound</b><br>&nbsp;&nbsp;↳ Fetched 5237 chars</li><li><b>AltCorner</b><br>&nbsp;&nbsp;↳ Fetched 5582 chars</li><li><b>Blabbermouth</b><br>&nbsp;&nbsp;↳ Fetched 993 chars</li><li><b>Loudwire</b><br>&nbsp;&nbsp;↳ Fetched 7030 chars</li><li><b>Metacritic (Music)</b><br>&nbsp;&nbsp;↳ Fetched 18715 chars</li><li><b>Angry Metal Guy</b><br>&nbsp;&nbsp;↳ Fetched 7784 chars</li><li><b>Heavy Blog is Heavy (HBIH)</b><br>&nbsp;&nbsp;↳ Fetched 1827 chars</li><li><b>KEXP Blog/Reviews</b><br>&nbsp;&nbsp;↳ Fetched 7886 chars</li><li><b>Maximum Rocknroll (MRR)</b><br>&nbsp;&nbsp;↳ Fetched 43254 chars</li><li><b>Profane Existence</b><br>&nbsp;&nbsp;↳ Fetched 283 chars</li><li><b>Aquarium Drunkard</b><br>&nbsp;&nbsp;↳ Fetched 12622 chars</li><li><b>The Toilet Ov Hell</b><br>&nbsp;&nbsp;↳ Fetched 10554 chars</li><li><b>Distorted Sound Magazine</b><br>&nbsp;&nbsp;↳ Fetched 3336 chars</li><li><b>Illustrate Magazine</b><br>&nbsp;&nbsp;↳ Fetched 8785 chars</li><li><b>We are the Last Beatniks</b><br>&nbsp;&nbsp;↳ Fetched 10873 chars</li><li><b>Nothing But A Nightmare</b><br>&nbsp;&nbsp;↳ Fetched 981 chars</li><li><b>Gorilla vs. Bear</b><br>&nbsp;&nbsp;↳ Fetched 5161 chars</li>
+            <li><b>Twangville</b><br>&nbsp;&nbsp;↳ Fetched 5423 chars</li><li><b>Pitchfork</b><br>&nbsp;&nbsp;↳ Fetched 4891 chars</li><li><b>Sputnikmusic</b><br>&nbsp;&nbsp;↳ Fetched 3831 chars</li><li><b>Louder Sound</b><br>&nbsp;&nbsp;↳ Fetched 4434 chars</li><li><b>AllMusic</b><br>&nbsp;&nbsp;↳ Fetched 7460 chars</li><li><b>Metal Temple</b><br>&nbsp;&nbsp;↳ Fetched 11930 chars</li><li><b>Consequence of Sound</b><br>&nbsp;&nbsp;↳ Fetched 5247 chars</li><li><b>AltCorner</b><br>&nbsp;&nbsp;↳ Fetched 5582 chars</li><li><b>Blabbermouth</b><br>&nbsp;&nbsp;↳ Fetched 1085 chars</li><li><b>Loudwire</b><br>&nbsp;&nbsp;↳ Fetched 7030 chars</li><li><b>Metacritic (Music)</b><br>&nbsp;&nbsp;↳ Fetched 18710 chars</li><li><b>Angry Metal Guy</b><br>&nbsp;&nbsp;↳ Fetched 7898 chars</li><li><b>Heavy Blog is Heavy (HBIH)</b><br>&nbsp;&nbsp;↳ Fetched 1827 chars</li><li><b>KEXP Blog/Reviews</b><br>&nbsp;&nbsp;↳ Fetched 7886 chars</li><li><b>Maximum Rocknroll (MRR)</b><br>&nbsp;&nbsp;↳ Fetched 43254 chars</li><li><b>Profane Existence</b><br>&nbsp;&nbsp;↳ Fetched 283 chars</li><li><b>Aquarium Drunkard</b><br>&nbsp;&nbsp;↳ Fetched 12190 chars</li><li><b>The Toilet Ov Hell</b><br>&nbsp;&nbsp;↳ Fetched 10392 chars</li><li><b>Distorted Sound Magazine</b><br>&nbsp;&nbsp;↳ Fetched 3377 chars</li><li><b>Illustrate Magazine</b><br>&nbsp;&nbsp;↳ Fetched 8786 chars</li><li><b>We are the Last Beatniks</b><br>&nbsp;&nbsp;↳ Fetched 10873 chars</li><li><b>Nothing But A Nightmare</b><br>&nbsp;&nbsp;↳ Fetched 981 chars</li><li><b>Gorilla vs. Bear</b><br>&nbsp;&nbsp;↳ Fetched 5161 chars</li>
         </ul>
+        
+        <script>
+            
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const inputs = this.querySelector('input[name="inputs"]').value;
+                    let data;
+                    let action = this.querySelector('button').innerText.includes("Remove") ? "remove" : "promote";
+
+                    try {
+                        data = JSON.parse(inputs);
+                    } catch (error) {
+                        console.error("Failed to parse JSON inputs:", error);
+                        alert("Error: Could not process removal data.");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    let message;
+                    if (action === "remove") {
+                        message = `Are you sure you want to permanently REMOVE and EXCLUDE the album "${data.album}" by ${data.artist}?`;
+                    } else {
+                        message = `Are you sure you want to PROMOTE the album "${data.album}" by ${data.artist} to your Liked Albums? (This will also remove it from the playlist).`;
+                    }
+                    
+                    const isConfirmed = confirm(message);
+                    
+                    if (!isConfirmed) {
+                        e.preventDefault();
+                    } else {
+                        alert(`Request submitted for "${data.album}". Check the GitHub Actions page for status.`);
+                    }
+                });
+            });
+    
+        </script>
     </body>
     </html>
     
