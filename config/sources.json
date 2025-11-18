@@ -20,9 +20,9 @@
       "category": "Established Pillars (Tier I)",
       "website": "Sputnikmusic",
       "relevancy_score": 8.16,
-      "genre_focus": "Indie, Metal, Punk",
-      "description": "Cross-genre review site...",
-      "url": "https://www.sputnikmusic.com/reviews/"
+      "genre_focus": "Progressive, Alternative, User-Driven",
+      "description": "Cross-genre review site. (FIXED URL to /albums/)",
+      "url": "https://www.sputnikmusic.com/albums/"
     },
     {
       "category": "Established Pillars (Tier I)",
@@ -31,14 +31,6 @@
       "genre_focus": "Rock, Metal, Prog",
       "description": "UK portal and online home for major magazines...",
       "url": "https://www.loudersound.com/reviews"
-    },
-    {
-      "category": "Established Pillars (Tier I)",
-      "website": "Drowned in Sound",
-      "relevancy_score": 7.9,
-      "genre_focus": "Alternative, Indie, Electronic (UK focus)",
-      "description": "Long-standing and well-respected alternative music outlet...",
-      "url": "https://drownedinsound.com/reviews/album"
     },
     {
       "category": "Established Pillars (Tier I)",
@@ -53,8 +45,8 @@
       "website": "Metal Temple",
       "relevancy_score": 7.69,
       "genre_focus": "Extreme Metal, News, History",
-      "description": "Pioneering metal journalism since 2000...",
-      "url": "https://www.metal-temple.com/site/catalogues/reviews.htm"
+      "description": "Pioneering metal journalism since 2000. (FIXED URL to .php)",
+      "url": "https://www.metal-temple.com/site/catalogues/reviews.php"
     },
     {
       "category": "Established Pillars (Tier I)",
@@ -141,16 +133,16 @@
       "website": "Aquarium Drunkard",
       "relevancy_score": 8.78,
       "genre_focus": "Vintage Garage, Psych, Folk",
-      "description": "Excellent high-quality archival and niche curation...",
-      "url": "https://aquariumdrunkard.com/category/reviews/"
+      "description": "Excellent high-quality archival and niche curation. (FIXED URL)",
+      "url": "https://aquariumdrunkard.com/category/album-reviews/"
     },
     {
       "category": "Independent Pulse (Tier II)",
       "website": "The Toilet Ov Hell",
       "relevancy_score": 8.18,
       "genre_focus": "Any kind of metal (Critical/Humorous)",
-      "description": "Specialized metal blog...",
-      "url": "https-reviews/"
+      "description": "Specialized metal blog. (FIXED URL to /reviews/)",
+      "url": "http://www.toiletovhell.com/reviews/"
     },
     {
       "category": "Independent Pulse (Tier II)",
@@ -165,8 +157,8 @@
       "website": "Illustrate Magazine",
       "relevancy_score": 7.68,
       "genre_focus": "Art Rock, Eclectic, Singer-Songwriter",
-      "description": "Independent journal that often covers Art Rock...",
-      "url": "https://illustratemagazine.com/all-music-reviews/"
+      "description": "Independent journal that often covers Art Rock. (FIXED URL to /music-reviews/)",
+      "url": "https://illustratemagazine.com/music-reviews/"
     },
     {
       "category": "Independent Pulse (Tier II)",
@@ -181,24 +173,32 @@
       "website": "Nothing But A Nightmare",
       "relevancy_score": 7.1,
       "genre_focus": "Punk, Gothic, Psychobilly, Hardcore",
-      "description": "Focuses on the underground movement...",
-      "url": "https://nothingbutanightmare.com/category/reviews/"
+      "description": "Focuses on the underground movement. (FIXED URL to /reviews/)",
+      "url": "https://nothingbutanightmare.com/reviews/"
     },
     {
       "category": "Independent Pulse (Tier II)",
       "website": "Gorilla vs. Bear",
       "relevancy_score": 7.1,
       "genre_focus": "Indie, Hipster focus, Eclectic",
-      "description": "High cultural cachet in the indie sphere...",
-      "url": "https://www.gorillavsbear.net/category/albums/"
+      "description": "High cultural cachet in the indie sphere. (FIXED URL to /category/new-music/)",
+      "url": "https://www.gorillavsbear.net/category/new-music/"
     },
     {
       "category": "Independent Pulse (Tier II)",
       "website": "Portals",
       "relevancy_score": 6.54,
       "genre_focus": "Independent, Unsigned Acts",
-      "description": "Focuses heavily on independent and unsigned music...",
-      "url": "https://www.portalsmusic.com/category/reviews/"
+      "description": "Focuses heavily on independent and unsigned music. (FIXED URL)",
+      "url": "https://portalsmusic.com/reviews/"
+    },
+    {
+      "category": "Independent Pulse (Tier II)",
+      "website": "RateYourMusic (RYM)",
+      "relevancy_score": 7.8,
+      "genre_focus": "All Genres (User-Driven, Database)",
+      "description": "Comprehensive database with detailed genre tagging.",
+      "url": "https://rateyourmusic.com/"
     }
   ]
 }
