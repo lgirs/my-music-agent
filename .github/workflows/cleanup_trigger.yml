@@ -1,0 +1,20 @@
+# --- Entry Point for Manual/Future Workflow C Run (MODIFIED) ---
+if __name__ == "__main__":
+    print("CleanupAgent: Running in workflow mode...")
+    
+    # Read variables passed from the GitHub Action environment
+    artist = os.getenv("CLEANUP_ARTIST")
+    album = os.getenv("CLEANUP_ALBUM")
+    album_id = os.getenv("CLEANUP_ALBUM_ID")
+
+    if not all([artist, album, album_id]):
+        print("Error: Missing one or more required cleanup inputs (Artist, Album, Album ID).")
+        sys.exit(1)
+
+    success = remove_album_from_playlist(artist, album, album_id, PLAYLIST_NAME)
+    
+    if success:
+        print(f"\nCleanupAgent: Successfully initiated removal for '{album}' by '{artist}'.")
+    else:
+        print(f"\nCleanupAgent: Failed to complete removal for '{album}' by '{artist}'.")
+        sys.exit(1)
