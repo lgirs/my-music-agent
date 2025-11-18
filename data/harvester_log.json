@@ -12,17 +12,12 @@
   {
     "status": "error",
     "source": "Sputnikmusic",
-    "message": "404 Client Error: Not Found for url: https://www.sputnikmusic.com/reviews/"
+    "message": "404 Client Error: Not Found for url: https://www.sputnikmusic.com/albums/"
   },
   {
     "status": "success",
     "source": "Louder Sound",
     "message": "Fetched 4434 chars"
-  },
-  {
-    "status": "error",
-    "source": "Drowned in Sound",
-    "message": "404 Client Error: Not Found for url: https://drownedinsound.com/reviews/album"
   },
   {
     "status": "success",
@@ -32,12 +27,12 @@
   {
     "status": "error",
     "source": "Metal Temple",
-    "message": "404 Client Error: Not Found for url: https://metal-temple.com/site/catalogues/reviews.htm"
+    "message": "404 Client Error: Not Found for url: https://metal-temple.com/site/catalogues/reviews.php"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5214 chars"
+    "message": "Fetched 5238 chars"
   },
   {
     "status": "success",
@@ -52,7 +47,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 7030 chars"
+    "message": "Fetched 7032 chars"
   },
   {
     "status": "success",
@@ -87,12 +82,12 @@
   {
     "status": "error",
     "source": "Aquarium Drunkard",
-    "message": "404 Client Error: Not Found for url: https://aquariumdrunkard.com/category/reviews/"
+    "message": "404 Client Error: Not Found for url: https://aquariumdrunkard.com/category/album-reviews/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Invalid URL 'https-reviews/': No scheme supplied. Perhaps you meant https://https-reviews/?"
+    "message": "Fetched 10554 chars"
   },
   {
     "status": "success",
@@ -102,26 +97,31 @@
   {
     "status": "error",
     "source": "Illustrate Magazine",
-    "message": "404 Client Error: Not Found for url: https://illustratemagazine.com/all-music-reviews/"
+    "message": "404 Client Error: Not Found for url: https://illustratemagazine.com/music-reviews/"
   },
   {
     "status": "success",
     "source": "We are the Last Beatniks",
-    "message": "Fetched 10873 chars"
+    "message": "Fetched 10898 chars"
   },
   {
     "status": "error",
     "source": "Nothing But A Nightmare",
-    "message": "404 Client Error: Not Found for url: https://www.nothingbutanightmare.com/category/reviews/"
+    "message": "404 Client Error: Not Found for url: https://www.nothingbutanightmare.com/reviews/"
   },
   {
     "status": "error",
     "source": "Gorilla vs. Bear",
-    "message": "404 Client Error: Not Found for url: https://www.gorillavsbear.net/category/albums/"
+    "message": "404 Client Error: Not Found for url: https://www.gorillavsbear.net/category/new-music/"
   },
   {
     "status": "error",
     "source": "Portals",
     "message": "Found no text on page."
+  },
+  {
+    "status": "error",
+    "source": "RateYourMusic (RYM)",
+    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/"
   }
 ]
