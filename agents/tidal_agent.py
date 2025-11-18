@@ -9,6 +9,7 @@ from fuzzywuzzy import fuzz
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
 HARVESTER_LOG_PATH = 'data/harvester_log.json'
+PROCESSED_LOG_PATH = 'data/processed_albums.json' # <-- NEW: Log of all albums we've taken action on
 LOG_FILE_PATH = 'data/run_log.txt'
 REPORT_FILE_PATH = 'data/index.html'
 OUTPUT_DIR = 'data'
@@ -16,7 +17,7 @@ PLAYLIST_NAME = "Weekly Discovery"
 MAX_LIKED_ALBUMS_PER_RUN = 5 
 FUZZY_MATCH_THRESHOLD = 85
 
-# --- RealTidalClient Class ---
+# --- RealTidalClient Class (No Change) ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
@@ -54,6 +55,7 @@ class RealTidalClient:
             highest_score = 0
             for tidal_album in search_results['albums'][:5]:
                 score = fuzz.token_sort_ratio(album_to_find, tidal_album.name)
+                # Apply a boost for matching the primary artist
                 if tidal_album.artist.name.lower() == artist.lower():
                     score += 10
                 if score > highest_score:
@@ -92,6 +94,9 @@ class RealTidalClient:
             new_pl = self.session.user.create_playlist(playlist_name, "Created by my AI agent.")
             playlist_id = new_pl.id
         playlist = self.session.playlist(playlist_id)
+        
+        # NOTE: Unlike adding to favorites, adding tracks to a playlist does not automatically check for duplicates.
+        # We rely on the external PROCESSED_LOG_PATH to prevent repeats.
         playlist.add(track_ids)
         print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
 
@@ -135,8 +140,8 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (FIXED for HTML display) ---
-def generate_html_report(actions_list):
+# --- generate_html_report (No Change) ---
+def generate_html_report(actions_list, processed_log_len):
     print(f"  > Generating HTML report...")
 
     try:
@@ -158,7 +163,6 @@ def generate_html_report(actions_list):
         
         # This is for "Not Found" or "Error"
         if not found:
-            # --- FIX: Including reason_html for the 'Not Found' section as requested ---
             return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>" 
         
         # This is for "Fuzzy Matches"
@@ -175,6 +179,7 @@ def generate_html_report(actions_list):
     added_fuzzy = [format_li(*a) for a in actions_list if a[0] == "ADDED_FUZZY_MATCH"]
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
+    skipped_dupe = [format_li(*a) for a in actions_list if a[0].startswith("SKIPPED_PROCESSED")]
 
     # Separate harvester logs by type
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
@@ -183,7 +188,6 @@ def generate_html_report(actions_list):
     harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&nbsp;&nbsp;↳ {h['message']}</span></li>" for h in harvester_errors])
     harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&nbsp;↳ {h['message']}</li>" for h in harvester_success])
 
-    # --- SYNTAX ERROR FIX APPLIED HERE: Changed ""**.**join to "".join() ---
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -203,16 +207,23 @@ def generate_html_report(actions_list):
             .reasoning {{ color: #586069; font-size: 0.9em; }}
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
+            .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
         </style>
     </head>
     <body>
         <h1>🎵 Music Agent Report</h1>
-        <p>Last run: {time.ctime()}</p>
+        <p>Last run: {time.ctime()} | Albums tracked in history: {processed_log_len}</p>
 
         <h2 class="error">🌐 Source Harvester Errors ({len(harvester_errors)})</h2>
         <p>These sites failed to load. We need to fix the URLs or remove them from <code>sources.json</code>.</p>
         <ul>
             {harvester_error_html or "<li>None</li>"}
+        </ul>
+        
+        <h2 class="skipped">🚫 Skipped Duplicates ({len(skipped_dupe)})</h2>
+        <p>These albums were successfully filtered against the permanent history file (<code>processed_albums.json</code>).</p>
+        <ul>
+            { "".join(skipped_dupe) or "<li>None</li>"}
         </ul>
 
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
@@ -260,9 +271,38 @@ def generate_html_report(actions_list):
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Main Function ---
+# --- Helper for Log Management (NEW) ---
+def load_processed_albums():
+    try:
+        with open(PROCESSED_LOG_PATH, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def save_processed_album(album_data):
+    processed_albums = load_processed_albums()
+    
+    # Create a unique key for the album
+    unique_key = f"{album_data['artist']}::{album_data['album']}"
+
+    # Only add if it's not already logged to prevent the log file from growing unnecessarily
+    if not any(item['key'] == unique_key for item in processed_albums):
+        processed_albums.append({
+            "key": unique_key,
+            "artist": album_data['artist'],
+            "album": album_data['album'],
+            "timestamp": time.time(),
+            "action": album_data.get('decision') # e.g. "LIKE_IMMEDIATELY"
+        })
+        with open(PROCESSED_LOG_PATH, 'w') as f:
+            json.dump(processed_albums, f, indent=2)
+    
+# --- Main Function (Modified) ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
+    
+    # --- NEW: Load Processed Log ---
+    processed_albums_keys = {f"{item['artist']}::{item['album']}" for item in load_processed_albums()}
     
     try:
         # Load environment variables (TIDAL_* secrets) from .env if running locally
@@ -280,26 +320,51 @@ def take_tidal_actions():
         print(f"Note: Filtered albums file not found or empty. No actions to take.")
         filtered_albums = []
     
-    albums_to_like = [a for a in filtered_albums if a.get('decision') == 'LIKE_IMMEDIATELY']
-    albums_to_playlist = [a for a in filtered_albums if a.get('decision') == 'ADD_TO_PLAYLIST']
-    albums_to_like.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
+    # --- NEW: Anti-Duplication Filter ---
+    albums_to_process = []
+    albums_skipped = []
+
+    for album in filtered_albums:
+        unique_key = f"{album.get('artist')}::{album.get('album')}"
+        if unique_key in processed_albums_keys:
+            # We skip this album as we've already acted on it in a previous run
+            album_data_tuple = ("SKIPPED_PROCESSED", album.get('artist'), album.get('album'), "N/A", album.get('relevance_score'), "Skipped: Already processed in a previous run.")
+            albums_skipped.append(album_data_tuple)
+        else:
+            albums_to_process.append(album)
+            
+    if albums_skipped:
+        print(f"  > Skipped {len(albums_skipped)} albums already found in history.")
+
+    # --- Separate and Cap the filtered list ---
+    albums_to_like_raw = [a for a in albums_to_process if a.get('decision') == 'LIKE_IMMEDIATELY']
+    albums_to_playlist = [a for a in albums_to_process if a.get('decision') == 'ADD_TO_PLAYLIST']
+    albums_to_like_raw.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
+    
+    # Apply the capping rule
+    albums_to_like = albums_to_like_raw[:MAX_LIKED_ALBUMS_PER_RUN]
+    
     print(f"  > Found {len(albums_to_like)} albums to 'Like' and {len(albums_to_playlist)} to 'Add to Playlist'.")
 
-    if len(albums_to_like) > MAX_LIKED_ALBUMS_PER_RUN:
-        print(f"  > Capping 'Like' list from {len(albums_to_like)} to the top {MAX_LIKED_ALBUMS_PER_RUN} most relevant.")
-        albums_to_like = albums_to_like[:MAX_LIKED_ALBUMS_PER_RUN]
-
     actions_list_for_report = [] 
-    
+    actions_list_for_report.extend(albums_skipped) # Add skipped list to report
+
+    # --- Process Actions ---
     print(f"\n--- Processing {len(albums_to_like)} 'Like' Actions ---")
     for album_data in albums_to_like:
         action_result_tuple = process_album_action(tidal_client, album_data)
         actions_list_for_report.append(action_result_tuple)
+        # Log successful action
+        if action_result_tuple[0].startswith("LIKED"):
+            save_processed_album(album_data)
 
     print(f"\n--- Processing {len(albums_to_playlist)} 'Playlist' Actions ---")
     for album_data in albums_to_playlist:
         action_result_tuple = process_album_action(tidal_client, album_data)
         actions_list_for_report.append(action_result_tuple)
+        # Log successful action
+        if action_result_tuple[0].startswith("ADDED"):
+            save_processed_album(album_data)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
@@ -307,7 +372,7 @@ def take_tidal_actions():
         for status, artist, original, found, score, reasoning in actions_list_for_report:
             f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
     
-    generate_html_report(actions_list_for_report)
+    generate_html_report(actions_list_for_report, len(load_processed_albums()))
     
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
     print(f"Actions logged to {LOG_FILE_PATH} and {REPORT_FILE_PATH}")
