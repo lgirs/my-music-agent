@@ -509,5 +509,19 @@
     "album": "Rot",
     "timestamp": 1763504201.6218603,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Oasis::(What's The Story) Morning Glory? (Remastered)",
+    "artist": "Oasis",
+    "album": "(What's The Story) Morning Glory? (Remastered)",
+    "timestamp": 1763507657.9439213,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Otherwise::Some Kind of Alchemy",
+    "artist": "Otherwise",
+    "album": "Some Kind of Alchemy",
+    "timestamp": 1763507658.4851458,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
