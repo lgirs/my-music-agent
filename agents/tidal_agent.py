@@ -1,6 +1,7 @@
 import json
 import os
 import time
+import requests
 from dotenv import load_dotenv
 from tidalapi import Session, Quality
 import tidalapi
@@ -9,7 +10,7 @@ from fuzzywuzzy import fuzz
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
 HARVESTER_LOG_PATH = 'data/harvester_log.json'
-PROCESSED_LOG_PATH = 'data/processed_albums.json' # <-- NEW: Log of all albums we've taken action on
+PROCESSED_LOG_PATH = 'data/processed_albums.json' 
 LOG_FILE_PATH = 'data/run_log.txt'
 REPORT_FILE_PATH = 'data/index.html'
 OUTPUT_DIR = 'data'
@@ -17,7 +18,7 @@ PLAYLIST_NAME = "Weekly Discovery"
 MAX_LIKED_ALBUMS_PER_RUN = 5 
 FUZZY_MATCH_THRESHOLD = 85
 
-# --- RealTidalClient Class (No Change) ---
+# --- RealTidalClient Class (Modified) ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
@@ -43,6 +44,53 @@ class RealTidalClient:
         except Exception as e:
             print(f"Failed to authenticate with Tidal: {e}")
             raise
+
+    def get_playlist(self, name):
+        """Finds the playlist object."""
+        for pl in self.session.user.playlists():
+            if pl.name == name:
+                return pl
+        return None
+
+    def get_current_playlist_albums_for_report(self, playlist_name):
+        """
+        Retrieves all tracks from a playlist and groups them into unique albums.
+        Returns a list of dicts: [{'artist': 'X', 'album': 'Y', 'album_id': 123}]
+        """
+        print(f"  > Fetching current contents of '{playlist_name}'...")
+        playlist = self.get_playlist(playlist_name)
+        if not playlist:
+            print(f"  > Playlist '{playlist_name}' not found.")
+            return []
+
+        album_set = set()
+        album_list = []
+        
+        # Get all tracks in the playlist
+        # Note: This operation can be slow for very large playlists
+        try:
+            tracks = playlist.tracks()
+        except requests.exceptions.HTTPError as e:
+            print(f"  > Error fetching playlist tracks: {e}")
+            return []
+
+        for track in tracks:
+            # We use the track's album object to get the full album details
+            album = track.album
+            
+            # Create a unique key using the album ID
+            album_key = album.id
+            
+            if album_key not in album_set:
+                album_set.add(album_key)
+                album_list.append({
+                    'artist': album.artist.name if album.artist else 'Unknown Artist',
+                    'album': album.name,
+                    'album_id': album.id
+                })
+        
+        print(f"  > Found {len(album_list)} unique albums in '{playlist_name}'.")
+        return album_list
 
     def find_album_id(self, artist, album_to_find):
         """Searches Tidal and intelligently finds the best match."""
@@ -84,23 +132,44 @@ class RealTidalClient:
         album_object = self.session.album(album_id)
         tracks = album_object.tracks()
         track_ids = [track.id for track in tracks]
-        playlist_id = None
-        for pl in self.session.user.playlists():
-            if pl.name == playlist_name:
-                playlist_id = pl.id
-                break
-        if not playlist_id:
+        
+        playlist = self.get_playlist(playlist_name)
+        if not playlist:
             print(f"  > Playlist '{playlist_name}' not found. Creating it...")
             new_pl = self.session.user.create_playlist(playlist_name, "Created by my AI agent.")
-            playlist_id = new_pl.id
-        playlist = self.session.playlist(playlist_id)
-        
-        # NOTE: Unlike adding to favorites, adding tracks to a playlist does not automatically check for duplicates.
+            playlist = new_pl
+
         # We rely on the external PROCESSED_LOG_PATH to prevent repeats.
         playlist.add(track_ids)
         print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
 
-# --- process_album_action ---
+# --- Helper for Log Management (No Change) ---
+def load_processed_albums():
+    try:
+        with open(PROCESSED_LOG_PATH, 'r') as f:
+            return json.load(f)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return []
+
+def save_processed_album(album_data):
+    processed_albums = load_processed_albums()
+    
+    # Create a unique key for the album
+    unique_key = f"{album_data['artist']}::{album_data['album']}"
+
+    # Only add if it's not already logged to prevent the log file from growing unnecessarily
+    if not any(item['key'] == unique_key for item in processed_albums):
+        processed_albums.append({
+            "key": unique_key,
+            "artist": album_data['artist'],
+            "album": album_data['album'],
+            "timestamp": time.time(),
+            "action": album_data.get('decision') # e.g. "LIKE_IMMEDIATELY"
+        })
+        with open(PROCESSED_LOG_PATH, 'w') as f:
+            json.dump(processed_albums, f, indent=2)
+    
+# --- process_album_action (No Change) ---
 def process_album_action(tidal_client, album_data):
     """
     Processes a single album and returns a detailed log tuple:
@@ -140,8 +209,8 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (No Change) ---
-def generate_html_report(actions_list, processed_log_len):
+# --- generate_html_report (MODIFIED) ---
+def generate_html_report(actions_list, processed_log_len, current_playlist_albums):
     print(f"  > Generating HTML report...")
 
     try:
@@ -150,7 +219,7 @@ def generate_html_report(actions_list, processed_log_len):
     except Exception:
         harvester_log = []
 
-    # Helper function to format list items
+    # Helper function to format list items (No change)
     def format_li(status, artist, original, found, score, reasoning):
         # Ensure data is HTML-safe
         artist = artist.replace('<', '&lt;').replace('>', '&gt;')
@@ -161,18 +230,39 @@ def generate_html_report(actions_list, processed_log_len):
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
         reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
         
-        # This is for "Not Found" or "Error"
         if not found:
             return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>" 
         
-        # This is for "Fuzzy Matches"
         if "FUZZY" in status:
             return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
         
-        # This is for "Exact Matches"
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
-    # Separate actions by type
+    # --- NEW: Helper for current playlist album list ---
+    def format_current_album_li(album_data):
+        artist_safe = album_data['artist'].replace('<', '&lt;').replace('>', '&gt;')
+        album_safe = album_data['album'].replace('<', '&lt;').replace('>', '&gt;')
+        album_id = album_data['album_id']
+        
+        # We need a form to submit the data required by the cleanup_agent
+        # This form will target the GitHub Action Dispatch mechanism, which we will set up next.
+        # For now, it's a simple POST form.
+        remove_form = f"""
+            <form style="display:inline;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank" onsubmit="alert('Cleanup initiated for: {album_safe}. Check the 'Weekly Discovery' playlist and the linked GitHub Action run status.');">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}"}}'>
+                <button type="submit" style="float:right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer;">Remove Album</button>
+            </form>
+        """
+        
+        return f"""
+        <li>
+            <b>{artist_safe} - {album_safe}</b>
+            {remove_form}
+        </li>
+        """
+
+    # Separate action log by type
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
     liked_fuzzy = [format_li(*a) for a in actions_list if a[0] == "LIKED_FUZZY_MATCH"]
     added_exact = [format_li(*a) for a in actions_list if a[0] == "ADDED_EXACT_MATCH"]
@@ -180,6 +270,9 @@ def generate_html_report(actions_list, processed_log_len):
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
     skipped_dupe = [format_li(*a) for a in actions_list if a[0].startswith("SKIPPED_PROCESSED")]
+
+    # Format current playlist albums
+    current_playlist_html = ''.join([format_current_album_li(a) for a in current_playlist_albums])
 
     # Separate harvester logs by type
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
@@ -201,13 +294,14 @@ def generate_html_report(actions_list, processed_log_len):
             h1 {{ font-size: 32px; }}
             h2 {{ font-size: 24px; margin-top: 40px; }}
             ul {{ list-style-type: none; padding-left: 0; }}
-            li {{ background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; }}
+            li {{ background-color: #ffffff; border: 1px solid #d1d5da; padding: 12px; margin-bottom: 8px; border-radius: 6px; position: relative; }}
             .score {{ float: right; color: #586069; font-size: 0.9em; font-weight: bold; }}
             .fuzzy {{ color: #b08800; font-size: 0.9em; }}
             .reasoning {{ color: #586069; font-size: 0.9em; }}
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
+            .remove-btn {{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: #d73a49; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }}
         </style>
     </head>
     <body>
@@ -220,6 +314,12 @@ def generate_html_report(actions_list, processed_log_len):
             {harvester_error_html or "<li>None</li>"}
         </ul>
         
+        <h2>🗑️ Current 'Weekly Discovery' Contents ({len(current_playlist_albums)})</h2>
+        <p>Use the "Remove Album" button to quickly delete an album from the playlist and permanently exclude it from future additions.</p>
+        <ul>
+            {current_playlist_html or "<li>The 'Weekly Discovery' playlist is currently empty or could not be accessed.</li>"}
+        </ul>
+
         <h2 class="skipped">🚫 Skipped Duplicates ({len(skipped_dupe)})</h2>
         <p>These albums were successfully filtered against the permanent history file (<code>processed_albums.json</code>).</p>
         <ul>
@@ -259,6 +359,24 @@ def generate_html_report(actions_list, processed_log_len):
         <ul>
             {harvester_success_html or "<li>None</li>"}
         </ul>
+        
+        <script>
+            // Note: This script is a placeholder. It will use a placeholder POST request 
+            // until the dedicated GitHub Action workflow is created in the next step.
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const data = JSON.parse(this.querySelector('input[name="inputs"]').value);
+                    const isConfirmed = confirm(`Are you sure you want to permanently remove and exclude the album "${data.album}" by ${data.artist}?`);
+                    
+                    if (!isConfirmed) {
+                        e.preventDefault();
+                    }
+                    
+                    // Note: Since this form action is not a live server, the actual removal 
+                    // trigger will need to be configured in the next step via a GitHub Actions setup.
+                });
+            });
+        </script>
     </body>
     </html>
     """
@@ -271,56 +389,32 @@ def generate_html_report(actions_list, processed_log_len):
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Helper for Log Management (NEW) ---
-def load_processed_albums():
-    try:
-        with open(PROCESSED_LOG_PATH, 'r') as f:
-            return json.load(f)
-    except (FileNotFoundError, json.JSONDecodeError):
-        return []
-
-def save_processed_album(album_data):
-    processed_albums = load_processed_albums()
-    
-    # Create a unique key for the album
-    unique_key = f"{album_data['artist']}::{album_data['album']}"
-
-    # Only add if it's not already logged to prevent the log file from growing unnecessarily
-    if not any(item['key'] == unique_key for item in processed_albums):
-        processed_albums.append({
-            "key": unique_key,
-            "artist": album_data['artist'],
-            "album": album_data['album'],
-            "timestamp": time.time(),
-            "action": album_data.get('decision') # e.g. "LIKE_IMMEDIATELY"
-        })
-        with open(PROCESSED_LOG_PATH, 'w') as f:
-            json.dump(processed_albums, f, indent=2)
-    
 # --- Main Function (Modified) ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
-    # --- NEW: Load Processed Log ---
+    # --- Load Processed Log ---
     processed_albums_keys = {f"{item['artist']}::{item['album']}" for item in load_processed_albums()}
     
     try:
-        # Load environment variables (TIDAL_* secrets) from .env if running locally
-        load_dotenv(dotenv_path='config/.env') 
         tidal_client = RealTidalClient()
     except Exception as e:
         print(f"Could not start Tidal agent. Exiting. Error: {e}")
-        return
+        # Note: If tidal fails, we can't run the cleanup check for the report.
+        return 
 
+    # --- Fetch Current Playlist Albums for Report ---
+    current_playlist_albums = tidal_client.get_current_playlist_albums_for_report(PLAYLIST_NAME)
+    
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
             filtered_albums = json.load(f)
         print(f"Found {len(filtered_albums)} approved albums to process.")
     except (FileNotFoundError, json.JSONDecodeError):
-        print(f"Note: Filtered albums file not found or empty. No actions to take.")
+        print(f"Note: Filtered albums file not found or empty. No albums processed.")
         filtered_albums = []
-    
-    # --- NEW: Anti-Duplication Filter ---
+        
+    # --- Anti-Duplication Filter ---
     albums_to_process = []
     albums_skipped = []
 
@@ -372,7 +466,7 @@ def take_tidal_actions():
         for status, artist, original, found, score, reasoning in actions_list_for_report:
             f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
     
-    generate_html_report(actions_list_for_report, len(load_processed_albums()))
+    generate_html_report(actions_list_for_report, len(load_processed_albums()), current_playlist_albums)
     
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
     print(f"Actions logged to {LOG_FILE_PATH} and {REPORT_FILE_PATH}")
