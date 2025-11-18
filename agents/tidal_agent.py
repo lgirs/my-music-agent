@@ -246,7 +246,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         # We need a form to submit the data required by the cleanup_agent
         # *** REMEMBER TO REPLACE OWNER/REPO WITH YOUR ACTUAL PATH ***
         remove_form = f"""
-            <form style="display:inline;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
                 <input type="hidden" name="ref" value="main">
                 <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "REMOVE"}}'>
                 <button type="submit" class="remove-btn">Remove Album</button>
