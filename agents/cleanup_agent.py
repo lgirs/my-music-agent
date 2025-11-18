@@ -5,12 +5,10 @@ import time
 from dotenv import load_dotenv
 from tidalapi import Session, exceptions as tidal_exceptions
 
-# --- Configuration (Shared) ---
+# --- Configuration ---
 PLAYLIST_NAME = "Weekly Discovery"
-OUTPUT_DIR = 'data'
 PROCESSED_LOG_PATH = 'data/processed_albums.json' 
 
-# --- Tidal Client (Reused from TidalAgent) ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
@@ -20,7 +18,7 @@ class RealTidalClient:
         refresh_token = os.getenv("TIDAL_REFRESH_TOKEN")
         expiry_time = os.getenv("TIDAL_EXPIRY_TIME")
         if not all([token_type, access_token, refresh_token, expiry_time]):
-            print("Error: Tidal auth tokens not found...")
+            print("Error: Tidal auth tokens not found.")
             raise ValueError("Missing Tidal authentication")
         
         try:
@@ -36,18 +34,16 @@ class RealTidalClient:
             raise
 
     def get_playlist(self, name):
-        """Finds the 'Weekly Discovery' playlist object."""
         for pl in self.session.user.playlists():
             if pl.name == name:
                 return pl
         return None
 
-# --- Exclusion Log Management ---
-def update_processed_log(artist, album, status="EXCLUDED_MANUAL"):
-    """
-    Updates the processed_albums.json file to permanently mark an album 
-    as handled, overriding any previous ADDED or LIKED action if present.
-    """
+    def like_album(self, album_id):
+        print(f"  > Liking album {album_id}...")
+        self.session.user.favorites.add_album(album_id)
+
+def update_processed_log(artist, album, status):
     try:
         with open(PROCESSED_LOG_PATH, 'r') as f:
             processed_albums = json.load(f)
@@ -55,18 +51,14 @@ def update_processed_log(artist, album, status="EXCLUDED_MANUAL"):
         processed_albums = []
 
     unique_key = f"{artist}::{album}"
-    
-    # Check if album already exists in the log (it should, as the main agent added it)
     found = False
     for item in processed_albums:
         if item['key'] == unique_key:
-            # Update the existing entry with the new exclusion status
             item['action'] = status 
             item['timestamp'] = time.time()
             found = True
             break
             
-    # If somehow the album wasn't there, add it with the exclusion status
     if not found:
         processed_albums.append({
             "key": unique_key,
@@ -78,64 +70,63 @@ def update_processed_log(artist, album, status="EXCLUDED_MANUAL"):
         
     with open(PROCESSED_LOG_PATH, 'w') as f:
         json.dump(processed_albums, f, indent=2)
-        
-    print(f"  > Log updated for '{artist} - {album}': Status set to {status}")
+    print(f"  > Log updated: {unique_key} -> {status}")
 
-# --- Core Cleanup Function ---
-def remove_album_from_playlist(artist, album_title, album_id, playlist_name):
-    """
-    Connects to Tidal, removes all tracks belonging to an album, and updates the exclusion log.
-    """
-    print(f"\nCleanupAgent: Removing '{album_title}' by '{artist}' (Album ID: {album_id})...")
+def handle_album_action(artist, album_title, album_id, action_type):
+    print(f"\nCleanupAgent: Processing '{album_title}' by '{artist}' (ID: {album_id})")
+    print(f"  > Action: {action_type}")
     
     try:
         tidal_client = RealTidalClient()
-    except Exception as e:
-        print(f"Error: Cannot authenticate Tidal client. {e}")
+    except Exception:
         return False
         
-    playlist = tidal_client.get_playlist(playlist_name)
+    playlist = tidal_client.get_playlist(PLAYLIST_NAME)
     if not playlist:
-        print(f"Error: Playlist '{playlist_name}' not found for user.")
+        print(f"Error: Playlist '{PLAYLIST_NAME}' not found.")
         return False
         
     try:
+        # 1. If Promoting, Like the album first
+        if action_type == "PROMOTE":
+            tidal_client.like_album(album_id)
+            log_status = "LIKED_MANUAL"
+        else:
+            log_status = "EXCLUDED_MANUAL"
+
+        # 2. Remove tracks from playlist (for both REMOVE and PROMOTE)
+        # We must fetch tracks to get their IDs
         album_object = tidal_client.session.album(album_id)
         tracks = album_object.tracks()
         
-        if not tracks:
-            print("Warning: Could not find tracks for this album ID. Skipping removal.")
-            update_processed_log(artist, album_title, status="EXCLUDED_MISSING_TRACKS")
-            return True
-            
-        track_ids_to_remove = [track.id for track in tracks]
-        
-        # The tidalapi remove_by_id function removes tracks from the playlist
-        # It's robust for removing multiple IDs at once.
-        playlist.remove_by_id(track_ids_to_remove)
-        
-        print(f"  > SUCCESS: Removed {len(track_ids_to_remove)} tracks from '{playlist_name}'.")
-        
-        # Log this album as permanently EXCLUDED/handled
-        update_processed_log(artist, album_title, status="EXCLUDED_MANUAL")
+        if tracks:
+            track_ids = [t.id for t in tracks]
+            playlist.remove_by_id(track_ids)
+            print(f"  > Removed {len(track_ids)} tracks from '{PLAYLIST_NAME}'.")
+        else:
+            print("  > Warning: No tracks found for album. Playlist unchanged.")
+
+        # 3. Update Log
+        update_processed_log(artist, album_title, status=log_status)
         return True
         
-    except tidal_exceptions.ItemNotFound:
-        print(f"Error: Album ID {album_id} not found on Tidal. Updating log to exclude.")
-        update_processed_log(artist, album_title, status="EXCLUDED_NOT_FOUND")
-        return True
     except Exception as e:
-        print(f"An unexpected error occurred during removal: {e}")
+        print(f"An error occurred: {e}")
         return False
 
-# --- Entry Point for Manual/Future Workflow C Run ---
 if __name__ == "__main__":
-    # This section is a placeholder for how the new agent would be executed,
-    # either via a dashboard or command line. We'll implement the web trigger later.
-    print("CleanupAgent: Running in standalone mode.")
-    # Example usage (hardcoded for demonstration - to be replaced by web interface calls)
-    # Note: The real trigger will pass the album's artist and Tidal ID to this script.
+    print("CleanupAgent: Running in workflow mode...")
     
-    # Since we don't have the web trigger yet, this script will be empty on first run.
-    # The next step will focus on creating the web interface to feed it data.
-    pass
+    artist = os.getenv("CLEANUP_ARTIST")
+    album = os.getenv("CLEANUP_ALBUM")
+    album_id = os.getenv("CLEANUP_ALBUM_ID")
+    action = os.getenv("CLEANUP_ACTION", "REMOVE") # Default to remove
+
+    if not all([artist, album, album_id]):
+        print("Error: Missing inputs.")
+        sys.exit(1)
+
+    success = handle_album_action(artist, album, album_id, action)
+    
+    if not success:
+        sys.exit(1)
