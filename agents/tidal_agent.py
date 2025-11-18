@@ -135,7 +135,7 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (FIXED) ---
+# --- generate_html_report (FIXED for HTML display) ---
 def generate_html_report(actions_list):
     print(f"  > Generating HTML report...")
 
@@ -158,8 +158,8 @@ def generate_html_report(actions_list):
         
         # This is for "Not Found" or "Error"
         if not found:
-            # Removed the reason_html for Not Found, as it clutters the HITL dashboard
-            return f"<li><b>{artist} - {original}</b> {score_html}</li>" 
+            # --- FIX: Including reason_html for the 'Not Found' section as requested ---
+            return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>" 
         
         # This is for "Fuzzy Matches"
         if "FUZZY" in status:
