@@ -67,7 +67,6 @@ class RealTidalClient:
         album_list = []
         
         # Get all tracks in the playlist
-        # Note: This operation can be slow for very large playlists
         try:
             tracks = playlist.tracks()
         except requests.exceptions.HTTPError as e:
@@ -209,7 +208,7 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (MODIFIED) ---
+# --- generate_html_report (FIXED JS ESCAPING) ---
 def generate_html_report(actions_list, processed_log_len, current_playlist_albums):
     print(f"  > Generating HTML report...")
 
@@ -246,12 +245,12 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         
         # We need a form to submit the data required by the cleanup_agent
         # This form will target the GitHub Action Dispatch mechanism, which we will set up next.
-        # For now, it's a simple POST form.
+        # This is where you need to replace OWNER/REPO with your actual path
         remove_form = f"""
-            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank" onsubmit="alert('Cleanup initiated for: {album_safe}. Check the 'Weekly Discovery' playlist and the linked GitHub Action run status.');">
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
                 <input type="hidden" name="ref" value="main">
                 <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}"}}'>
-                <button type="submit" style="float:right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer;">Remove Album</button>
+                <button type="submit" class="remove-btn">Remove Album</button>
             </form>
         """
         
@@ -301,7 +300,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
-            .remove-btn {{ position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background-color: #d73a49; color: white; border: none; padding: 5px 10px; border-radius: 3px; cursor: pointer; }}
+            .remove-btn {{ float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }}
         </style>
     </head>
     <body>
@@ -361,21 +360,29 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         </ul>
         
         <script>
-            // Note: This script is a placeholder. It will use a placeholder POST request 
-            // until the dedicated GitHub Action workflow is created in the next step.
-            document.querySelectorAll('form').forEach(form => {
-                form.addEventListener('submit', function(e) {
-                    const data = JSON.parse(this.querySelector('input[name="inputs"]').value);
+            // This script handles the confirmation step before submitting the form
+            document.querySelectorAll('form').forEach(form => {{
+                form.addEventListener('submit', function(e) {{
+                    const inputs = this.querySelector('input[name="inputs"]').value;
+                    let data;
+                    try {{
+                        data = JSON.parse(inputs);
+                    }} catch (error) {{
+                        console.error("Failed to parse JSON inputs:", error);
+                        alert("Error: Could not process removal data.");
+                        e.preventDefault();
+                        return;
+                    }}
+
                     const isConfirmed = confirm(`Are you sure you want to permanently remove and exclude the album "${data.album}" by ${data.artist}?`);
                     
-                    if (!isConfirmed) {
+                    if (!isConfirmed) {{
                         e.preventDefault();
-                    }
-                    
-                    // Note: Since this form action is not a live server, the actual removal 
-                    // trigger will need to be configured in the next step via a GitHub Actions setup.
-                });
-            });
+                    }} else {{
+                        alert(`Removal request submitted for "${data.album}". Check the GitHub Actions page for status.`);
+                    }}
+                }});
+            }});
         </script>
     </body>
     </html>
