@@ -248,7 +248,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         # This form will target the GitHub Action Dispatch mechanism, which we will set up next.
         # For now, it's a simple POST form.
         remove_form = f"""
-            <form style="display:inline;" action="https://github.com/OWNER/REPO/actions/workflows/cleanup_trigger.yml" method="post" target="_blank" onsubmit="alert('Cleanup initiated for: {album_safe}. Check the 'Weekly Discovery' playlist and the linked GitHub Action run status.');">
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank" onsubmit="alert('Cleanup initiated for: {album_safe}. Check the 'Weekly Discovery' playlist and the linked GitHub Action run status.');">
                 <input type="hidden" name="ref" value="main">
                 <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}"}}'>
                 <button type="submit" style="float:right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer;">Remove Album</button>
