@@ -20,6 +20,8 @@ FUZZY_MATCH_THRESHOLD = 85
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
+        # Load environment variables (TIDAL_* secrets) from .env if running locally
+        load_dotenv(dotenv_path='config/.env') 
         token_type = os.getenv("TIDAL_TOKEN_TYPE")
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
         refresh_token = os.getenv("TIDAL_REFRESH_TOKEN")
@@ -125,7 +127,7 @@ def process_album_action(tidal_client, album_data):
             return ("LIKED_" + match_status, artist, album_to_find, found_title, ai_score, reasoning)
         elif decision == "ADD_TO_PLAYLIST":
             tidal_client.add_album_to_playlist(album_id, artist, found_title, playlist_name=PLAYLIST_NAME)
-            return ("ADDED_" + match_status, artist, album_to_find, found_title, ai_score, reasoning)
+            return ("ADDED_" + match_status, artist, album_to_find, found_title, album_data['relevance_score'], reasoning)
     except Exception as e:
         print(f"  > Error during Tidal action: {e}")
         return ("ERROR", artist, album_to_find, str(e), ai_score, reasoning)
@@ -152,15 +154,16 @@ def generate_html_report(actions_list):
         reasoning = reasoning.replace('<', '&lt;').replace('>', '&gt;')
 
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
-        reason_html = f"<br><span class='reasoning'>&nbsp;&Larr; <i>AI Reason: {reasoning}</i></span>"
+        reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
         
         # This is for "Not Found" or "Error"
         if not found:
-            return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>"
+            # Removed the reason_html for Not Found, as it clutters the HITL dashboard
+            return f"<li><b>{artist} - {original}</b> {score_html}</li>" 
         
         # This is for "Fuzzy Matches"
         if "FUZZY" in status:
-            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&Larr; Matched as: <i>{found}</i></span>{reason_html}</li>"
+            return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
         
         # This is for "Exact Matches"
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
@@ -177,11 +180,10 @@ def generate_html_report(actions_list):
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
 
-    harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&Larr; {h['message']}</span></li>" for h in harvester_errors])
-    harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&Larr; {h['message']}</li>" for h in harvester_success])
+    harvester_error_html = ''.join([f"<li><b>{h['source']}</b><br><span class='fuzzy'>&nbsp;&nbsp;↳ {h['message']}</span></li>" for h in harvester_errors])
+    harvester_success_html = ''.join([f"<li><b>{h['source']}</b><br>&nbsp;&nbsp;↳ {h['message']}</li>" for h in harvester_success])
 
-    # --- THIS IS THE FIX ---
-    # The '' must be "" inside an f-string
+    # --- SYNTAX ERROR FIX APPLIED HERE: Changed ""**.**join to "".join() ---
     html = f"""
     <!DOCTYPE html>
     <html lang="en">
@@ -216,28 +218,28 @@ def generate_html_report(actions_list):
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
         <p>These albums passed the AI filter but could not be found on Tidal.</p>
         <ul>
-            {""**.**join(not_found) or "<li>None</li>"}
+            { "".join(not_found) or "<li>None</li>"}
         </ul>
 
         <h2 class="error">❌ Tidal API Errors ({len(errors)})</h2>
         <p>These albums were found, but a system error occurred during the Tidal action.</p>
         <ul>
-            {""**.**join(errors) or "<li>None</li>"}
+            { "".join(errors) or "<li>None</li>"}
         </ul>
 
         <h2>⭐ Albums Liked ({len(liked_exact) + len(liked_fuzzy)})</h2>
         <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores.</p>
         <ul>
-            {""**.**join(liked_exact)}
-            {""**.**join(liked_fuzzy)}
+            { "".join(liked_exact)}
+            { "".join(liked_fuzzy)}
             {'<li>None</li>' if not (liked_exact or liked_fuzzy) else ''}
         </ul>
 
         <h2>🎶 Added to 'Weekly Discovery' ({len(added_exact) + len(added_fuzzy)})</h2>
         <p>These albums were also recommended by the AI and added to your playlist.</p>
         <ul>
-            {""**.**join(added_exact)}
-            {""**.**join(added_fuzzy)}
+            { "".join(added_exact)}
+            { "".join(added_fuzzy)}
             {'<li>None</li>' if not (added_exact or added_fuzzy) else ''}
         </ul>
 
@@ -263,6 +265,8 @@ def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
     try:
+        # Load environment variables (TIDAL_* secrets) from .env if running locally
+        load_dotenv(dotenv_path='config/.env') 
         tidal_client = RealTidalClient()
     except Exception as e:
         print(f"Could not start Tidal agent. Exiting. Error: {e}")
