@@ -136,7 +136,7 @@ def process_queue(client, command_pl, target_pl, action):
             else:
                 log_status = "EXCLUDED_VIA_PLAYLIST"
 
-            # ACTION: Identify tracks to remove from Target (Weekly Discovery)
+            # ACTION: Identify tracks to remove from Target (AI Music Discovery)
             # We scan the target playlist for ANY track belonging to this album
             target_tracks = target_pl.tracks()
             for t in target_tracks:
@@ -149,21 +149,31 @@ def process_queue(client, command_pl, target_pl, action):
         except Exception as e:
             print(f"    - Error processing item: {e}")
 
-    # Batch remove from Target Playlist
+    # Batch remove from Target Playlist (FIXED: Loop removal)
     if items_to_remove_from_target:
         print(f"  > Removing {len(items_to_remove_from_target)} tracks from '{target_pl.name}'...")
         # Remove duplicates just in case
         unique_ids = list(set(items_to_remove_from_target))
-        target_pl.remove_by_id(unique_ids)
+        
+        # FIX: Iterate and remove one by one to ensure API acceptance
+        for track_id in unique_ids:
+            try:
+                target_pl.remove_by_id(track_id)
+            except Exception as e:
+                print(f"    - Failed to remove track {track_id}: {e}")
+                
     else:
         print(f"  > No matching tracks found in '{target_pl.name}' to remove.")
 
-    # FINAL STEP: Clear the Command Playlist
-    # There isn't a "clear()" method, so we remove all items we just found
+    # FINAL STEP: Clear the Command Playlist (FIXED: Loop removal)
     cmd_item_ids = [t.id for t in tracks]
     if cmd_item_ids:
         print(f"  > Clearing command playlist '{command_pl.name}'...")
-        command_pl.remove_by_id(cmd_item_ids)
+        for track_id in cmd_item_ids:
+            try:
+                command_pl.remove_by_id(track_id)
+            except Exception as e:
+                print(f"    - Failed to clear command track {track_id}: {e}")
 
 if __name__ == "__main__":
     process_commands()
