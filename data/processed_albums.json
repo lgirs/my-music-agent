@@ -108,8 +108,8 @@
     "key": "Conjurer::Unself",
     "artist": "Conjurer",
     "album": "Unself",
-    "timestamp": 1763510756.6515048,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763566327.1980941,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Testament::Para Bellum",
@@ -416,7 +416,7 @@
     "key": "Bob Dylan::Through The Open Window: The Bootleg Series Vol. 18 (Highlights)",
     "artist": "Bob Dylan",
     "album": "Through The Open Window: The Bootleg Series Vol. 18 (Highlights)",
-    "timestamp": 1763510832.7864573,
+    "timestamp": 1763566259.0540936,
     "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
@@ -542,8 +542,8 @@
     "key": "1914::Viribus Unitis",
     "artist": "1914",
     "album": "Viribus Unitis",
-    "timestamp": 1763551524.1841848,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763566258.6735287,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "common::Resurrection",
@@ -557,6 +557,69 @@
     "artist": "Thee Headcoats",
     "album": "The Sherlock Holmes Rhythm \u2019n\u2019 Beat Vernacular",
     "timestamp": 1763551535.193342,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Aesop Rock::Float",
+    "artist": "Aesop Rock",
+    "album": "Float",
+    "timestamp": 1763566231.430856,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "H\u00fcsker D\u00fc::1985: The Miracle Year",
+    "artist": "H\u00fcsker D\u00fc",
+    "album": "1985: The Miracle Year",
+    "timestamp": 1763566234.269863,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Patti Smith::Horses",
+    "artist": "Patti Smith",
+    "album": "Horses",
+    "timestamp": 1763566236.8366168,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Armand Hammer::Mercy",
+    "artist": "Armand Hammer",
+    "album": "Mercy",
+    "timestamp": 1763566239.3489885,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Tortoise::Touch",
+    "artist": "Tortoise",
+    "album": "Touch",
+    "timestamp": 1763566241.9474409,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Machine Girl::PsychoWarrior: MG Ultra X",
+    "artist": "Machine Girl",
+    "album": "PsychoWarrior: MG Ultra X",
+    "timestamp": 1763566245.0275548,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Danny Brown::Stardust",
+    "artist": "Danny Brown",
+    "album": "Stardust",
+    "timestamp": 1763566247.6776645,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Saba::C0FFEE!",
+    "artist": "Saba",
+    "album": "C0FFEE!",
+    "timestamp": 1763566250.389872,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Bruce Springsteen::Nebraska '82: Expanded Edition",
+    "artist": "Bruce Springsteen",
+    "album": "Nebraska '82: Expanded Edition",
+    "timestamp": 1763566259.2029343,
     "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
