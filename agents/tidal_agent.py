@@ -10,20 +10,19 @@ from fuzzywuzzy import fuzz
 # --- Configuration ---
 INPUT_FILE_PATH = 'data/filtered_album_list.json'
 HARVESTER_LOG_PATH = 'data/harvester_log.json'
-PROCESSED_LOG_PATH = 'data/processed_albums.json'
+PROCESSED_LOG_PATH = 'data/processed_albums.json' 
 LOG_FILE_PATH = 'data/run_log.txt'
 REPORT_FILE_PATH = 'data/index.html'
 OUTPUT_DIR = 'data'
 PLAYLIST_NAME = "AI Music Discovery"
-MAX_LIKED_ALBUMS_PER_RUN = 5
+MAX_LIKED_ALBUMS_PER_RUN = 5 
 FUZZY_MATCH_THRESHOLD = 85
 
 # --- RealTidalClient Class ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
-        # Load environment variables (TIDAL_* secrets) from .env if running locally
-        load_dotenv(dotenv_path='config/.env')
+        load_dotenv(dotenv_path='config/.env') 
         token_type = os.getenv("TIDAL_TOKEN_TYPE")
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
         refresh_token = os.getenv("TIDAL_REFRESH_TOKEN")
@@ -87,7 +86,7 @@ class RealTidalClient:
         album_object = self.session.album(album_id)
         tracks = album_object.tracks()
         track_ids = [track.id for track in tracks]
-
+        
         playlist = self.get_playlist(playlist_name)
         if not playlist:
             print(f"  > Playlist '{playlist_name}' not found. Creating it...")
@@ -118,7 +117,7 @@ def save_processed_album(album_data):
         })
         with open(PROCESSED_LOG_PATH, 'w') as f:
             json.dump(processed_albums, f, indent=2)
-
+    
 # --- process_album_action ---
 def process_album_action(tidal_client, album_data):
     artist = album_data.get('artist', 'Unknown')
@@ -131,7 +130,7 @@ def process_album_action(tidal_client, album_data):
         return ("SKIPPED_INVALID", artist, f"Invalid data: {album_data}", "", ai_score, reasoning)
 
     match_info = tidal_client.find_album_id(artist, album_to_find)
-
+    
     if match_info["status"] == "NOT_FOUND":
         return ("NOT_FOUND", artist, album_to_find, "", ai_score, reasoning)
     if match_info["status"] == "ERROR":
@@ -140,7 +139,7 @@ def process_album_action(tidal_client, album_data):
     album_id = match_info["id"]
     found_title = match_info["title"]
     match_status = match_info["status"]
-
+    
     try:
         if decision == "LIKE_IMMEDIATELY":
             tidal_client.like_album(album_id, artist, found_title)
@@ -151,11 +150,11 @@ def process_album_action(tidal_client, album_data):
     except Exception as e:
         print(f"  > Error during Tidal action: {e}")
         return ("ERROR", artist, album_to_find, str(e), ai_score, reasoning)
-
+    
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (REORDERED) ---
+# --- generate_html_report (FIXED & CLEANED) ---
 def generate_html_report(actions_list, processed_log_len):
     print(f"  > Generating HTML report...")
 
@@ -173,13 +172,13 @@ def generate_html_report(actions_list, processed_log_len):
 
         score_html = f"<span class='score'>[AI Score: {score}]</span>"
         reason_html = f"<br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span>"
-
+        
         if not found:
-            return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>"
-
+            return f"<li><b>{artist} - {original}</b> {score_html}{reason_html}</li>" 
+        
         if "FUZZY" in status:
             return f"<li><b>{artist} - {original}</b> {score_html}<br><span class='fuzzy'>&nbsp;&nbsp;↳ Matched as: <i>{found}</i></span>{reason_html}</li>"
-
+        
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
@@ -282,15 +281,15 @@ def generate_html_report(actions_list, processed_log_len):
 # --- Main Function ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
-
+    
     # --- Load Processed Log ---
     processed_albums_keys = {f"{item['artist']}::{item['album']}" for item in load_processed_albums()}
-
+    
     try:
         tidal_client = RealTidalClient()
     except Exception as e:
         print(f"Could not start Tidal agent. Exiting. Error: {e}")
-        return
+        return 
 
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
@@ -299,7 +298,7 @@ def take_tidal_actions():
     except (FileNotFoundError, json.JSONDecodeError):
         print(f"Note: Filtered albums file not found or empty. No albums processed.")
         filtered_albums = []
-
+        
     # --- Anti-Duplication Filter ---
     albums_to_process = []
     albums_skipped = []
@@ -311,7 +310,7 @@ def take_tidal_actions():
             albums_skipped.append(album_data_tuple)
         else:
             albums_to_process.append(album)
-
+            
     if albums_skipped:
         print(f"  > Skipped {len(albums_skipped)} albums already found in history.")
 
@@ -319,13 +318,13 @@ def take_tidal_actions():
     albums_to_like_raw = [a for a in albums_to_process if a.get('decision') == 'LIKE_IMMEDIATELY']
     albums_to_playlist = [a for a in albums_to_process if a.get('decision') == 'ADD_TO_PLAYLIST']
     albums_to_like_raw.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
-
+    
     # Apply the capping rule
     albums_to_like = albums_to_like_raw[:MAX_LIKED_ALBUMS_PER_RUN]
-
+    
     print(f"  > Found {len(albums_to_like)} albums to 'Like' and {len(albums_to_playlist)} to 'Add to Playlist'.")
 
-    actions_list_for_report = []
+    actions_list_for_report = [] 
     actions_list_for_report.extend(albums_skipped) # Add skipped list to report
 
     # --- Process Actions ---
@@ -344,15 +343,16 @@ def take_tidal_actions():
         # Log successful action
         if action_result_tuple[0].startswith("ADDED"):
             save_processed_album(album_data)
-
+    
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
         for status, artist, original, found, score, reasoning in actions_list_for_report:
             f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
-
-    generate_html_report(actions_list, len(load_processed_albums()))
-
+    
+    # --- Pass the correct variable (actions_list_for_report) to avoid the NameError ---
+    generate_html_report(actions_list_for_report, len(load_processed_albums()))
+    
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
     print(f"Actions logged to {LOG_FILE_PATH} and {REPORT_FILE_PATH}")
 
