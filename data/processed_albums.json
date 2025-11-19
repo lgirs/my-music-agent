@@ -164,15 +164,15 @@
     "key": "Dijon::Baby",
     "artist": "Dijon",
     "album": "Baby",
-    "timestamp": 1763510771.2303712,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763551535.0594237,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Dave McMurray::I LOVE LIFE even when I'm hurting",
     "artist": "Dave McMurray",
     "album": "I LOVE LIFE even when I'm hurting",
-    "timestamp": 1763510772.8394232,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763551534.924428,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Thee Headcoats::The Sherlock Holmes Rhythm 'n' Beat Vernacular",
@@ -227,8 +227,8 @@
     "key": "Heteropsy::Embalming",
     "artist": "Heteropsy",
     "album": "Embalming",
-    "timestamp": 1763510786.0785131,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763551535.4581451,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Rosal\u00eda::LUX",
@@ -241,8 +241,8 @@
     "key": "Doja Cat::Vie",
     "artist": "Doja Cat",
     "album": "Vie",
-    "timestamp": 1763510789.539526,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763551534.791721,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Cardi B::Am I the Drama?",
@@ -276,8 +276,8 @@
     "key": "Asira::As Ink in Water",
     "artist": "Asira",
     "album": "As Ink in Water",
-    "timestamp": 1763510797.8692577,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763551535.3263547,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Tempestuous Fall::The Descent of Mortals Past",
@@ -438,6 +438,125 @@
     "artist": "Cardi B",
     "album": "AM I THE DRAMA?",
     "timestamp": 1763519305.539659,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "IAN::Come On Everybody, Let\u2019s Do Nothing!",
+    "artist": "IAN",
+    "album": "Come On Everybody, Let\u2019s Do Nothing!",
+    "timestamp": 1763551487.6510732,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Hellshock::XXV",
+    "artist": "Hellshock",
+    "album": "XXV",
+    "timestamp": 1763551487.871818,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Bob Dylan::Through the Open Window: The Bootleg Series Vol. 18",
+    "artist": "Bob Dylan",
+    "album": "Through the Open Window: The Bootleg Series Vol. 18",
+    "timestamp": 1763551491.2460418,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Bruce Springsteen::Nebraska \u201982: Expanded Edition",
+    "artist": "Bruce Springsteen",
+    "album": "Nebraska \u201982: Expanded Edition",
+    "timestamp": 1763551494.2591975,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Kalia Vandever::Another View",
+    "artist": "Kalia Vandever",
+    "album": "Another View",
+    "timestamp": 1763551497.3854287,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Hammerfilosofi::Signum",
+    "artist": "Hammerfilosofi",
+    "album": "Signum",
+    "timestamp": 1763551499.7972014,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Empire Drowns::Endless Nights",
+    "artist": "Empire Drowns",
+    "album": "Endless Nights",
+    "timestamp": 1763551502.5170424,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Ripping Remains::Necrodestiny",
+    "artist": "Ripping Remains",
+    "album": "Necrodestiny",
+    "timestamp": 1763551505.1874328,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Fit For a King::Lonely God",
+    "artist": "Fit For a King",
+    "album": "Lonely God",
+    "timestamp": 1763551507.8134165,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Mecht Mensch::Anthology",
+    "artist": "Mecht Mensch",
+    "album": "Anthology",
+    "timestamp": 1763551510.54552,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Shrunken Elvis::Shrunken Elvis",
+    "artist": "Shrunken Elvis",
+    "album": "Shrunken Elvis",
+    "timestamp": 1763551513.9049947,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Jon Hassell::Fourth World, Vol. 1: Possible Musics",
+    "artist": "Jon Hassell",
+    "album": "Fourth World, Vol. 1: Possible Musics",
+    "timestamp": 1763551516.511592,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Natural Information Society::Perseverance Flow",
+    "artist": "Natural Information Society",
+    "album": "Perseverance Flow",
+    "timestamp": 1763551519.190103,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "The Maple State::Don\u2019t Take Forever",
+    "artist": "The Maple State",
+    "album": "Don\u2019t Take Forever",
+    "timestamp": 1763551521.7599964,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "1914::Viribus Unitis",
+    "artist": "1914",
+    "album": "Viribus Unitis",
+    "timestamp": 1763551524.1841848,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "common::Resurrection",
+    "artist": "common",
+    "album": "Resurrection",
+    "timestamp": 1763551534.461732,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Thee Headcoats::The Sherlock Holmes Rhythm \u2019n\u2019 Beat Vernacular",
+    "artist": "Thee Headcoats",
+    "album": "The Sherlock Holmes Rhythm \u2019n\u2019 Beat Vernacular",
+    "timestamp": 1763551535.193342,
     "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
