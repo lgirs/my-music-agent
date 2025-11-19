@@ -185,8 +185,7 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (SIMPLIFIED FOR OPTION 1) ---
-# We don't need buttons anymore since you are using playlist commands!
+# --- generate_html_report (No Change, but good to refresh) ---
 def generate_html_report(actions_list, processed_log_len, current_playlist_albums):
     print(f"  > Generating HTML report...")
 
@@ -213,12 +212,76 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
-    # Just list albums, no buttons needed
+    # --- MODIFIED BUTTON GENERATOR ---
     def format_current_album_li(album_data):
         artist_safe = album_data['artist'].replace('<', '&lt;').replace('>', '&gt;')
         album_safe = album_data['album'].replace('<', '&lt;').replace('>', '&gt;')
-        return f"<li><b>{artist_safe} - {album_safe}</b></li>"
+        album_id = album_data['album_id']
+        
+        # We need a form to submit the data required by the cleanup_agent
+        # *** REMEMBER TO REPLACE OWNER/REPO WITH YOUR ACTUAL PATH ***
+        remove_form = f"""
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "REMOVE"}}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        """
+        
+        # --- PROMOTION BUTTON ADDED HERE ---
+        promote_form = f"""
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "PROMOTE"}}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        """
+        
+        return f"""
+        <li style="position: relative;">
+            <b>{artist_safe} - {album_safe}</b>
+            <div style="float:right;">
+                {promote_form}
+                {remove_form}
+            </div>
+        </li>
+        """
     
+    # --- ISOLATED JAVASCRIPT STRING (FIXES SYNTAX ERROR) ---
+    js_script = """
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const inputs = this.querySelector('input[name="inputs"]').value;
+                    let data;
+                    let action = this.querySelector('button').innerText.includes("Remove") ? "remove" : "promote";
+
+                    try {
+                        data = JSON.parse(inputs);
+                    } catch (error) {
+                        console.error("Failed to parse JSON inputs:", error);
+                        alert("Error: Could not process removal data.");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    let message;
+                    if (action === "remove") {
+                        message = `Are you sure you want to permanently REMOVE and EXCLUDE the album "${data.album}" by ${data.artist}?`;
+                    } else {
+                        message = `Are you sure you want to PROMOTE the album "${data.album}" by ${data.artist} to your Liked Albums? (This will also remove it from the playlist).`;
+                    }
+                    
+                    const isConfirmed = confirm(message);
+                    
+                    if (!isConfirmed) {
+                        e.preventDefault();
+                    } else {
+                        alert(`Request submitted for "${data.album}". Check the GitHub Actions page for status.`);
+                    }
+                });
+            });
+    """
+
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
     liked_fuzzy = [format_li(*a) for a in actions_list if a[0] == "LIKED_FUZZY_MATCH"]
     added_exact = [format_li(*a) for a in actions_list if a[0] == "ADDED_EXACT_MATCH"]
@@ -255,6 +318,8 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
+            .remove-btn {{ float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }}
+            .promote-btn {{ float: right; background-color:#1890ff; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; margin-right: 10px; }}
         </style>
     </head>
     <body>
@@ -268,7 +333,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         </ul>
         
         <h2>🗑️ Current 'AI Music Discovery' Contents ({len(current_playlist_albums)})</h2>
-        <p>To manage this playlist, use the <b>[Agent] Remove</b> and <b>[Agent] Promote</b> playlists in your Tidal app.</p>
+        <p>Use the buttons to manage your playlist. The dashboard will copy the data to your clipboard and open the GitHub Actions page.</p>
         <ul>
             {current_playlist_html or "<li>The 'AI Music Discovery' playlist is currently empty or could not be accessed.</li>"}
         </ul>
@@ -312,6 +377,10 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         <ul>
             {harvester_success_html or "<li>None</li>"}
         </ul>
+        
+        <script>
+            {js_script}
+        </script>
     </body>
     </html>
     """
@@ -337,9 +406,6 @@ def take_tidal_actions():
         print(f"Could not start Tidal agent. Exiting. Error: {e}")
         return 
 
-    # --- Fetch Current Playlist Albums for Report ---
-    current_playlist_albums = tidal_client.get_current_playlist_albums_for_report(PLAYLIST_NAME)
-    
     try:
         with open(INPUT_FILE_PATH, 'r') as f:
             filtered_albums = json.load(f)
@@ -355,7 +421,6 @@ def take_tidal_actions():
     for album in filtered_albums:
         unique_key = f"{album.get('artist')}::{album.get('album')}"
         if unique_key in processed_albums_keys:
-            # We skip this album as we've already acted on it in a previous run
             album_data_tuple = ("SKIPPED_PROCESSED", album.get('artist'), album.get('album'), "N/A", album.get('relevance_score'), "Skipped: Already processed in a previous run.")
             albums_skipped.append(album_data_tuple)
         else:
@@ -393,6 +458,9 @@ def take_tidal_actions():
         # Log successful action
         if action_result_tuple[0].startswith("ADDED"):
             save_processed_album(album_data)
+    
+    # --- MOVED TO END: Fetch Current Playlist Albums for Report (AFTER processing) ---
+    current_playlist_albums = tidal_client.get_current_playlist_albums_for_report(PLAYLIST_NAME)
 
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
