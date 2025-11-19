@@ -1,0 +1,122 @@
+[
+  {
+    "status": "success",
+    "source": "Twangville",
+    "message": "Fetched 5423 chars"
+  },
+  {
+    "status": "success",
+    "source": "Pitchfork",
+    "message": "Fetched 4891 chars"
+  },
+  {
+    "status": "success",
+    "source": "Sputnikmusic",
+    "message": "Fetched 3831 chars"
+  },
+  {
+    "status": "success",
+    "source": "Louder Sound",
+    "message": "Fetched 4434 chars"
+  },
+  {
+    "status": "success",
+    "source": "AllMusic",
+    "message": "Fetched 7460 chars"
+  },
+  {
+    "status": "success",
+    "source": "Metal Temple",
+    "message": "Fetched 11930 chars"
+  },
+  {
+    "status": "success",
+    "source": "Consequence of Sound",
+    "message": "Fetched 5234 chars"
+  },
+  {
+    "status": "success",
+    "source": "AltCorner",
+    "message": "Fetched 5582 chars"
+  },
+  {
+    "status": "success",
+    "source": "Blabbermouth",
+    "message": "Fetched 1019 chars"
+  },
+  {
+    "status": "success",
+    "source": "Loudwire",
+    "message": "Fetched 7032 chars"
+  },
+  {
+    "status": "success",
+    "source": "Metacritic (Music)",
+    "message": "Fetched 18710 chars"
+  },
+  {
+    "status": "success",
+    "source": "Angry Metal Guy",
+    "message": "Fetched 7898 chars"
+  },
+  {
+    "status": "success",
+    "source": "Heavy Blog is Heavy (HBIH)",
+    "message": "Fetched 1827 chars"
+  },
+  {
+    "status": "success",
+    "source": "KEXP Blog/Reviews",
+    "message": "Fetched 7886 chars"
+  },
+  {
+    "status": "success",
+    "source": "Maximum Rocknroll (MRR)",
+    "message": "Fetched 43254 chars"
+  },
+  {
+    "status": "success",
+    "source": "Profane Existence",
+    "message": "Fetched 283 chars"
+  },
+  {
+    "status": "success",
+    "source": "Aquarium Drunkard",
+    "message": "Fetched 12190 chars"
+  },
+  {
+    "status": "success",
+    "source": "The Toilet Ov Hell",
+    "message": "Fetched 10392 chars"
+  },
+  {
+    "status": "success",
+    "source": "Distorted Sound Magazine",
+    "message": "Fetched 3377 chars"
+  },
+  {
+    "status": "success",
+    "source": "Illustrate Magazine",
+    "message": "Fetched 8786 chars"
+  },
+  {
+    "status": "success",
+    "source": "We are the Last Beatniks",
+    "message": "Fetched 10873 chars"
+  },
+  {
+    "status": "success",
+    "source": "Nothing But A Nightmare",
+    "message": "Fetched 981 chars"
+  },
+  {
+    "status": "success",
+    "source": "Gorilla vs. Bear",
+    "message": "Fetched 5161 chars"
+  },
+  {
+    "status": "error",
+    "source": "RateYourMusic (RYM)",
+    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
+  }
+]
