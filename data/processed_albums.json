@@ -122,8 +122,8 @@
     "key": "Thrice::Horizons/West",
     "artist": "Thrice",
     "album": "Horizons/West",
-    "timestamp": 1763510761.365501,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763511218.0726361,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "AFI::Silver Bleeds the Black Sun",
@@ -425,5 +425,12 @@
     "album": "Some Kind of Alchemy",
     "timestamp": 1763510833.1157274,
     "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Oasis::(What's The Story) Morning Glory?",
+    "artist": "Oasis",
+    "album": "(What's The Story) Morning Glory?",
+    "timestamp": 1763511217.6999054,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
