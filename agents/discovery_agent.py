@@ -22,7 +22,7 @@ else:
 def generate_discovery_report(added, removed, current_sources):
     print(f"  > Generating Discovery HTML report...")
     
-    added_html = "".join([f"<li style='color:green;'><b>+ ADDED:</b> {s['Source_Name']} ({s.get('Primary_Genre_Focus', 'N/A')})</li>" for s in added])
+    added_html = "".join([f"<li style='color:green;'><b>+ ADDED:</b> {s['website']} ({s.get('genre_focus', 'N/A')})</li>" for s in added])
     removed_html = "".join([f"<li style='color:red;'><b>- REMOVED:</b> {s['website']}</li>" for s in removed])
     
     if not added: added_html = "<li>No new sources added.</li>"
@@ -30,10 +30,9 @@ def generate_discovery_report(added, removed, current_sources):
 
     current_rows = ""
     for s in current_sources:
-        # Handle key mismatch between config (website) and AI output (Source_Name)
-        name = s.get('Source_Name') or s.get('website')
-        genre = s.get('Primary_Genre_Focus') or s.get('genre_focus')
-        tier = s.get('Tier') or s.get('category', 'N/A')
+        name = s.get('website')
+        genre = s.get('genre_focus')
+        tier = s.get('category', 'N/A')
         
         current_rows += f"<tr><td>{name}</td><td>{genre}</td><td>{tier}</td></tr>"
 
@@ -52,9 +51,15 @@ def generate_discovery_report(added, removed, current_sources):
             table {{ width: 100%; border-collapse: collapse; margin-top: 20px; background: #fff; }}
             th, td {{ text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }}
             th {{ background-color: #007bff; color: white; }}
+            .nav-link {{ display: inline-block; margin-bottom: 20px; padding: 10px 15px; background-color: #e1f5fe; color: #0277bd; text-decoration: none; border-radius: 5px; font-weight: bold; border: 1px solid #b3e5fc; }}
+            .nav-link:hover {{ background-color: #b3e5fc; }}
         </style>
     </head>
     <body>
+        <div>
+            <a href="index.html" class="nav-link">🎵 Back to Main Music Report</a>
+        </div>
+
         <h1>🕵️ Discovery Agent Report</h1>
         <p>Run Date: {time.ctime()}</p>
         
@@ -92,7 +97,6 @@ def run_discovery():
         return
 
     # 2. Prepare AI Context
-    # We map the existing config to the format the AI expects to minimize hallucination
     context_sources = []
     for s in current_sources_list:
         context_sources.append({
@@ -100,7 +104,6 @@ def run_discovery():
             "URL": s.get('url'),
             "Tier": s.get('category'),
             "Primary_Genre_Focus": s.get('genre_focus'),
-            # Include other fields if necessary to match prompt schema
         })
         
     user_content = f"Here is my current list of sources. Please audit them and output the updated JSON list of 30 sources.\n\n{json.dumps(context_sources, indent=2)}"
@@ -123,27 +126,27 @@ def run_discovery():
         return
 
     # 4. Diff & Update Logic
-    # Create sets of names for easy comparison
     old_names = {s['website'] for s in current_sources_list}
-    new_names = {s['Source_Name'] for s in new_sources_list}
     
-    added_sources = [s for s in new_sources_list if s['Source_Name'] not in old_names]
-    removed_sources = [s for s in current_sources_list if s['website'] not in new_names]
-
-    print(f"  > Analysis: {len(added_sources)} new added, {len(removed_sources)} removed.")
-
-    # 5. Transformation: Convert AI Output format back to Config format
-    # The AI returns keys like "Source_Name", but your harvester needs "website", "url", "category".
+    # Handle varied AI key output safely
     final_config_list = []
     for s in new_sources_list:
+        name = s.get('Source_Name') or s.get('website')
         final_config_list.append({
             "category": s.get('Tier', 'Uncategorized'),
-            "website": s.get('Source_Name'),
+            "website": name,
             "relevancy_score": s.get('Relevancy_Score', 5.0),
             "genre_focus": s.get('Primary_Genre_Focus', 'General'),
             "description": s.get('Key_Critical_Strength', ''),
             "url": s.get('URL')
         })
+
+    new_names = {s['website'] for s in final_config_list}
+    
+    added_sources = [s for s in final_config_list if s['website'] not in old_names]
+    removed_sources = [s for s in current_sources_list if s['website'] not in new_names]
+
+    print(f"  > Analysis: {len(added_sources)} new added, {len(removed_sources)} removed.")
 
     # 6. Save Updates
     final_config = {"sources": final_config_list}
