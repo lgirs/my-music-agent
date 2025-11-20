@@ -18,11 +18,10 @@ PLAYLIST_NAME = "AI Music Discovery"
 MAX_LIKED_ALBUMS_PER_RUN = 5 
 FUZZY_MATCH_THRESHOLD = 85
 
-# --- RealTidalClient Class ---
+# --- RealTidalClient Class (No Change) ---
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
-        # Load environment variables (TIDAL_* secrets) from .env if running locally
         load_dotenv(dotenv_path='config/.env') 
         token_type = os.getenv("TIDAL_TOKEN_TYPE")
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
@@ -50,6 +49,36 @@ class RealTidalClient:
             if pl.name == name:
                 return pl
         return None
+
+    def get_current_playlist_albums_for_report(self, playlist_name):
+        print(f"  > Fetching current contents of '{playlist_name}'...")
+        playlist = self.get_playlist(playlist_name)
+        if not playlist:
+            print(f"  > Playlist '{playlist_name}' not found.")
+            return []
+
+        album_set = set()
+        album_list = []
+        
+        try:
+            tracks = playlist.tracks()
+        except requests.exceptions.HTTPError as e:
+            print(f"  > Error fetching playlist tracks: {e}")
+            return []
+
+        for track in tracks:
+            album = track.album
+            album_key = album.id
+            if album_key not in album_set:
+                album_set.add(album_key)
+                album_list.append({
+                    'artist': album.artist.name if album.artist else 'Unknown Artist',
+                    'album': album.name,
+                    'album_id': album.id
+                })
+        
+        print(f"  > Found {len(album_list)} unique albums in '{playlist_name}'.")
+        return album_list
 
     def find_album_id(self, artist, album_to_find):
         print(f"  > Searching Tidal for: '{album_to_find}' by '{artist}'...")
@@ -97,7 +126,7 @@ class RealTidalClient:
         playlist.add(track_ids)
         print(f"  > Successfully added {len(track_ids)} tracks to '{playlist_name}'.")
 
-# --- Helper for Log Management ---
+# --- Helper for Log Management (No Change) ---
 def load_processed_albums():
     try:
         with open(PROCESSED_LOG_PATH, 'r') as f:
@@ -118,8 +147,8 @@ def save_processed_album(album_data):
         })
         with open(PROCESSED_LOG_PATH, 'w') as f:
             json.dump(processed_albums, f, indent=2)
-
-# --- process_album_action ---
+    
+# --- process_album_action (No Change) ---
 def process_album_action(tidal_client, album_data):
     artist = album_data.get('artist', 'Unknown')
     album_to_find = album_data.get('album', 'Unknown')
@@ -155,8 +184,8 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report ---
-def generate_html_report(actions_list, processed_log_len, current_playlist_albums):
+# --- generate_html_report (UPDATED) ---
+def generate_html_report(actions_list, processed_log_len, current_playlist_albums, manual_review_list):
     print(f"  > Generating HTML report...")
 
     try:
@@ -182,14 +211,21 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
-    # --- MODIFIED BUTTON GENERATOR ---
+    def format_review_li(album_data):
+        artist = album_data.get('artist', 'Unknown').replace('<', '&lt;').replace('>', '&gt;')
+        album = album_data.get('album', 'Unknown').replace('<', '&lt;').replace('>', '&gt;')
+        score = album_data.get('relevance_score', 0)
+        reasoning = album_data.get('reasoning', 'N/A').replace('<', '&lt;').replace('>', '&gt;')
+        
+        return f"<li><b>{artist} - {album}</b> <span class='score'>[AI Score: {score}]</span><br><span class='reasoning'>&nbsp;&nbsp;↳ <i>AI Reason: {reasoning}</i></span></li>"
+
+    # --- BUTTON GENERATOR ---
     def format_current_album_li(album_data):
         artist_safe = album_data['artist'].replace('<', '&lt;').replace('>', '&gt;')
         album_safe = album_data['album'].replace('<', '&lt;').replace('>', '&gt;')
         album_id = album_data['album_id']
         
-        # We need a form to submit the data required by the cleanup_agent
-        # *** REMEMBER TO REPLACE OWNER/REPO WITH YOUR ACTUAL PATH ***
+        # REPLACE OWNER/REPO with your actual GitHub path
         remove_form = f"""
             <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
                 <input type="hidden" name="ref" value="main">
@@ -259,6 +295,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
     skipped_dupe = [format_li(*a) for a in actions_list if a[0].startswith("SKIPPED_PROCESSED")]
 
     current_playlist_html = ''.join([format_current_album_li(a) for a in current_playlist_albums])
+    review_html = "".join([format_review_li(a) for a in manual_review_list])
 
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
@@ -286,6 +323,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
+            .review li {{ background-color: #f0f8ff; border-color: #007bff; }}
             .remove-btn {{ float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }}
             .promote-btn {{ float: right; background-color:#1890ff; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; margin-right: 10px; }}
             .nav-link {{ display: inline-block; margin-bottom: 10px; padding: 8px 12px; background-color: #e1f5fe; color: #0277bd; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.9em; border: 1px solid #b3e5fc; }}
@@ -301,7 +339,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         <p>Last run: {time.ctime()} | Albums tracked in history: {processed_log_len}</p>
 
         <h2>⭐ Albums Liked ({len(liked_exact) + len(liked_fuzzy)})</h2>
-        <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores.</p>
+        <p>These are the Top {MAX_LIKED_ALBUMS_PER_RUN} albums with the highest AI scores (90-100).</p>
         <ul>
             { "".join(liked_exact)}
             { "".join(liked_fuzzy)}
@@ -309,11 +347,17 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         </ul>
 
         <h2>🎶 Added to '{PLAYLIST_NAME}' ({len(added_exact) + len(added_fuzzy)})</h2>
-        <p>These albums were also recommended by the AI and added to your playlist.</p>
+        <p>These albums scored 80-89 and were added to your playlist.</p>
         <ul>
             { "".join(added_exact)}
             { "".join(added_fuzzy)}
             {'<li>None</li>' if not (added_exact or added_fuzzy) else ''}
+        </ul>
+        
+        <h2 class="review">🤔 Not Added but Worth Browsing ({len(manual_review_list)})</h2>
+        <p>These albums scored 70-79. They didn't make the playlist but might be interesting.</p>
+        <ul class="review">
+            {review_html or "<li>None</li>"}
         </ul>
 
         <h2 class="not-found">❗ Action Required: Not Found ({len(not_found)})</h2>
@@ -345,6 +389,16 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         <ul>
             { "".join(skipped_dupe) or "<li>None</li>"}
         </ul>
+        
+        <h2>🗑️ Manage Current Playlist ({len(current_playlist_albums)})</h2>
+        <p>Use these buttons to manually remove/promote items from the playlist.</p>
+        <ul>
+            {current_playlist_html or "<li>The playlist is currently empty or could not be accessed.</li>"}
+        </ul>
+
+        <script>
+            {js_script}
+        </script>
     </body>
     </html>
     """
@@ -357,7 +411,7 @@ def generate_html_report(actions_list, processed_log_len, current_playlist_album
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Main Function (Modified) ---
+# --- Main Function ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
@@ -393,15 +447,20 @@ def take_tidal_actions():
     if albums_skipped:
         print(f"  > Skipped {len(albums_skipped)} albums already found in history.")
 
-    # --- Separate and Cap the filtered list ---
+    # --- Separate lists ---
     albums_to_like_raw = [a for a in albums_to_process if a.get('decision') == 'LIKE_IMMEDIATELY']
     albums_to_playlist = [a for a in albums_to_process if a.get('decision') == 'ADD_TO_PLAYLIST']
+    albums_to_review = [a for a in albums_to_process if a.get('decision') == 'REVIEW_MANUALLY']
+    
+    # Sort
     albums_to_like_raw.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
+    albums_to_playlist.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
+    albums_to_review.sort(key=lambda x: x.get('relevance_score', 0), reverse=True)
     
     # Apply the capping rule
     albums_to_like = albums_to_like_raw[:MAX_LIKED_ALBUMS_PER_RUN]
     
-    print(f"  > Found {len(albums_to_like)} albums to 'Like' and {len(albums_to_playlist)} to 'Add to Playlist'.")
+    print(f"  > Found {len(albums_to_like)} albums to 'Like', {len(albums_to_playlist)} to 'Add to Playlist', and {len(albums_to_review)} to 'Review Manually'.")
 
     actions_list_for_report = [] 
     actions_list_for_report.extend(albums_skipped) # Add skipped list to report
@@ -423,6 +482,10 @@ def take_tidal_actions():
         if action_result_tuple[0].startswith("ADDED"):
             save_processed_album(album_data)
     
+    # Add manual review items to report list (mocking a "processed" tuple for the report generator to ignore, 
+    # we pass the raw list to the report function instead)
+    # Actually, I will pass the raw list `albums_to_review` directly to generate_html_report
+    
     # --- MOVED TO END: Fetch Current Playlist Albums for Report (AFTER processing) ---
     current_playlist_albums = tidal_client.get_current_playlist_albums_for_report(PLAYLIST_NAME)
 
@@ -432,7 +495,7 @@ def take_tidal_actions():
         for status, artist, original, found, score, reasoning in actions_list_for_report:
             f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
     
-    generate_html_report(actions_list_for_report, len(load_processed_albums()), current_playlist_albums)
+    generate_html_report(actions_list_for_report, len(load_processed_albums()), current_playlist_albums, albums_to_review)
     
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
     print(f"Actions logged to {LOG_FILE_PATH} and {REPORT_FILE_PATH}")
