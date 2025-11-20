@@ -40,9 +40,9 @@ jobs:
 
       - name: Commit and Push Updates
         run: |
-          # We now commit the actual config and the report
+          # We force add (-f) because the data/ folder is in .gitignore
           git add config/sources.json
-          git add data/discovery_report.html
+          git add -f data/discovery_report.html
           
           # Only commit if there are changes
           if ! git diff-index --quiet HEAD; then
