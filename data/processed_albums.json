@@ -94,8 +94,8 @@
     "key": "Melvin Gibbs::Amasia: Anamibia Sessions 2",
     "artist": "Melvin Gibbs",
     "album": "Amasia: Anamibia Sessions 2",
-    "timestamp": 1763510753.3788981,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605635.0474765,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Militarie Gun::God Save the Gun",
@@ -115,8 +115,8 @@
     "key": "Testament::Para Bellum",
     "artist": "Testament",
     "album": "Para Bellum",
-    "timestamp": 1763510758.2714753,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605634.897084,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Thrice::Horizons/West",
@@ -220,8 +220,8 @@
     "key": "Destruction Ritual::Providence",
     "artist": "Destruction Ritual",
     "album": "Providence",
-    "timestamp": 1763510784.4809952,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605635.7869027,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Heteropsy::Embalming",
@@ -332,8 +332,8 @@
     "key": "Sklitakling::Normal Drift",
     "artist": "Sklitakling",
     "album": "Normal Drift",
-    "timestamp": 1763510811.122235,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605635.2054803,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Top Dollar::Objects of Misfortune",
@@ -514,8 +514,8 @@
     "key": "Shrunken Elvis::Shrunken Elvis",
     "artist": "Shrunken Elvis",
     "album": "Shrunken Elvis",
-    "timestamp": 1763551513.9049947,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605635.3563123,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Jon Hassell::Fourth World, Vol. 1: Possible Musics",
@@ -570,8 +570,8 @@
     "key": "H\u00fcsker D\u00fc::1985: The Miracle Year",
     "artist": "H\u00fcsker D\u00fc",
     "album": "1985: The Miracle Year",
-    "timestamp": 1763566234.269863,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605691.4576776,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Patti Smith::Horses",
@@ -584,8 +584,8 @@
     "key": "Armand Hammer::Mercy",
     "artist": "Armand Hammer",
     "album": "Mercy",
-    "timestamp": 1763566239.3489885,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763605635.5076954,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Tortoise::Touch",
@@ -620,6 +620,13 @@
     "artist": "Bruce Springsteen",
     "album": "Nebraska '82: Expanded Edition",
     "timestamp": 1763566259.2029343,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Sister Irene O'Connor::Fire of God's Love",
+    "artist": "Sister Irene O'Connor",
+    "album": "Fire of God's Love",
+    "timestamp": 1763605634.5238473,
     "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
