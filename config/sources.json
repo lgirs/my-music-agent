@@ -1,196 +1,236 @@
 {
   "sources": [
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
+      "website": "Decibel Magazine",
+      "relevancy_score": 8.7,
+      "genre_focus": "Extreme Metal (Death, Black, Grind)",
+      "description": "Ultimate Genre Authority, Depth",
+      "url": "https://www.decibelmagazine.com/"
+    },
+    {
+      "category": "Tier I",
       "website": "Twangville",
-      "relevancy_score": 9.02,
+      "relevancy_score": 8.1,
       "genre_focus": "Americana, Alt-Country, Folk",
-      "description": "The definitive source for roots music coverage...",
+      "description": "Niche Curation, Listener-focused",
       "url": "https://twangville.com/category/features/reviews/"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
+      "website": "Revolver Magazine",
+      "relevancy_score": 7.7,
+      "genre_focus": "Metal, Hardcore, Industrial",
+      "description": "Scene Reporting, Aesthetic Focus",
+      "url": "https://www.revolvermag.com/"
+    },
+    {
+      "category": "Tier I",
       "website": "Pitchfork",
-      "relevancy_score": 8.3,
+      "relevancy_score": 8.2,
       "genre_focus": "Indie, Alt-Rock, Experimental",
-      "description": "Institutional analysis of the alternative canon...",
+      "description": "Cultural Barometer, Long-form Analysis",
       "url": "https://pitchfork.com/reviews/albums/"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Sputnikmusic",
-      "relevancy_score": 8.16,
+      "relevancy_score": 7.5,
       "genre_focus": "Progressive, Alternative, User-Driven",
-      "description": "Cross-genre review site. (FIXED URL to /reviews/albums)",
+      "description": "High Volume, Community-Based Scores",
       "url": "https://www.sputnikmusic.com/reviews/albums"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Louder Sound",
-      "relevancy_score": 8.05,
+      "relevancy_score": 8.1,
       "genre_focus": "Rock, Metal, Prog",
-      "description": "UK portal and online home for major magazines...",
+      "description": "Deep Genre Expertise, Print Heritage",
       "url": "https://www.loudersound.com/reviews"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
+      "website": "Drowned in Sound",
+      "relevancy_score": 5.1,
+      "genre_focus": "Indie, Electronic (UK/EU Focus)",
+      "description": "Thoughtful Curation, Long-form (Historical)",
+      "url": "https://drownedinsound.com/"
+    },
+    {
+      "category": "Tier I",
       "website": "AllMusic",
-      "relevancy_score": 7.8,
+      "relevancy_score": 7.9,
       "genre_focus": "Comprehensive Database, Deep Reviews",
-      "description": "A trusted source with a vast database...",
+      "description": "Historical Context, Database Quality",
       "url": "https://www.allmusic.com/newreleases"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Metal Temple",
-      "relevancy_score": 7.69,
+      "relevancy_score": 7.8,
       "genre_focus": "Extreme Metal, News, History",
-      "description": "Pioneering metal journalism since 2000. (FIXED URL to /reviews/)",
+      "description": "Consistent Output, International Scope",
       "url": "https://metal-temple.com/reviews/"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Consequence of Sound",
-      "relevancy_score": 7.65,
+      "relevancy_score": 7.2,
       "genre_focus": "Alternative, Indie, Broad",
-      "description": "Broad coverage site with strong roots...",
+      "description": "Timeliness, Broad Industry Coverage",
       "url": "https://consequence.net/category/reviews/album-reviews/"
     },
     {
-      "category": "Established Pillars (Tier I)",
-      "website": "AltCorner",
-      "relevancy_score": 7.6,
-      "genre_focus": "Alternative Rock, Punk, Pop Punk, Metal",
-      "description": "Promotional platform focusing on rising stars...",
-      "url": "https://altcorner.com/reviews/"
-    },
-    {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Blabbermouth",
-      "relevancy_score": 7.4,
-      "genre_focus": "Metal News/Updates",
-      "description": "One of the largest metal news platforms...",
+      "relevancy_score": 7.6,
+      "genre_focus": "Metal News, Gossip",
+      "description": "Speed of News, Industry Pulse",
       "url": "https://blabbermouth.net/reviews"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
       "website": "Loudwire",
-      "relevancy_score": 7.2,
+      "relevancy_score": 7.7,
       "genre_focus": "Metal News/Updates",
-      "description": "Leading source for up-to-the-minute news...",
+      "description": "High Volume News, Mainstream Metal",
       "url": "https://loudwire.com/reviews/"
     },
     {
-      "category": "Established Pillars (Tier I)",
+      "category": "Tier I",
+      "website": "RateYourMusic (RYM)",
+      "relevancy_score": 6.7,
+      "genre_focus": "All Genres (User-Driven, Database)",
+      "description": "Comprehensive Database, Sub-genre Tags",
+      "url": "https://rateyourmusic.com/new-music/"
+    },
+    {
+      "category": "Tier I",
+      "website": "AltCorner",
+      "relevancy_score": 7.4,
+      "genre_focus": "Alternative Rock, Punk, Pop Punk, Metal",
+      "description": "Emerging Scene, Youth Focus",
+      "url": "https://altcorner.com/reviews/"
+    },
+    {
+      "category": "Tier I",
       "website": "Metacritic (Music)",
-      "relevancy_score": 5.8,
+      "relevancy_score": 7.3,
       "genre_focus": "Aggregate Consensus (Diagnostic Tool)",
-      "description": "Aggregates reviews from top critics...",
+      "description": "Quantitative Consensus",
       "url": "https://www.metacritic.com/browse/album/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Angry Metal Guy",
-      "relevancy_score": 9.2,
-      "genre_focus": "All Metal (Critical Review)",
-      "description": "Top analytical metal blog since 2009...",
+      "relevancy_score": 8.1,
+      "genre_focus": "Extreme Metal, Technical Metal",
+      "description": "Humorous, Deeply Opinionated",
       "url": "https://www.angrymetalguy.com/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
+      "website": "Invisible Oranges",
+      "relevancy_score": 8.1,
+      "genre_focus": "Black Metal, Doom Metal",
+      "description": "Culturally Engaged, High Quality Writing",
+      "url": "https://www.invisibleoranges.com/"
+    },
+    {
+      "category": "Tier II",
       "website": "Heavy Blog is Heavy (HBIH)",
-      "relevancy_score": 9.01,
+      "relevancy_score": 7.9,
       "genre_focus": "Progressive Metal, Post-Rock, Experimental",
-      "description": "Focused on deep, analytical critique...",
+      "description": "Forward-Thinking, Niche Discovery",
       "url": "https://www.heavyblogisheavy.com/category/reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "KEXP Blog/Reviews",
-      "relevancy_score": 8.95,
+      "relevancy_score": 7.6,
       "genre_focus": "Alternative, Eclectic, Art Rock",
-      "description": "Review section of the influential non-commercial radio station...",
+      "description": "Curatorial Authority, Radio Backing",
       "url": "https://kexp.org/reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Maximum Rocknroll (MRR)",
-      "relevancy_score": 8.92,
+      "relevancy_score": 8.4,
       "genre_focus": "Underground Punk, Hardcore, Oi!",
-      "description": "The absolute authority for underground punk legitimacy...",
+      "description": "DIY Ethos, Historical Significance",
       "url": "https://maximumrocknroll.com/category/reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Profane Existence",
-      "relevancy_score": 8.88,
+      "relevancy_score": 8.1,
       "genre_focus": "Anarcho-punk, Crust, Grindcore",
-      "description": "Foundational collective/zine...",
+      "description": "Political Edge, Scene Focus",
       "url": "https://profaneexistence.com/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Aquarium Drunkard",
-      "relevancy_score": 8.78,
+      "relevancy_score": 8.2,
       "genre_focus": "Vintage Garage, Psych, Folk",
-      "description": "Excellent high-quality archival and niche curation. (FIXED URL to root)",
+      "description": "Deep Curation, Historical Liner Notes",
       "url": "https://aquariumdrunkard.com/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "The Toilet Ov Hell",
-      "relevancy_score": 8.18,
+      "relevancy_score": 7.9,
       "genre_focus": "Any kind of metal (Critical/Humorous)",
-      "description": "Specialized metal blog. (FIXED URL to /reviews/)",
+      "description": "Satirical, Community-Driven",
       "url": "http://www.toiletovhell.com/reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Distorted Sound Magazine",
-      "relevancy_score": 7.85,
+      "relevancy_score": 7.2,
       "genre_focus": "Extreme/Heavy Metal, Hardcore",
-      "description": "Specialized UK-based heavy music portal...",
+      "description": "High Volume, UK/European Scene",
       "url": "https://distortedsoundmag.com/category/reviews/album-reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Illustrate Magazine",
-      "relevancy_score": 7.68,
+      "relevancy_score": 6.7,
       "genre_focus": "Art Rock, Eclectic, Singer-Songwriter",
-      "description": "Independent journal that often covers Art Rock. (FIXED URL to /reviews/)",
+      "description": "Artist Interviews, New Release Focus",
       "url": "https://illustratemagazine.com/reviews/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
-      "website": "We are the Last Beatniks",
-      "relevancy_score": 7.25,
-      "genre_focus": "Garage/Psychedelic Rock",
-      "description": "Niche review blog dedicated specifically to garage...",
-      "url": "https://wearethelastbeatniks.com/"
-    },
-    {
-      "category": "Independent Pulse (Tier II)",
-      "website": "Nothing But A Nightmare",
-      "relevancy_score": 7.1,
-      "genre_focus": "Punk, Gothic, Psychobilly, Hardcore",
-      "description": "Focuses on the underground movement. (FIXED URL to /releases/)",
-      "url": "https://www.nothingbutanightmare.com/releases/"
-    },
-    {
-      "category": "Independent Pulse (Tier II)",
+      "category": "Tier II",
       "website": "Gorilla vs. Bear",
-      "relevancy_score": 7.1,
+      "relevancy_score": 7.4,
       "genre_focus": "Indie, Hipster focus, Eclectic",
-      "description": "High cultural cachet in the indie sphere. (FIXED URL to root)",
+      "description": "Early Discovery, Aesthetic Focus",
       "url": "https://www.gorillavsbear.net/"
     },
     {
-      "category": "Independent Pulse (Tier II)",
-      "website": "RateYourMusic (RYM)",
-      "relevancy_score": 7.8,
-      "genre_focus": "All Genres (User-Driven, Database)",
-      "description": "Comprehensive database with detailed genre tagging. (FIXED URL to /new-music/)",
-      "url": "https://rateyourmusic.com/new-music/"
+      "category": "Tier II",
+      "website": "Portals",
+      "relevancy_score": 7.6,
+      "genre_focus": "Experimental, Math-Rock, Post-Rock",
+      "description": "Niche/Festival-driven, Intellectual",
+      "url": "https://www.portalsrock.com/blog-news"
+    },
+    {
+      "category": "Tier II",
+      "website": "Active Listener",
+      "relevancy_score": 8.0,
+      "genre_focus": "Psychedelic Rock, Krautrock, Avant-Garde, Experimental Folk",
+      "description": "Niche Authority, Deep Cuts, Underground Focus",
+      "url": "https://activelistener.net/"
+    },
+    {
+      "category": "Tier II",
+      "website": "Cvlt Nation",
+      "relevancy_score": 8.2,
+      "genre_focus": "Extreme Metal, Doom, Black Metal, Hardcore, Punk, Industrial, Noise",
+      "description": "Underground Scene Authority, Aesthetic Focus, High Volume Niche Content",
+      "url": "https://www.cvltnation.com/reviews/"
     }
   ]
 }
