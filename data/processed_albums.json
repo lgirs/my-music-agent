@@ -577,8 +577,8 @@
     "key": "Patti Smith::Horses",
     "artist": "Patti Smith",
     "album": "Horses",
-    "timestamp": 1763566236.8366168,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763638195.1115422,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Armand Hammer::Mercy",
@@ -628,5 +628,138 @@
     "album": "Fire of God's Love",
     "timestamp": 1763605634.5238473,
     "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Converge::Love Is Not Enough",
+    "artist": "Converge",
+    "album": "Love Is Not Enough",
+    "timestamp": 1763638162.566516,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Sonic Youth::Washing Machine",
+    "artist": "Sonic Youth",
+    "album": "Washing Machine",
+    "timestamp": 1763638162.7930243,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Machine Girl::PsychoWarrior: MG Ultra",
+    "artist": "Machine Girl",
+    "album": "PsychoWarrior: MG Ultra",
+    "timestamp": 1763638162.9921107,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Shaun Harris::S/T",
+    "artist": "Shaun Harris",
+    "album": "S/T",
+    "timestamp": 1763638164.943174,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "BELIEVE IN NOTHING::Rot",
+    "artist": "BELIEVE IN NOTHING",
+    "album": "Rot",
+    "timestamp": 1763638166.447485,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Nordstahl::Ragnar\u00f6k in Berlin",
+    "artist": "Nordstahl",
+    "album": "Ragnar\u00f6k in Berlin",
+    "timestamp": 1763638168.0600605,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Big L::Harlem\u2019s Finest: Return of the King",
+    "artist": "Big L",
+    "album": "Harlem\u2019s Finest: Return of the King",
+    "timestamp": 1763638169.7311952,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Psychonaut::World Maker",
+    "artist": "Psychonaut",
+    "album": "World Maker",
+    "timestamp": 1763638171.3924654,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Evoken::Mendacium",
+    "artist": "Evoken",
+    "album": "Mendacium",
+    "timestamp": 1763638172.941602,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Hooded Menace::Lachrymose Monuments of Obscuration",
+    "artist": "Hooded Menace",
+    "album": "Lachrymose Monuments of Obscuration",
+    "timestamp": 1763638174.47357,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "YOUR INLAND EMPIRE::Your Inland Empire",
+    "artist": "YOUR INLAND EMPIRE",
+    "album": "Your Inland Empire",
+    "timestamp": 1763638176.260871,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "claire rousay::a little death",
+    "artist": "claire rousay",
+    "album": "a little death",
+    "timestamp": 1763638178.3621469,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Jay Som::Belong",
+    "artist": "Jay Som",
+    "album": "Belong",
+    "timestamp": 1763638180.040975,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "The Acacia Strain::You Are Safe From God Here",
+    "artist": "The Acacia Strain",
+    "album": "You Are Safe From God Here",
+    "timestamp": 1763638181.5564952,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "for your health::Death of Spring",
+    "artist": "for your health",
+    "album": "Death of Spring",
+    "timestamp": 1763638183.0978541,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "U.S. Christmas::Cannibals Of Unaka",
+    "artist": "U.S. Christmas",
+    "album": "Cannibals Of Unaka",
+    "timestamp": 1763638184.6334407,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Raphael Weinroth-Browne::Lifeblood",
+    "artist": "Raphael Weinroth-Browne",
+    "album": "Lifeblood",
+    "timestamp": 1763638186.111701,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "THE MAPLE STATE::Don\u2019t Take Forever",
+    "artist": "THE MAPLE STATE",
+    "album": "Don\u2019t Take Forever",
+    "timestamp": 1763638187.7068114,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Calling All Astronauts::Noise Against Tyranny",
+    "artist": "Calling All Astronauts",
+    "album": "Noise Against Tyranny",
+    "timestamp": 1763638189.3338938,
+    "action": "ADD_TO_PLAYLIST"
   }
 ]

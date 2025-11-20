@@ -1,23 +1,38 @@
 [
   {
+    "status": "error",
+    "source": "Decibel Magazine",
+    "message": "403 Client Error: Forbidden for url: https://www.decibelmagazine.com/"
+  },
+  {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5423 chars"
+    "message": "Fetched 5372 chars"
+  },
+  {
+    "status": "error",
+    "source": "Revolver Magazine",
+    "message": "403 Client Error: Forbidden for url: https://www.revolvermag.com/"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4955 chars"
+    "message": "Fetched 4918 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3831 chars"
+    "message": "Fetched 3852 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4434 chars"
+    "message": "Fetched 4702 chars"
+  },
+  {
+    "status": "success",
+    "source": "Drowned in Sound",
+    "message": "Fetched 2723 chars"
   },
   {
     "status": "success",
@@ -27,22 +42,17 @@
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12348 chars"
+    "message": "Fetched 13106 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5210 chars"
-  },
-  {
-    "status": "success",
-    "source": "AltCorner",
-    "message": "Fetched 5582 chars"
+    "message": "Fetched 5214 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 974 chars"
+    "message": "Fetched 1058 chars"
   },
   {
     "status": "success",
@@ -50,14 +60,29 @@
     "message": "Fetched 7032 chars"
   },
   {
+    "status": "error",
+    "source": "RateYourMusic (RYM)",
+    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
+  },
+  {
+    "status": "success",
+    "source": "AltCorner",
+    "message": "Fetched 5615 chars"
+  },
+  {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18690 chars"
+    "message": "Fetched 18700 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8061 chars"
+    "message": "Fetched 8025 chars"
+  },
+  {
+    "status": "error",
+    "source": "Invisible Oranges",
+    "message": "403 Client Error: Forbidden for url: https://www.invisibleoranges.com/"
   },
   {
     "status": "success",
@@ -82,17 +107,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12090 chars"
+    "message": "Fetched 12316 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10417 chars"
+    "message": "Fetched 10593 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3410 chars"
+    "message": "Fetched 3401 chars"
   },
   {
     "status": "success",
@@ -101,22 +126,27 @@
   },
   {
     "status": "success",
-    "source": "We are the Last Beatniks",
-    "message": "Fetched 10873 chars"
-  },
-  {
-    "status": "success",
-    "source": "Nothing But A Nightmare",
-    "message": "Fetched 981 chars"
-  },
-  {
-    "status": "success",
     "source": "Gorilla vs. Bear",
     "message": "Fetched 5161 chars"
   },
   {
+    "status": "success",
+    "source": "Portals",
+    "message": "Fetched 1360 chars"
+  },
+  {
+    "status": "success",
+    "source": "Active Listener",
+    "message": "Fetched 5068 chars"
+  },
+  {
     "status": "error",
-    "source": "RateYourMusic (RYM)",
-    "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
+    "source": "Cvlt Nation",
+    "message": "403 Client Error: Forbidden for url: https://www.cvltnation.com/reviews/"
+  },
+  {
+    "status": "success",
+    "source": "Stereogum",
+    "message": "Fetched 2256 chars"
   }
 ]
