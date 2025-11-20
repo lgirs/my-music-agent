@@ -22,6 +22,7 @@ FUZZY_MATCH_THRESHOLD = 85
 class RealTidalClient:
     def __init__(self):
         self.session = Session()
+        # Load environment variables (TIDAL_* secrets) from .env if running locally
         load_dotenv(dotenv_path='config/.env') 
         token_type = os.getenv("TIDAL_TOKEN_TYPE")
         access_token = os.getenv("TIDAL_ACCESS_TOKEN")
@@ -117,7 +118,7 @@ def save_processed_album(album_data):
         })
         with open(PROCESSED_LOG_PATH, 'w') as f:
             json.dump(processed_albums, f, indent=2)
-    
+
 # --- process_album_action ---
 def process_album_action(tidal_client, album_data):
     artist = album_data.get('artist', 'Unknown')
@@ -154,8 +155,8 @@ def process_album_action(tidal_client, album_data):
     return ("UNKNOWN", artist, album_to_find, "", ai_score, reasoning)
 
 
-# --- generate_html_report (FIXED & CLEANED) ---
-def generate_html_report(actions_list, processed_log_len):
+# --- generate_html_report ---
+def generate_html_report(actions_list, processed_log_len, current_playlist_albums):
     print(f"  > Generating HTML report...")
 
     try:
@@ -181,6 +182,74 @@ def generate_html_report(actions_list, processed_log_len):
         
         return f"<li><b>{artist} - {found}</b> {score_html}{reason_html}</li>"
 
+    # --- MODIFIED BUTTON GENERATOR ---
+    def format_current_album_li(album_data):
+        artist_safe = album_data['artist'].replace('<', '&lt;').replace('>', '&gt;')
+        album_safe = album_data['album'].replace('<', '&lt;').replace('>', '&gt;')
+        album_id = album_data['album_id']
+        
+        # We need a form to submit the data required by the cleanup_agent
+        # *** REMEMBER TO REPLACE OWNER/REPO WITH YOUR ACTUAL PATH ***
+        remove_form = f"""
+            <form style="display:inline;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "REMOVE"}}'>
+                <button type="submit" class="remove-btn">Remove Album</button>
+            </form>
+        """
+        
+        promote_form = f"""
+            <form style="display:inline; margin-right: 10px;" action="https://github.com/lgirs/my-music-agent/actions/workflows/cleanup_trigger.yml" method="post" target="_blank">
+                <input type="hidden" name="ref" value="main">
+                <input type="hidden" name="inputs" value='{{"artist": "{artist_safe}", "album": "{album_safe}", "album_id": "{album_id}", "action_type": "PROMOTE"}}'>
+                <button type="submit" class="promote-btn">Promote to Liked</button>
+            </form>
+        """
+        
+        return f"""
+        <li style="position: relative;">
+            <b>{artist_safe} - {album_safe}</b>
+            <div style="float:right;">
+                {promote_form}
+                {remove_form}
+            </div>
+        </li>
+        """
+    
+    js_script = """
+            document.querySelectorAll('form').forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    const inputs = this.querySelector('input[name="inputs"]').value;
+                    let data;
+                    let action = this.querySelector('button').innerText.includes("Remove") ? "remove" : "promote";
+
+                    try {
+                        data = JSON.parse(inputs);
+                    } catch (error) {
+                        console.error("Failed to parse JSON inputs:", error);
+                        alert("Error: Could not process removal data.");
+                        e.preventDefault();
+                        return;
+                    }
+
+                    let message;
+                    if (action === "remove") {
+                        message = `Are you sure you want to permanently REMOVE and EXCLUDE the album "${data.album}" by ${data.artist}?`;
+                    } else {
+                        message = `Are you sure you want to PROMOTE the album "${data.album}" by ${data.artist} to your Liked Albums? (This will also remove it from the playlist).`;
+                    }
+                    
+                    const isConfirmed = confirm(message);
+                    
+                    if (!isConfirmed) {
+                        e.preventDefault();
+                    } else {
+                        alert(`Request submitted for "${data.album}". Check the GitHub Actions page for status.`);
+                    }
+                });
+            });
+    """
+
     liked_exact = [format_li(*a) for a in actions_list if a[0] == "LIKED_EXACT_MATCH"]
     liked_fuzzy = [format_li(*a) for a in actions_list if a[0] == "LIKED_FUZZY_MATCH"]
     added_exact = [format_li(*a) for a in actions_list if a[0] == "ADDED_EXACT_MATCH"]
@@ -188,6 +257,8 @@ def generate_html_report(actions_list, processed_log_len):
     not_found = [format_li(*a) for a in actions_list if a[0] == "NOT_FOUND"]
     errors = [format_li(*a) for a in actions_list if a[0] == "ERROR"]
     skipped_dupe = [format_li(*a) for a in actions_list if a[0].startswith("SKIPPED_PROCESSED")]
+
+    current_playlist_html = ''.join([format_current_album_li(a) for a in current_playlist_albums])
 
     harvester_errors = [l for l in harvester_log if l['status'] == 'error']
     harvester_success = [l for l in harvester_log if l['status'] == 'success']
@@ -215,9 +286,17 @@ def generate_html_report(actions_list, processed_log_len):
             .error li {{ background-color: #fff8f8; border-color: #d73a49; }}
             .not-found li {{ background-color: #fffbf0; border-color: #f0ad4e; }}
             .skipped li {{ background-color: #e6f7ff; border-color: #1890ff; }}
+            .remove-btn {{ float: right; background-color:#d73a49; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; }}
+            .promote-btn {{ float: right; background-color:#1890ff; color:white; border:none; padding: 5px 10px; border-radius:3px; cursor:pointer; margin-right: 10px; }}
+            .nav-link {{ display: inline-block; margin-bottom: 10px; padding: 8px 12px; background-color: #e1f5fe; color: #0277bd; text-decoration: none; border-radius: 4px; font-weight: bold; font-size: 0.9em; border: 1px solid #b3e5fc; }}
+            .nav-link:hover {{ background-color: #b3e5fc; }}
         </style>
     </head>
     <body>
+        <div>
+            <a href="discovery_report.html" class="nav-link">🔍 View Source Discovery Report</a>
+        </div>
+
         <h1>🎵 Music Agent Report</h1>
         <p>Last run: {time.ctime()} | Albums tracked in history: {processed_log_len}</p>
 
@@ -269,7 +348,7 @@ def generate_html_report(actions_list, processed_log_len):
     </body>
     </html>
     """
-
+    
     try:
         with open(REPORT_FILE_PATH, 'w') as f:
             f.write(html)
@@ -278,7 +357,7 @@ def generate_html_report(actions_list, processed_log_len):
         print(f"  > Error writing HTML report: {e}")
 
 
-# --- Main Function ---
+# --- Main Function (Modified) ---
 def take_tidal_actions():
     print("TidalActionAgent: Starting run...")
     
@@ -344,14 +423,16 @@ def take_tidal_actions():
         if action_result_tuple[0].startswith("ADDED"):
             save_processed_album(album_data)
     
+    # --- MOVED TO END: Fetch Current Playlist Albums for Report (AFTER processing) ---
+    current_playlist_albums = tidal_client.get_current_playlist_albums_for_report(PLAYLIST_NAME)
+
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     with open(LOG_FILE_PATH, 'a') as f:
         f.write(f"\n--- TidalAgent Run: {time.ctime()} ---\n")
         for status, artist, original, found, score, reasoning in actions_list_for_report:
             f.write(f"[{status}] (Score: {score}) | Artist: '{artist}' | Looking for: '{original}' | Found: '{found}' | Reason: {reasoning}\n")
     
-    # --- Pass the correct variable (actions_list_for_report) to avoid the NameError ---
-    generate_html_report(actions_list_for_report, len(load_processed_albums()))
+    generate_html_report(actions_list_for_report, len(load_processed_albums()), current_playlist_albums)
     
     print(f"\nTidalActionAgent: Run complete. Processed {len(actions_list_for_report)} total actions.")
     print(f"Actions logged to {LOG_FILE_PATH} and {REPORT_FILE_PATH}")
