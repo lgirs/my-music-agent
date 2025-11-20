@@ -1,16 +1,15 @@
 name: Run Source Discovery Agent
 
 on:
-  # This adds the manual "Run workflow" button for testing
+  # Manual trigger
   workflow_dispatch:
   
-  # This is your monthly schedule (e.g., 1st of the month at 2 AM)
+  # Monthly schedule (1st of the month at 02:00 UTC)
   schedule:
     - cron: '0 2 1 * *'
 
 jobs:
   run-discovery:
-    # Give the job permission to write to the repo
     permissions:
       contents: write 
       
@@ -39,16 +38,16 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
 
-      - name: Commit and Push Suggestions
+      - name: Commit and Push Updates
         run: |
-          if [ -f "data/suggested_sources.json" ]; then
-            git add -f data/suggested_sources.json
-            if ! git diff-index --quiet HEAD; then
-              git commit -m "Automated source discovery run"
-              git push
-            else
-              echo "No new source suggestions found."
-            fi
+          # We now commit the actual config and the report
+          git add config/sources.json
+          git add data/discovery_report.html
+          
+          # Only commit if there are changes
+          if ! git diff-index --quiet HEAD; then
+            git commit -m "Discovery Agent: Updated sources and generated report"
+            git push
           else
-            echo "No suggestions file created."
+            echo "No changes to sources."
           fi
