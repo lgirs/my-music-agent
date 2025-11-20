@@ -52,8 +52,8 @@
       "category": "Tier I",
       "website": "Drowned in Sound",
       "relevancy_score": 5.1,
-      "genre_focus": "Indie, Electronic (UK/EU Focus)",
-      "description": "Thoughtful Curation, Long-form (Historical)",
+      "genre_focus": "Indie, Electronic (UK/EU Focus) - Historical",
+      "description": "Thoughtful Curation (Archival)",
       "url": "https://drownedinsound.com/"
     },
     {
@@ -219,9 +219,9 @@
     {
       "category": "Tier II",
       "website": "Active Listener",
-      "relevancy_score": 8.0,
+      "relevancy_score": 8.2,
       "genre_focus": "Psychedelic Rock, Krautrock, Avant-Garde, Experimental Folk",
-      "description": "Niche Authority, Deep Cuts, Underground Focus",
+      "description": "Deep Niche Curation, Obscure Discoveries",
       "url": "https://activelistener.net/"
     },
     {
@@ -229,8 +229,16 @@
       "website": "Cvlt Nation",
       "relevancy_score": 8.2,
       "genre_focus": "Extreme Metal, Doom, Black Metal, Hardcore, Punk, Industrial, Noise",
-      "description": "Underground Scene Authority, Aesthetic Focus, High Volume Niche Content",
+      "description": "Underground Scene Authority, Visual Aesthetic Focus",
       "url": "https://www.cvltnation.com/reviews/"
+    },
+    {
+      "category": "Tier I",
+      "website": "Stereogum",
+      "relevancy_score": 8.1,
+      "genre_focus": "Indie Rock, Alternative, Pop",
+      "description": "Timely Coverage, Industry Bellwether",
+      "url": "https://www.stereogum.com/category/reviews/"
     }
   ]
 }
