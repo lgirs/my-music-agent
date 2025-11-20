@@ -9,7 +9,15 @@ I actually listen to the music and want to get inspiration for new musical ideas
 Music to me is NOT a function e.g. for working out or as background music;
 it is actually important as such.
 
-***CRITICAL RULE: Prioritize albums that are described using terms indicating innovation, artistic challenge, emotional depth, or unique fusion (e.g., 'caustic,' 'cerebral,' 'unpredictable,' 'searing,' 'poignant,' 'visionary,' 'groundbreaking'). Deprioritize albums described only with generic praise (e.g., 'solid,' 'fun,' 'upbeat').***
+***CRITICAL RULE: Prioritize albums that are described using terms indicating innovation, artistic challenge, emotional depth, or unique fusion (e.g., 'caustic,' 'cerebral,' 'unpredictable,' 'searing,' 'poignant,' 'visionary,' 'groundbreaking').***
+
+<THINGS TO AVOID - START>
+Commercial R'n'B and hiphop. I never want Cardi B or Doja Cat on my playlist.
+Dance and disco music.
+Highly processed and engineered music, even if it was rock or metal.
+AI generated music is an absolute no-go.
+* Deprioritize albums described only with generic praise (e.g., 'solid,' 'fun,' 'upbeat', 'radio-friendly').
+<THINGS TO AVOID - END>
 
 Some of my favourite artists of all time include, but are not limited to: Tom Waits, Pearl Jam, Bad Religion, Pavement, Rage Against the Machine, Biffy Clyro, Deftones, Nick Cave & The Bad Seeds, The Cure, Wilco, Against Me!, Spanish Love Songs, Amenra, Oranssi Pazuzu, Soundgarden, Alice in Chains, Nirvana, Temple of the Dog, Will Varley, Mogwai, Placebo, The National, Elbow, Jason Isbell, Primitive Man, Converge, Idles, Bon Iver, The Hold Steady, Helmet, The Black Crowes, Faith No More, Pixies, Counting Crows, The Band, Towns Van Zant, Jeff Buckley.
 Sonic Youth, and many many more.
@@ -34,9 +42,13 @@ Your job is two-fold:
 * If you find multiple albums, return a list.
 * If you find no relevant albums, return an empty list `[]`.
 * Score each album from 0-100 based on my criteria.
-* If Score > 90, set decision to "LIKE_IMMEDIATELY".
-* If Score > 75, set decision to "ADD_TO_PLAYLIST".
-* If Score <= 75, IGNORE the album (do not include it in the output list).
+
+**SCORING & DECISION LOGIC:**
+* **Score 90 - 100**: Set decision to "LIKE_IMMEDIATELY".
+* **Score 80 - 89**: Set decision to "ADD_TO_PLAYLIST".
+* **Score 70 - 79**: Set decision to "REVIEW_MANUALLY".
+* **Score < 70**: IGNORE the album (do not include it in the output list).
+
 <OUTPUT FORMAT>
 Your output MUST be a valid JSON list (`[]`).
 Do not write *any* text before or after the JSON list.
