@@ -402,8 +402,8 @@
     "key": "james K::Doom Bikini",
     "artist": "james K",
     "album": "Doom Bikini",
-    "timestamp": 1763510828.1006784,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952581.7856195,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Oasis::(What's The Story) Morning Glory? (Remastered)",
@@ -717,8 +717,8 @@
     "key": "Jay Som::Belong",
     "artist": "Jay Som",
     "album": "Belong",
-    "timestamp": 1763638180.040975,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952581.5123727,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Acacia Strain::You Are Safe From God Here",
@@ -787,7 +787,7 @@
     "key": "ROSAL\u00cdA::LUX",
     "artist": "ROSAL\u00cdA",
     "album": "LUX",
-    "timestamp": 1763692036.253084,
+    "timestamp": 1763952581.7004125,
     "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
@@ -871,8 +871,8 @@
     "key": "Sun of the Dying::A Throne of Ashes",
     "artist": "Sun of the Dying",
     "album": "A Throne of Ashes",
-    "timestamp": 1763722649.7362685,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952581.602883,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Matt LaJoie::Stonehouse",
@@ -913,8 +913,8 @@
     "key": "Wolfbrigade::Kill to Live",
     "artist": "Wolfbrigade",
     "album": "Kill to Live",
-    "timestamp": 1763722659.6069746,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952581.8662565,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Sharp Pins::Balloon Balloon Balloon",
@@ -962,8 +962,8 @@
     "key": "Wolfbrigade::Hostile Wasteland",
     "artist": "Wolfbrigade",
     "album": "Hostile Wasteland",
-    "timestamp": 1763722671.5703156,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952581.9489477,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Idles::Joy as an Act of Resistance",
@@ -1130,8 +1130,8 @@
     "key": "FKA twigs::EUSEXUA",
     "artist": "FKA twigs",
     "album": "EUSEXUA",
-    "timestamp": 1763809036.5819545,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952582.1174405,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Mavis Staples::Sad and Beautiful World",
@@ -1144,7 +1144,42 @@
     "key": "Ildaruni::Divinum Sanguinem",
     "artist": "Ildaruni",
     "album": "Divinum Sanguinem",
-    "timestamp": 1763809039.1168716,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1763952582.0301685,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Sudan Archives::THE BPM",
+    "artist": "Sudan Archives",
+    "album": "THE BPM",
+    "timestamp": 1763952582.2010276,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Aresi::Aurrera Beti",
+    "artist": "Aresi",
+    "album": "Aurrera Beti",
+    "timestamp": 1763952582.2947056,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Brandi Carlile::Returning To Myself",
+    "artist": "Brandi Carlile",
+    "album": "Returning To Myself",
+    "timestamp": 1763952616.334826,
+    "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "The Maple State::Don't take forever",
+    "artist": "The Maple State",
+    "album": "Don't take forever",
+    "timestamp": 1763952616.581284,
+    "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Stone Nomads::Empires Of Stone",
+    "artist": "Stone Nomads",
+    "album": "Empires Of Stone",
+    "timestamp": 1763952616.7116895,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
