@@ -80,8 +80,8 @@
     "key": "The Antlers::Blight",
     "artist": "The Antlers",
     "album": "Blight",
-    "timestamp": 1763510750.1845746,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.9499497,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Elias R\u00f8nnenfelt::Speak Daggers",
@@ -199,8 +199,8 @@
     "key": "Haerts::Laguna Road",
     "artist": "Haerts",
     "album": "Laguna Road",
-    "timestamp": 1763510779.370425,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038508.1432016,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "James Elkington::Rebuilding",
@@ -304,8 +304,8 @@
     "key": "An Slua::Sure Look It",
     "artist": "An Slua",
     "album": "Sure Look It",
-    "timestamp": 1763510804.4507003,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038544.1439397,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Bezette Stad::F.A.N.O.N.",
@@ -388,15 +388,15 @@
     "key": "Jessy Lanza::Slapped By My Life",
     "artist": "Jessy Lanza",
     "album": "Slapped By My Life",
-    "timestamp": 1763510824.8512976,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038508.044979,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Joanne Robertson::Blurrr",
     "artist": "Joanne Robertson",
     "album": "Blurrr",
-    "timestamp": 1763510826.4405775,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.8560445,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "james K::Doom Bikini",
@@ -486,8 +486,8 @@
     "key": "Empire Drowns::Endless Nights",
     "artist": "Empire Drowns",
     "album": "Endless Nights",
-    "timestamp": 1763551502.5170424,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.6645885,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Ripping Remains::Necrodestiny",
@@ -598,8 +598,8 @@
     "key": "Machine Girl::PsychoWarrior: MG Ultra X",
     "artist": "Machine Girl",
     "album": "PsychoWarrior: MG Ultra X",
-    "timestamp": 1763566245.0275548,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.7630863,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Danny Brown::Stardust",
@@ -668,8 +668,8 @@
     "key": "Nordstahl::Ragnar\u00f6k in Berlin",
     "artist": "Nordstahl",
     "album": "Ragnar\u00f6k in Berlin",
-    "timestamp": 1763638168.0600605,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.572373,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Big L::Harlem\u2019s Finest: Return of the King",
@@ -1088,8 +1088,8 @@
     "key": "Steve Tibbetts::Close",
     "artist": "Steve Tibbetts",
     "album": "Close",
-    "timestamp": 1763809028.3279703,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764038507.4396582,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Stone Nomads::Empires of Stone",
@@ -1180,6 +1180,13 @@
     "artist": "Stone Nomads",
     "album": "Empires Of Stone",
     "timestamp": 1763952616.7116895,
+    "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Earthless::Rhythms from a Cosmic Sky",
+    "artist": "Earthless",
+    "album": "Rhythms from a Cosmic Sky",
+    "timestamp": 1764038544.4434516,
     "action": "LIKED_VIA_PLAYLIST"
   }
 ]
