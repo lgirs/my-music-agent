@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4966 chars"
+    "message": "Fetched 4888 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3859 chars"
+    "message": "Fetched 3856 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4654 chars"
+    "message": "Fetched 4577 chars"
   },
   {
     "status": "success",
@@ -37,22 +37,22 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 6742 chars"
+    "message": "Fetched 7197 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Metal Temple",
-    "message": "HTTPSConnectionPool(host='metal-temple.com', port=443): Max retries exceeded with url: /reviews/ (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f997cae7e50>: Failed to resolve 'metal-temple.com' ([Errno -2] Name or service not known)\"))"
+    "message": "Fetched 12263 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5218 chars"
+    "message": "Fetched 5252 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1043 chars"
+    "message": "Fetched 1018 chars"
   },
   {
     "status": "success",
@@ -67,17 +67,17 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5615 chars"
+    "message": "Fetched 5729 chars"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18715 chars"
+    "message": "Fetched 18693 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8026 chars"
+    "message": "Fetched 7608 chars"
   },
   {
     "status": "error",
@@ -92,12 +92,12 @@
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7886 chars"
+    "message": "Fetched 7897 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 43254 chars"
+    "message": "Fetched 41992 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12945 chars"
+    "message": "Fetched 12598 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10382 chars"
+    "message": "Fetched 10324 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3487 chars"
+    "message": "Fetched 3466 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8798 chars"
+    "message": "Fetched 8923 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2256 chars"
+    "message": "Fetched 2248 chars"
   }
 ]
