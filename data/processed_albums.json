@@ -31,8 +31,8 @@
     "key": "Black Eyes::Hostile Design",
     "artist": "Black Eyes",
     "album": "Hostile Design",
-    "timestamp": 1763510738.7371252,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124973.7310529,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Anna von Hausswolff::Iconoclasts",
@@ -290,8 +290,8 @@
     "key": "Citadel::Descension",
     "artist": "Citadel",
     "album": "Descension",
-    "timestamp": 1763510801.1642582,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124951.7136216,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Vower::A Storm Lined With Silver",
@@ -885,8 +885,8 @@
     "key": "Madi Diaz::Fatal Optimist",
     "artist": "Madi Diaz",
     "album": "Fatal Optimist",
-    "timestamp": 1763722653.0651717,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124973.3146253,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Silvana Estrada::Vendr\u00e1n Suaves Lluvias",
@@ -997,8 +997,8 @@
     "key": "Juana Molina::DOGA",
     "artist": "Juana Molina",
     "album": "DOGA",
-    "timestamp": 1763809010.791013,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124952.1455307,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Sudan Archives::The BPM",
@@ -1067,8 +1067,8 @@
     "key": "Bruce Springsteen::Springsteen on Broadway",
     "artist": "Bruce Springsteen",
     "album": "Springsteen on Broadway",
-    "timestamp": 1763809023.897041,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124973.9485464,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Rosal\u00eda::Lux",
@@ -1081,8 +1081,8 @@
     "key": "Antino\u00eb::The Fold",
     "artist": "Antino\u00eb",
     "album": "The Fold",
-    "timestamp": 1763809026.6632223,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764124951.948104,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Steve Tibbetts::Close",
@@ -1188,5 +1188,19 @@
     "album": "Rhythms from a Cosmic Sky",
     "timestamp": 1764038544.4434516,
     "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "runo plum::patching",
+    "artist": "runo plum",
+    "album": "patching",
+    "timestamp": 1764124951.8553073,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Spock's Beard::The Archaeoptimist",
+    "artist": "Spock's Beard",
+    "album": "The Archaeoptimist",
+    "timestamp": 1764124952.0511975,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
