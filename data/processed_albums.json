@@ -262,8 +262,8 @@
     "key": "Soulfly::Chama",
     "artist": "Soulfly",
     "album": "Chama",
-    "timestamp": 1763510794.654126,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764296858.5384438,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Linkin Park::From Zero",
@@ -283,8 +283,8 @@
     "key": "Tempestuous Fall::The Descent of Mortals Past",
     "artist": "Tempestuous Fall",
     "album": "The Descent of Mortals Past",
-    "timestamp": 1763510799.529494,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764296858.3485212,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Citadel::Descension",
@@ -367,8 +367,8 @@
     "key": "Believe In Nothing::Rot",
     "artist": "Believe In Nothing",
     "album": "Rot",
-    "timestamp": 1763510819.7811472,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764296869.1048546,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Oromet::The Sinking Isle",
@@ -1314,5 +1314,19 @@
     "album": "The Only Heaven You\u2019ll Know",
     "timestamp": 1764155184.505132,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Jon Hassell::Fourth World Vol 1 Possible Musics",
+    "artist": "Jon Hassell",
+    "album": "Fourth World Vol 1 Possible Musics",
+    "timestamp": 1764296858.4573042,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "De La Soul::Cabin In The Sky",
+    "artist": "De La Soul",
+    "album": "Cabin In The Sky",
+    "timestamp": 1764296868.9648983,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
