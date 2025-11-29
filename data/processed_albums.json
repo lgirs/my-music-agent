@@ -710,8 +710,8 @@
     "key": "claire rousay::a little death",
     "artist": "claire rousay",
     "album": "a little death",
-    "timestamp": 1763638178.3621469,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383266.321044,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Jay Som::Belong",
@@ -892,15 +892,15 @@
     "key": "Silvana Estrada::Vendr\u00e1n Suaves Lluvias",
     "artist": "Silvana Estrada",
     "album": "Vendr\u00e1n Suaves Lluvias",
-    "timestamp": 1763722654.7140558,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383230.0759897,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Hannah Frances::Nested in Tangles",
     "artist": "Hannah Frances",
     "album": "Nested in Tangles",
-    "timestamp": 1763722656.3355677,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383230.4674168,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Keaton Henson::Parader",
@@ -948,8 +948,8 @@
     "key": "Terror Corpse::Ash Eclipses Flesh",
     "artist": "Terror Corpse",
     "album": "Ash Eclipses Flesh",
-    "timestamp": 1763722668.0996928,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383230.2105505,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Grahams::The Bridge",
@@ -1032,8 +1032,8 @@
     "key": "After::After EP",
     "artist": "After",
     "album": "After EP",
-    "timestamp": 1763809017.6663668,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383230.3398545,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "After::After EP 2",
@@ -1396,8 +1396,8 @@
     "key": "Cosmic Reaper::Bleed the Wicked, Drown the Damned",
     "artist": "Cosmic Reaper",
     "album": "Bleed the Wicked, Drown the Damned",
-    "timestamp": 1764327572.3738525,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764383229.9442406,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "False Reality::Faded Intentions",
@@ -1412,5 +1412,12 @@
     "album": "Leviathan Carcass",
     "timestamp": 1764327577.6998916,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Mental Maze::HERE GOES NOTHING",
+    "artist": "Mental Maze",
+    "album": "HERE GOES NOTHING",
+    "timestamp": 1764383229.6725004,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
