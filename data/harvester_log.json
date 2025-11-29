@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5627 chars"
+    "message": "Fetched 5360 chars"
   },
   {
     "status": "error",
@@ -22,7 +22,7 @@
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3833 chars"
+    "message": "Fetched 3815 chars"
   },
   {
     "status": "success",
@@ -37,7 +37,7 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 4818 chars"
+    "message": "Fetched 5511 chars"
   },
   {
     "status": "success",
@@ -47,12 +47,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5221 chars"
+    "message": "Fetched 5228 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1024 chars"
+    "message": "Fetched 929 chars"
   },
   {
     "status": "success",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8132 chars"
+    "message": "Fetched 8250 chars"
   },
   {
     "status": "error",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12319 chars"
+    "message": "Fetched 12619 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10431 chars"
+    "message": "Fetched 10500 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3446 chars"
+    "message": "Fetched 3448 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8899 chars"
+    "message": "403 Client Error: Forbidden for url: https://illustratemagazine.com/reviews/"
   },
   {
     "status": "success",
