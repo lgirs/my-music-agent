@@ -27,7 +27,7 @@
     {
       "category": "Tier I",
       "website": "Pitchfork",
-      "relevancy_score": 8.2,
+      "relevancy_score": 8.0,
       "genre_focus": "Indie, Alt-Rock, Experimental",
       "description": "Cultural Barometer, Long-form Analysis",
       "url": "https://pitchfork.com/reviews/albums/"
@@ -49,12 +49,12 @@
       "url": "https://www.loudersound.com/reviews"
     },
     {
-      "category": "Tier I",
-      "website": "Drowned in Sound",
-      "relevancy_score": 5.1,
-      "genre_focus": "Indie, Electronic (UK/EU Focus) - Historical",
-      "description": "Thoughtful Curation (Archival)",
-      "url": "https://drownedinsound.com/"
+      "category": "Tier II",
+      "website": "Tone Glow",
+      "relevancy_score": 9.0,
+      "genre_focus": "Experimental, Avant-Garde, Ambient, Jazz",
+      "description": "Deep Critical Analysis, Niche Focus, Highly Independent",
+      "url": "https://www.tone-glow.com/"
     },
     {
       "category": "Tier I",
@@ -172,7 +172,7 @@
       "category": "Tier II",
       "website": "Aquarium Drunkard",
       "relevancy_score": 8.2,
-      "genre_focus": "Vintage Garage, Psych, Folk",
+      "genre_focus": "Vintage Garage, Psych, Folk, Obscure Reissues",
       "description": "Deep Curation, Historical Liner Notes",
       "url": "https://aquariumdrunkard.com/"
     },
@@ -189,7 +189,7 @@
       "website": "Distorted Sound Magazine",
       "relevancy_score": 7.2,
       "genre_focus": "Extreme/Heavy Metal, Hardcore",
-      "description": "High Volume, UK/European Scene",
+      "description": "High Volume, UK/European Scene focus",
       "url": "https://distortedsoundmag.com/category/reviews/album-reviews/"
     },
     {
@@ -204,7 +204,7 @@
       "category": "Tier II",
       "website": "Gorilla vs. Bear",
       "relevancy_score": 7.4,
-      "genre_focus": "Indie, Hipster focus, Eclectic",
+      "genre_focus": "Indie Pop, Electronic, Hype, Aesthetic Focus",
       "description": "Early Discovery, Aesthetic Focus",
       "url": "https://www.gorillavsbear.net/"
     },
@@ -219,25 +219,25 @@
     {
       "category": "Tier II",
       "website": "Active Listener",
-      "relevancy_score": 8.2,
+      "relevancy_score": 8.1,
       "genre_focus": "Psychedelic Rock, Krautrock, Avant-Garde, Experimental Folk",
-      "description": "Deep Niche Curation, Obscure Discoveries",
+      "description": "Deep Curation, Niche Discovery, Focus on Obscure/International",
       "url": "https://activelistener.net/"
     },
     {
       "category": "Tier II",
       "website": "Cvlt Nation",
-      "relevancy_score": 8.2,
+      "relevancy_score": 7.8,
       "genre_focus": "Extreme Metal, Doom, Black Metal, Hardcore, Punk, Industrial, Noise",
-      "description": "Underground Scene Authority, Visual Aesthetic Focus",
+      "description": "Broad Coverage of Underground Extreme Genres, Visual Aesthetic",
       "url": "https://www.cvltnation.com/reviews/"
     },
     {
       "category": "Tier I",
       "website": "Stereogum",
-      "relevancy_score": 8.1,
+      "relevancy_score": 7.7,
       "genre_focus": "Indie Rock, Alternative, Pop",
-      "description": "Timely Coverage, Industry Bellwether",
+      "description": "Timely News, Broad Indie Coverage, influential",
       "url": "https://www.stereogum.com/category/reviews/"
     }
   ]
