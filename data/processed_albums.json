@@ -955,8 +955,8 @@
     "key": "The Grahams::The Bridge",
     "artist": "The Grahams",
     "album": "The Bridge",
-    "timestamp": 1763722669.8460004,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1764760049.8262506,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Wolfbrigade::Hostile Wasteland",
@@ -1566,5 +1566,138 @@
     "album": "The Only Heaven You'll Know",
     "timestamp": 1764729832.521722,
     "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Orob::Golden Tears of Love and Sorrow",
+    "artist": "Orob",
+    "album": "Golden Tears of Love and Sorrow",
+    "timestamp": 1764760007.5285938,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Fox Lake::New World Heat",
+    "artist": "Fox Lake",
+    "album": "New World Heat",
+    "timestamp": 1764760007.7143662,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "G.A.Z.E.::G.A.Z.E.",
+    "artist": "G.A.Z.E.",
+    "album": "G.A.Z.E.",
+    "timestamp": 1764760008.07127,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Blindfolded and Led to the Woods::The Hardest Thing About Being God Is That No One Believes Me",
+    "artist": "Blindfolded and Led to the Woods",
+    "album": "The Hardest Thing About Being God Is That No One Believes Me",
+    "timestamp": 1764760010.298406,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Leprous::An Evening Of Atonement",
+    "artist": "Leprous",
+    "album": "An Evening Of Atonement",
+    "timestamp": 1764760012.512985,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "TESTAMENT::Para Bellum",
+    "artist": "TESTAMENT",
+    "album": "Para Bellum",
+    "timestamp": 1764760014.2780836,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Suncraft::Welcome to the Coven",
+    "artist": "Suncraft",
+    "album": "Welcome to the Coven",
+    "timestamp": 1764760016.041022,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Prise Rapide::Trop Plein",
+    "artist": "Prise Rapide",
+    "album": "Trop Plein",
+    "timestamp": 1764760018.1610117,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Snocaps::S/T",
+    "artist": "Snocaps",
+    "album": "S/T",
+    "timestamp": 1764760020.0617802,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "DARKTRIBE::Forgotten Reveries",
+    "artist": "DARKTRIBE",
+    "album": "Forgotten Reveries",
+    "timestamp": 1764760022.0522957,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Maudits::In Situ",
+    "artist": "Maudits",
+    "album": "In Situ",
+    "timestamp": 1764760023.8300478,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Cadaver::Hallucinating Anxiety",
+    "artist": "Cadaver",
+    "album": "Hallucinating Anxiety",
+    "timestamp": 1764760025.9870987,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "\u00c4nterbila::Avart",
+    "artist": "\u00c4nterbila",
+    "album": "Avart",
+    "timestamp": 1764760028.0876734,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Split System::No Cops in Heaven / Pull the Trigger",
+    "artist": "Split System",
+    "album": "No Cops in Heaven / Pull the Trigger",
+    "timestamp": 1764760030.1473255,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Cold Summer::Den Umst\u00e4nden Entsprechend",
+    "artist": "Cold Summer",
+    "album": "Den Umst\u00e4nden Entsprechend",
+    "timestamp": 1764760031.9672728,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Destiny Bond::The Love",
+    "artist": "Destiny Bond",
+    "album": "The Love",
+    "timestamp": 1764760033.797543,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Zachary Cale::Love\u2019s Work",
+    "artist": "Zachary Cale",
+    "album": "Love\u2019s Work",
+    "timestamp": 1764760035.6761239,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Rufus Wainwright::I'm a Stranger Here Myself - Wainwright Does Weill",
+    "artist": "Rufus Wainwright",
+    "album": "I'm a Stranger Here Myself - Wainwright Does Weill",
+    "timestamp": 1764760041.253891,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Greyhaven::Keep It Quiet",
+    "artist": "Greyhaven",
+    "album": "Keep It Quiet",
+    "timestamp": 1764760050.0280638,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]

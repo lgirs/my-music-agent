@@ -17,42 +17,42 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4930 chars"
+    "message": "Fetched 5034 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3815 chars"
+    "message": "Fetched 3794 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4564 chars"
+    "message": "Fetched 4583 chars"
   },
   {
-    "status": "success",
-    "source": "Drowned in Sound",
-    "message": "Fetched 2723 chars"
+    "status": "error",
+    "source": "Tone Glow",
+    "message": "HTTPSConnectionPool(host='www.tone-glow.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f729b874220>: Failed to resolve 'www.tone-glow.com' ([Errno -2] Name or service not known)\"))"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5511 chars"
+    "message": "Fetched 5508 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 11811 chars"
+    "message": "Fetched 12313 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5228 chars"
+    "message": "Fetched 5172 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 929 chars"
+    "message": "Fetched 1014 chars"
   },
   {
     "status": "success",
@@ -72,12 +72,12 @@
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18703 chars"
+    "message": "Fetched 18734 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8250 chars"
+    "message": "Fetched 8324 chars"
   },
   {
     "status": "error",
@@ -97,7 +97,7 @@
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 41992 chars"
+    "message": "Fetched 41708 chars"
   },
   {
     "status": "success",
@@ -107,27 +107,27 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12619 chars"
+    "message": "Fetched 11202 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10500 chars"
+    "message": "Fetched 10438 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3448 chars"
+    "message": "Fetched 3517 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Illustrate Magazine",
-    "message": "403 Client Error: Forbidden for url: https://illustratemagazine.com/reviews/"
+    "message": "Fetched 8788 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5161 chars"
+    "message": "Fetched 5033 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2248 chars"
+    "message": "Fetched 2269 chars"
   }
 ]
