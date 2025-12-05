@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5360 chars"
+    "message": "Fetched 5426 chars"
   },
   {
     "status": "error",
@@ -17,42 +17,42 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5034 chars"
+    "message": "Fetched 5077 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3794 chars"
+    "message": "Fetched 3809 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4583 chars"
+    "message": "Fetched 4546 chars"
   },
   {
     "status": "error",
     "source": "Tone Glow",
-    "message": "HTTPSConnectionPool(host='www.tone-glow.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f729b874220>: Failed to resolve 'www.tone-glow.com' ([Errno -2] Name or service not known)\"))"
+    "message": "HTTPSConnectionPool(host='www.tone-glow.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x7f45eb5e4070>: Failed to resolve 'www.tone-glow.com' ([Errno -2] Name or service not known)\"))"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5508 chars"
+    "message": "Fetched 4007 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12313 chars"
+    "message": "Fetched 13335 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5172 chars"
+    "message": "Fetched 5253 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1014 chars"
+    "message": "Fetched 1093 chars"
   },
   {
     "status": "success",
@@ -72,12 +72,12 @@
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18734 chars"
+    "message": "Fetched 18742 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8324 chars"
+    "message": "Fetched 7798 chars"
   },
   {
     "status": "error",
@@ -92,7 +92,7 @@
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7927 chars"
+    "message": "Fetched 8125 chars"
   },
   {
     "status": "success",
@@ -105,29 +105,29 @@
     "message": "Fetched 283 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11202 chars"
+    "message": "HTTPSConnectionPool(host='aquariumdrunkard.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<urllib3.connection.HTTPSConnection object at 0x7f45ea2fb760>, 'Connection to aquariumdrunkard.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10438 chars"
+    "message": "Fetched 10395 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3517 chars"
+    "message": "Fetched 3429 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8788 chars"
+    "message": "Fetched 8720 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5033 chars"
+    "message": "HTTPSConnectionPool(host='www.gorillavsbear.net', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
