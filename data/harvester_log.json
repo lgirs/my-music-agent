@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5062 chars"
+    "message": "Fetched 5039 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3809 chars"
+    "message": "Fetched 3762 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4727 chars"
+    "message": "Fetched 4496 chars"
   },
   {
     "status": "error",
@@ -37,22 +37,22 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5221 chars"
+    "message": "Fetched 5231 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 13683 chars"
+    "message": "Fetched 12812 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5375 chars"
+    "message": "Fetched 5267 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 993 chars"
+    "message": "Fetched 1064 chars"
   },
   {
     "status": "success",
@@ -65,9 +65,9 @@
     "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "AltCorner",
-    "message": "Fetched 5386 chars"
+    "message": "HTTPSConnectionPool(host='altcorner.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8384 chars"
+    "message": "Fetched 8836 chars"
   },
   {
     "status": "error",
@@ -87,17 +87,17 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 1827 chars"
+    "message": "Fetched 1757 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 8125 chars"
+    "message": "Fetched 8187 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 41708 chars"
+    "message": "Fetched 40126 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10931 chars"
+    "message": "Fetched 10890 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10700 chars"
+    "message": "Fetched 10657 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3472 chars"
+    "message": "Fetched 3484 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8709 chars"
+    "message": "Fetched 8759 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2242 chars"
+    "message": "Fetched 2280 chars"
   }
 ]

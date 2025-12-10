@@ -24,8 +24,8 @@
     "key": "Gurf Morlix::Bristlecone",
     "artist": "Gurf Morlix",
     "album": "Bristlecone",
-    "timestamp": 1763510736.9495354,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364734.6125858,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Black Eyes::Hostile Design",
@@ -906,8 +906,8 @@
     "key": "Keaton Henson::Parader",
     "artist": "Keaton Henson",
     "album": "Parader",
-    "timestamp": 1763722657.8975139,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364753.2468157,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Wolfbrigade::Kill to Live",
@@ -1039,8 +1039,8 @@
     "key": "After::After EP 2",
     "artist": "After",
     "album": "After EP 2",
-    "timestamp": 1763809018.9577525,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364734.379765,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Rafael Toral::Traveling Light",
@@ -1109,8 +1109,8 @@
     "key": "dEUS::The Ideal Crash",
     "artist": "dEUS",
     "album": "The Ideal Crash",
-    "timestamp": 1763809032.0876548,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364734.3071632,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "quannnic::Warbrained",
@@ -1291,8 +1291,8 @@
     "key": "The Plane Crash::Too Little Too Late",
     "artist": "The Plane Crash",
     "album": "Too Little Too Late",
-    "timestamp": 1764155182.2199378,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364734.4857876,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Aephanemer::Utopie",
@@ -1613,8 +1613,8 @@
     "key": "Suncraft::Welcome to the Coven",
     "artist": "Suncraft",
     "album": "Welcome to the Coven",
-    "timestamp": 1764760016.041022,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765364753.0574048,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Prise Rapide::Trop Plein",
@@ -1993,5 +1993,152 @@
     "album": "Rebuilding (Original Motion Picture Soundtrack)",
     "timestamp": 1765162152.4266953,
     "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Yellow Eyes::Confusion Gate",
+    "artist": "Yellow Eyes",
+    "album": "Confusion Gate",
+    "timestamp": 1765364720.400609,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Veilburner::Longing for Triumph, Reeking of Tragedy",
+    "artist": "Veilburner",
+    "album": "Longing for Triumph, Reeking of Tragedy",
+    "timestamp": 1765364721.4104612,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Puscifer::Normal Isn't",
+    "artist": "Puscifer",
+    "album": "Normal Isn't",
+    "timestamp": 1765364722.046071,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Nattradio::The Longest Night",
+    "artist": "Nattradio",
+    "album": "The Longest Night",
+    "timestamp": 1765364722.8233242,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Old Sorcery::The Escapist",
+    "artist": "Old Sorcery",
+    "album": "The Escapist",
+    "timestamp": 1765364723.5457368,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Atlantic::Timeworn",
+    "artist": "Atlantic",
+    "album": "Timeworn",
+    "timestamp": 1765364724.0957043,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Speed Week::Weak Speed",
+    "artist": "Speed Week",
+    "album": "Weak Speed",
+    "timestamp": 1765364724.7071102,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Kauan::Wayhome",
+    "artist": "Kauan",
+    "album": "Wayhome",
+    "timestamp": 1765364725.2986703,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Clouds::Desprins",
+    "artist": "Clouds",
+    "album": "Desprins",
+    "timestamp": 1765364726.0040743,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Bootcamp::Time\u2019s Up",
+    "artist": "Bootcamp",
+    "album": "Time\u2019s Up",
+    "timestamp": 1765364726.704025,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Kolpeka / Revert::Kolpeka / Revert Split",
+    "artist": "Kolpeka / Revert",
+    "album": "Kolpeka / Revert Split",
+    "timestamp": 1765364727.3187227,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "ASTRONOID::Stargod",
+    "artist": "ASTRONOID",
+    "album": "Stargod",
+    "timestamp": 1765364727.9308052,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "VoidCeremony::Abditum",
+    "artist": "VoidCeremony",
+    "album": "Abditum",
+    "timestamp": 1765364728.4680102,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "TTTTurbo::Modern Music",
+    "artist": "TTTTurbo",
+    "album": "Modern Music",
+    "timestamp": 1765364729.0530999,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Grenadier::Wolves of the Trench",
+    "artist": "Grenadier",
+    "album": "Wolves of the Trench",
+    "timestamp": 1765364729.7575562,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Crist\u00f8::Fragments of the Inferno",
+    "artist": "Crist\u00f8",
+    "album": "Fragments of the Inferno",
+    "timestamp": 1765364730.4509456,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Dead and Dripping::Nefarious Scintillations",
+    "artist": "Dead and Dripping",
+    "album": "Nefarious Scintillations",
+    "timestamp": 1765364731.1106012,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "D.U.N.C.E.::Demo 1",
+    "artist": "D.U.N.C.E.",
+    "album": "Demo 1",
+    "timestamp": 1765364731.7706988,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Fimbul Winter::What Once Was",
+    "artist": "Fimbul Winter",
+    "album": "What Once Was",
+    "timestamp": 1765364732.4574637,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "The Grimly Pleased::I'll Choose It",
+    "artist": "The Grimly Pleased",
+    "album": "I'll Choose It",
+    "timestamp": 1765364734.2312498,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Bruiser Wolf::MADE BY DOPE",
+    "artist": "Bruiser Wolf",
+    "album": "MADE BY DOPE",
+    "timestamp": 1765364734.5495229,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
