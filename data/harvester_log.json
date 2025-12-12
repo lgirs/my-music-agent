@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5382 chars"
+    "message": "Fetched 5795 chars"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5039 chars"
+    "message": "Fetched 5050 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3762 chars"
+    "message": "Fetched 3745 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4496 chars"
+    "message": "Fetched 4495 chars"
   },
   {
     "status": "error",
@@ -37,22 +37,22 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5231 chars"
+    "message": "Fetched 4815 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12812 chars"
+    "message": "Fetched 13270 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5267 chars"
+    "message": "Fetched 5301 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1064 chars"
+    "message": "Fetched 1034 chars"
   },
   {
     "status": "success",
@@ -65,19 +65,19 @@
     "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "AltCorner",
-    "message": "HTTPSConnectionPool(host='altcorner.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 4877 chars"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18742 chars"
+    "message": "Fetched 18783 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8836 chars"
+    "message": "Fetched 8075 chars"
   },
   {
     "status": "error",
@@ -107,17 +107,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10890 chars"
+    "message": "Fetched 10235 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10657 chars"
+    "message": "Fetched 10646 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3484 chars"
+    "message": "Fetched 3469 chars"
   },
   {
     "status": "success",
@@ -127,7 +127,7 @@
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5033 chars"
+    "message": "Fetched 4915 chars"
   },
   {
     "status": "success",
