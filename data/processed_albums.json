@@ -1298,8 +1298,8 @@
     "key": "Aephanemer::Utopie",
     "artist": "Aephanemer",
     "album": "Utopie",
-    "timestamp": 1764155183.0615618,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765853380.5645044,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Wode::Uncrossing The Keys",
@@ -1746,8 +1746,8 @@
     "key": "Afton Wolfe::Ophiuchus",
     "artist": "Afton Wolfe",
     "album": "Ophiuchus",
-    "timestamp": 1764932118.964493,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765853380.8824441,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Baby Tyler::Sucker With a Dream",
@@ -1767,8 +1767,8 @@
     "key": "Sepulchral::Beneath the Shroud",
     "artist": "Sepulchral",
     "album": "Beneath the Shroud",
-    "timestamp": 1764932122.6787314,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765853380.3433268,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Thinking Fellers Union Local 282::Strangers From the Universe",
@@ -2005,8 +2005,8 @@
     "key": "Veilburner::Longing for Triumph, Reeking of Tragedy",
     "artist": "Veilburner",
     "album": "Longing for Triumph, Reeking of Tragedy",
-    "timestamp": 1765364721.4104612,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765853380.6547942,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Puscifer::Normal Isn't",
@@ -2208,8 +2208,8 @@
     "key": "Haitham Haidar::Zaytoun",
     "artist": "Haitham Haidar",
     "album": "Zaytoun",
-    "timestamp": 1765623670.1953795,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765853380.4580212,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Agriculture::The Spiritual Sound",
@@ -2252,5 +2252,19 @@
     "album": "Heard Noises",
     "timestamp": 1765623678.3320873,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "cLOUDs::Desprins",
+    "artist": "cLOUDs",
+    "album": "Desprins",
+    "timestamp": 1765853380.751392,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "ef::Give Me Beauty... Or Give Me Death",
+    "artist": "ef",
+    "album": "Give Me Beauty... Or Give Me Death",
+    "timestamp": 1765853404.8857777,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
