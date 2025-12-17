@@ -374,8 +374,8 @@
     "key": "Oromet::The Sinking Isle",
     "artist": "Oromet",
     "album": "The Sinking Isle",
-    "timestamp": 1763510821.4205747,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765939594.4718342,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Hilary Woods::Night CRI\u00da",
@@ -836,8 +836,8 @@
     "key": "Post Heaven::The Space That's In Between",
     "artist": "Post Heaven",
     "album": "The Space That's In Between",
-    "timestamp": 1763722641.4817982,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1765939609.0485995,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Spock\u2019s Beard::The Archaeoptimist",
@@ -2266,5 +2266,19 @@
     "album": "Give Me Beauty... Or Give Me Death",
     "timestamp": 1765853404.8857777,
     "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Dragon Throne::Tale of The Two: Dusk",
+    "artist": "Dragon Throne",
+    "album": "Tale of The Two: Dusk",
+    "timestamp": 1765939594.8100471,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Kolpeka::REVERTT / KOLPEKA Split",
+    "artist": "Kolpeka",
+    "album": "REVERTT / KOLPEKA Split",
+    "timestamp": 1765939594.9462833,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
