@@ -5,9 +5,9 @@
     "message": "403 Client Error: Forbidden for url: https://www.decibelmagazine.com/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Twangville",
-    "message": "Fetched 9729 chars"
+    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: /category/features/reviews/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='twangville.com', port=443) at 0x7f075f7f7dc0>, 'Connection to twangville.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4930 chars"
+    "message": "Fetched 4969 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3729 chars"
+    "message": "Fetched 3748 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4641 chars"
+    "message": "Fetched 4600 chars"
   },
   {
     "status": "error",
@@ -37,22 +37,22 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 6150 chars"
+    "message": "Fetched 2485 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12088 chars"
+    "message": "Fetched 12022 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5308 chars"
+    "message": "Fetched 5345 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1037 chars"
+    "message": "Fetched 1129 chars"
   },
   {
     "status": "success",
@@ -65,19 +65,19 @@
     "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "AltCorner",
-    "message": "Fetched 4877 chars"
+    "message": "HTTPSConnectionPool(host='altcorner.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18789 chars"
+    "message": "Fetched 18781 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8151 chars"
+    "message": "Fetched 7932 chars"
   },
   {
     "status": "error",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10487 chars"
+    "message": "Fetched 10375 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10521 chars"
+    "message": "Fetched 10723 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3534 chars"
+    "message": "Fetched 3501 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8758 chars"
+    "message": "Fetched 8853 chars"
   },
   {
     "status": "success",
@@ -135,9 +135,9 @@
     "message": "Fetched 1360 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Active Listener",
-    "message": "Fetched 5068 chars"
+    "message": "HTTPSConnectionPool(host='activelistener.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='activelistener.net', port=443) at 0x7f075ecef850>, 'Connection to activelistener.net timed out. (connect timeout=15)'))"
   },
   {
     "status": "error",

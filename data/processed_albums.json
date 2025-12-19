@@ -2096,8 +2096,8 @@
     "key": "Grenadier::Wolves of the Trench",
     "artist": "Grenadier",
     "album": "Wolves of the Trench",
-    "timestamp": 1765364729.7575562,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766141797.0971553,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Crist\u00f8::Fragments of the Inferno",
@@ -2336,5 +2336,89 @@
     "album": "God Save The Gun",
     "timestamp": 1766112663.6103904,
     "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Nape Neck::The Shallowest End",
+    "artist": "Nape Neck",
+    "album": "The Shallowest End",
+    "timestamp": 1766141761.8981378,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Pink Floyd::Wish You Were Here",
+    "artist": "Pink Floyd",
+    "album": "Wish You Were Here",
+    "timestamp": 1766141762.1384563,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Thumos::The Trial of Socrates",
+    "artist": "Thumos",
+    "album": "The Trial of Socrates",
+    "timestamp": 1766141762.519967,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Kaatayra::S\u00f3 Quem Viu o Rel\u00e2mpago \u00e0 Sua Direita Sabe",
+    "artist": "Kaatayra",
+    "album": "S\u00f3 Quem Viu o Rel\u00e2mpago \u00e0 Sua Direita Sabe",
+    "timestamp": 1766141766.047375,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Dying Wish::Flesh Stays Together",
+    "artist": "Dying Wish",
+    "album": "Flesh Stays Together",
+    "timestamp": 1766141769.4116867,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Body Minus Head::An Exercise in Self-Sufficiency",
+    "artist": "Body Minus Head",
+    "album": "An Exercise in Self-Sufficiency",
+    "timestamp": 1766141772.0032609,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Nektar::A Tab In The Ocean",
+    "artist": "Nektar",
+    "album": "A Tab In The Ocean",
+    "timestamp": 1766141774.730411,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Between the Buried and Me::The Blue Nowhere",
+    "artist": "Between the Buried and Me",
+    "album": "The Blue Nowhere",
+    "timestamp": 1766141777.6186187,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Hurt Hawks::The Big Sweat",
+    "artist": "Hurt Hawks",
+    "album": "The Big Sweat",
+    "timestamp": 1766141780.3941498,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Who Pays::Hard Times",
+    "artist": "Who Pays",
+    "album": "Hard Times",
+    "timestamp": 1766141783.0561268,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Return To Darkness::Eternal",
+    "artist": "Return To Darkness",
+    "album": "Eternal",
+    "timestamp": 1766141785.8821247,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Cochemea::Ancestros Futuros",
+    "artist": "Cochemea",
+    "album": "Ancestros Futuros",
+    "timestamp": 1766141788.9635088,
+    "action": "ADD_TO_PLAYLIST"
   }
 ]
