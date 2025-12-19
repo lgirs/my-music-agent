@@ -115,7 +115,7 @@
     "key": "Testament::Para Bellum",
     "artist": "Testament",
     "album": "Para Bellum",
-    "timestamp": 1763605634.897084,
+    "timestamp": 1766112582.8669002,
     "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
@@ -472,8 +472,8 @@
     "key": "Kalia Vandever::Another View",
     "artist": "Kalia Vandever",
     "album": "Another View",
-    "timestamp": 1763551497.3854287,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112582.5930772,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Hammerfilosofi::Signum",
@@ -1011,8 +1011,8 @@
     "key": "Low::Double Negative",
     "artist": "Low",
     "album": "Double Negative",
-    "timestamp": 1763809013.4587724,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112584.3007047,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Bruiser Wolf::Made by Dope",
@@ -1123,8 +1123,8 @@
     "key": "Smerz::Big city life EDITS",
     "artist": "Smerz",
     "album": "Big city life EDITS",
-    "timestamp": 1763809035.0225363,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.7069905,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "FKA twigs::EUSEXUA",
@@ -1305,8 +1305,8 @@
     "key": "Wode::Uncrossing The Keys",
     "artist": "Wode",
     "album": "Uncrossing The Keys",
-    "timestamp": 1764155183.8183877,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.2361615,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Caskets::The Only Heaven You\u2019ll Know",
@@ -1494,8 +1494,8 @@
     "key": "Halocraft::To Leave a Single Wolf Alive",
     "artist": "Halocraft",
     "album": "To Leave a Single Wolf Alive",
-    "timestamp": 1764414000.391062,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112584.4149663,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "FALSE REALITY::Faded Intentions",
@@ -1508,8 +1508,8 @@
     "key": "Vintersorg::Vattenkrafternas Spel",
     "artist": "Vintersorg",
     "album": "Vattenkrafternas Spel",
-    "timestamp": 1764414005.6922297,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.9538734,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Summoning Hellgates::Spear of Conquest",
@@ -1795,8 +1795,8 @@
     "key": "Steve Gunn::Daylight Daylight",
     "artist": "Steve Gunn",
     "album": "Daylight Daylight",
-    "timestamp": 1765018716.4622452,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.8280382,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Claire Rousay::a little death",
@@ -1837,8 +1837,8 @@
     "key": "The Boo Radleys::Giant Steps",
     "artist": "The Boo Radleys",
     "album": "Giant Steps",
-    "timestamp": 1765018720.8824089,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.4717672,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Quannnic::Warbrained",
@@ -2166,8 +2166,8 @@
     "key": "Gloombound::Dreaming Delusion",
     "artist": "Gloombound",
     "album": "Dreaming Delusion",
-    "timestamp": 1765537183.5538056,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.3549728,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Blue Nile::Hats",
@@ -2194,8 +2194,8 @@
     "key": "Wednesday Knudsen::Atrium",
     "artist": "Wednesday Knudsen",
     "album": "Atrium",
-    "timestamp": 1765537189.9297705,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112583.5862644,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Mountain Goats::Through This Fire Across From Peter Balkan",
@@ -2229,8 +2229,8 @@
     "key": "Juliana Hatfield::Lightning Might Strike",
     "artist": "Juliana Hatfield",
     "album": "Lightning Might Strike",
-    "timestamp": 1765623674.1764474,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112584.186481,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Rotten Sound::Mass Extinction",
@@ -2292,8 +2292,8 @@
     "key": "Jeff Tweedy::Twilight Override",
     "artist": "Jeff Tweedy",
     "album": "Twilight Override",
-    "timestamp": 1765969412.3519542,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766112663.2246954,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Neil Young and The Chrome Hearts::Talkin to the Trees",
@@ -2301,5 +2301,40 @@
     "album": "Talkin to the Trees",
     "timestamp": 1765969413.939591,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Neil Young::Talkin to the Trees",
+    "artist": "Neil Young",
+    "album": "Talkin to the Trees",
+    "timestamp": 1766112582.7477515,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "TTTTURBO::Modern Music",
+    "artist": "TTTTURBO",
+    "album": "Modern Music",
+    "timestamp": 1766112582.9929166,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "D.U.N.C.E.::DEMO 1",
+    "artist": "D.U.N.C.E.",
+    "album": "DEMO 1",
+    "timestamp": 1766112583.115128,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Cold Summer::Den Umst\u00e4nden entsprechend",
+    "artist": "Cold Summer",
+    "album": "Den Umst\u00e4nden entsprechend",
+    "timestamp": 1766112584.0726342,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Militarie Gun::God Save The Gun",
+    "artist": "Militarie Gun",
+    "album": "God Save The Gun",
+    "timestamp": 1766112663.6103904,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
