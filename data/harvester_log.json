@@ -5,9 +5,9 @@
     "message": "403 Client Error: Forbidden for url: https://www.decibelmagazine.com/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Twangville",
-    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: /category/features/reviews/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='twangville.com', port=443) at 0x7f075f7f7dc0>, 'Connection to twangville.com timed out. (connect timeout=15)'))"
+    "message": "Fetched 9983 chars"
   },
   {
     "status": "error",
@@ -17,7 +17,7 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 4969 chars"
+    "message": "Fetched 4958 chars"
   },
   {
     "status": "success",
@@ -42,22 +42,22 @@
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12022 chars"
+    "message": "Fetched 11989 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5345 chars"
+    "message": "Fetched 5319 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1129 chars"
+    "message": "Fetched 1081 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 6908 chars"
+    "message": "Fetched 7032 chars"
   },
   {
     "status": "error",
@@ -65,19 +65,19 @@
     "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "AltCorner",
-    "message": "HTTPSConnectionPool(host='altcorner.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 4232 chars"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18781 chars"
+    "message": "Fetched 18766 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7932 chars"
+    "message": "Fetched 7909 chars"
   },
   {
     "status": "error",
@@ -112,22 +112,22 @@
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10723 chars"
+    "message": "Fetched 10753 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3501 chars"
+    "message": "Fetched 3506 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8853 chars"
+    "message": "Fetched 8827 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 4915 chars"
+    "message": "Fetched 4982 chars"
   },
   {
     "status": "success",
@@ -135,9 +135,9 @@
     "message": "Fetched 1360 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Active Listener",
-    "message": "HTTPSConnectionPool(host='activelistener.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='activelistener.net', port=443) at 0x7f075ecef850>, 'Connection to activelistener.net timed out. (connect timeout=15)'))"
+    "message": "Fetched 5068 chars"
   },
   {
     "status": "error",
