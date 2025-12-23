@@ -339,8 +339,8 @@
     "key": "Top Dollar::Objects of Misfortune",
     "artist": "Top Dollar",
     "album": "Objects of Misfortune",
-    "timestamp": 1763510812.7173893,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766458303.6260815,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Sister Irene O\u2019Connor::Fire of God\u2019s Love",
@@ -2236,8 +2236,8 @@
     "key": "Rotten Sound::Mass Extinction",
     "artist": "Rotten Sound",
     "album": "Mass Extinction",
-    "timestamp": 1765623675.421169,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766458282.4225721,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "SML::How You Been",
@@ -2250,8 +2250,8 @@
     "key": "Matt Berry::Heard Noises",
     "artist": "Matt Berry",
     "album": "Heard Noises",
-    "timestamp": 1765623678.3320873,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1766458282.0628464,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "cLOUDs::Desprins",
@@ -2497,5 +2497,12 @@
     "album": "War Is Family",
     "timestamp": 1766228337.545157,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Voidceremony::Abditum",
+    "artist": "Voidceremony",
+    "album": "Abditum",
+    "timestamp": 1766458282.5553164,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
