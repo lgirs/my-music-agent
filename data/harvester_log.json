@@ -5,9 +5,9 @@
     "message": "403 Client Error: Forbidden for url: https://www.decibelmagazine.com/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Twangville",
-    "message": "Fetched 10002 chars"
+    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: /category/features/reviews/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='twangville.com', port=443) at 0x7f828a993e20>, 'Connection to twangville.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "error",
@@ -42,22 +42,22 @@
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 11470 chars"
+    "message": "Fetched 11126 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5153 chars"
+    "message": "Fetched 5325 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1121 chars"
+    "message": "Fetched 1093 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 6908 chars"
+    "message": "Fetched 6976 chars"
   },
   {
     "status": "error",
@@ -72,12 +72,12 @@
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18759 chars"
+    "message": "Fetched 18753 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7582 chars"
+    "message": "Fetched 7016 chars"
   },
   {
     "status": "error",
@@ -110,14 +110,14 @@
     "message": "Fetched 11023 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10680 chars"
+    "message": "HTTPSConnectionPool(host='www.toiletovhell.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3512 chars"
+    "message": "Fetched 3543 chars"
   },
   {
     "status": "success",
@@ -135,9 +135,9 @@
     "message": "Fetched 1360 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Active Listener",
-    "message": "Fetched 5068 chars"
+    "message": "HTTPSConnectionPool(host='activelistener.net', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='activelistener.net', port=443) at 0x7f828991d6c0>, 'Connection to activelistener.net timed out. (connect timeout=15)'))"
   },
   {
     "status": "error",
