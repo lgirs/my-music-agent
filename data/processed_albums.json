@@ -2642,8 +2642,8 @@
     "key": "JJJJJerome Ellis::Vesper Sparrow",
     "artist": "JJJJJerome Ellis",
     "album": "Vesper Sparrow",
-    "timestamp": 1766746652.0389233,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767063165.2177305,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Cultic::Lore",
@@ -2721,5 +2721,19 @@
     "album": "Red sky at morning",
     "timestamp": 1766832946.7656665,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Return to Darkness::Eternal",
+    "artist": "Return to Darkness",
+    "album": "Eternal",
+    "timestamp": 1767063165.5184052,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Gurf Morlix::The Taste of Ashes",
+    "artist": "Gurf Morlix",
+    "album": "The Taste of Ashes",
+    "timestamp": 1767063165.6765237,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
