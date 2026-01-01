@@ -1809,8 +1809,8 @@
     "key": "Monograf::Occultation",
     "artist": "Monograf",
     "album": "Occultation",
-    "timestamp": 1765018717.9134994,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767236671.3645825,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Jerskin Fendrix::Once Upon a Time... in Shropshire",
@@ -1851,8 +1851,8 @@
     "key": "Daniel Avery::Tremor",
     "artist": "Daniel Avery",
     "album": "Tremor",
-    "timestamp": 1765018722.1542008,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767236671.09287,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Dragon Throne::Tale of the Two: Dusk",
@@ -2124,8 +2124,8 @@
     "key": "Fimbul Winter::What Once Was",
     "artist": "Fimbul Winter",
     "album": "What Once Was",
-    "timestamp": 1765364732.4574637,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767236652.5490568,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Grimly Pleased::I'll Choose It",
@@ -2173,8 +2173,8 @@
     "key": "The Blue Nile::Hats",
     "artist": "The Blue Nile",
     "album": "Hats",
-    "timestamp": 1765537185.5246356,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767236652.4263444,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "EF::Give Me Beauty\u2026 Or Give Me Death!",
@@ -2798,5 +2798,26 @@
     "album": "Against The Odds Because We\u2019re Gods",
     "timestamp": 1767178964.6441672,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "INHUMAN::GLORI\u00c6",
+    "artist": "INHUMAN",
+    "album": "GLORI\u00c6",
+    "timestamp": 1767236652.1448777,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Mavi::The Pilot",
+    "artist": "Mavi",
+    "album": "The Pilot",
+    "timestamp": 1767236652.3013344,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Draculum::Poems Of Spellcraft",
+    "artist": "Draculum",
+    "album": "Poems Of Spellcraft",
+    "timestamp": 1767236652.6676738,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
