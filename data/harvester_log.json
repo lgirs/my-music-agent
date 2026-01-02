@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 12374 chars"
+    "message": "Fetched 12534 chars"
   },
   {
     "status": "error",
@@ -22,12 +22,12 @@
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3752 chars"
+    "message": "Fetched 3698 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4756 chars"
+    "message": "Fetched 4464 chars"
   },
   {
     "status": "error",
@@ -37,22 +37,22 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 2485 chars"
+    "message": "Fetched 2482 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 10945 chars"
+    "message": "Fetched 11130 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5313 chars"
+    "message": "Fetched 5280 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 1078 chars"
+    "message": "Fetched 976 chars"
   },
   {
     "status": "success",
@@ -72,12 +72,12 @@
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18747 chars"
+    "message": "Fetched 18760 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 4064 chars"
+    "message": "Fetched 3916 chars"
   },
   {
     "status": "error",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11321 chars"
+    "message": "Fetched 11042 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10537 chars"
+    "message": "Fetched 10422 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3515 chars"
+    "message": "Fetched 3497 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8681 chars"
+    "message": "403 Client Error: Forbidden for url: https://illustratemagazine.com/reviews/"
   },
   {
     "status": "success",
