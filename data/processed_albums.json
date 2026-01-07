@@ -1536,8 +1536,8 @@
     "key": "The Saints::Long March Through the Jazz Age",
     "artist": "The Saints",
     "album": "Long March Through the Jazz Age",
-    "timestamp": 1764414016.2987216,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784015.9010704,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "AFI::Silver Bleeds The Sun",
@@ -2222,8 +2222,8 @@
     "key": "Joelton Mayfield::Crowd Pleaser",
     "artist": "Joelton Mayfield",
     "album": "Crowd Pleaser",
-    "timestamp": 1765623672.9004192,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784015.7708604,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Juliana Hatfield::Lightning Might Strike",
@@ -2565,8 +2565,8 @@
     "key": "Sallow Moth::Mossbane Lantern",
     "artist": "Sallow Moth",
     "album": "Mossbane Lantern",
-    "timestamp": 1766574212.523964,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784003.5599961,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Optic Sink::Lucky Number",
@@ -2628,8 +2628,8 @@
     "key": "Soul Coughing::Ruby Vroom",
     "artist": "Soul Coughing",
     "album": "Ruby Vroom",
-    "timestamp": 1766746649.1121185,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784016.0330389,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Tommy Womack::Live a Little",
@@ -2761,8 +2761,8 @@
     "key": "Urban Dream::Human Eclipse",
     "artist": "Urban Dream",
     "album": "Human Eclipse",
-    "timestamp": 1767178951.3105783,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784003.3308132,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Amalekim::Shir Hashirim",
@@ -2796,8 +2796,8 @@
     "key": "Hot Apollo::Against The Odds Because We\u2019re Gods",
     "artist": "Hot Apollo",
     "album": "Against The Odds Because We\u2019re Gods",
-    "timestamp": 1767178964.6441672,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784003.2357395,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "INHUMAN::GLORI\u00c6",
@@ -2866,8 +2866,8 @@
     "key": "Judas Priest::Painkiller",
     "artist": "Judas Priest",
     "album": "Painkiller",
-    "timestamp": 1767437955.0338335,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767784003.4585257,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Beatles::Anthology 4",
@@ -2896,5 +2896,103 @@
     "album": "Changes in Air",
     "timestamp": 1767754457.99402,
     "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Small Doses::Rodeo",
+    "artist": "Small Doses",
+    "album": "Rodeo",
+    "timestamp": 1767783993.4796581,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Miguel G\u00f3es::Pequenas Lembran\u00e7as",
+    "artist": "Miguel G\u00f3es",
+    "album": "Pequenas Lembran\u00e7as",
+    "timestamp": 1767783994.1596823,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Steven Wilson::Hand. Cannot. Erase.",
+    "artist": "Steven Wilson",
+    "album": "Hand. Cannot. Erase.",
+    "timestamp": 1767783994.779635,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Dead Head::Repression Tank",
+    "artist": "Dead Head",
+    "album": "Repression Tank",
+    "timestamp": 1767783995.4129982,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Opia::I Welcome Thee, Eternal Sleep",
+    "artist": "Opia",
+    "album": "I Welcome Thee, Eternal Sleep",
+    "timestamp": 1767783996.084362,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Havana Syndrome::Kill Your Brain",
+    "artist": "Havana Syndrome",
+    "album": "Kill Your Brain",
+    "timestamp": 1767783996.6999254,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Fungas::Intelligence 1",
+    "artist": "Fungas",
+    "album": "Intelligence 1",
+    "timestamp": 1767783997.3661115,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Blood Cannery::Olympic Blood",
+    "artist": "Blood Cannery",
+    "album": "Olympic Blood",
+    "timestamp": 1767783998.3379734,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Elijah Minnelli::Clams As A Main Meal",
+    "artist": "Elijah Minnelli",
+    "album": "Clams As A Main Meal",
+    "timestamp": 1767783998.9626055,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Pagan Altar::Lords of Hypocrisy",
+    "artist": "Pagan Altar",
+    "album": "Lords of Hypocrisy",
+    "timestamp": 1767783999.6182396,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Oregon/Elvin Jones::Together",
+    "artist": "Oregon/Elvin Jones",
+    "album": "Together",
+    "timestamp": 1767784000.291706,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Ptolemea::Kali",
+    "artist": "Ptolemea",
+    "album": "Kali",
+    "timestamp": 1767784001.0344472,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Cochemea::Vol III: Ancestros Futuros",
+    "artist": "Cochemea",
+    "album": "Vol III: Ancestros Futuros",
+    "timestamp": 1767784015.4991384,
+    "action": "LIKED_VIA_PLAYLIST"
+  },
+  {
+    "key": "konrad kinard::War Is Family",
+    "artist": "konrad kinard",
+    "album": "War Is Family",
+    "timestamp": 1767784015.6374035,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
