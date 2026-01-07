@@ -1046,8 +1046,8 @@
     "key": "Rafael Toral::Traveling Light",
     "artist": "Rafael Toral",
     "album": "Traveling Light",
-    "timestamp": 1763809020.2528026,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.4480455,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Natural Information Society::Perseverance",
@@ -1361,8 +1361,8 @@
     "key": "Astronoid::Stargod",
     "artist": "Astronoid",
     "album": "Stargod",
-    "timestamp": 1765162020.2667048,
-    "action": "EXCLUDED_VIA_PLAYLIST"
+    "timestamp": 1767754506.3646374,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Julien Baker::Sprained Ankle",
@@ -2110,8 +2110,8 @@
     "key": "Dead and Dripping::Nefarious Scintillations",
     "artist": "Dead and Dripping",
     "album": "Nefarious Scintillations",
-    "timestamp": 1765364731.1106012,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.3554823,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "D.U.N.C.E.::Demo 1",
@@ -2187,8 +2187,8 @@
     "key": "Victimarum::Seitsem\u00e4n soihdun valossa",
     "artist": "Victimarum",
     "album": "Seitsem\u00e4n soihdun valossa",
-    "timestamp": 1765537188.4861066,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754458.1728683,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Wednesday Knudsen::Atrium",
@@ -2215,8 +2215,8 @@
     "key": "Agriculture::The Spiritual Sound",
     "artist": "Agriculture",
     "album": "The Spiritual Sound",
-    "timestamp": 1765623671.559747,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754506.624042,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Joelton Mayfield::Crowd Pleaser",
@@ -2362,8 +2362,8 @@
     "key": "Kaatayra::S\u00f3 Quem Viu o Rel\u00e2mpago \u00e0 Sua Direita Sabe",
     "artist": "Kaatayra",
     "album": "S\u00f3 Quem Viu o Rel\u00e2mpago \u00e0 Sua Direita Sabe",
-    "timestamp": 1766141766.047375,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.1612425,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Dying Wish::Flesh Stays Together",
@@ -2397,8 +2397,8 @@
     "key": "Hurt Hawks::The Big Sweat",
     "artist": "Hurt Hawks",
     "album": "The Big Sweat",
-    "timestamp": 1766141780.3941498,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754506.7587938,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Who Pays::Hard Times",
@@ -2523,8 +2523,8 @@
     "key": "Species::Changelings",
     "artist": "Species",
     "album": "Changelings",
-    "timestamp": 1766574207.9610431,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.262357,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Preyrs::The Wounded Healer",
@@ -2572,15 +2572,15 @@
     "key": "Optic Sink::Lucky Number",
     "artist": "Optic Sink",
     "album": "Lucky Number",
-    "timestamp": 1766574213.2040422,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.9026706,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Sarayasign::Shadows Of The Dying Light",
     "artist": "Sarayasign",
     "album": "Shadows Of The Dying Light",
-    "timestamp": 1766574213.9128602,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.5393283,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Draculum::Poems of Spellcraft",
@@ -2607,8 +2607,8 @@
     "key": "Casket Rats::Rat City Rockers",
     "artist": "Casket Rats",
     "album": "Rat City Rockers",
-    "timestamp": 1766574216.755117,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754458.083744,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Schenectavoidz::Attaining New Levels of High",
@@ -2649,8 +2649,8 @@
     "key": "Cultic::Lore",
     "artist": "Cultic",
     "album": "Lore",
-    "timestamp": 1766746653.5451572,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.812807,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "MAVI::The Pilot",
@@ -2754,8 +2754,8 @@
     "key": "Balto::No Hard Feeling",
     "artist": "Balto",
     "album": "No Hard Feeling",
-    "timestamp": 1767178948.592028,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754506.8842258,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Urban Dream::Human Eclipse",
@@ -2873,7 +2873,28 @@
     "key": "The Beatles::Anthology 4",
     "artist": "The Beatles",
     "album": "Anthology 4",
-    "timestamp": 1767437957.9554112,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1767754457.056826,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Akai Solo::No Control, No Glory",
+    "artist": "Akai Solo",
+    "album": "No Control, No Glory",
+    "timestamp": 1767754457.6281824,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "CRIST\u00d8::Fragments Of The Inferno",
+    "artist": "CRIST\u00d8",
+    "album": "Fragments Of The Inferno",
+    "timestamp": 1767754457.7190254,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Kara-lis Coverdale::Changes in Air",
+    "artist": "Kara-lis Coverdale",
+    "album": "Changes in Air",
+    "timestamp": 1767754457.99402,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
