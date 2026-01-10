@@ -185,8 +185,8 @@
     "key": "Sister Ray Davies::Holy Island",
     "artist": "Sister Ray Davies",
     "album": "Holy Island",
-    "timestamp": 1763510776.067215,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1768013334.7440581,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Farao::Magical Thinking",
@@ -1116,8 +1116,8 @@
     "key": "quannnic::Warbrained",
     "artist": "quannnic",
     "album": "Warbrained",
-    "timestamp": 1763809033.3211138,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1768013335.147478,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Smerz::Big city life EDITS",
@@ -2558,8 +2558,8 @@
     "key": "Katakomba::The Second Death",
     "artist": "Katakomba",
     "album": "The Second Death",
-    "timestamp": 1766574211.7669277,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1768013334.9647732,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Sallow Moth::Mossbane Lantern",
@@ -2705,8 +2705,8 @@
     "key": "Svntarer::Exitus Triumphalis",
     "artist": "Svntarer",
     "album": "Exitus Triumphalis",
-    "timestamp": 1766832945.2539892,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1768013360.2491138,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Melody\u2019s Echo Chamber::Unclouded",
@@ -2964,8 +2964,8 @@
     "key": "Pagan Altar::Lords of Hypocrisy",
     "artist": "Pagan Altar",
     "album": "Lords of Hypocrisy",
-    "timestamp": 1767783999.6182396,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1768013335.062124,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Oregon/Elvin Jones::Together",
@@ -3078,5 +3078,12 @@
     "album": "Equinox",
     "timestamp": 1767956371.3996413,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Between The Buried And Me::The Blue Nowhere",
+    "artist": "Between The Buried And Me",
+    "album": "The Blue Nowhere",
+    "timestamp": 1768013334.8702316,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
