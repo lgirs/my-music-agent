@@ -353,8 +353,8 @@
     "key": "David Darling::Cycles",
     "artist": "David Darling",
     "album": "Cycles",
-    "timestamp": 1763510816.3488736,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137010.712478,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Your Inland Empire::Your Inland Empire",
@@ -2026,8 +2026,8 @@
     "key": "Old Sorcery::The Escapist",
     "artist": "Old Sorcery",
     "album": "The Escapist",
-    "timestamp": 1765364723.5457368,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137007.470479,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Atlantic::Timeworn",
@@ -2047,8 +2047,8 @@
     "key": "Kauan::Wayhome",
     "artist": "Kauan",
     "album": "Wayhome",
-    "timestamp": 1765364725.2986703,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137009.7721248,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Clouds::Desprins",
@@ -2285,8 +2285,8 @@
     "key": "Jason Isbell::Foxes in the Snow",
     "artist": "Jason Isbell",
     "album": "Foxes in the Snow",
-    "timestamp": 1765969410.7738912,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137009.592656,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Jeff Tweedy::Twilight Override",
@@ -2537,8 +2537,8 @@
     "key": "Sanguisugabogg::Hideous Aftermath",
     "artist": "Sanguisugabogg",
     "album": "Hideous Aftermath",
-    "timestamp": 1766574209.3807995,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137008.3520877,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Sold Soul::Just Like That, I Disappear Entirely",
@@ -2691,8 +2691,8 @@
     "key": "Dagdr\u00f8m::Schauder",
     "artist": "Dagdr\u00f8m",
     "album": "Schauder",
-    "timestamp": 1766746661.2375736,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137009.0346842,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Bug::Implosion",
@@ -2768,8 +2768,8 @@
     "key": "Amalekim::Shir Hashirim",
     "artist": "Amalekim",
     "album": "Shir Hashirim",
-    "timestamp": 1767178953.7250206,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137010.062868,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Model Martel::A Thousand Couple Times",
@@ -2957,8 +2957,8 @@
     "key": "Elijah Minnelli::Clams As A Main Meal",
     "artist": "Elijah Minnelli",
     "album": "Clams As A Main Meal",
-    "timestamp": 1767783998.9626055,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137010.3984501,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Pagan Altar::Lords of Hypocrisy",
@@ -3104,8 +3104,8 @@
     "key": "Robert Stillman::10,000 Rivers",
     "artist": "Robert Stillman",
     "album": "10,000 Rivers",
-    "timestamp": 1768042703.4445581,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137008.8672724,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Destroyer::Destroyer's Rubies",
@@ -3195,15 +3195,15 @@
     "key": "Will Epstein::Yeah, mostly",
     "artist": "Will Epstein",
     "album": "Yeah, mostly",
-    "timestamp": 1768388843.7614818,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137136.238411,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Darvaza::We Are Him",
     "artist": "Darvaza",
     "album": "We Are Him",
-    "timestamp": 1768388844.9552426,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137008.5199406,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Serial Pest::Living in Fear",
@@ -3230,8 +3230,8 @@
     "key": "Marianas Rest::The Bereaved",
     "artist": "Marianas Rest",
     "album": "The Bereaved",
-    "timestamp": 1768561229.0631752,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137007.999873,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Dylan Day::The Unanswered Prayer",
@@ -3286,8 +3286,8 @@
     "key": "Leti Y Los Utensilios::Fuego",
     "artist": "Leti Y Los Utensilios",
     "album": "Fuego",
-    "timestamp": 1768561234.9716766,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137009.2022061,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "HUNNY::SPIRIT!",
@@ -3426,8 +3426,8 @@
     "key": "Unexpectance::Solus Ipse",
     "artist": "Unexpectance",
     "album": "Solus Ipse",
-    "timestamp": 1768647582.3352134,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1769137010.2275782,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Warning::Watching From a Distance",
@@ -3484,5 +3484,40 @@
     "album": "Krushers Of The World",
     "timestamp": 1768993879.8128967,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Hunny::SPIRIT!",
+    "artist": "Hunny",
+    "album": "SPIRIT!",
+    "timestamp": 1769137008.1826177,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "The Cribs::Selling A Vibe",
+    "artist": "The Cribs",
+    "album": "Selling A Vibe",
+    "timestamp": 1769137008.687353,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Will Speros::Lamictal",
+    "artist": "Will Speros",
+    "album": "Lamictal",
+    "timestamp": 1769137009.4239726,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "PERDITION TEMPLE::Malign Apotheosis",
+    "artist": "PERDITION TEMPLE",
+    "album": "Malign Apotheosis",
+    "timestamp": 1769137010.8892877,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "PREYRS::The Wounded Healer",
+    "artist": "PREYRS",
+    "album": "The Wounded Healer",
+    "timestamp": 1769137135.833448,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
