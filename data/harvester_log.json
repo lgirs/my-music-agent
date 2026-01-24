@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5986 chars"
+    "message": "Fetched 6148 chars"
   },
   {
     "status": "error",
@@ -17,12 +17,12 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5109 chars"
+    "message": "Fetched 5173 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3764 chars"
+    "message": "Fetched 3808 chars"
   },
   {
     "status": "success",
@@ -37,17 +37,17 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 4013 chars"
+    "message": "Fetched 5807 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Metal Temple",
-    "message": "Fetched 11593 chars"
+    "message": "HTTPSConnectionPool(host='metal-temple.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5354 chars"
+    "message": "Fetched 5299 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 6917 chars"
+    "message": "Fetched 6999 chars"
   },
   {
     "status": "error",
@@ -72,12 +72,12 @@
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18821 chars"
+    "message": "Fetched 18802 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7147 chars"
+    "message": "Fetched 6698 chars"
   },
   {
     "status": "error",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12636 chars"
+    "message": "Fetched 12686 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10467 chars"
+    "message": "Fetched 10626 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3332 chars"
+    "message": "Fetched 3322 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8393 chars"
+    "message": "Fetched 8350 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2248 chars"
+    "message": "Fetched 2262 chars"
   }
 ]
