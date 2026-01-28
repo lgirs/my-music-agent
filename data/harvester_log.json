@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6148 chars"
+    "message": "Fetched 6163 chars"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5173 chars"
+    "message": "Fetched 5080 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 3808 chars"
+    "message": "Fetched 3841 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4458 chars"
+    "message": "Fetched 4957 chars"
   },
   {
     "status": "error",
@@ -37,27 +37,27 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5807 chars"
+    "message": "Fetched 6185 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Metal Temple",
-    "message": "HTTPSConnectionPool(host='metal-temple.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 10397 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 5299 chars"
+    "message": "Fetched 5331 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 917 chars"
+    "message": "Fetched 928 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 6999 chars"
+    "message": "Fetched 6917 chars"
   },
   {
     "status": "error",
@@ -67,17 +67,17 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 4393 chars"
+    "message": "Fetched 4424 chars"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18802 chars"
+    "message": "Fetched 18715 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 6698 chars"
+    "message": "Fetched 7539 chars"
   },
   {
     "status": "error",
@@ -92,12 +92,12 @@
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 8356 chars"
+    "message": "Fetched 8424 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 46461 chars"
+    "message": "Fetched 46359 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12686 chars"
+    "message": "Fetched 12606 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10626 chars"
+    "message": "Fetched 10530 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3322 chars"
+    "message": "Fetched 3373 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 8350 chars"
+    "message": "Fetched 8375 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2262 chars"
+    "message": "Fetched 2297 chars"
   }
 ]
