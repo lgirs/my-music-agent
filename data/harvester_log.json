@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6163 chars"
+    "message": "Fetched 6144 chars"
   },
   {
     "status": "error",
@@ -17,7 +17,7 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 5080 chars"
+    "message": "Fetched 5093 chars"
   },
   {
     "status": "success",
@@ -27,7 +27,7 @@
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 4957 chars"
+    "message": "Fetched 4384 chars"
   },
   {
     "status": "error",
@@ -37,12 +37,12 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 6185 chars"
+    "message": "Fetched 4042 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 10397 chars"
+    "message": "Fetched 10771 chars"
   },
   {
     "status": "success",
@@ -52,12 +52,12 @@
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 928 chars"
+    "message": "Fetched 841 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 6917 chars"
+    "message": "Fetched 6999 chars"
   },
   {
     "status": "error",
@@ -65,19 +65,19 @@
     "message": "403 Client Error: Forbidden for url: https://rateyourmusic.com/new-music/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "AltCorner",
-    "message": "Fetched 4424 chars"
+    "message": "HTTPSConnectionPool(host='altcorner.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Metacritic (Music)",
-    "message": "Fetched 18715 chars"
+    "message": "Fetched 18692 chars"
   },
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7539 chars"
+    "message": "Fetched 7523 chars"
   },
   {
     "status": "error",
@@ -87,7 +87,7 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 1850 chars"
+    "message": "Fetched 1828 chars"
   },
   {
     "status": "success",
@@ -107,17 +107,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12606 chars"
+    "message": "Fetched 12036 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 10530 chars"
+    "message": "Fetched 10484 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3373 chars"
+    "message": "Fetched 3410 chars"
   },
   {
     "status": "success",
@@ -147,6 +147,6 @@
   {
     "status": "success",
     "source": "Stereogum",
-    "message": "Fetched 2297 chars"
+    "message": "Fetched 2265 chars"
   }
 ]
