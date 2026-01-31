@@ -3904,5 +3904,12 @@
     "album": "Oracle",
     "timestamp": 1769771369.4347908,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "A$AP Rocky::Don't Be Dumb",
+    "artist": "A$AP Rocky",
+    "album": "Don't Be Dumb",
+    "timestamp": 1769829320.0708907,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
