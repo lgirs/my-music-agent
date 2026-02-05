@@ -2635,8 +2635,8 @@
     "key": "Tommy Womack::Live a Little",
     "artist": "Tommy Womack",
     "album": "Live a Little",
-    "timestamp": 1766746650.761087,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262127.388677,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "JJJJJerome Ellis::Vesper Sparrow",
@@ -2698,8 +2698,8 @@
     "key": "The Bug::Implosion",
     "artist": "The Bug",
     "album": "Implosion",
-    "timestamp": 1766832944.4655457,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262126.413919,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Svntarer::Exitus Triumphalis",
@@ -2747,8 +2747,8 @@
     "key": "Embittered::This Failed Endeavor",
     "artist": "Embittered",
     "album": "This Failed Endeavor",
-    "timestamp": 1767178945.3775961,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262127.1427872,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Balto::No Hard Feeling",
@@ -3412,8 +3412,8 @@
     "key": "Haeun Joo::Just Gravity",
     "artist": "Haeun Joo",
     "album": "Just Gravity",
-    "timestamp": 1768647578.685011,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262125.969502,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Ratboys::Singin' to an Empty Chair",
@@ -3713,8 +3713,8 @@
     "key": "Yellow Wallpaper::Choose Death",
     "artist": "Yellow Wallpaper",
     "album": "Choose Death",
-    "timestamp": 1769598661.9275086,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262126.9066632,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Lucinda Williams::World\u2019s Gone Wrong",
@@ -3727,8 +3727,8 @@
     "key": "Outkast::ATLiens",
     "artist": "Outkast",
     "album": "ATLiens",
-    "timestamp": 1769598666.5019486,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262126.7895885,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Bj\u00f6rn Meyer::Convergence",
@@ -3783,8 +3783,8 @@
     "key": "Daguerreotypes::This Is My Way to Tell You That Everything Is Real and Happening Right Now",
     "artist": "Daguerreotypes",
     "album": "This Is My Way to Tell You That Everything Is Real and Happening Right Now",
-    "timestamp": 1769598686.043839,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262169.436459,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Two Shell::Two Shell",
@@ -3825,8 +3825,8 @@
     "key": "Kaunis Kuolematon::Kun Valo Minussa Kuoli",
     "artist": "Kaunis Kuolematon",
     "album": "Kun Valo Minussa Kuoli",
-    "timestamp": 1769598699.5232673,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262127.2602804,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Defecto::Echoes Of Isolation",
@@ -3979,8 +3979,8 @@
     "key": "Invictus::Nocturnal Visions",
     "artist": "Invictus",
     "album": "Nocturnal Visions",
-    "timestamp": 1769857503.1407979,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262126.6579196,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "UNDER::What Happened In Roundwood",
@@ -4126,8 +4126,8 @@
     "key": "URNE::Setting Fire To The Sky",
     "artist": "URNE",
     "album": "Setting Fire To The Sky",
-    "timestamp": 1770204194.689246,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770262126.537128,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Blackwater Holylight::Not Here Not Gone",
@@ -4183,6 +4183,41 @@
     "artist": "In The Woods...",
     "album": "Otra",
     "timestamp": 1770204216.1324985,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "ERG ONE::THE LIFE OF ERG",
+    "artist": "ERG ONE",
+    "album": "THE LIFE OF ERG",
+    "timestamp": 1770262126.1545227,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "TOOL::\u00c6nima",
+    "artist": "TOOL",
+    "album": "\u00c6nima",
+    "timestamp": 1770262126.2899377,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Future Loves Past::Dreamcrusher",
+    "artist": "Future Loves Past",
+    "album": "Dreamcrusher",
+    "timestamp": 1770262127.0251768,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Evelyne / Masao::Testpattern",
+    "artist": "Evelyne / Masao",
+    "album": "Testpattern",
+    "timestamp": 1770262127.5374463,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Obelisk::Brushed by Darkness",
+    "artist": "Obelisk",
+    "album": "Brushed by Darkness",
+    "timestamp": 1770262127.658191,
     "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
