@@ -3041,8 +3041,8 @@
     "key": "Nas::Light-Years",
     "artist": "Nas",
     "album": "Light-Years",
-    "timestamp": 1767956363.5611205,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770781463.8256435,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Plosivs::YELL AT CLOUD",
@@ -3783,15 +3783,15 @@
     "key": "Daguerreotypes::This Is My Way to Tell You That Everything Is Real and Happening Right Now",
     "artist": "Daguerreotypes",
     "album": "This Is My Way to Tell You That Everything Is Real and Happening Right Now",
-    "timestamp": 1770262169.436459,
+    "timestamp": 1770781476.163237,
     "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Two Shell::Two Shell",
     "artist": "Two Shell",
     "album": "Two Shell",
-    "timestamp": 1769598688.2989993,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770781463.9418874,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "redveil::sankofa",
@@ -3818,8 +3818,8 @@
     "key": "Erik Hall::Solo Three",
     "artist": "Erik Hall",
     "album": "Solo Three",
-    "timestamp": 1769598697.0535989,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1770781463.7074974,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Kaunis Kuolematon::Kun Valo Minussa Kuoli",
@@ -4196,7 +4196,7 @@
     "key": "TOOL::\u00c6nima",
     "artist": "TOOL",
     "album": "\u00c6nima",
-    "timestamp": 1770262126.2899377,
+    "timestamp": 1770781463.5766416,
     "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
@@ -4366,5 +4366,26 @@
     "album": "Round & Round",
     "timestamp": 1770462296.985037,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Dyed In Grey::Harbinger",
+    "artist": "Dyed In Grey",
+    "album": "Harbinger",
+    "timestamp": 1770781463.4228053,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "Cate le Bon::Michelangelo Dying",
+    "artist": "Cate le Bon",
+    "album": "Michelangelo Dying",
+    "timestamp": 1770781464.0620766,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "For Your Health::Death of Spring",
+    "artist": "For Your Health",
+    "album": "Death of Spring",
+    "timestamp": 1770781475.8328776,
+    "action": "LIKED_VIA_PLAYLIST"
   }
 ]
