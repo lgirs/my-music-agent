@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6122 chars"
+    "message": "Fetched 5928 chars"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7327 chars"
+    "message": "Fetched 7395 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4536 chars"
+    "message": "Fetched 4560 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 12860 chars"
+    "message": "Fetched 12572 chars"
   },
   {
     "status": "success",
@@ -37,17 +37,17 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5482 chars"
+    "message": "Fetched 5670 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 10306 chars"
+    "message": "Fetched 10504 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13907 chars"
+    "message": "Fetched 13813 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4056 chars"
+    "message": "Fetched 3967 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5395 chars"
+    "message": "Fetched 5339 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8613 chars"
+    "message": "Fetched 8230 chars"
   },
   {
     "status": "error",
@@ -87,12 +87,12 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2755 chars"
+    "message": "Fetched 2872 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7957 chars"
+    "message": "Fetched 7871 chars"
   },
   {
     "status": "success",
@@ -107,27 +107,27 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12503 chars"
+    "message": "Fetched 12857 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8291 chars"
+    "message": "Fetched 8019 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3552 chars"
+    "message": "Fetched 3627 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Illustrate Magazine",
-    "message": "403 Client Error: Forbidden for url: https://illustratemagazine.com/"
+    "message": "Fetched 22265 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5196 chars"
+    "message": "Fetched 5403 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "The Quietus",
-    "message": "Fetched 13198 chars"
+    "message": "Fetched 13364 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "No Clean Singing",
-    "message": "HTTPSConnectionPool(host='www.nocleansinging.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1017)')))"
+    "message": "Fetched 18422 chars"
   }
 ]
