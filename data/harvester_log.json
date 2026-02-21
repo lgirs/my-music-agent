@@ -7,7 +7,7 @@
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6280 chars"
+    "message": "Fetched 5385 chars"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7403 chars"
+    "message": "Fetched 7370 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4811 chars"
+    "message": "Fetched 4601 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 12776 chars"
+    "message": "Fetched 13130 chars"
   },
   {
     "status": "success",
@@ -37,17 +37,17 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5278 chars"
+    "message": "Fetched 5952 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 10917 chars"
+    "message": "Fetched 10673 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13759 chars"
+    "message": "Fetched 13871 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3698 chars"
+    "message": "Fetched 3773 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7749 chars"
+    "message": "Fetched 7314 chars"
   },
   {
     "status": "error",
@@ -87,7 +87,7 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2718 chars"
+    "message": "Fetched 3116 chars"
   },
   {
     "status": "success",
@@ -112,22 +112,22 @@
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7859 chars"
+    "message": "Fetched 8035 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3639 chars"
+    "message": "Fetched 3783 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 22320 chars"
+    "message": "Fetched 22205 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "HTTPSConnectionPool(host='www.gorillavsbear.net', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 5403 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "The Quietus",
-    "message": "Fetched 13512 chars"
+    "message": "Fetched 13411 chars"
   },
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 19753 chars"
+    "message": "Fetched 19352 chars"
   }
 ]
