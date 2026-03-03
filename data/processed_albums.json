@@ -2908,8 +2908,8 @@
     "key": "Miguel G\u00f3es::Pequenas Lembran\u00e7as",
     "artist": "Miguel G\u00f3es",
     "album": "Pequenas Lembran\u00e7as",
-    "timestamp": 1767783994.1596823,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508581.8337908,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Steven Wilson::Hand. Cannot. Erase.",
@@ -3377,8 +3377,8 @@
     "key": "Gluecifer::Same Drug New High",
     "artist": "Gluecifer",
     "album": "Same Drug New High",
-    "timestamp": 1768647569.6195793,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508581.5437129,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Tomeka Reid::Dream Archives",
@@ -3783,7 +3783,7 @@
     "key": "Daguerreotypes::This Is My Way to Tell You That Everything Is Real and Happening Right Now",
     "artist": "Daguerreotypes",
     "album": "This Is My Way to Tell You That Everything Is Real and Happening Right Now",
-    "timestamp": 1770781476.163237,
+    "timestamp": 1772508618.6023626,
     "action": "LIKED_VIA_PLAYLIST"
   },
   {
@@ -3888,8 +3888,8 @@
     "key": "Vesseles::Home",
     "artist": "Vesseles",
     "album": "Home",
-    "timestamp": 1769771365.7895424,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508581.0796099,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Zyclone::Visions of Impending Death",
@@ -4056,8 +4056,8 @@
     "key": "Clockwork Animals::Fantastic Future Dream",
     "artist": "Clockwork Animals",
     "album": "Fantastic Future Dream",
-    "timestamp": 1770204171.459646,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508580.4528317,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "The Lowest Pair::As Young As We\u2019ll Ever Be",
@@ -4441,8 +4441,8 @@
     "key": "Wilder Maker::The Streets Like Beds Still Warm",
     "artist": "Wilder Maker",
     "album": "The Streets Like Beds Still Warm",
-    "timestamp": 1770809427.452861,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508618.1213577,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Tony Joe White::The Real Thang",
@@ -4567,8 +4567,8 @@
     "key": "Lily Allen::West End Girl",
     "artist": "Lily Allen",
     "album": "West End Girl",
-    "timestamp": 1771067115.519698,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508579.189207,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Banisher::Metamorphosis",
@@ -4623,8 +4623,8 @@
     "key": "Velothian::Mythic Dawn",
     "artist": "Velothian",
     "album": "Mythic Dawn",
-    "timestamp": 1771413948.8047483,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508580.1068518,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Stephen McCraven::Wooley The Newt",
@@ -4679,8 +4679,8 @@
     "key": "Exhumed::Red Asphalt",
     "artist": "Exhumed",
     "album": "Red Asphalt",
-    "timestamp": 1771585835.959567,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508579.6025891,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Pantomime Horse::Everyone\u2019s a Ghost",
@@ -4861,8 +4861,8 @@
     "key": "Los Idiotas::En Las Sombras Se Mueven Mucho Mejor",
     "artist": "Los Idiotas",
     "album": "En Las Sombras Se Mueven Mucho Mejor",
-    "timestamp": 1772019055.0676577,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508579.9415965,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Hen Ogledd::Discombobulated",
@@ -4966,8 +4966,8 @@
     "key": "Gorillaz::The Mountain",
     "artist": "Gorillaz",
     "album": "The Mountain",
-    "timestamp": 1772190734.107016,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508580.622426,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Maria BC::Marathon",
@@ -5050,8 +5050,8 @@
     "key": "Tim Easton::fIREHORSE",
     "artist": "Tim Easton",
     "album": "fIREHORSE",
-    "timestamp": 1772276529.74764,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508579.7780733,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Buck Meek::The Mirror",
@@ -5085,8 +5085,8 @@
     "key": "Cavern Womb::Stages of Infinity",
     "artist": "Cavern Womb",
     "album": "Stages of Infinity",
-    "timestamp": 1772276533.134345,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772508580.7905777,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Post Luctum::Timor Lucis",
@@ -5164,5 +5164,19 @@
     "album": "Song Shards",
     "timestamp": 1772276541.351212,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Death Dealer::Reign of Steel",
+    "artist": "Death Dealer",
+    "album": "Reign of Steel",
+    "timestamp": 1772508580.2720392,
+    "action": "EXCLUDED_VIA_PLAYLIST"
+  },
+  {
+    "key": "INFERNAL PRESENCE::Fiery Path",
+    "artist": "INFERNAL PRESENCE",
+    "album": "Fiery Path",
+    "timestamp": 1772508581.3639922,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
