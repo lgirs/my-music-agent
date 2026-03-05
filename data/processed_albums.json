@@ -3125,8 +3125,8 @@
     "key": "Despised Icon::Shadow Work",
     "artist": "Despised Icon",
     "album": "Shadow Work",
-    "timestamp": 1768388834.0002813,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772681154.1208467,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Cemento::Bad Dream Songs",
@@ -3328,8 +3328,8 @@
     "key": "Soen::Reliance",
     "artist": "Soen",
     "album": "Reliance",
-    "timestamp": 1768647556.5697563,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772681154.2766738,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
     "key": "Lamictal::Lamictal",
@@ -4007,8 +4007,8 @@
     "key": "Alex Wong::Permission",
     "artist": "Alex Wong",
     "album": "Permission",
-    "timestamp": 1769857507.7755158,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772681168.9805365,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "King Yosef::Spire of Fear",
@@ -4203,7 +4203,7 @@
     "key": "Future Loves Past::Dreamcrusher",
     "artist": "Future Loves Past",
     "album": "Dreamcrusher",
-    "timestamp": 1770262127.0251768,
+    "timestamp": 1772681153.945993,
     "action": "EXCLUDED_VIA_PLAYLIST"
   },
   {
@@ -4665,8 +4665,8 @@
     "key": "Marielle V Jakobsons::The Patterns Lost to Air",
     "artist": "Marielle V Jakobsons",
     "album": "The Patterns Lost to Air",
-    "timestamp": 1771585833.6284869,
-    "action": "ADD_TO_PLAYLIST"
+    "timestamp": 1772681169.4802973,
+    "action": "LIKED_VIA_PLAYLIST"
   },
   {
     "key": "Nytt Land::Aba Khan",
@@ -5360,5 +5360,12 @@
     "album": "Temperament",
     "timestamp": 1772623165.538897,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "DUSK::Bunker",
+    "artist": "DUSK",
+    "album": "Bunker",
+    "timestamp": 1772681153.738667,
+    "action": "EXCLUDED_VIA_PLAYLIST"
   }
 ]
