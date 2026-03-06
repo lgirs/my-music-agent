@@ -2,12 +2,12 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6079 chars"
+    "message": "Fetched 5824 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5096 chars"
+    "message": "Fetched 5698 chars"
   },
   {
     "status": "error",
@@ -17,17 +17,17 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7519 chars"
+    "message": "Fetched 7440 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4583 chars"
+    "message": "Fetched 4670 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 12834 chars"
+    "message": "Fetched 13212 chars"
   },
   {
     "status": "success",
@@ -37,27 +37,27 @@
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5917 chars"
+    "message": "Fetched 6042 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 10884 chars"
+    "message": "Fetched 11116 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13774 chars"
+    "message": "Fetched 14051 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 788 chars"
+    "message": "Fetched 816 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4075 chars"
+    "message": "Fetched 4011 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7537 chars"
+    "message": "Fetched 8350 chars"
   },
   {
     "status": "error",
@@ -87,7 +87,7 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 3127 chars"
+    "message": "Fetched 3106 chars"
   },
   {
     "status": "success",
@@ -105,29 +105,29 @@
     "message": "Fetched 283 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "HTTPSConnectionPool(host='aquariumdrunkard.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='aquariumdrunkard.com', port=443) at 0x7fa3b16301c0>, 'Connection to aquariumdrunkard.com timed out. (connect timeout=15)'))"
+    "message": "Fetched 12756 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8158 chars"
+    "message": "Fetched 7857 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3581 chars"
+    "message": "Fetched 3615 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15460 chars"
+    "message": "Fetched 15259 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5801 chars"
+    "message": "Fetched 5843 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "The Quietus",
-    "message": "Fetched 13049 chars"
+    "message": "Fetched 12570 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "No Clean Singing",
-    "message": "HTTPSConnectionPool(host='www.nocleansinging.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nocleansinging.com', port=443) at 0x7fa3b1f711e0>, 'Connection to www.nocleansinging.com timed out. (connect timeout=15)'))"
+    "message": "Fetched 19589 chars"
   }
 ]
