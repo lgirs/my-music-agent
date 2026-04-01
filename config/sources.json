@@ -5,7 +5,7 @@
       "website": "Decibel Magazine",
       "relevancy_score": 8.7,
       "genre_focus": "Extreme Metal (Death, Black, Grind, Doom, Thrash)",
-      "description": "Ultimate Genre Authority, Deep Analysis, Scene Coverage",
+      "description": "Ultimate Genre Authority, Depth, Print Legacy",
       "url": "https://www.decibelmagazine.com/"
     },
     {
@@ -13,7 +13,7 @@
       "website": "Twangville",
       "relevancy_score": 8.1,
       "genre_focus": "Americana, Roots, Folk, Alt-Country",
-      "description": "Niche Curation, Listener-focused Reviews, Early Discovery",
+      "description": "Niche Curation, Listener-focused, Consistent Quality",
       "url": "https://twangville.com/"
     },
     {
@@ -21,47 +21,39 @@
       "website": "Revolver Magazine",
       "relevancy_score": 7.7,
       "genre_focus": "Metal, Hardcore, Industrial, Alternative",
-      "description": "Scene Reporting, Aesthetic Focus, Mainstream Metal Coverage",
+      "description": "Scene Reporting, Aesthetic Focus, Mainstream Metal Pulse",
       "url": "https://www.revolvermag.com/"
     },
     {
       "category": "Tier I",
       "website": "Pitchfork",
       "relevancy_score": 8.2,
-      "genre_focus": "Indie, Alternative, Experimental, Pop",
-      "description": "Cultural Barometer, Long-form Analysis, Broad Influence",
+      "genre_focus": "Indie, Alternative, Experimental, Pop, Hip-Hop",
+      "description": "Cultural Barometer, Long-form Analysis, Trendsetter",
       "url": "https://pitchfork.com/"
     },
     {
       "category": "Tier I",
       "website": "Sputnikmusic",
       "relevancy_score": 7.5,
-      "genre_focus": "Progressive, Alternative, User-Driven, Metal",
-      "description": "High Volume, Community-Based Scores, Diverse Genre Coverage",
+      "genre_focus": "Progressive, Alternative, User-Driven, Metal, Indie",
+      "description": "High Volume, Community-Based Scores, Niche Discovery (user-submitted)",
       "url": "https://www.sputnikmusic.com/"
     },
     {
       "category": "Tier I",
       "website": "Louder Sound",
       "relevancy_score": 8.1,
-      "genre_focus": "Hard Rock, Metal, Prog (Classic & Modern)",
-      "description": "Deep Genre Expertise, Print Heritage, Comprehensive Coverage",
+      "genre_focus": "Hard Rock, Metal, Prog (Classic & Modern), Classic Rock",
+      "description": "Deep Genre Expertise, Print Heritage, Broad Rock/Metal Coverage",
       "url": "https://www.loudersound.com/"
-    },
-    {
-      "category": "Tier I",
-      "website": "Drowned in Sound",
-      "relevancy_score": 5.6,
-      "genre_focus": "Indie, Electronic (Historical UK/EU Focus, now largely archival)",
-      "description": "Historical Context, UK/EU Indie Scene (Past), Archival Value",
-      "url": "https://drownedinsound.com/"
     },
     {
       "category": "Tier I",
       "website": "AllMusic",
       "relevancy_score": 7.9,
-      "genre_focus": "Extensive Catalog, Retrospective, All Genres",
-      "description": "Historical Context, Comprehensive Database Quality, Retrospective",
+      "genre_focus": "Extensive Catalog, Retrospective, All Genres (Database)",
+      "description": "Historical Context, Database Quality, Comprehensive Discographies",
       "url": "https://www.allmusic.com/"
     },
     {
@@ -69,30 +61,22 @@
       "website": "Metal Temple",
       "relevancy_score": 7.8,
       "genre_focus": "European/Power Metal, General Metal, News",
-      "description": "Consistent Output, International Scope, Power/Traditional Metal focus",
+      "description": "Consistent Output, International Scope, Broad Metal Reviews",
       "url": "https://metal-temple.com/"
     },
     {
       "category": "Tier I",
       "website": "Consequence of Sound",
-      "relevancy_score": 7.2,
-      "genre_focus": "Multi-Genre, News Focus, Indie, Alternative",
-      "description": "Timeliness, Broad Industry Coverage, Multi-Genre News",
+      "relevancy_score": 7.7,
+      "genre_focus": "Multi-Genre, News Focus, Indie, Alternative, Rock, Hip-Hop",
+      "description": "Timeliness, Broad Industry Coverage, Cultural Commentary",
       "url": "https://consequence.net/"
-    },
-    {
-      "category": "Tier I",
-      "website": "Blabbermouth",
-      "relevancy_score": 7.6,
-      "genre_focus": "Metal News, Hard Rock News, Gossip",
-      "description": "Speed of News, Industry Pulse, Metal News Aggregation",
-      "url": "https://www.blabbermouth.net/"
     },
     {
       "category": "Tier I",
       "website": "Loudwire",
       "relevancy_score": 7.7,
-      "genre_focus": "Hard Rock, Heavy Metal, News",
+      "genre_focus": "Hard Rock, Heavy Metal, News, Mainstream Metal",
       "description": "High Volume News, Mainstream Metal Coverage, Interviews",
       "url": "https://loudwire.com/"
     },
@@ -101,15 +85,15 @@
       "website": "RateYourMusic (RYM)",
       "relevancy_score": 6.7,
       "genre_focus": "All Genres (User-Driven, Comprehensive Database, Sub-genre Tags)",
-      "description": "Comprehensive Database, Sub-genre Tags, User Ratings/Discovery",
+      "description": "Comprehensive Database, Sub-genre Discovery, User Consensus, Release Dates",
       "url": "https://www.rateyourmusic.com/"
     },
     {
       "category": "Tier I",
       "website": "AltCorner",
       "relevancy_score": 7.4,
-      "genre_focus": "Pop Punk, Emo, Alternative, Metalcore",
-      "description": "Emerging Scene Focus, Youth Culture, Pop Punk/Emo Coverage",
+      "genre_focus": "Pop Punk, Emo, Alternative, Metalcore, Indie",
+      "description": "Emerging Scene, Youth Focus, Interviews, UK Bias",
       "url": "https://altcorner.com/"
     },
     {
@@ -117,15 +101,15 @@
       "website": "Metacritic (Music)",
       "relevancy_score": 7.3,
       "genre_focus": "All Genres (Aggregation)",
-      "description": "Quantitative Consensus, Broad Coverage, Review Aggregation",
+      "description": "Quantitative Consensus, Broad Review Aggregation",
       "url": "https://www.metacritic.com/music/"
     },
     {
       "category": "Tier II",
       "website": "Angry Metal Guy",
       "relevancy_score": 8.1,
-      "genre_focus": "Extreme Metal, Technical Metal, Traditional Metal",
-      "description": "Humorous, Deeply Opinionated Reviews, Niche Metal Expertise",
+      "genre_focus": "Extreme Metal, Technical Metal, Traditional Metal, Progressive Metal",
+      "description": "Humorous, Deeply Opinionated, Niche Authority, High Volume",
       "url": "https://www.angrymetalguy.com/"
     },
     {
@@ -133,31 +117,31 @@
       "website": "Invisible Oranges",
       "relevancy_score": 8.1,
       "genre_focus": "Black Metal, Doom Metal, Atmospheric Metal, Underground Metal",
-      "description": "Culturally Engaged, High Quality Writing, Underground Metal Focus",
+      "description": "Culturally Engaged, High Quality Writing, Underground Scene Authority",
       "url": "https://www.invisibleoranges.com/"
     },
     {
       "category": "Tier II",
       "website": "Heavy Blog is Heavy (HBIH)",
       "relevancy_score": 7.9,
-      "genre_focus": "Progressive Metal, Djent, Post-Metal, Experimental, Mathcore",
-      "description": "Forward-Thinking, Niche Discovery, Progressive/Post-Metal Expertise",
+      "genre_focus": "Progressive Metal, Djent, Post-Metal, Experimental, Mathcore, Deathcore",
+      "description": "Forward-Thinking, Niche Discovery, Community Engagement",
       "url": "https://www.heavyblogisheavy.com/"
     },
     {
       "category": "Tier II",
       "website": "KEXP Blog/Reviews",
       "relevancy_score": 7.6,
-      "genre_focus": "Indie, Eclectic, Pacific Northwest, Alternative, World",
-      "description": "Curatorial Authority, Radio Backing, Eclectic Discovery",
+      "genre_focus": "Indie, Eclectic, Pacific Northwest, Alternative, World, Psychedelic",
+      "description": "Curatorial Authority, Radio Backing, Discoverability (Live Sessions)",
       "url": "https://www.kexp.org/read/"
     },
     {
       "category": "Tier II",
       "website": "Maximum Rocknroll (MRR)",
       "relevancy_score": 8.4,
-      "genre_focus": "Global Punk, Hardcore, DIY, Underground",
-      "description": "DIY Ethos, Historical Significance, Global Punk/Hardcore Authority",
+      "genre_focus": "Global Punk, Hardcore, DIY, Underground (Historical & Contemporary)",
+      "description": "DIY Ethos, Historical Significance, Global Underground Authority",
       "url": "https://maximumrocknroll.com/"
     },
     {
@@ -165,31 +149,31 @@
       "website": "Profane Existence",
       "relevancy_score": 8.1,
       "genre_focus": "Anarcho-punk, Crust, Grindcore, DIY Hardcore",
-      "description": "Political Edge, Scene Focus, Anarcho/Crust Punk Authority",
+      "description": "Political Edge, Scene Focus, Extreme DIY Punk Authority",
       "url": "https://profaneexistence.com/"
     },
     {
       "category": "Tier II",
       "website": "Aquarium Drunkard",
       "relevancy_score": 8.2,
-      "genre_focus": "Psychedelia, Folk, Jazz, Garage Rock, Obscure Reissues, Experimental",
-      "description": "Deep Curation, Historical Context, Obscure Reissues, Psych/Folk Authority",
+      "genre_focus": "Psychedelia, Folk, Jazz, Garage Rock, Obscure Reissues, Experimental, Americana",
+      "description": "Deep Curation, Historical Liner Notes, Discovery of Obscure Gems",
       "url": "https://aquariumdrunkard.com/"
     },
     {
       "category": "Tier II",
       "website": "The Toilet Ov Hell",
       "relevancy_score": 7.9,
-      "genre_focus": "Underground Metal, Grindcore, Satirical, Black/Death Metal",
-      "description": "Satirical, Community-Driven, Underground Metal Discovery",
+      "genre_focus": "Underground Metal, Grindcore, Satirical, Black/Death Metal, Sludge",
+      "description": "Satirical, Community-Driven, Candid Underground Metal Reviews",
       "url": "http://www.toiletovhell.com/"
     },
     {
       "category": "Tier II",
       "website": "Distorted Sound Magazine",
       "relevancy_score": 7.2,
-      "genre_focus": "Rock, Metal, Alternative, Hardcore (UK Focused)",
-      "description": "High Volume, UK/European Scene Coverage, Emerging Artist Focus",
+      "genre_focus": "Rock, Metal, Alternative, Hardcore (UK Focused), Progressive",
+      "description": "High Volume, UK/European Scene, Event Coverage",
       "url": "https://distortedsoundmag.com/"
     },
     {
@@ -197,40 +181,56 @@
       "website": "Illustrate Magazine",
       "relevancy_score": 6.7,
       "genre_focus": "Emerging Indie, Singer-Songwriter, Eclectic, Art Pop",
-      "description": "Artist Interviews, New Release Focus, Emerging Indie Discovery",
+      "description": "Artist Interviews, New Release Focus (often singles), Discovery of Very New Talent",
       "url": "https://illustratemagazine.com/"
     },
     {
       "category": "Tier II",
       "website": "Gorilla vs. Bear",
       "relevancy_score": 7.4,
-      "genre_focus": "Indie Pop, Electronic, Hype, Aesthetic Focus, Dream Pop",
-      "description": "Early Discovery, Aesthetic Focus, Indie Hype Cycle",
+      "genre_focus": "Indie Pop, Electronic, Hype, Aesthetic Focus, Dream Pop, Experimental Pop",
+      "description": "Early Discovery, Aesthetic Focus, Curated Sound",
       "url": "http://www.gorillavsbear.net/"
     },
     {
       "category": "Tier II",
       "website": "Portals",
       "relevancy_score": 7.6,
-      "genre_focus": "Experimental, Math-Rock, Post-Rock, Ambient, Avant-Garde",
-      "description": "Niche/Festival-driven, Intellectual Reviews, Experimental Genre Focus",
+      "genre_focus": "Experimental, Math-Rock, Post-Rock, Ambient, Avant-Garde, Noise",
+      "description": "Niche/Festival-driven, Intellectual, Focus on Complex Genres",
       "url": "https://www.portalsrock.com/blog-news"
     },
     {
       "category": "Tier II",
       "website": "The Quietus",
-      "relevancy_score": 8.6,
-      "genre_focus": "Experimental, Noise, Electronic, Post-Punk, Metal, Avant-Garde, Obscure",
-      "description": "In-depth analysis, Focus on overlooked/experimental artists, UK cultural perspective, Avant-garde authority",
+      "relevancy_score": 8.7,
+      "genre_focus": "Experimental, Noise, Electronic, Post-Punk, Metal, Avant-Garde, Obscure, Global Underground",
+      "description": "Deeply Intellectual, Broad Underground Scope, Fearless Curation, UK Perspective",
       "url": "https://thequietus.com/"
     },
     {
       "category": "Tier II",
       "website": "No Clean Singing",
-      "relevancy_score": 8.5,
-      "genre_focus": "Extreme Metal (Death, Black, Grind, Doom), Underground Metal, Asian Metal",
-      "description": "High volume of reviews/premieres, focus on discovery, deep genre knowledge, international extreme metal scope",
+      "relevancy_score": 8.3,
+      "genre_focus": "Extreme Metal (Death, Black, Grind, Doom), Underground Metal, Asian Metal, Progressive Metal",
+      "description": "High Volume, Niche Authority, Focus on Vocal-Free/Extreme, International Scope",
       "url": "https://www.nocleansinging.com/"
+    },
+    {
+      "category": "Tier II",
+      "website": "A Closer Listen",
+      "relevancy_score": 8.6,
+      "genre_focus": "Experimental Electronic, Ambient, Drone, Modern Classical, Post-Rock, Psychedelia",
+      "description": "Deep Curation, High Quality Analysis for Niche Genres, Avant-Garde Authority",
+      "url": "https://acloserlisten.com/"
+    },
+    {
+      "category": "Tier II",
+      "website": "Post-Punk.com",
+      "relevancy_score": 8.5,
+      "genre_focus": "Post-Punk, Goth, Coldwave, Industrial, Darkwave, New Wave",
+      "description": "Genre-Defining Authority, Deep Scene Coverage, Consistent News & Reviews",
+      "url": "https://post-punk.com/"
     }
   ]
 }
