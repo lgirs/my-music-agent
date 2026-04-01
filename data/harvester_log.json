@@ -2,12 +2,12 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5804 chars"
+    "message": "Fetched 5795 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6134 chars"
+    "message": "Fetched 6012 chars"
   },
   {
     "status": "error",
@@ -17,47 +17,37 @@
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 8507 chars"
+    "message": "Fetched 8139 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Sputnikmusic",
-    "message": "Fetched 4600 chars"
+    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 12922 chars"
-  },
-  {
-    "status": "success",
-    "source": "Drowned in Sound",
-    "message": "Fetched 2574 chars"
+    "message": "Fetched 13674 chars"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5982 chars"
+    "message": "Fetched 5941 chars"
   },
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 12141 chars"
+    "message": "Fetched 12041 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12328 chars"
-  },
-  {
-    "status": "success",
-    "source": "Blabbermouth",
-    "message": "Fetched 805 chars"
+    "message": "Fetched 12257 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3835 chars"
+    "message": "Fetched 3937 chars"
   },
   {
     "status": "error",
@@ -65,9 +55,9 @@
     "message": "403 Client Error: Forbidden for url: https://www.rateyourmusic.com/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "AltCorner",
-    "message": "401 Client Error: Unauthorized for url: https://altcorner.com/"
+    "message": "Fetched 5531 chars"
   },
   {
     "status": "error",
@@ -77,12 +67,12 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7917 chars"
+    "message": "Fetched 7657 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Invisible Oranges",
-    "message": "403 Client Error: Forbidden for url: https://www.invisibleoranges.com/"
+    "message": "Fetched 6228 chars"
   },
   {
     "status": "success",
@@ -92,12 +82,12 @@
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7938 chars"
+    "message": "Fetched 7906 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 6600 chars"
+    "message": "Fetched 6544 chars"
   },
   {
     "status": "success",
@@ -107,22 +97,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12672 chars"
+    "message": "Fetched 12705 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7907 chars"
+    "message": "Fetched 7830 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3535 chars"
+    "message": "Fetched 3727 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15362 chars"
+    "message": "Fetched 15282 chars"
   },
   {
     "status": "success",
@@ -135,13 +125,23 @@
     "message": "Fetched 1417 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "The Quietus",
-    "message": "Fetched 13604 chars"
+    "message": "403 Client Error: Forbidden for url: https://thequietus.com/"
   },
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 18600 chars"
+    "message": "Fetched 18652 chars"
+  },
+  {
+    "status": "success",
+    "source": "A Closer Listen",
+    "message": "Fetched 6111 chars"
+  },
+  {
+    "status": "success",
+    "source": "Post-Punk.com",
+    "message": "Fetched 8753 chars"
   }
 ]
