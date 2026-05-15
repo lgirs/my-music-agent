@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5319 chars"
+    "message": "Fetched 5595 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Twangville",
-    "message": "Fetched 5701 chars"
+    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1017)')))"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3400 chars"
+    "message": "Fetched 3359 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7996 chars"
+    "message": "Fetched 7939 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4520 chars"
+    "message": "Fetched 4594 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 13141 chars"
+    "message": "Fetched 13217 chars"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5517 chars"
+    "message": "Fetched 5724 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12409 chars"
+    "message": "Fetched 12000 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3967 chars"
+    "message": "Fetched 3787 chars"
   },
   {
     "status": "error",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5296 chars"
+    "message": "Fetched 5362 chars"
   },
   {
     "status": "error",
@@ -67,17 +67,17 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8475 chars"
+    "message": "Fetched 8244 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5610 chars"
+    "message": "Fetched 5695 chars"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2673 chars"
+    "message": "Fetched 2820 chars"
   },
   {
     "status": "success",
@@ -95,19 +95,19 @@
     "message": "Fetched 283 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12295 chars"
+    "message": "HTTPSConnectionPool(host='aquariumdrunkard.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='aquariumdrunkard.com', port=443) at 0x7fe97e3055d0>, 'Connection to aquariumdrunkard.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8058 chars"
+    "message": "Fetched 8077 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3608 chars"
+    "message": "Fetched 3536 chars"
   },
   {
     "status": "error",
@@ -122,7 +122,7 @@
   {
     "status": "success",
     "source": "Portals",
-    "message": "Fetched 1670 chars"
+    "message": "Fetched 1648 chars"
   },
   {
     "status": "error",
@@ -130,23 +130,23 @@
     "message": "403 Client Error: Forbidden for url: https://thequietus.com/"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "No Clean Singing",
-    "message": "Fetched 19793 chars"
+    "message": "HTTPSConnectionPool(host='www.nocleansinging.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.nocleansinging.com', port=443) at 0x7fe97fe3da80>, 'Connection to www.nocleansinging.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6101 chars"
+    "message": "Fetched 6497 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8794 chars"
+    "message": "Fetched 8867 chars"
   },
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 4984 chars"
+    "message": "Fetched 4929 chars"
   }
 ]
