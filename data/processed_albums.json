@@ -8300,5 +8300,47 @@
     "album": "Confession",
     "timestamp": 1778931494.588077,
     "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Primus::A Handful of Nuggs",
+    "artist": "Primus",
+    "album": "A Handful of Nuggs",
+    "timestamp": 1779282084.4754534,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Gojira::From Mars to Sirius",
+    "artist": "Gojira",
+    "album": "From Mars to Sirius",
+    "timestamp": 1779282084.690235,
+    "action": "LIKE_IMMEDIATELY"
+  },
+  {
+    "key": "Whitehorse::All I Want Is All of It",
+    "artist": "Whitehorse",
+    "album": "All I Want Is All of It",
+    "timestamp": 1779282086.4324818,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Periphery::Periphery V: Djent Is Not a Genre",
+    "artist": "Periphery",
+    "album": "Periphery V: Djent Is Not a Genre",
+    "timestamp": 1779282087.7438383,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "The Civil Wars::Barton Hollow",
+    "artist": "The Civil Wars",
+    "album": "Barton Hollow",
+    "timestamp": 1779282089.3588665,
+    "action": "ADD_TO_PLAYLIST"
+  },
+  {
+    "key": "Zanias::Unearthed",
+    "artist": "Zanias",
+    "album": "Unearthed",
+    "timestamp": 1779282090.7496371,
+    "action": "ADD_TO_PLAYLIST"
   }
 ]
