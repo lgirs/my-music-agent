@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5649 chars"
+    "message": "Fetched 5778 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Twangville",
-    "message": "Fetched 6169 chars"
+    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='twangville.com', port=443): Failed to resolve 'twangville.com' ([Errno -3] Temporary failure in name resolution)\"))"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3366 chars"
+    "message": "Fetched 3335 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7837 chars"
+    "message": "Fetched 8101 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4491 chars"
+    "message": "Fetched 4613 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14653 chars"
+    "message": "Fetched 14302 chars"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5774 chars"
+    "message": "Fetched 5853 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12614 chars"
+    "message": "Fetched 12230 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3868 chars"
+    "message": "Fetched 4052 chars"
   },
   {
     "status": "error",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5458 chars"
+    "message": "Fetched 5429 chars"
   },
   {
     "status": "error",
@@ -67,17 +67,17 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8621 chars"
+    "message": "Fetched 9024 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5915 chars"
+    "message": "Fetched 5936 chars"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2847 chars"
+    "message": "Fetched 2856 chars"
   },
   {
     "status": "success",
@@ -97,17 +97,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11473 chars"
+    "message": "Fetched 12877 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8058 chars"
+    "message": "Fetched 8121 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3459 chars"
+    "message": "Fetched 3428 chars"
   },
   {
     "status": "error",
@@ -132,21 +132,21 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 16997 chars"
+    "message": "Fetched 17834 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6629 chars"
+    "message": "Fetched 6485 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8964 chars"
+    "message": "Fetched 8817 chars"
   },
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 4824 chars"
+    "message": "Fetched 4859 chars"
   }
 ]
