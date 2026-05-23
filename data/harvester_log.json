@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5778 chars"
+    "message": "Fetched 5767 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Twangville",
-    "message": "HTTPSConnectionPool(host='twangville.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='twangville.com', port=443): Failed to resolve 'twangville.com' ([Errno -3] Temporary failure in name resolution)\"))"
+    "message": "Fetched 5630 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3335 chars"
+    "message": "Fetched 3395 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 8101 chars"
+    "message": "Fetched 8159 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4613 chars"
+    "message": "Fetched 4623 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14302 chars"
+    "message": "Fetched 14431 chars"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 5853 chars"
+    "message": "Fetched 6036 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12230 chars"
+    "message": "Fetched 12328 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4052 chars"
+    "message": "Fetched 3928 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 9024 chars"
+    "message": "Fetched 9302 chars"
   },
   {
     "status": "success",
@@ -77,12 +77,12 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2856 chars"
+    "message": "Fetched 2857 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7853 chars"
+    "message": "Fetched 7913 chars"
   },
   {
     "status": "success",
@@ -97,17 +97,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12877 chars"
+    "message": "Fetched 13065 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8121 chars"
+    "message": "Fetched 8145 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3428 chars"
+    "message": "Fetched 3485 chars"
   },
   {
     "status": "error",
@@ -132,17 +132,17 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 17834 chars"
+    "message": "Fetched 18580 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6485 chars"
+    "message": "Fetched 6473 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8817 chars"
+    "message": "Fetched 8758 chars"
   },
   {
     "status": "success",
