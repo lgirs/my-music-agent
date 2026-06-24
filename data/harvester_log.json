@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5551 chars"
+    "message": "Fetched 5405 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5365 chars"
+    "message": "Fetched 5551 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3277 chars"
+    "message": "Fetched 3173 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7908 chars"
+    "message": "Fetched 7868 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4614 chars"
+    "message": "Fetched 4764 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14704 chars"
+    "message": "Fetched 14915 chars"
   },
   {
     "status": "success",
     "source": "AllMusic",
-    "message": "Fetched 7430 chars"
+    "message": "Fetched 7123 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12667 chars"
+    "message": "Fetched 12963 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4048 chars"
+    "message": "Fetched 4025 chars"
   },
   {
     "status": "error",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5638 chars"
+    "message": "Fetched 5940 chars"
   },
   {
     "status": "error",
@@ -67,27 +67,27 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8205 chars"
+    "message": "Fetched 7857 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5476 chars"
+    "message": "Fetched 5402 chars"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2794 chars"
+    "message": "Fetched 2934 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7799 chars"
+    "message": "Fetched 7861 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 6007 chars"
+    "message": "Fetched 6058 chars"
   },
   {
     "status": "success",
@@ -97,22 +97,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10144 chars"
+    "message": "Fetched 10531 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8126 chars"
+    "message": "Fetched 8213 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3645 chars"
+    "message": "Fetched 3739 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15253 chars"
+    "message": "403 Client Error: Forbidden for url: https://illustratemagazine.com/"
   },
   {
     "status": "success",
@@ -132,21 +132,21 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 18830 chars"
+    "message": "Fetched 20045 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6083 chars"
+    "message": "Fetched 6303 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8522 chars"
+    "message": "Fetched 8545 chars"
   },
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 4918 chars"
+    "message": "Fetched 4984 chars"
   }
 ]
