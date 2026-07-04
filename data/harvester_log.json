@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5869 chars"
+    "message": "Fetched 5850 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5894 chars"
+    "message": "Fetched 5148 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3330 chars"
+    "message": "Fetched 3242 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7818 chars"
+    "message": "Fetched 7929 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Sputnikmusic",
-    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 4402 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14324 chars"
+    "message": "Fetched 14383 chars"
   },
   {
     "status": "error",
@@ -42,7 +42,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12774 chars"
+    "message": "Fetched 13209 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5635 chars"
+    "message": "Fetched 5647 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7519 chars"
+    "message": "Fetched 7577 chars"
   },
   {
     "status": "error",
@@ -97,22 +97,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 9719 chars"
+    "message": "Fetched 9718 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8212 chars"
+    "message": "Fetched 8368 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3596 chars"
+    "message": "Fetched 3610 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15358 chars"
+    "message": "Fetched 15345 chars"
   },
   {
     "status": "success",
@@ -132,17 +132,17 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 17727 chars"
+    "message": "Fetched 18534 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6031 chars"
+    "message": "Fetched 6115 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8734 chars"
+    "message": "Fetched 8732 chars"
   },
   {
     "status": "success",
