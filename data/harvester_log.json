@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5535 chars"
+    "message": "Fetched 5469 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6259 chars"
+    "message": "Fetched 6543 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Revolver Magazine",
-    "message": "415 Client Error: Unsupported Media Type for url: https://www.revolvermag.com/"
+    "message": "Fetched 3497 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7900 chars"
+    "message": "Fetched 7915 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4606 chars"
+    "message": "Fetched 4648 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14532 chars"
+    "message": "Fetched 14238 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13106 chars"
+    "message": "Fetched 13264 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4191 chars"
+    "message": "Fetched 4115 chars"
   },
   {
     "status": "error",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "AltCorner",
-    "message": "Fetched 5605 chars"
+    "message": "Fetched 5676 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7407 chars"
+    "message": "Fetched 7383 chars"
   },
   {
     "status": "error",
@@ -77,12 +77,12 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 3240 chars"
+    "message": "Fetched 3245 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7846 chars"
+    "message": "Fetched 7856 chars"
   },
   {
     "status": "success",
@@ -97,22 +97,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 9519 chars"
+    "message": "Fetched 9310 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8114 chars"
+    "message": "Fetched 7943 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3642 chars"
+    "message": "Fetched 3582 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15372 chars"
+    "message": "Fetched 15233 chars"
   },
   {
     "status": "success",
@@ -132,21 +132,21 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 16785 chars"
+    "message": "Fetched 18831 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 5965 chars"
+    "message": "Fetched 6133 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8361 chars"
+    "message": "Fetched 8475 chars"
   },
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 4895 chars"
+    "message": "Fetched 5098 chars"
   }
 ]
