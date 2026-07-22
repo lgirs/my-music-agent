@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5465 chars"
+    "message": "Fetched 5435 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5909 chars"
+    "message": "Fetched 5430 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Revolver Magazine",
-    "message": "415 Client Error: Unsupported Media Type for url: https://www.revolvermag.com/"
+    "message": "Fetched 3404 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 8179 chars"
+    "message": "Fetched 8005 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Sputnikmusic",
-    "message": "Fetched 4752 chars"
+    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1017)')))"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14481 chars"
+    "message": "Fetched 14602 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13372 chars"
+    "message": "Fetched 13241 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4052 chars"
+    "message": "Fetched 3775 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7412 chars"
+    "message": "Fetched 8867 chars"
   },
   {
     "status": "error",
@@ -77,42 +77,42 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 3291 chars"
+    "message": "Fetched 3316 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7862 chars"
+    "message": "Fetched 7864 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 5588 chars"
+    "message": "Fetched 6086 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Profane Existence",
-    "message": "Fetched 283 chars"
+    "message": "HTTPSConnectionPool(host='profaneexistence.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 9645 chars"
+    "message": "Fetched 9985 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7668 chars"
+    "message": "Fetched 7728 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3557 chars"
+    "message": "Fetched 3597 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 15255 chars"
+    "message": "Fetched 15234 chars"
   },
   {
     "status": "success",
@@ -132,17 +132,17 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 18705 chars"
+    "message": "Fetched 17098 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6185 chars"
+    "message": "Fetched 6367 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8692 chars"
+    "message": "Fetched 8605 chars"
   },
   {
     "status": "success",
