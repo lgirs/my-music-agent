@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5456 chars"
+    "message": "Fetched 5199 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5339 chars"
+    "message": "Fetched 5389 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 80 chars"
+    "message": "Fetched 3167 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 9003 chars"
+    "message": "Fetched 7418 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4677 chars"
+    "message": "Fetched 4726 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14460 chars"
+    "message": "Fetched 15135 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "AllMusic",
-    "message": "Fetched 6694 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.allmusic.com/"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13195 chars"
+    "message": "Fetched 13194 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3987 chars"
+    "message": "Fetched 4032 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7563 chars"
+    "message": "Fetched 7832 chars"
   },
   {
     "status": "error",
@@ -77,17 +77,17 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2864 chars"
+    "message": "Fetched 2722 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7820 chars"
+    "message": "Fetched 7841 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 5570 chars"
+    "message": "Fetched 5757 chars"
   },
   {
     "status": "success",
@@ -95,29 +95,29 @@
     "message": "Fetched 283 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "HTTPSConnectionPool(host='aquariumdrunkard.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='aquariumdrunkard.com', port=443) at 0x7f7f4f788160>, 'Connection to aquariumdrunkard.com timed out. (connect timeout=15)'))"
+    "message": "Fetched 11455 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7992 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.toiletovhell.com/"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3604 chars"
+    "message": "Fetched 3586 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Illustrate Magazine",
-    "message": "HTTPSConnectionPool(host='illustratemagazine.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='illustratemagazine.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    "message": "Fetched 13577 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "HTTPSConnectionPool(host='www.gorillavsbear.net', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 5628 chars"
   },
   {
     "status": "success",
@@ -130,23 +130,23 @@
     "message": "403 Client Error: Forbidden for url: https://thequietus.com/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "No Clean Singing",
-    "message": "403 Client Error: Forbidden for url: https://www.nocleansinging.com/"
+    "message": "Fetched 18056 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6265 chars"
+    "message": "Fetched 6255 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8792 chars"
+    "message": "Fetched 9003 chars"
   },
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5064 chars"
+    "message": "Fetched 4999 chars"
   }
 ]
