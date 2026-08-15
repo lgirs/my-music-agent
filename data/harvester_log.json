@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5177 chars"
+    "message": "Fetched 5267 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5819 chars"
+    "message": "Fetched 5285 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3347 chars"
+    "message": "Fetched 3323 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7686 chars"
+    "message": "Fetched 7697 chars"
   },
   {
     "status": "error",
     "source": "Sputnikmusic",
-    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sputnikmusic.com', port=443) at 0x7fade63c76d0>, 'Connection to www.sputnikmusic.com timed out. (connect timeout=15)'))"
+    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 15581 chars"
+    "message": "Fetched 15074 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13271 chars"
+    "message": "Fetched 13009 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4086 chars"
+    "message": "Fetched 4049 chars"
   },
   {
     "status": "error",
@@ -67,7 +67,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7994 chars"
+    "message": "Fetched 7971 chars"
   },
   {
     "status": "error",
@@ -77,12 +77,12 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2549 chars"
+    "message": "Fetched 2731 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7841 chars"
+    "message": "Fetched 7799 chars"
   },
   {
     "status": "success",
@@ -97,17 +97,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12001 chars"
+    "message": "Fetched 12082 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7986 chars"
+    "message": "Fetched 7967 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3548 chars"
+    "message": "Fetched 3540 chars"
   },
   {
     "status": "success",
@@ -122,7 +122,7 @@
   {
     "status": "success",
     "source": "Portals",
-    "message": "Fetched 1648 chars"
+    "message": "Fetched 1768 chars"
   },
   {
     "status": "error",
@@ -132,17 +132,17 @@
   {
     "status": "success",
     "source": "No Clean Singing",
-    "message": "Fetched 18094 chars"
+    "message": "Fetched 18674 chars"
   },
   {
     "status": "success",
     "source": "A Closer Listen",
-    "message": "Fetched 6359 chars"
+    "message": "Fetched 6405 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 9050 chars"
+    "message": "Fetched 9125 chars"
   },
   {
     "status": "success",
