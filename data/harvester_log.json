@@ -2,32 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6075 chars"
+    "message": "Fetched 6407 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6059 chars"
+    "message": "Fetched 6110 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3408 chars"
+    "message": "Fetched 3355 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7437 chars"
+    "message": "Fetched 7207 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4864 chars"
+    "message": "Fetched 4853 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14585 chars"
+    "message": "Fetched 14441 chars"
+  },
+  {
+    "status": "success",
+    "source": "Drowned in Sound",
+    "message": "Fetched 2578 chars"
   },
   {
     "status": "error",
@@ -42,12 +47,17 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13688 chars"
+    "message": "Fetched 13298 chars"
+  },
+  {
+    "status": "success",
+    "source": "Blabbermouth",
+    "message": "Fetched 725 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3988 chars"
+    "message": "Fetched 4046 chars"
   },
   {
     "status": "error",
@@ -67,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 9333 chars"
+    "message": "Fetched 8722 chars"
   },
   {
     "status": "error",
@@ -77,17 +87,17 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2801 chars"
+    "message": "Fetched 2659 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7739 chars"
+    "message": "Fetched 7862 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 6628 chars"
+    "message": "Fetched 6861 chars"
   },
   {
     "status": "success",
@@ -97,27 +107,27 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 12087 chars"
+    "message": "Fetched 12320 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8151 chars"
+    "message": "Fetched 8085 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3770 chars"
+    "message": "Fetched 3816 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13654 chars"
+    "message": "Fetched 13630 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5589 chars"
+    "message": "Fetched 5784 chars"
   },
   {
     "status": "success",
@@ -125,28 +135,13 @@
     "message": "Fetched 1768 chars"
   },
   {
-    "status": "error",
-    "source": "The Quietus",
-    "message": "403 Client Error: Forbidden for url: https://thequietus.com/"
-  },
-  {
     "status": "success",
-    "source": "No Clean Singing",
-    "message": "Fetched 18076 chars"
-  },
-  {
-    "status": "success",
-    "source": "A Closer Listen",
-    "message": "Fetched 6651 chars"
+    "source": "It's Psychedelic Baby Magazine",
+    "message": "Fetched 5056 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 9009 chars"
-  },
-  {
-    "status": "success",
-    "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 4970 chars"
+    "message": "Fetched 8884 chars"
   }
 ]
