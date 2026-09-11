@@ -1,555 +1,527 @@
 [
   {
-    "artist": "Cartilage",
-    "album": "Operating Altar",
-    "relevance_score": 88,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "This deathgrind album fits your extreme metal genre preference. The description 'make their particular pathology even more elaborate' suggests artistic depth and a challenging approach, aligning with your desire for music with artistic merit."
+    "artist": "Sacreligious",
+    "album": "Brutality Incarnated",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "The album is described as 'Death metal,' which is a core genre you enjoy. While the description is brief, 'Brutality Incarnated' suggests intensity, aligning with your appreciation for extreme music, but it lacks specific artistic depth descriptors for a higher priority."
   },
   {
-    "artist": "Agalloch",
-    "album": "Ashes Against the Grain",
-    "relevance_score": 95,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "A 'Hall of Fame induction' for a classic black/folk metal album signifies profound artistic value and impact. Agalloch's style aligns well with your taste for bands like Oranssi Pazuzu and Deafheaven, demonstrating long-standing artistic merit and influence."
+    "artist": "Cartilage",
+    "album": "Operating Altar",
+    "relevance_score": 85,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "This deathgrind album fits your 'extreme metal' criteria. The description 'make their particular pathology even more elaborate' hints at artistic development and a unique approach, which aligns with your critical rule for innovation and artistic challenge."
   },
   {
     "artist": "God Mother",
     "album": "K\u00f6ttv\u00e4rld",
-    "relevance_score": 72,
+    "relevance_score": 78,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "The genre (hardcore/metal) is a good fit for your taste, particularly given your interest in bands like Converge and Full of Hell. While the description is brief, it's a full-length album in a relevant genre, warranting a manual review for potential artistic value."
-  },
-  {
-    "artist": "Stellar Rot",
-    "album": "Where the Formless Dwell",
-    "relevance_score": 90,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "This blackgaze/ambient black metal aligns perfectly with your enjoyment of bands like Deafheaven and Oranssi Pazuzu. Descriptors such as 'frigid' and 'melodic atmospherics' strongly indicate emotional depth, unique fusion, and artistic innovation, fulfilling your critical criteria."
-  },
-  {
-    "artist": "Korrupt",
-    "album": "The Weight We Carry",
-    "relevance_score": 89,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description 'Norwegian black metal-informed hardcore outfit' points to an exciting and unique fusion, strongly aligning with your taste for challenging and innovative hardcore/extreme metal acts like Converge, Full of Hell, and Wiegedood."
+    "reasoning": "God Mother operates in the hardcore/mathcore space, a genre adjacent to your hardcore and alternative rock preferences (e.g., Converge, Full of Hell). While the description for this album is minimal, the band's general style and 'third full-length album' status make it worth a manual review given your taste."
   },
   {
     "artist": "Skeletal Remains",
     "album": "Fragments of the Ageless",
     "relevance_score": 82,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "This death metal album is explicitly noted as 'Decibel\u2018s album of the week,' indicating high quality and artistic merit within the extreme metal genre, which is a core part of your preferences."
+    "reasoning": "This death metal album is a strong fit for your 'extreme metal' criteria. Being named 'Decibel\u2019s album of the week' is a significant indicator of artistic merit and quality within a respected publication, suggesting it's more than just generic praise and aligns with your desire for musically important work."
   },
   {
     "artist": "The Jayhawks",
     "album": "Sanctuary Park",
-    "relevance_score": 82,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as balancing country songwriting with a rock-band approach, refining their own version, and compared to Buffalo Springfield for its innovative genre blending of country, folk-rooted harmonies, and electric rock. This suggests artistic merit and unique fusion within genres you enjoy."
-  },
-  {
-    "artist": "Monte Warden",
-    "album": "Doghouse Flowers",
     "relevance_score": 88,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Explicitly described as 'mashing together genres and trying to create a new sound,' which directly aligns with your criteria for innovation and unique fusion within genres related to Americana and rockabilly."
+    "reasoning": "The description highlights the album's 'balancing country songwriting with a rock-band approach' and 'mixed country instrumentation, folk-rooted harmonies and electric rock without treating those elements as separate styles.' This indicates a unique fusion and refined artistic approach, aligning with your interest in artistic value, merit, and genre blending."
+  },
+  {
+    "artist": "Monte Warden & the Wagoneers",
+    "album": "Doghouse Flowers",
+    "relevance_score": 92,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "The review explicitly states the band was 'mashing together genres and trying to create a new sound' and involved in 'creative experimentation'. This directly hits your criteria for innovation, artistic challenge, and unique fusion, particularly within the Americana/Rockabilly genres you appreciate."
   },
   {
     "artist": "Sanford",
-    "album": "Don\u2019t Fence Me In",
+    "album": "Don't Fence Me In",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as taking a honky-tonk two-step and running it through a 'rock engine' for 'more muscle,' indicating a unique fusion and artistic reinterpretation of a genre you appreciate."
+    "reasoning": "The description 'takes a honky-tonk two-step and runs it through a rock engine \u2014 same dance-floor bones, more muscle' suggests a unique fusion and a more robust, potentially challenging take on a traditional genre, fitting your interest in innovative and impactful music."
   },
   {
-    "artist": "WAGE WAR",
+    "artist": "Wage War",
     "album": "Landfall",
-    "relevance_score": 82,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description 'apocalyptic' and 'envisioning a time when all life becomes extinct' suggests a profound, challenging theme that aligns with your interest in artistic value and deeper lyrical content within heavier genres like metalcore/extreme metal."
-  },
-  {
-    "artist": "SLEEP",
-    "album": "Hempispheres",
-    "relevance_score": 90,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Sleep is a legendary stoner/doom metal band, a genre that falls within your preferences for sludge and extreme metal. The description 'epic new album' and 'doom-grooved trip' strongly indicates a release with significant artistic merit, emotional depth, and a unique sound, consistent with your critical rule for innovation and profound listening experiences."
-  },
-  {
-    "artist": "DARKEST HOUR",
-    "album": "Suffer Divine",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Darkest Hour's melodic death metal/metalcore style fits your broader metal/hardcore preferences. The description 'goes out to anyone pushing hatred and division' implies a strong, potentially politically charged or socially conscious message, which suggests artistic challenge and emotional depth, rather than generic praise."
-  },
-  {
-    "artist": "Busta Rhymes",
-    "album": "Dillagence II",
     "relevance_score": 75,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "Hip-hop is an occasional interest, and this features respected artists (J Dilla beats, Busta Rhymes, D'Angelo). While 'full of thrills' is generic, the unique collaboration and previously unreleased material suggest artistic merit and historical value in the genre."
+    "reasoning": "The album is described with an 'apocalyptic' theme, 'envisioning a time when all life becomes extinct,' which suggests artistic depth and aligns with your interest in intense, emotionally resonant music within the rock/metal sphere. While the specific subgenre (metalcore) can sometimes lean towards processed sounds, the thematic description warrants a manual review."
   },
   {
-    "artist": "Mykki Blanco",
-    "album": "Cafe Paradiso",
-    "relevance_score": 88,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description highlights a 'shapeshifting artist' and a 'unique fusion' of '80s grooves, indie-rock riffs, and raps, indicating artistic challenge and innovation, which aligns strongly with your criteria for artistic merit and new ideas."
+    "artist": "Sleep",
+    "album": "Hempispheres",
+    "relevance_score": 95,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Described as an 'epic new album' and a 'doom-grooved trip from the reconfigured stoner trio,' this perfectly aligns with your love for sludge, grunge, and alternative metal, as well as artists like Primitive Man and Sumac. The language 'doom-grooved trip' strongly indicates a rich, artistically valuable, and immersive listening experience."
   },
   {
-    "artist": "Bitchin Bajas",
-    "album": "Isle Peaks",
+    "artist": "This Is Lorelei",
+    "album": "The Singer in My Band",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as an 'experimental trio' with a 'cosmic, hypnotic drift,' this aligns with your interest in artistic value, inspiration, and music that isn't functional. The experimental nature suggests innovation."
+    "reasoning": "The description suggests a 'warm, twangy, and tightly constructed approach' from a songwriter, implying artistic merit and aligning with Americana/folk genres you enjoy, similar to artists like Wilco or Jason Isbell."
   },
   {
-    "artist": "Lily Seabird",
-    "album": "Lightspheres on Their Way",
-    "relevance_score": 92,
+    "artist": "Russian Circles",
+    "album": "Nine",
+    "relevance_score": 98,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "The description of 'empathetic, rambling rock songs' marked by 'existential doubt and moody sprawl' strongly suggests emotional depth and artistic merit, which are critical criteria for your interest in music that provides inspiration. The rootsy influences also fit well with your Americana preferences."
+    "reasoning": "Russian Circles is explicitly listed as one of your favorite artists. The description confirms it's an instrumental album pulling from 'death metal and hardcore' and is one of their 'heaviest and most riff-forward releases,' perfectly aligning with your preference for heavy, artistically significant rock and metal."
   },
   {
-    "artist": "Future",
-    "album": "Monster",
-    "relevance_score": 78,
+    "artist": "The Cure",
+    "album": "Mixed Up",
+    "relevance_score": 75,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "While it's a retrospective, the description 'extremely raw' hints at artistic depth and aligns with your appreciation for non-processed music and artistic challenge, making it worth a manual review despite being a 2014 release."
+    "reasoning": "The Cure is a favorite artist. While this is a review of a past 'club-friendly remix collection,' the description mentions it as a 'spirited rebuke to critics,' indicating artistic intent and depth beyond generic remixes, warranting a manual review despite not being a new album."
   },
   {
     "artist": "Primus",
     "album": "Pork Soda",
-    "relevance_score": 90,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "The description of 'grisly, oozing,' 'weirdest,' and 'upsetting' strongly indicates artistic challenge, innovation, and emotional depth, aligning perfectly with your critical criteria. Funk-metal is also a relevant subgenre."
+    "relevance_score": 80,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "While a review of a past album, Primus fits within your broader rock/metal appreciation (e.g., Faith No More, Helmet). The description uses evocative terms like 'grisly, oozing,' 'weirdest and most upsetting,' indicating significant artistic merit and uniqueness, aligning with your desire for inspiring music."
   },
   {
     "artist": "Opeth",
     "album": "Damnation",
-    "relevance_score": 95,
+    "relevance_score": 90,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Opeth is a relevant metal artist, and the description 'desolate foray into melodic songwriting' and 'haunted emotional breakthrough' directly addresses your critical criteria for emotional depth and artistic challenge, making it a high-priority recommendation."
+    "reasoning": "Opeth aligns perfectly with your taste for progressive and heavy music, and the description highlights 'desolate foray into melodic songwriting' and a 'haunted emotional breakthrough,' strongly indicating artistic and emotional depth, aligning with your critical rule for innovation and inspiring music."
   },
   {
     "artist": "Rush",
     "album": "Power Windows",
     "relevance_score": 70,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "Rush is a significant prog artist, a genre you appreciate. While it's from their 'synth era' which might hint at processing, 'impressive musicianship' and its status as a 'peak' for the band warrants a manual review to assess its artistic merit and potential for inspiration."
+    "reasoning": "Rush is a well-regarded prog rock band, a genre you enjoy. The description notes 'impressive musicianship,' which aligns with your appreciation for artistic merit. However, it's a review of an older album, hence a manual review to see if it offers new inspiration."
   },
   {
     "artist": "Green Carnation",
     "album": "A Dark Poem Part III: The Messiah Complex",
-    "relevance_score": 82,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Progressive metal aligns with your broader taste in rock and metal, and the description 'triumphant closing chapter' suggests significant artistic merit and emotional depth, fitting your criteria for meaningful music."
-  },
-  {
-    "artist": "Russian Circles",
-    "album": "Nine",
-    "relevance_score": 95,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Russian Circles is explicitly one of your favorite artists. The description 'Desperate to end this noise in my head' strongly suggests emotional depth and an intense, challenging artistic experience, perfectly matching your criteria for high-priority recommendations."
-  },
-  {
-    "artist": "Movements",
-    "album": "Happier Now",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Movements' emo/post-hardcore sound fits your punk/hardcore criteria. The description 'Desperate to end this noise in my head' points to significant emotional depth and an introspective, challenging listen, aligning with your preferences for meaningful music."
-  },
-  {
-    "artist": "Showing Teeth",
-    "album": "A Fate Worse Than Loneliness",
-    "relevance_score": 78,
+    "relevance_score": 75,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "The artist name and description 'Bearing fangs' suggest an aggressive, intense sound likely in the hardcore or metal sphere, appealing to your taste for caustic and challenging music."
+    "reasoning": "The album title 'A Dark Poem Part III' suggests a conceptual and artistically driven work, and the description 'A triumphant closing chapter' hints at emotional depth and culmination, aligning with your interest in music with artistic value and merit."
   },
   {
     "artist": "Chat Pile",
     "album": "Who Loves the Sun",
     "relevance_score": 98,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Chat Pile is explicitly one of your recently enjoyed artists. The highly evocative and unique description 'Please be quiet, the skull is speaking..' strongly indicates artistic innovation, challenge, and depth, making it a critical high-priority recommendation."
+    "reasoning": "Chat Pile is a direct new favorite of yours. The description 'Please be quiet, the skull is speaking..' is uniquely evocative, hinting at artistic challenge and depth, which perfectly aligns with your critical criteria for innovative and meaningful music."
+  },
+  {
+    "artist": "Russian Circles",
+    "album": "Nine",
+    "relevance_score": 85,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Russian Circles is explicitly listed as one of your new favorite bands, making any new album by them a high-priority recommendation even without an explicit descriptive review in this snippet."
   },
   {
     "artist": "Interpol",
     "album": "This Mirror Weighs a Ton",
     "relevance_score": 80,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "As an alternative rock band, Interpol fits your taste. The description 'The old dogs learn a few new tricks...' indicates artistic growth and potential innovation, aligning with your desire for new musical ideas and artistic merit."
+    "reasoning": "The description 'The old dogs learn a few new tricks...' suggests artistic evolution and innovation, which aligns with your criteria for music with artistic merit and inspiration, and your appreciation for alternative rock bands like The Cure."
   },
   {
-    "artist": "NAILS",
-    "album": "Fear Based Life",
+    "artist": "Royal Sorrow",
+    "album": "Innerdeeps",
+    "relevance_score": 70,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "The phrase 'return in secret' (from the news item related to the band's activity around the album) suggests a mysterious or unique artistic approach, which could align with your interest in innovative or challenging music within the extreme metal genre."
+  },
+  {
+    "artist": "Steven Wilson",
+    "album": "Requiem For A Village",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "NAILS' hardcore punk/grindcore sound is a strong match for your preference for extreme metal and hardcore (similar to Full of Hell, Converge, Primitive Man). While no explicit review text was provided, the band's genre and intense reputation, coupled with the album title 'Fear Based Life' implying thematic depth, qualifies it as a high-priority artist for your taste."
+    "reasoning": "Steven Wilson's progressive rock aligns with the user's taste (Mogwai, Russian Circles, ArcTanGent). Although the description is brief, his known body of work often prioritizes artistic challenge and depth, which fits the critical rule. This is explicitly announced as a new album."
+  },
+  {
+    "artist": "The Meffs",
+    "album": "Business",
+    "relevance_score": 88,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Described as 'confrontational,' this punk album strongly aligns with the user's preference for punk rock and artists like Bad Religion, Against Me!, and Idles, which often embody artistic challenge. Explicitly stated as a new album."
   },
   {
     "artist": "Green Lung",
     "album": "Necropolitan",
-    "relevance_score": 85,
+    "relevance_score": 82,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The album is described as 'doom metal,' a genre that aligns well with your preferences (extreme metal, sludge). While phrases like 'hottest doom metal band' are somewhat generic, the comparison to Ghost suggests artistic ambition and quality, making it a strong candidate for inspiration."
-  },
-  {
-    "artist": "Prince Of Failure",
-    "album": "Prince Of Failure",
-    "relevance_score": 95,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "This project, a side project of Daniel Tompkins (TesseracT) and Paul Ortiz (Chimp Spanner), is described as 'a battle against AI and mental issues' and 'a way of dealing with anxiety, impostor syndrome and career-threatening change.' These themes directly match your critical criteria for innovation, emotional depth, and artistic challenge within a relevant progressive metal context."
+    "reasoning": "Described as 'doom metal' and 'Britain's hottest doom metal band,' this directly matches the user's preference for sludge and extreme metal (e.g., Amenra, Primitive Man, Sumac). The review implies a current, relevant release."
   },
   {
     "artist": "President",
     "album": "Blood Of Your Empire",
-    "relevance_score": 88,
+    "relevance_score": 87,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description highlights 'deeply personal' themes for this debut album. This aligns with your desire for music with emotional depth and artistic merit. The mysterious 'masked' aspect also suggests a unique artistic approach, making it a high-priority recommendation."
-  },
-  {
-    "artist": "Rick Wakeman",
-    "album": "Return To The Red Planet",
-    "relevance_score": 72,
-    "decision": "REVIEW_MANUALLY",
-    "reasoning": "This is a new album from prog legend Rick Wakeman. While the description is primarily about a bundle, prog rock is a genre that aligns with your broader rock interests (e.g., Mogwai, Elbow, ArcTanGent festival). The artist's legacy in progressive music suggests inherent artistic value, warranting a closer look."
-  },
-  {
-    "artist": "Bruce Springsteen",
-    "album": "Springsteen on Broadway",
-    "relevance_score": 75,
-    "decision": "REVIEW_MANUALLY",
-    "reasoning": "Bruce Springsteen is a legendary artist whose work consistently embodies artistic value and merit, aligning with your appreciation for folk, stadium rock, and artists like Jason Isbell and The Hold Steady. While no specific review text was provided, the album is a highly acclaimed performance that fits your general criteria for important music."
-  },
-  {
-    "artist": "Low",
-    "album": "Double Negative",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Low is renowned for their experimental slowcore and indie rock, often described with terms like 'poignant' and 'cerebral.' Their album 'Double Negative' received significant critical acclaim for its innovative, deconstructed sound and emotional depth, strongly aligning with your criteria for artistic challenge and unique fusion, even without a specific description in this text."
-  },
-  {
-    "artist": "Spiritualized",
-    "album": "And Nothing Hurt",
-    "relevance_score": 80,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Spiritualized is an artist widely recognized for their artistic value, emotional depth, and unique space rock sound. Their work, including 'And Nothing Hurt', often explores themes that resonate with your criteria for poignant and creatively rich music, even without a specific description in this text."
-  },
-  {
-    "artist": "IDLES",
-    "album": "Joy as an Act of Resistance",
-    "relevance_score": 98,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "IDLES is explicitly listed as one of your favorite artists, making this an immediate high-priority recommendation. 'Joy as an Act of Resistance' is a critically acclaimed album that embodies their characteristic blend of punk, social commentary, and emotional intensity, aligning perfectly with your taste."
-  },
-  {
-    "artist": "Sonic Youth",
-    "album": "Nurse",
-    "relevance_score": 99,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Sonic Youth is explicitly listed as one of your all-time favorite artists, making this an immediate high-priority recommendation. Their work consistently embodies innovation, artistic challenge, and unique soundscapes that are crucial to your musical criteria. The album title 'Nurse' is taken directly from the text provided, although it may refer to an obscure release or a typo related to their iconic imagery."
+    "reasoning": "Described with 'deeply personal' themes and a 'masked and mysterious' aesthetic, suggesting emotional depth and artistic concept, aligning with the user's criteria for artistic value and merit. This is a review of their debut album, implying a new release."
   },
   {
     "artist": "Mastodon",
     "album": "Marrow Deep",
     "relevance_score": 95,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "This album falls squarely into your preferred genres of sludge and metal. The description 'Thunderous Eruption of a New Era' strongly suggests significant artistic challenge, impact, and potential innovation, directly aligning with your critical priority criteria for music with artistic value and inspiration for new ideas."
+    "reasoning": "Mastodon is explicitly listed as a favorite artist in your criteria, and this is an announcement/celebration of a new album release, making it a high-priority recommendation."
+  },
+  {
+    "artist": "IDLES",
+    "album": "Joy as an Act of Resistance",
+    "relevance_score": 95,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "IDLES is explicitly listed as one of your favorite bands, making this a high-priority recommendation even without an accompanying description in the text."
+  },
+  {
+    "artist": "Sonic Youth",
+    "album": "Nurse",
+    "relevance_score": 95,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Sonic Youth is explicitly listed as one of your favorite artists, making this a high-priority recommendation even though it's an older album review and lacks a detailed description."
+  },
+  {
+    "artist": "Robert Plant",
+    "album": "All That Glitters...",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "Established artist with potential for folk/americana, which you occasionally enjoy. However, the description is minimal, lacking strong indicators of artistic challenge or innovation, thus warranting manual review."
+  },
+  {
+    "artist": "Mastodon",
+    "album": "Marrow Deep",
+    "relevance_score": 95,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Mastodon is a core band in genres you love (sludge, extreme metal). The description 'Thunderous Eruption of a New Era' strongly suggests innovation, artistic power, and a significant creative leap, perfectly aligning with your critical rule for high-priority recommendations."
+  },
+  {
+    "artist": "Weezer",
+    "album": "The Gold Album",
+    "relevance_score": 70,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "Weezer is an alternative rock band, a genre you appreciate. The description 'Don't Have to Fake It' suggests authenticity, which is positive. However, it lacks the explicit keywords indicating innovation, emotional depth, or artistic challenge to merit a higher immediate recommendation, making a manual review appropriate."
   },
   {
     "artist": "Yasiin Bey",
     "album": "The Ecstatic",
-    "relevance_score": 88,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "While hip-hop is an occasional genre, the description 'still sounds like the future' is a strong indicator of innovation and artistic merit, which is a critical positive factor for you. Yasiin Bey (Mos Def) is known for his artistic and non-commercial approach to hip-hop, fitting your preference to avoid commercial R&B/hip-hop."
+    "relevance_score": 90,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Yasiin Bey (aka Mos Def) is a hip hop artist whose work often possesses significant artistic and intellectual merit, fitting your 'occasionally like hip hop' criteria and avoiding commercial R&B/hip hop. The description 'Still Sounds Like the Future' is a powerful indicator of innovation and artistic vision, aligning perfectly with your critical rule."
   },
   {
-    "artist": "BEHEMOTH",
-    "album": "I, Scvlptor",
+    "artist": "Slime Dimension",
+    "album": "Slime Dimension",
+    "relevance_score": 78,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "Death Metal is a favored genre. The description, focusing on 'maximum gross-out' and 'texture' for visceral impact, suggests a distinct and non-generic artistic approach that could offer inspiration, avoiding merely 'solid' praise."
+  },
+  {
+    "artist": "Green Lung",
+    "album": "Necropolitan",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Behemoth is a prominent extreme metal band, a genre you explicitly enjoy. They are also highly relevant to the Damnation festival, which you identify as a key source for new and relevant bands. Despite the lack of an extensive review snippet, the band's established artistic merit within this genre and the positive score of 8/10 make it a strong recommendation as a 'high-priority match' by genre and festival relevance."
+    "reasoning": "Stoner Metal is a strong match, related to sludge and alternative rock. The description uses terms like 'ponderous weight' and 'sly melodicism,' indicating artistic depth and a compelling blend of styles, aligning with your appreciation for artistic value."
   },
   {
     "artist": "Sworn",
     "album": "Null Crowned the Infinite",
-    "relevance_score": 75,
-    "decision": "REVIEW_MANUALLY",
-    "reasoning": "Atmospheric Black Metal is a strong genre fit. The band has a long, established career with a highly praised previous album, suggesting inherent artistic value, even if the description for this specific album is brief."
+    "relevance_score": 82,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Atmospheric/Melodic Black Metal is a highly relevant genre. While specific descriptors for *this* album are light, the context of the band's twenty-year career and previous 'best record' status suggests a band with artistic merit and depth that would appeal to you."
   },
   {
     "artist": "Archgoat",
     "album": "Nightbringer, Lightbringer",
     "relevance_score": 88,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Bestial Blackened Death Metal, a subgenre of extreme metal, aligns with your taste. The description emphasizes raw power, a 'simple yet effective' formula, and their 'Mt. Rushmore' status, indicating significant artistic merit and intensity rather than processing or generic appeal."
+    "reasoning": "Bestial Blackened Death Metal/War Metal falls squarely within your extreme metal preferences. The description, with 'uber-deep growls,' 'ritualistic, marching breaks,' and 'godless frenzy,' highlights a powerful and distinctive artistic aesthetic, not generic praise."
   },
   {
     "artist": "Season of Melancholy",
     "album": "In Sleep",
-    "relevance_score": 70,
+    "relevance_score": 79,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "Post-punk and Goth rock are relevant genres. 'Dark atmospheres,' 'heartbreak and yearning' suggest emotional depth. However, terms like 'bouncy tunes,' 'sharper hooks, bigger choruses' slightly temper the artistic challenge, making a manual review appropriate."
+    "reasoning": "Post-punk is a genre you enjoy (e.g., The Cure, Placebo). The focus on 'romantic music,' 'bleeding hearts,' 'sultry melodies,' and 'dark atmospheres' suggests emotional depth and artistic intent, aligning with your value for music that is 'important as such.'"
   },
   {
     "artist": "Rapid",
     "album": "Enter the Realm of Fire",
-    "relevance_score": 92,
+    "relevance_score": 91,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "A potent mix of Black Metal, Speed Metal, Thrash, and Punk. Descriptors like 'gnarly and riotous,' 'ugly, thrashy mayhem,' 'piss-and-vinegar-drenched,' and 'authentically twisted concoction' strongly indicate raw artistic intent, intensity, and a challenging sound, perfectly matching your preference for innovative and non-processed music."
-  },
-  {
-    "artist": "Acausal Intrusion",
-    "album": "Vomit Meditations",
-    "relevance_score": 95,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Extreme Metal genres (Black, Death, Technical Death) are a strong fit. The comparison to Sartre's 'Nausea' and the description 'disjointed and uncanny' highlight significant artistic depth, intellectual challenge, and a unique, possibly disturbing, emotional landscape, precisely meeting your critical rule for innovation and cerebral quality."
-  },
-  {
-    "artist": "Hanternoz",
-    "album": "A Hed an Noz, a Noz, a Noz",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Folk Metal and Black Metal blend well with your tastes. The specific mention of 'medieval-style' and songs about 'different types of devil from Breton folklore' indicates a strong, unique artistic concept and cultural fusion, suggesting depth and originality."
+    "reasoning": "This debut album spans several favored genres: Thrash, Black Metal, Speed Metal, Heavy Metal, and Punk. Descriptors like 'gnarly and riotous,' 'ugly, thrashy mayhem,' 'piss-and-vinegar-drenched metal,' and 'authentically twisted concoction, brooding with bombast, evil vibes, and over-the-top theatrics' strongly indicate artistic challenge, a unique aesthetic, and emotional depth, perfectly matching your 'CRITICAL RULE' for innovation and inspiration."
   },
   {
     "artist": "Dreadnought",
-    "album": "Wars of Spirit // Wards of Light",
-    "relevance_score": 90,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "The description 'deeper into the beating, shadowed heart of their sound' suggests significant artistic depth and a challenging, introspective journey, aligning perfectly with your criteria for artistic value and emotional depth. Their progressive/atmospheric metal style also fits your taste for bands like Oranssi Pazuzu and Amenra."
+    "album": "Wars of Spirit// Wards of Light",
+    "relevance_score": 88,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "The description 'deeper into the beating, shadowed heart of their sound' suggests artistic depth and evolution, aligning with your appreciation for music with artistic value and emotional depth. Dreadnought's usual genre (atmospheric progressive/doom metal) fits your taste for extreme metal and progressive sounds."
   },
   {
     "artist": "Mastodon",
     "album": "Marrow Deep",
-    "relevance_score": 95,
+    "relevance_score": 92,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Mastodon is a well-established artist in genres you enjoy (sludge/progressive metal). The description 'fresh and inspired, pushing forward once again' strongly suggests innovation and a renewed artistic challenge, which is a critical priority for your musical exploration."
-  },
-  {
-    "artist": "Sleep",
-    "album": "Hempispheres",
-    "relevance_score": 80,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Sleep is a highly influential and relevant artist within your preferred sludge/doom metal genres, and fits the vibe of artists found at festivals like Damnation. Despite lacking a descriptive review, the artist's inherent relevance and standing make this a high-priority recommendation for you."
+    "reasoning": "Described as feeling 'fresh and inspired, pushing forward', this indicates innovation and artistic challenge, which is a critical priority for you. Mastodon's blend of progressive metal and sludge aligns well with your genre preferences and favorite artists like Deftones and Soundgarden."
   },
   {
     "artist": "Russian Circles",
     "album": "Nine",
     "relevance_score": 95,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Russian Circles is explicitly mentioned as one of your 'newer favorites,' making any new release from them a top priority regardless of accompanying description. Their post-metal/instrumental rock aligns perfectly with your taste for bands like Mogwai and Amenra."
+    "reasoning": "Russian Circles is explicitly listed as one of your recent favorite bands. Even without an accompanying review description, any new album from a high-priority artist like this is an immediate recommendation for you."
   },
   {
     "artist": "Alewya",
     "album": "Zero",
-    "relevance_score": 82,
+    "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description highlights the album as 'genre-blurring' and a 'stellar debut'. The 'genre-blurring' aspect directly aligns with your critical rule to prioritize unique fusion and artistic challenge, indicating a potential for innovation. As a debut, it offers an opportunity to discover new artists with artistic merit, which you value."
+    "reasoning": "The description highlights a 'stellar debut album' that is 'genre-blurring'. The term 'genre-blurring' directly aligns with your critical rule for 'unique fusion' and indicates artistic innovation and challenge, suggesting it's not generic or highly processed music. This implies artistic merit and potential for inspiration, despite not explicitly being one of your primary genres."
+  },
+  {
+    "artist": "Opus",
+    "album": "Opus",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "The album is described as having a 'punchy sound' and bridging the gap between bands like DEAD KENNEDYS, indicating it's solid punk rock, which aligns with your core genres. While 'punchy' is somewhat generic, the association with DEAD KENNEDYS suggests a degree of artistic energy. It doesn't use the high-priority terms for innovation or emotional depth, so it's a manual review rather than an immediate top pick."
   },
   {
     "artist": "L.O.T.I.O.N.",
     "album": "Machine Hallucinations",
-    "relevance_score": 92,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "The description 'Dance music for a collapsing civilization' suggests strong artistic intent and emotional depth, aligning with your preference for music with artistic merit. The genre fusion of 'cyberpunk-soaked punk mixed with glimpses of gabber, industrial techno, and digital hardcore' indicates innovation and a unique artistic challenge, fitting your criteria for diverse and impactful rock/metal subgenres and experimental sounds. Keywords like 'punishing,' 'relentless,' and 'hostile' align with your preference for intense and non-background music. The comparison to G.I.S.M. in a 'neon dystopia' provides a strong visual and sonic reference for something cerebral and groundbreaking, hitting the critical rule for innovation and challenging art."
-  },
-  {
-    "artist": "Ikue Mori with Robert Quine and Marc Ribot",
-    "album": "Painted Desert",
     "relevance_score": 95,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Features punk savant Robert Quine and avant-garde impresario John Zorn, described as an 'astonishing melding of skeletal machine rhythms and big sky guitars' and a 'missing link in ambient country'. This signals unique fusion, innovation, and artistic challenge, aligning perfectly with your critical criteria."
+    "reasoning": "This album is highly prioritized due to its description as 'Dance music for a collapsing civilization' and a unique fusion of 'cyberpunk-soaked punk mixed with glimpses of gabber, industrial techno, and digital hardcore.' Terms like 'punishing riffs,' 'relentless rhythms,' and 'hostile' production, along with the vivid comparison to 'G.I.S.M. trapped in a neon dystopia, playing songs by DOPPLEREFFEKT,' strongly indicate innovation, artistic challenge, and a unique sound. This aligns perfectly with your critical rule for artistic value and inspiration."
+  },
+  {
+    "artist": "Animated Violence / Total Vacation",
+    "album": "Split",
+    "relevance_score": 70,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "This split LP features 'fast and loose West Coast hardcore punk' and 'snotty, \u201980s-inspired USHC,' which fits squarely within your preferred genres of hardcore and punk. The description of 'enough variation in style' is positive, but it lacks the strong descriptors of innovation, emotional depth, or unique fusion that would push it into a higher-priority category for immediate recommendation. It's a good genre fit, but warrants a manual review to determine its artistic merit."
+  },
+  {
+    "artist": "Christer Bothen, Oren Ambarchi, Johan Berthling, Andreas Werliin",
+    "album": "Serpentine",
+    "relevance_score": 82,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Described as 'skeletal jazz' that 'deepen their groove while expanding their reach' with 'bluesy bass clarinet and earthy donso n\u2019goni', suggesting a unique fusion and artistic depth. The mention of 'haunted' adds to the emotional depth criteria."
+  },
+  {
+    "artist": "Ikue Mori",
+    "album": "Painted Desert",
+    "relevance_score": 93,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "This album features 'punk savant Robert Quine' and 'downtown NYC journeyman Marc Ribot' (who worked with your favorite artists like Tom Waits and Nick Cave) with 'avant-garde impresario John Zorn' producing. It's described as an 'astonishing melding of skeletal machine rhythms and big sky guitars' in the 'ambient country' genre, which indicates innovation and unique fusion. The blend of punk, avant-garde, and ambient country is highly intriguing and artistically challenging."
   },
   {
     "artist": "Horse Lords",
     "album": "Demand to Be Taken to Heaven Alive!",
-    "relevance_score": 98,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Described as their 'strangest and prettiest album yet', adding 'Protestant hymn-singing, swamp boogie, early computer music and even robot funk to their signature brand of phase-shifting krautrock groove'. This is a highly innovative and radical fusion, playing with themes of 'religious devotion and utopian longing', indicating significant artistic challenge and emotional depth."
-  },
-  {
-    "artist": "John Foxx & Harold Budd",
-    "album": "Translucence + Drift Music",
-    "relevance_score": 82,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "A collaboration between an electronic music landmark and a minimalist composer, focusing on 'sound and space'. This suggests experimental artistic intent and a unique fusion, fitting your appreciation for artistic merit beyond typical genre boundaries."
-  },
-  {
-    "artist": "Panda Bear and Sonic Boom",
-    "album": "A ? of WHEN",
-    "relevance_score": 88,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as a 'playful act of musical curiosity' with an 'ever-shifting collage of samples and melodies' that 'meets experimentation with open ears and a sense of wonder'. This strongly indicates innovation, artistic challenge, and unique sound design, aligning with your desire for new musical ideas."
-  },
-  {
-    "artist": "The Bird Calls",
-    "album": "Take Leave",
-    "relevance_score": 80,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as 'literate folk rock and alt-country songcraft' that 'rattles with downcast charm' and is 'sly and full of knowing'. This fits your americana/folk preferences and suggests emotional depth and artistic sophistication."
-  },
-  {
-    "artist": "Jake Xerxes Fussell",
-    "album": "The Old Beloved Path",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Features 'meticulously curated old-time songs' from a 'musicologist\u2019s grasp of pre-war folk and blues' who 'reinterprets' the past. This speaks to high artistic value, deep knowledge, and a re-envisioning of traditional forms, aligning with your appreciation for Americana and folk artists like Will Varley and Jason Isbell."
-  },
-  {
-    "artist": "Christer Bothen/Oren Ambarchi/Johan Berthling/Andreas Werliin",
-    "album": "Serpentine",
-    "relevance_score": 85,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as 'sleek, skeletal jazz' that 'deepens their groove while expanding their reach' with 'bluesy bass clarinet and earthy donso n\u2019goni' and 'stays haunted'. This suggests experimental instrumentation, unique texture, and emotional depth, fitting your broader taste for artistic merit and inspiration."
-  },
-  {
-    "artist": "Upper Wilds",
-    "album": "Mercury",
-    "relevance_score": 92,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "From 'noise mainstays' and described as 'guitar-centric', 'ferociously tight ship', and 'loud as fuck, but nothing\u2019s wasted'. This aligns perfectly with your core genres of punk, alternative rock, sludge, and hardcore, indicating intensity and artistic precision."
-  },
-  {
-    "artist": "Bill Orcutt",
-    "album": "Four Louies Live",
     "relevance_score": 95,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "A 'deconstruction of \u201cLouie Louie\u201d' that's a 'mash-up of Steve Reich\u2019s 1970 minimalist milestones with the rock staple', finding a 'seam between experimental, avant garde repetition and the dumb but beautiful way that garage rock can hammer on a riff forever'. This is highly innovative, experimental, and a unique fusion, directly hitting your critical prioritization for groundbreaking artistic challenge."
-  },
-  {
-    "artist": "The Drin",
-    "album": "I Lost My Way for Centuries",
-    "relevance_score": 97,
-    "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Described with 'tortured guitar unspool against a beat obscured by fuzz', 'hooky songs rotted to phosphorescence', and tunes that 'live furtively in fetid underground bunkers, where their ear-wormy melodies bounce off muck and concrete'. These visceral descriptors strongly align with sludge, grunge, punk, and hardcore, indicating artistic challenge, emotional depth, and a unique, caustic sound."
-  },
-  {
-    "artist": "Nighttime",
-    "album": "Looking Glass",
-    "relevance_score": 87,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as 'an album about thresholds. About opening your heart, taking a leap, and coming out on the other side' and a 'swirling m\u00e9lange of dusty psychedelia and cosmic folk music, full of sepia-toned dreamscapes and tinges of western noir'. This indicates strong emotional depth, unique genre fusion, and artistic merit, fitting your appreciation for folk/Americana with a twist."
+    "reasoning": "Described as their 'strangest and prettiest album yet', featuring a unique fusion of 'Protestant hymn-singing, swamp boogie, early computer music and even robot funk' within their 'phase-shifting krautrock groove'. The terms 'alluring, compelling mix' and 'radical, captivating music' strongly align with your criteria for innovation, artistic challenge, and unique fusion, playing with themes of 'religious devotion and utopian longing'."
   },
   {
     "artist": "Chu Kosaka",
     "album": "Arigato",
     "relevance_score": 78,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "Described as 'wide-open pastoral bliss' and 'American country rock through the lens of a Japanese perfectionism'. It fits your Americana/folk criteria with an interesting artistic twist, though it lacks the more intense 'innovation' keywords for a higher score."
+    "reasoning": "This is described as 'wide-open pastoral bliss' and 'American country rock through the lens of a Japanese perfectionism'. Americana is a liked genre, and the description of tunes being 'loose' and lingering 'like a haze of humidity' suggests a thoughtful, atmospheric quality with artistic merit."
+  },
+  {
+    "artist": "Panda Bear",
+    "album": "A ? of WHEN",
+    "relevance_score": 85,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Described as a 'playful act of musical curiosity' with 'steel drums, pedal steel, and harp loops' creating an 'ever-shifting collage of samples and melodies'. The emphasis on 'experimentation with open ears and a sense of wonder' and 'sonic subtext' aligns well with your preference for innovation and artistic value, moving beyond generic pop."
+  },
+  {
+    "artist": "Crying Laughing",
+    "album": "Talking",
+    "relevance_score": 88,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "The description highlights 'insistent new theme songs and rallying cries' with 'necessary and emphatic instrumental anthems', driven by a 'twin alto sax attack and percussion that channels the snap and bounce of New Orleans rhythms'. This suggests a powerful, unique, and artistically challenging instrumental rock, fitting your desire for inspiration and music that is 'important as such'."
+  },
+  {
+    "artist": "Mike D",
+    "album": "Thank You",
+    "relevance_score": 70,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "As the first solo work from a Beastie Boy (a group you occasionally like), and following a 'long period of creative grief', there's a hint of emotional depth. However, the musical description is sparse, so a manual review is needed to determine artistic merit and specific sound."
+  },
+  {
+    "artist": "Diles Que No Me Maten",
+    "album": "Escrito en Agua",
+    "relevance_score": 92,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "This album 'conjure a languid and mournful psychedelia', 'infusing krautrock and slowcore elements into a patiently unfolding album that sears with intensity'. The combination of 'mournful', 'krautrock', 'slowcore', and 'sears with intensity' directly hits your critical keywords for emotional depth, unique fusion, and artistic challenge within genres you appreciate."
+  },
+  {
+    "artist": "The Bird Calls",
+    "album": "Take Leave",
+    "relevance_score": 80,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "Described as 'literate folk rock and alt-country songcraft' that 'rattles with downcast charm' and is 'sly and full of knowing'. This aligns with your appreciation for Americana and folk with emotional depth and artistic intention, similar to artists like Wilco and Jason Isbell."
   },
   {
     "artist": "Walt Dickerson",
     "album": "To My Queen",
     "relevance_score": 75,
     "decision": "REVIEW_MANUALLY",
-    "reasoning": "An 'unsung pioneer of the jazz vibraphone', described as a 'tender, lovingly crafted suite showcasing the vibraphonist\u2019s asymmetrical and self-proclaimed plush metallic tones'. While jazz is outside your core genres, the pioneering aspect and unique artistic description warrant manual review for inspiration."
+    "reasoning": "This jazz album by an 'unsung pioneer' is a 'tender, lovingly crafted suite' showcasing 'asymmetrical and self-proclaimed plush metallic tones'. While jazz is an occasional preference, the descriptors 'unsung pioneer' and 'asymmetrical' indicate innovation and artistic merit, making it worth a manual review."
+  },
+  {
+    "artist": "Jake Xerxes Fussell",
+    "album": "The Old Beloved Path",
+    "relevance_score": 89,
+    "decision": "ADD_TO_PLAYLIST",
+    "reasoning": "This artist has a 'musicologist\u2019s grasp of pre-war folk and blues' and 'uses this knowledge not to replicate the past but to reinterpret it, so that the songs live and breathe'. This focus on reinterpretation and finding the 'core of the music' shows strong artistic value and innovation within the Americana/folk genre you enjoy, similar to the depth found in Towns Van Zant."
+  },
+  {
+    "artist": "Upper Wilds",
+    "album": "Mercury",
+    "relevance_score": 90,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Coming from the 'aughts noise mainstays Parts & Labor' and described as 'guitar-centric' and running a 'ferociously tight ship', this album is 'loud as fuck, but nothing\u2019s wasted'. This directly matches your preference for punk/noise rock, intensity, and music with artistic control and impact."
+  },
+  {
+    "artist": "Coal & Crayon",
+    "album": "The Great Misgive",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "The description 'Lighten up, then get a little dark with it, then undo that several times over' suggests a dynamic and potentially complex musical structure, aligning with your interest in artistic value and non-generic approaches to music. This hints at innovative composition."
   },
   {
     "artist": "Sigh",
     "album": "Goh-Ka",
     "relevance_score": 95,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "The review describes the album as 'epic', 'entrancing', 'obtuse', and 'wild'. These terms strongly indicate artistic challenge, innovation, and unpredictability, aligning perfectly with your critical rule for prioritizing recommendations and your interest in extreme metal and avant-garde acts like Oranssi Pazuzu."
+    "reasoning": "Described as 'epic and entrancing as it is obtuse and wild,' this album strongly aligns with your critical rule for innovation, artistic challenge, emotional depth, and unique fusion. 'Obtuse' and 'wild' particularly suggest a departure from conventional structures and a depth that you seek in extreme metal and avant-garde sounds, reminiscent of artists like Oranssi Pazuzu."
   },
   {
-    "artist": "Green Lung",
-    "album": "Necropolitan",
-    "relevance_score": 82,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The band's genre (Hard Rock, Psychedelic Rock, often identified as Stoner/Doom) aligns well with your taste in various rock and metal subgenres. The accompanying text hints at a strong artistic vision, noting their previous work involved a 'sprawling tour of the folklore of the British Isles,' which suggests thematic depth and artistic value beyond mere background music. This avoids generic praise and points to thoughtful artistry."
+    "artist": "R\u00d8RY",
+    "album": "BLOODLETTING",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "The description 'no amount of emotional armour is going to protect against' strongly suggests significant emotional depth and impact, aligning with your critical criteria for emotionally challenging music. While the genres listed include Pop-Punk and Pop-Rock, the Alternative tag and the emphasis on emotional weight make this worth further investigation."
   },
   {
     "artist": "Caleb Elliott",
     "album": "Without Warning",
-    "relevance_score": 88,
+    "relevance_score": 90,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "Described as 'noir Americana' with 'haunting vocals, literary songwriting and atmospheric arrangements,' finding comfort without ignoring 'anxiety'. This aligns perfectly with your appreciation for artistic depth, emotional complexity, and artists like Tom Waits and Nick Cave."
+  },
+  {
+    "artist": "Energy Whores",
+    "album": "Invisible",
+    "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "Described as 'noir Americana' with 'haunting vocals, literary songwriting and atmospheric arrangements,' finding 'comfort without pretending anxiety does not exist.' This aligns perfectly with your appreciation for artistic value, emotional depth, and nuanced storytelling within a preferred genre."
+    "reasoning": "An 'electronic/alternative project' that 'turns feeling unseen into an experiment in perspective' and 'refuses to exist in just one emotional form.' The mention of 'Lo-Fi' and the experimental nature suggests innovation and artistic challenge, aligning with your interest in unique fusions and artistic merit."
   },
   {
     "artist": "I Plead Irony",
     "album": "This Monologue Conversation",
     "relevance_score": 90,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "This rock album explores 'heavy questions about humanity, conformity, fear and self-destruction,' indicating significant artistic challenge and emotional depth. The description suggests a cerebral and poignant experience, which are critical criteria for you."
+    "reasoning": "This rock album, 'ten years in the making,' carries 'heavy questions about humanity, conformity, fear and self-destruction.' This thematic depth directly aligns with your criteria for artistic value, emotional depth, and intellectual engagement, reminiscent of bands like The National or Spanish Love Songs."
   },
   {
     "artist": "Last Night Watchman",
     "album": "Old Blighty",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "This rock EP is 'shaped by reflections on mortality, history, human behavior, and the relentless movement of time,' finding 'something quietly profound in everyday existence.' This showcases deep emotional depth and artistic merit, matching your interest in thoughtful and poignant music."
+    "reasoning": "A rock EP 'shaped by reflections on mortality, history, human behavior, and the relentless movement of time,' finding 'something quietly profound in everyday existence.' This thematic richness and sense of profound reflection aligns with your interest in artistic merit and emotional depth."
+  },
+  {
+    "artist": "THROES NYC",
+    "album": "The Wires Out",
+    "relevance_score": 90,
+    "decision": "LIKE_IMMEDIATELY",
+    "reasoning": "This 'altriphop' EP 'lives in the messy territory where attraction becomes obsession and intimacy can feel just as alienating as it does comforting,' turning romance into 'something hazy, restless, and slightly dangerous.' This description strongly indicates emotional depth, artistic challenge, and a unique, possibly 'caustic' or 'unpredictable' fusion, appealing to your taste for artists like Mogwai or Nick Cave."
   },
   {
     "artist": "Trail Hawk",
     "album": "One Hundred Angels",
-    "relevance_score": 87,
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "A deeply heartfelt indie single that 'turns devastating grief into a moving tribute.' While possessing strong emotional depth, it uses more generally 'heartfelt' language rather than keywords indicating innovation or artistic challenge, warranting a manual review."
+  },
+  {
+    "artist": "SIR-VERE",
+    "album": "New Age Girl",
+    "relevance_score": 80,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "A deeply heartfelt single that 'turns devastating grief into a moving tribute' and 'looks beyond the pain of losing someone and toward the extraordinary love.' This strongly aligns with your criteria for emotional depth and artistic value derived from profound human experience."
+    "reasoning": "Described as a 'brooding collision of Alt-Pop, Electro and Electronic Rock' that 'feels as though it has escaped from a neon-lit cyberpunk city.' The 'brooding' aspect and the 'electronic rock' genre, combined with a unique atmospheric aesthetic, suggest artistic merit beyond typical EDM."
   },
   {
     "artist": "Suchetana Sinha",
     "album": "Khwaab \u2013 A Night and an Unfinished Melody",
-    "relevance_score": 89,
+    "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "This folk piece is a 'delicate Hindi nazm that draws from the richness of North Indian semi-classical music while floating comfortably within a contemporary arrangement.' It's built around 'reflections on longing,' indicating a unique fusion, emotional depth, and artistic merit that you prioritize."
+    "reasoning": "This track 'opens a door into the hazy space between memory and desire' and is a 'delicate Hindi nazm that draws from the richness of North Indian semi-classical music while floating comfortably within a contemporary arrangement.' This represents a unique cultural fusion and emotional depth, aligning with your appreciation for artistic value and diverse inspiration."
   },
   {
     "artist": "Antony Sainati",
     "album": "Se Relever",
-    "relevance_score": 92,
+    "relevance_score": 90,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "A rock album described as a 'heartfelt testament to resilience, using the tradition of French chanson to explore courage, grief, hope and the stubborn human instinct to keep going.' It 'feels rooted in lived experience,' which speaks to profound emotional depth and a unique artistic approach, making it a high-priority recommendation."
+    "reasoning": "This rock album is a 'heartfelt testament to resilience, using the tradition of French chanson to explore courage, grief, hope and the stubborn human instinct to keep going,' rooted in 'lived experience.' The profound emotional depth, cultural fusion, and thematic substance make this a high-priority recommendation."
   },
   {
     "artist": "Trent Richardson",
     "album": "Promise You Now",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "A 'deeply personal country-leaning ballad' that 'turns one of life\u2019s most difficult chapters into an intimate promise' and 'carries the weight of uncertainty.' While emotionally profound, the description leans towards general 'heartfelt' praise rather than indicating artistic innovation or challenge, suggesting a manual review."
+  },
+  {
+    "artist": "Helen",
+    "album": "Linda's Head",
+    "relevance_score": 75,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "Described as a 'dream pop' band by Liz Harris (of Grouper fame) and released on Kranky, this suggests a focus on artistic merit and potentially emotional depth, aligning with your appreciation for atmospheric and non-commercial music from artists like Mogwai or The Cure."
+  },
+  {
+    "artist": "The Crying Nudes",
+    "album": "DJ",
     "relevance_score": 88,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "A deeply personal country-leaning ballad 'written from his family\u2019s experience' that 'turns one of life\u2019s most difficult chapters into an intimate promise' and 'carries the weight of uncertainty without allowing despair.' This exemplifies the emotional depth and artistic authenticity you seek."
+    "reasoning": "Described as an 'ethereal/ephemeral 13-minute masterpiece' and a 'gorgeous and heartbreaking new breakup record,' this strongly indicates significant emotional depth and artistic ambition, aligning perfectly with your critical rule for innovation and profound listening experiences."
   },
   {
-    "artist": "Veronica & the Dark Particles",
-    "album": "Initial Transmission",
-    "relevance_score": 85,
+    "artist": "Carla Dal Forno",
+    "album": "Confession",
+    "relevance_score": 82,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description of a 'goth club fed into a deep-space transmitter' with a 'malfunction that had better bass' suggests a unique, experimental, and potentially raw sound, aligning with artistic value and innovation in a genre adjacent to your preferences."
+    "reasoning": "The lead single is described as 'hauntingly yearning,' which points towards emotional depth and a specific atmospheric quality. This aligns with your appreciation for poignant and artistically valuable music, reminiscent of artists like Nick Cave or Jeff Buckley."
   },
   {
-    "artist": "Planeswalkers",
-    "album": "The Mind Room",
-    "relevance_score": 80,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The album's focus on 'unlocking the psyche' and exploring themes of 'trauma, denial, dissociation, and avoidance' indicates significant emotional depth and artistic ambition, aligning with your critical criteria. While 'Gothic Electronic' could be borderline, the thematic content elevates it."
+    "artist": "Jump Source",
+    "album": "Fold",
+    "relevance_score": 78,
+    "decision": "REVIEW_MANUALLY",
+    "reasoning": "This album features collaborations with 'esteemed collaborators' including Billy Woods (a respected underground rapper, fitting your occasional hip-hop interest) and is described as exploring 'uncharted late-night club zones.' This suggests a unique fusion and artistic challenge, despite the 'club' element which might typically lean towards avoidance, indicating an experimental approach you might appreciate."
   },
   {
-    "artist": "Pissoir Des Dieux",
-    "album": "Pissoir Des Dieux",
-    "relevance_score": 88,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "As a post-punk debut, the description delving into themes of 'heartbreak\u2019s few mercies' and 'attachment to lose oxygen' strongly indicates poignant emotional depth and artistic merit, aligning with your core preferences for meaningful rock music."
-  },
-  {
-    "artist": "Kontravoid",
-    "album": "Sound of the Void",
+    "artist": "Nashpaints",
+    "album": "Everyone Good is Called Molly",
     "relevance_score": 92,
     "decision": "LIKE_IMMEDIATELY",
-    "reasoning": "Described as moving 'across skeletal coldwave, heavy EBM, freestyle-informed electro, industrial club music,' this album promises unique fusion and artistic challenge. The use of 'skeletal' and 'heavy' suggests it avoids being overly polished, strongly aligning with your preference for innovative and emotionally deep music."
+    "reasoning": "Described as an album of 'hazy, achingly tender, eerily out-of-time-and-place classics,' this hits multiple critical criteria for emotional depth, unique atmosphere, and artistic merit. The language strongly suggests innovation and a poignant, non-functional listening experience."
   },
   {
-    "artist": "Tania Cassette",
-    "album": "The Death of Me",
-    "relevance_score": 89,
-    "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "The description of 'surrendering to fatal romance' with lyrical themes of 'fall for pain' and 'plead in vain' suggests significant emotional depth and artistic merit, consistent with your criteria for poignant and impactful music."
-  },
-  {
-    "artist": "Actors",
-    "album": "Our Love Will Live Forever",
+    "artist": "Georgia Gets By",
+    "album": "Heavy Meadow",
     "relevance_score": 85,
     "decision": "ADD_TO_PLAYLIST",
-    "reasoning": "A post-punk album whose lyrical fragments ('Between the teeth of misery,' 'The hunger takes a hold of me') suggest considerable emotional depth and artistic intent, fitting your taste for meaningful rock music in a core genre."
+    "reasoning": "The album's lead single is explicitly called 'poignant' and a 'glowingly romantic ode.' This directly aligns with your critical criterion for emotional depth and artistic value, indicating music that is meaningful and impactful."
   }
 ]
