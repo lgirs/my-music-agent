@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6140 chars"
+    "message": "Fetched 5977 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6215 chars"
+    "message": "Fetched 6382 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3212 chars"
+    "message": "Fetched 3259 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7658 chars"
+    "message": "Fetched 7890 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Sputnikmusic",
-    "message": "Fetched 4477 chars"
+    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14668 chars"
+    "message": "Fetched 14660 chars"
   },
   {
     "status": "success",
     "source": "Drowned in Sound",
-    "message": "Fetched 2578 chars"
+    "message": "Fetched 3488 chars"
   },
   {
     "status": "error",
@@ -47,17 +47,17 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 12890 chars"
+    "message": "Fetched 13141 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 806 chars"
+    "message": "Fetched 792 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4227 chars"
+    "message": "Fetched 3835 chars"
   },
   {
     "status": "error",
@@ -77,22 +77,22 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8435 chars"
+    "message": "Fetched 7803 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5697 chars"
+    "message": "Fetched 5653 chars"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2803 chars"
+    "message": "Fetched 3004 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7922 chars"
+    "message": "Fetched 7955 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11972 chars"
+    "message": "Fetched 11793 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8439 chars"
+    "message": "Fetched 8624 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3918 chars"
+    "message": "Fetched 3860 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13798 chars"
+    "message": "HTTPSConnectionPool(host='illustratemagazine.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='illustratemagazine.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5032 chars"
+    "message": "Fetched 5100 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8674 chars"
+    "message": "Fetched 8667 chars"
   }
 ]
