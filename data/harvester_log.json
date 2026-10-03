@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5977 chars"
+    "message": "Fetched 6001 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6382 chars"
+    "message": "Fetched 6252 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3259 chars"
+    "message": "Fetched 3223 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7890 chars"
+    "message": "Fetched 8007 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Sputnikmusic",
-    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 4499 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14660 chars"
+    "message": "Fetched 14771 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13141 chars"
+    "message": "Fetched 12917 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3835 chars"
+    "message": "Fetched 3790 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7803 chars"
+    "message": "Fetched 7347 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11793 chars"
+    "message": "Fetched 11769 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8624 chars"
+    "message": "Fetched 8548 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3860 chars"
+    "message": "Fetched 3882 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Illustrate Magazine",
-    "message": "HTTPSConnectionPool(host='illustratemagazine.com', port=443): Max retries exceeded with url: / (Caused by NewConnectionError(\"HTTPSConnection(host='illustratemagazine.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable\"))"
+    "message": "Fetched 13559 chars"
   },
   {
     "status": "success",
@@ -142,6 +142,6 @@
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8667 chars"
+    "message": "Fetched 8293 chars"
   }
 ]
