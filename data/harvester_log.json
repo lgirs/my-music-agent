@@ -1,33 +1,33 @@
 [
   {
-    "status": "success",
+    "status": "error",
     "source": "Decibel Magazine",
-    "message": "Fetched 6208 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.decibelmagazine.com/"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5740 chars"
+    "message": "Fetched 6410 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3313 chars"
+    "message": "Fetched 3314 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7857 chars"
+    "message": "Fetched 7825 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Sputnikmusic",
-    "message": "Fetched 4763 chars"
+    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sputnikmusic.com', port=443) at 0x7f24f76faf20>, 'Connection to www.sputnikmusic.com timed out. (connect timeout=15)'))"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14717 chars"
+    "message": "Fetched 14883 chars"
   },
   {
     "status": "success",
@@ -47,17 +47,17 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13374 chars"
+    "message": "Fetched 13136 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 719 chars"
+    "message": "Fetched 695 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3881 chars"
+    "message": "Fetched 3931 chars"
   },
   {
     "status": "error",
@@ -77,27 +77,27 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8416 chars"
+    "message": "Fetched 8800 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5341 chars"
+    "message": "Fetched 5425 chars"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2917 chars"
+    "message": "Fetched 2681 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7758 chars"
+    "message": "Fetched 7637 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 6355 chars"
+    "message": "Fetched 6980 chars"
   },
   {
     "status": "success",
@@ -107,27 +107,27 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11693 chars"
+    "message": "Fetched 11417 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8011 chars"
+    "message": "Fetched 8266 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3788 chars"
+    "message": "Fetched 3924 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13640 chars"
+    "message": "Fetched 13625 chars"
   },
   {
     "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 5470 chars"
+    "message": "Fetched 5255 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5161 chars"
+    "message": "Fetched 5172 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8478 chars"
+    "message": "Fetched 8558 chars"
   }
 ]
