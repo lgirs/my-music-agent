@@ -2,7 +2,7 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5794 chars"
+    "message": "Fetched 5721 chars"
   },
   {
     "status": "success",
@@ -12,12 +12,12 @@
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3346 chars"
+    "message": "Fetched 3380 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7512 chars"
+    "message": "Fetched 7564 chars"
   },
   {
     "status": "error",
@@ -27,7 +27,7 @@
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14154 chars"
+    "message": "Fetched 14202 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13027 chars"
+    "message": "Fetched 13763 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4025 chars"
+    "message": "Fetched 3980 chars"
   },
   {
     "status": "error",
@@ -77,17 +77,17 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8656 chars"
+    "message": "Fetched 7803 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Invisible Oranges",
-    "message": "Fetched 5545 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.invisibleoranges.com/"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2906 chars"
+    "message": "Fetched 3176 chars"
   },
   {
     "status": "success",
@@ -107,17 +107,17 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10850 chars"
+    "message": "Fetched 10933 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 7990 chars"
+    "message": "Fetched 8105 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4032 chars"
+    "message": "Fetched 4010 chars"
   },
   {
     "status": "success",
@@ -142,6 +142,6 @@
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8406 chars"
+    "message": "Fetched 8570 chars"
   }
 ]
