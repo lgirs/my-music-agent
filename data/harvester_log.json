@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5721 chars"
+    "message": "Fetched 6202 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5764 chars"
+    "message": "Fetched 6092 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3380 chars"
+    "message": "Fetched 3469 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7564 chars"
+    "message": "Fetched 7624 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Sputnikmusic",
-    "message": "HTTPSConnectionPool(host='www.sputnikmusic.com', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 39 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14202 chars"
+    "message": "Fetched 13975 chars"
   },
   {
     "status": "success",
@@ -47,17 +47,17 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13763 chars"
+    "message": "Fetched 13751 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 684 chars"
+    "message": "Fetched 715 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3980 chars"
+    "message": "Fetched 4076 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7803 chars"
+    "message": "Fetched 7547 chars"
   },
   {
     "status": "error",
@@ -87,17 +87,17 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 3176 chars"
+    "message": "Fetched 2872 chars"
   },
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7637 chars"
+    "message": "Fetched 7488 chars"
   },
   {
     "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "Fetched 6980 chars"
+    "message": "Fetched 6602 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10933 chars"
+    "message": "Fetched 11294 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8105 chars"
+    "message": "Fetched 8060 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4010 chars"
+    "message": "Fetched 3996 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13849 chars"
+    "message": "Fetched 13852 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5223 chars"
+    "message": "Fetched 5191 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8570 chars"
+    "message": "Fetched 8737 chars"
   }
 ]
