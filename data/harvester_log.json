@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6202 chars"
+    "message": "Fetched 6014 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6092 chars"
+    "message": "Fetched 6180 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3469 chars"
+    "message": "Fetched 3458 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7624 chars"
+    "message": "Fetched 7690 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 39 chars"
+    "message": "Fetched 4723 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 13975 chars"
+    "message": "Fetched 13793 chars"
   },
   {
     "status": "success",
     "source": "Drowned in Sound",
-    "message": "Fetched 3502 chars"
+    "message": "Fetched 3263 chars"
   },
   {
     "status": "error",
@@ -47,17 +47,17 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13751 chars"
+    "message": "Fetched 14227 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 715 chars"
+    "message": "Fetched 727 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4076 chars"
+    "message": "Fetched 3926 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7547 chars"
+    "message": "Fetched 8131 chars"
   },
   {
     "status": "error",
@@ -87,12 +87,12 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2872 chars"
+    "message": "Fetched 2993 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7488 chars"
+    "message": "HTTPSConnectionPool(host='www.kexp.org', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11294 chars"
+    "message": "Fetched 11582 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8060 chars"
+    "message": "Fetched 8244 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 3996 chars"
+    "message": "Fetched 4045 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13852 chars"
+    "message": "Fetched 13600 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5191 chars"
+    "message": "Fetched 5142 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8737 chars"
+    "message": "Fetched 8337 chars"
   }
 ]
