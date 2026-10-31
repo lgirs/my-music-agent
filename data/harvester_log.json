@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6014 chars"
+    "message": "Fetched 5981 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 6180 chars"
+    "message": "Fetched 5598 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3458 chars"
+    "message": "Fetched 3423 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7690 chars"
+    "message": "Fetched 7910 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4723 chars"
+    "message": "Fetched 4647 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 13793 chars"
+    "message": "Fetched 13615 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 14227 chars"
+    "message": "Fetched 14105 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3926 chars"
+    "message": "Fetched 3745 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 8131 chars"
+    "message": "Fetched 7714 chars"
   },
   {
     "status": "error",
@@ -90,9 +90,9 @@
     "message": "Fetched 2993 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "HTTPSConnectionPool(host='www.kexp.org', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 471 chars"
   },
   {
     "status": "success",
@@ -112,12 +112,12 @@
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8244 chars"
+    "message": "Fetched 8420 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4045 chars"
+    "message": "Fetched 4068 chars"
   },
   {
     "status": "success",
@@ -142,6 +142,6 @@
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8337 chars"
+    "message": "Fetched 8369 chars"
   }
 ]
