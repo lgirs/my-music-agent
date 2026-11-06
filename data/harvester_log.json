@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5810 chars"
+    "message": "Fetched 5800 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5968 chars"
+    "message": "Fetched 5641 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3343 chars"
+    "message": "Fetched 3363 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7590 chars"
+    "message": "Fetched 7702 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 4661 chars"
+    "message": "Fetched 4633 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14040 chars"
+    "message": "Fetched 14590 chars"
   },
   {
     "status": "success",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13753 chars"
+    "message": "Fetched 13743 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4083 chars"
+    "message": "Fetched 3720 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 6565 chars"
+    "message": "Fetched 7166 chars"
   },
   {
     "status": "error",
@@ -87,7 +87,7 @@
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 3097 chars"
+    "message": "Fetched 2992 chars"
   },
   {
     "status": "success",
@@ -107,27 +107,27 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 10623 chars"
+    "message": "Fetched 10813 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8302 chars"
+    "message": "Fetched 8435 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4084 chars"
+    "message": "Fetched 4036 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13538 chars"
+    "message": "Fetched 13513 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Gorilla vs. Bear",
-    "message": "Fetched 4914 chars"
+    "message": "HTTPSConnectionPool(host='www.gorillavsbear.net', port=443): Read timed out. (read timeout=15)"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5111 chars"
+    "message": "Fetched 5129 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8353 chars"
+    "message": "Fetched 8065 chars"
   }
 ]
