@@ -2,7 +2,7 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5800 chars"
+    "message": "Fetched 5810 chars"
   },
   {
     "status": "success",
@@ -12,27 +12,27 @@
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3363 chars"
+    "message": "Fetched 3293 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7702 chars"
+    "message": "Fetched 7733 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Sputnikmusic",
-    "message": "Fetched 4633 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.sputnikmusic.com/"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14590 chars"
+    "message": "Fetched 14548 chars"
   },
   {
     "status": "success",
     "source": "Drowned in Sound",
-    "message": "Fetched 3299 chars"
+    "message": "Fetched 3216 chars"
   },
   {
     "status": "error",
@@ -47,7 +47,7 @@
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13743 chars"
+    "message": "Fetched 13847 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3720 chars"
+    "message": "Fetched 3733 chars"
   },
   {
     "status": "error",
@@ -77,7 +77,7 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7166 chars"
+    "message": "Fetched 6761 chars"
   },
   {
     "status": "error",
@@ -92,7 +92,7 @@
   {
     "status": "success",
     "source": "KEXP Blog/Reviews",
-    "message": "Fetched 7367 chars"
+    "message": "Fetched 7462 chars"
   },
   {
     "status": "success",
@@ -112,22 +112,22 @@
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8435 chars"
+    "message": "Fetched 8299 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4036 chars"
+    "message": "Fetched 4070 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13513 chars"
+    "message": "Fetched 13538 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Gorilla vs. Bear",
-    "message": "HTTPSConnectionPool(host='www.gorillavsbear.net', port=443): Read timed out. (read timeout=15)"
+    "message": "Fetched 4914 chars"
   },
   {
     "status": "success",
@@ -142,6 +142,6 @@
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8065 chars"
+    "message": "Fetched 8172 chars"
   }
 ]
