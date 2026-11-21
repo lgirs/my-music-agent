@@ -2,37 +2,37 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 6182 chars"
+    "message": "Fetched 6178 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5132 chars"
+    "message": "Fetched 5150 chars"
   },
   {
     "status": "success",
     "source": "Revolver Magazine",
-    "message": "Fetched 3395 chars"
+    "message": "Fetched 3306 chars"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7530 chars"
+    "message": "Fetched 7494 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 6001 chars"
+    "message": "Fetched 8429 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14242 chars"
+    "message": "Fetched 14187 chars"
   },
   {
     "status": "success",
     "source": "Drowned in Sound",
-    "message": "Fetched 3298 chars"
+    "message": "Fetched 3400 chars"
   },
   {
     "status": "error",
@@ -42,12 +42,12 @@
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 11212 chars"
+    "message": "Fetched 11240 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 13972 chars"
+    "message": "Fetched 13889 chars"
   },
   {
     "status": "success",
@@ -57,7 +57,7 @@
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 3895 chars"
+    "message": "Fetched 3801 chars"
   },
   {
     "status": "error",
@@ -77,12 +77,12 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7521 chars"
+    "message": "Fetched 7099 chars"
   },
   {
     "status": "success",
     "source": "Invisible Oranges",
-    "message": "Fetched 5941 chars"
+    "message": "Fetched 5858 chars"
   },
   {
     "status": "success",
@@ -95,9 +95,9 @@
     "message": "Fetched 7218 chars"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "Maximum Rocknroll (MRR)",
-    "message": "HTTPSConnectionPool(host='maximumrocknroll.com', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='maximumrocknroll.com', port=443) at 0x7df94f836380>, 'Connection to maximumrocknroll.com timed out. (connect timeout=15)'))"
+    "message": "Fetched 6395 chars"
   },
   {
     "status": "success",
@@ -112,17 +112,17 @@
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8353 chars"
+    "message": "Fetched 8546 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4073 chars"
+    "message": "Fetched 3960 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13708 chars"
+    "message": "Fetched 13633 chars"
   },
   {
     "status": "success",
@@ -142,6 +142,6 @@
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8315 chars"
+    "message": "Fetched 8208 chars"
   }
 ]
