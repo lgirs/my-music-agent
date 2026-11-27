@@ -2,32 +2,32 @@
   {
     "status": "success",
     "source": "Decibel Magazine",
-    "message": "Fetched 5795 chars"
+    "message": "Fetched 5925 chars"
   },
   {
     "status": "success",
     "source": "Twangville",
-    "message": "Fetched 5597 chars"
+    "message": "Fetched 5344 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Revolver Magazine",
-    "message": "Fetched 2641 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.revolvermag.com/"
   },
   {
     "status": "success",
     "source": "Pitchfork",
-    "message": "Fetched 7368 chars"
+    "message": "Fetched 7390 chars"
   },
   {
     "status": "success",
     "source": "Sputnikmusic",
-    "message": "Fetched 8589 chars"
+    "message": "Fetched 8350 chars"
   },
   {
     "status": "success",
     "source": "Louder Sound",
-    "message": "Fetched 14639 chars"
+    "message": "Fetched 14792 chars"
   },
   {
     "status": "success",
@@ -42,22 +42,22 @@
   {
     "status": "success",
     "source": "Metal Temple",
-    "message": "Fetched 11313 chars"
+    "message": "Fetched 11189 chars"
   },
   {
     "status": "success",
     "source": "Consequence of Sound",
-    "message": "Fetched 14133 chars"
+    "message": "Fetched 14048 chars"
   },
   {
     "status": "success",
     "source": "Blabbermouth",
-    "message": "Fetched 750 chars"
+    "message": "Fetched 749 chars"
   },
   {
     "status": "success",
     "source": "Loudwire",
-    "message": "Fetched 4027 chars"
+    "message": "Fetched 3898 chars"
   },
   {
     "status": "error",
@@ -65,9 +65,9 @@
     "message": "403 Client Error: Forbidden for url: https://www.rateyourmusic.com/"
   },
   {
-    "status": "error",
+    "status": "success",
     "source": "AltCorner",
-    "message": "403 Client Error: Forbidden for url: https://altcorner.com/"
+    "message": "Fetched 5427 chars"
   },
   {
     "status": "error",
@@ -77,17 +77,17 @@
   {
     "status": "success",
     "source": "Angry Metal Guy",
-    "message": "Fetched 7188 chars"
+    "message": "Fetched 7032 chars"
   },
   {
-    "status": "success",
+    "status": "error",
     "source": "Invisible Oranges",
-    "message": "Fetched 5993 chars"
+    "message": "403 Client Error: Forbidden for url: https://www.invisibleoranges.com/"
   },
   {
     "status": "success",
     "source": "Heavy Blog is Heavy (HBIH)",
-    "message": "Fetched 2597 chars"
+    "message": "Fetched 2565 chars"
   },
   {
     "status": "success",
@@ -107,22 +107,22 @@
   {
     "status": "success",
     "source": "Aquarium Drunkard",
-    "message": "Fetched 11650 chars"
+    "message": "Fetched 11505 chars"
   },
   {
     "status": "success",
     "source": "The Toilet Ov Hell",
-    "message": "Fetched 8136 chars"
+    "message": "Fetched 8242 chars"
   },
   {
     "status": "success",
     "source": "Distorted Sound Magazine",
-    "message": "Fetched 4389 chars"
+    "message": "Fetched 4312 chars"
   },
   {
     "status": "success",
     "source": "Illustrate Magazine",
-    "message": "Fetched 13698 chars"
+    "message": "Fetched 13648 chars"
   },
   {
     "status": "success",
@@ -137,11 +137,11 @@
   {
     "status": "success",
     "source": "It's Psychedelic Baby Magazine",
-    "message": "Fetched 5229 chars"
+    "message": "Fetched 5210 chars"
   },
   {
     "status": "success",
     "source": "Post-Punk.com",
-    "message": "Fetched 8208 chars"
+    "message": "Fetched 8153 chars"
   }
 ]
